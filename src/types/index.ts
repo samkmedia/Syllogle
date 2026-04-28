@@ -11,23 +11,29 @@ export interface Puzzle {
   category: Category;
 }
 
+export interface DailySetResult {
+  scores: boolean[];          // one per puzzle (true = correct)
+  totalTimeSeconds: number;
+  date: string;               // YYYY-MM-DD
+}
+
 export interface PuzzleResult {
   puzzleId: string;
   correct: boolean;
   solveTimeSeconds: number;
   attempts: number;
-  date: string; // ISO date string YYYY-MM-DD
+  date: string; // YYYY-MM-DD
 }
 
 export interface UserStats {
   currentStreak: number;
   bestStreak: number;
-  totalSolved: number;
-  dailySolved: number;
-  practiceSolved: number;
-  totalCorrect: number;
-  totalAttempts: number;
-  lastDailyDate: string | null; // YYYY-MM-DD
-  dailyResults: Record<string, PuzzleResult>; // keyed by YYYY-MM-DD
+  totalSolved: number;        // daily sets completed
+  dailySolved: number;        // same as totalSolved
+  practiceSolved: number;     // individual practice puzzles
+  totalCorrect: number;       // total correct across all daily puzzles
+  totalAttempts: number;      // total daily puzzles attempted (sets × 5)
+  lastDailyDate: string | null;
+  dailyResults: Record<string, DailySetResult>; // keyed by YYYY-MM-DD
   practiceResults: PuzzleResult[];
 }

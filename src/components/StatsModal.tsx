@@ -12,12 +12,10 @@ export default function StatsModal({ stats, onClose }: StatsModalProps) {
   const accuracy = getAccuracyPercent(stats);
 
   const rows = [
-    { label: 'Current Streak', value: stats.currentStreak, unit: 'days', icon: '🔥' },
-    { label: 'Best Streak', value: stats.bestStreak, unit: 'days', icon: '🏆' },
-    { label: 'Total Solved', value: stats.totalSolved, unit: '', icon: '' },
-    { label: 'Accuracy', value: `${accuracy}%`, unit: '', icon: '' },
-    { label: 'Daily Solved', value: stats.dailySolved, unit: '', icon: '' },
-    { label: 'Practice Solved', value: stats.practiceSolved, unit: '', icon: '' },
+    { label: 'Current Streak', value: stats.currentStreak, suffix: ' days', icon: '🔥' },
+    { label: 'Best Streak', value: stats.bestStreak, suffix: ' days', icon: '🏆' },
+    { label: 'Sets Played', value: stats.dailySolved, suffix: '', icon: '' },
+    { label: 'Accuracy', value: `${accuracy}%`, suffix: '', icon: '' },
   ];
 
   return (
@@ -34,7 +32,7 @@ export default function StatsModal({ stats, onClose }: StatsModalProps) {
           </button>
         </div>
 
-        {stats.totalSolved === 0 ? (
+        {stats.dailySolved === 0 ? (
           <p className="text-gray-400 text-sm text-center py-6">
             No puzzles completed yet. Play your first daily puzzle to start tracking stats.
           </p>
@@ -45,8 +43,8 @@ export default function StatsModal({ stats, onClose }: StatsModalProps) {
                 <p className="text-2xl font-bold text-gray-900 tabular-nums">
                   {row.icon && <span className="mr-1 text-xl">{row.icon}</span>}
                   {row.value}
-                  {row.unit && (
-                    <span className="text-xs font-normal text-gray-400 ml-1">{row.unit}</span>
+                  {row.suffix && (
+                    <span className="text-xs font-normal text-gray-400 ml-1">{row.suffix}</span>
                   )}
                 </p>
                 <p className="text-xs text-gray-500 mt-0.5">{row.label}</p>

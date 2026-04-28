@@ -1,4 +1,4 @@
-import { UserStats, PuzzleResult } from '@/types';
+import { UserStats, PuzzleResult, DailySetResult } from '@/types';
 
 const STATS_KEY = 'syllogle_stats';
 
@@ -31,35 +31,32 @@ export function saveStats(stats: UserStats): void {
   localStorage.setItem(STATS_KEY, JSON.stringify(stats));
 }
 
-export function recordDailyResult(result: PuzzleResult): UserStats {
+export function recordDailyResult(result: DailySetResult): UserStats {
   const stats = getStats();
   const today = result.date;
 
   // Already recorded today — don't double-count
   if (stats.dailyResults[today]) return stats;
 
+  const correctCount = result.scores.filter(Boolean).length;
+
   const updatedStats: UserStats = {
     ...stats,
     totalSolved: stats.totalSolved + 1,
     dailySolved: stats.dailySolved + 1,
-    totalCorrect: stats.totalCorrect + (result.correct ? 1 : 0),
-    totalAttempts: stats.totalAttempts + result.attempts,
+    totalCorrect: stats.totalCorrect + correctCount,
+    totalAttempts: stats.totalAttempts + result.scores.length,
     dailyResults: { ...stats.dailyResults, [today]: result },
   };
 
-  // Streak logic
-  if (result.correct) {
-    const yesterday = getPreviousDay(today);
-    const hadYesterday =
-      !!stats.dailyResults[yesterday]?.correct || stats.lastDailyDate === yesterday;
-    const newStreak = hadYesterday ? stats.currentStreak + 1 : 1;
-    updatedStats.currentStreak = newStreak;
-    updatedStats.bestStreak = Math.max(stats.bestStreak, newStreak);
-  } else {
-    updatedStats.currentStreak = 0;
-  }
-
+  // Streak: completing the daily set counts regardless of score
+  const yesterday = getPreviousDay(today);
+  const hadYesterday = !!stats.dailyResults[yesterday] || stats.lastDailyDate === yesterday;
+  const newStreak = hadYesterday ? stats.currentStreak + 1 : 1;
+  updatedStats.currentStreak = newStreak;
+  updatedStats.bestStreak = Math.max(stats.bestStreak, newStreak);
   updatedStats.lastDailyDate = today;
+
   saveStats(updatedStats);
   return updatedStats;
 }
@@ -68,10 +65,7 @@ export function recordPracticeResult(result: PuzzleResult): UserStats {
   const stats = getStats();
   const updatedStats: UserStats = {
     ...stats,
-    totalSolved: stats.totalSolved + 1,
     practiceSolved: stats.practiceSolved + 1,
-    totalCorrect: stats.totalCorrect + (result.correct ? 1 : 0),
-    totalAttempts: stats.totalAttempts + result.attempts,
     practiceResults: [...stats.practiceResults, result],
   };
   saveStats(updatedStats);
@@ -84,8 +78,8 @@ export function hasDailyBeenCompleted(dateStr: string): boolean {
 }
 
 export function getAccuracyPercent(stats: UserStats): number {
-  if (stats.totalSolved === 0) return 0;
-  return Math.round((stats.totalCorrect / stats.totalSolved) * 100);
+  if (stats.totalAttempts === 0) return 0;
+  return Math.round((stats.totalCorrect / stats.totalAttempts) * 100);
 }
 
 function getPreviousDay(dateStr: string): string {
