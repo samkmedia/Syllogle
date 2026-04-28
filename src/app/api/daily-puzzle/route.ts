@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Puzzle } from '@/types';
-import { getDailyPuzzle, getTodayString } from '@/lib/puzzleUtils';
+import { getDailyPuzzles, getTodayString } from '@/lib/puzzleUtils';
 
 // ── KV helpers (Vercel KV in prod, in-memory fallback for local dev) ────────
 
@@ -140,7 +140,7 @@ export async function GET() {
     return NextResponse.json({ puzzle: generated, source: 'generated' });
   }
 
-  // 3. Fallback to deterministic local puzzle
-  const fallback = getDailyPuzzle();
+  // 3. Fallback to first of today's local puzzles
+  const fallback = getDailyPuzzles()[0];
   return NextResponse.json({ puzzle: fallback, source: 'fallback' });
 }
