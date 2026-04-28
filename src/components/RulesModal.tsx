@@ -33,12 +33,12 @@ export default function RulesModal({ onClose }: RulesModalProps) {
 
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div className="border border-gray-200 rounded-xl p-3 bg-gray-50">
-              <p className="font-semibold text-gray-900 mb-0.5">If they can all be true</p>
+              <p className="font-semibold text-gray-900 mb-0.5">All can be true</p>
               <p className="text-gray-500 text-xs">Tap <strong>Consistent</strong></p>
             </div>
             <div className="border border-gray-200 rounded-xl p-3 bg-gray-50">
-              <p className="font-semibold text-gray-900 mb-0.5">If there&apos;s a contradiction</p>
-              <p className="text-gray-500 text-xs">Tap the statement to remove</p>
+              <p className="font-semibold text-gray-900 mb-0.5">There&apos;s a contradiction</p>
+              <p className="text-gray-500 text-xs">Tap <strong>Inconsistent</strong></p>
             </div>
           </div>
 
@@ -49,29 +49,29 @@ export default function RulesModal({ onClose }: RulesModalProps) {
             </div>
             <div className="px-4 py-3 space-y-2">
               {[
-                { text: 'All birds can fly.', struck: true },
-                { text: 'Penguins are birds.', struck: false },
-                { text: 'Penguins cannot fly.', struck: false },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className={`text-sm flex items-start gap-2 ${s.struck ? 'text-rose-500' : 'text-gray-700'}`}
-                >
+                'All birds can fly.',
+                'Penguins are birds.',
+                'Penguins cannot fly.',
+              ].map((text, i) => (
+                <div key={i} className="text-sm flex items-start gap-2 text-gray-700">
                   <span className="text-gray-300 text-xs mt-0.5 shrink-0">{i + 1}.</span>
-                  <span className={s.struck ? 'line-through' : ''}>{s.text}</span>
-                  {s.struck && <span className="text-rose-400 text-xs shrink-0">← remove</span>}
+                  <span>{text}</span>
                 </div>
               ))}
             </div>
-            <div className="px-4 py-2.5 bg-gray-50 border-t border-gray-200">
+            <div className="px-4 py-2 bg-gray-50 border-t border-gray-200 space-y-1">
+              <div className="flex gap-2">
+                <span className="text-xs px-2 py-1 rounded-lg border border-gray-200 bg-white text-gray-400">Consistent</span>
+                <span className="text-xs px-2 py-1 rounded-lg bg-gray-900 text-white">Inconsistent ✓</span>
+              </div>
               <p className="text-xs text-gray-500">
-                Penguins can&apos;t fly but are birds — so &quot;all birds can fly&quot; must go.
+                Penguins can&apos;t fly but are birds — so these can&apos;t all be true.
               </p>
             </div>
           </div>
 
           <p className="text-gray-400 text-xs">
-            Puzzles test <strong>logic only</strong> — no obscure knowledge required.
+            Each day has <strong>5 puzzles</strong>. Puzzles test <strong>logic only</strong> — no obscure knowledge required.
           </p>
         </div>
 
