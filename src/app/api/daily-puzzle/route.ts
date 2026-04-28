@@ -124,7 +124,7 @@ export async function GET() {
 
   // 2. Try AI generation
   // Puzzle number = days since epoch (for difficulty cycling)
-  const epoch = new Date('2025-01-01').getTime();
+  const epoch = new Date('2026-04-28').getTime();
   const puzzleNumber = Math.floor((new Date(today).getTime() - epoch) / 86400000) + 1;
 
   const generated = await generateDailyPuzzle(today, puzzleNumber);

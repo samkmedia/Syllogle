@@ -33,7 +33,7 @@ export function getTodayString(): string {
  * Converts a YYYY-MM-DD date string into a numeric index.
  */
 function dateToIndex(dateStr: string): number {
-  const epoch = new Date('2025-01-01').getTime();
+  const epoch = new Date('2026-04-28').getTime();
   const date = new Date(dateStr).getTime();
   return Math.floor((date - epoch) / (1000 * 60 * 60 * 24));
 }
