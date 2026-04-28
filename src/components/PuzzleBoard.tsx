@@ -84,19 +84,22 @@ export default function PuzzleBoard({
 
       {/* Answer buttons */}
       {!answered && (
-        <div className="grid grid-cols-2 gap-3 pt-1">
-          <button
-            onClick={() => handleAnswer(true)}
-            className="py-4 rounded-xl font-semibold text-sm bg-white border border-gray-200 text-gray-700 hover:border-gray-400 hover:bg-gray-50 active:scale-[0.98] transition-all"
-          >
-            Consistent
-          </button>
-          <button
-            onClick={() => handleAnswer(false)}
-            className="py-4 rounded-xl font-semibold text-sm bg-gray-900 text-white hover:bg-gray-700 active:scale-[0.98] transition-all"
-          >
-            Inconsistent
-          </button>
+        <div className="pt-3 border-t border-gray-200 space-y-2.5">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Your answer</p>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={() => handleAnswer(true)}
+              className="py-4 rounded-xl font-semibold text-sm bg-white border-2 border-gray-200 text-gray-700 hover:border-gray-400 hover:bg-gray-50 active:scale-[0.98] transition-all"
+            >
+              Consistent
+            </button>
+            <button
+              onClick={() => handleAnswer(false)}
+              className="py-4 rounded-xl font-semibold text-sm bg-gray-900 text-white hover:bg-gray-700 active:scale-[0.98] transition-all"
+            >
+              Inconsistent
+            </button>
+          </div>
         </div>
       )}
 
