@@ -5,14 +5,17 @@ import { Puzzle } from '@/types';
 // Combined pool: handcrafted + AI-generated
 const allPuzzles: Puzzle[] = [...handcraftedPuzzles, ...generatedPuzzles];
 
+// Medium/hard only — for daily puzzle fallback
+const dailyPuzzles: Puzzle[] = allPuzzles.filter((p) => p.difficulty !== 'easy');
+
 /**
  * Returns a deterministic daily puzzle (fallback when API is unavailable).
- * Cycles through all puzzles so every day has a unique one.
+ * Only picks medium/hard puzzles.
  */
 export function getDailyPuzzle(): Puzzle {
   const today = getTodayString();
   const index = dateToIndex(today);
-  return allPuzzles[index % allPuzzles.length];
+  return dailyPuzzles[index % dailyPuzzles.length];
 }
 
 /**

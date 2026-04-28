@@ -18,24 +18,21 @@ interface LocalResult {
   attempts: number;
 }
 
-// Read these synchronously so PuzzleBoard gets correct initial state on first render
-const todayStr = getTodayString();
-const initialDone = hasDailyBeenCompleted(todayStr);
-const initialStats = initialDone ? getStats() : null;
-const initialResult = initialDone && initialStats
-  ? (initialStats.dailyResults[todayStr] ?? null)
-  : null;
-
 export default function DailyPage() {
   const [puzzle, setPuzzle] = useState<Puzzle>(() => getDailyPuzzle());
   const [puzzleNumber] = useState(getDailyPuzzleNumber());
-  const [alreadyDone, setAlreadyDone] = useState(initialDone);
-  const [savedResult, setSavedResult] = useState<LocalResult | null>(
-    initialResult
-      ? { correct: initialResult.correct, solveTimeSeconds: initialResult.solveTimeSeconds, attempts: initialResult.attempts }
-      : null
-  );
-  const [stats, setStats] = useState<UserStats | null>(initialStats);
+  const [alreadyDone, setAlreadyDone] = useState(() => hasDailyBeenCompleted(getTodayString()));
+  const [stats, setStats] = useState<UserStats | null>(() => {
+    const done = hasDailyBeenCompleted(getTodayString());
+    return done ? getStats() : null;
+  });
+  const [savedResult, setSavedResult] = useState<LocalResult | null>(() => {
+    const done = hasDailyBeenCompleted(getTodayString());
+    if (!done) return null;
+    const s = getStats();
+    const r = s.dailyResults[getTodayString()] ?? null;
+    return r ? { correct: r.correct, solveTimeSeconds: r.solveTimeSeconds, attempts: r.attempts } : null;
+  });
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -63,13 +60,14 @@ export default function DailyPage() {
 
   const handleComplete = useCallback(
     (result: LocalResult) => {
+      const today = getTodayString();
       setSubmitted(true);
       const updated = recordDailyResult({
         puzzleId: puzzle.id,
         correct: result.correct,
         solveTimeSeconds: result.solveTimeSeconds,
         attempts: result.attempts,
-        date: todayStr,
+        date: today,
       });
       setSavedResult(result);
       setStats(updated);
