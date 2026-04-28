@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Consistency
 
-## Getting Started
+A daily logic puzzle game. Can all of these statements be true at once?
 
-First, run the development server:
+## How to run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── page.tsx          # Home — title, stats, nav
+│   ├── daily/page.tsx    # Daily puzzle (one per day, locked after completion)
+│   ├── practice/page.tsx # Unlimited practice mode
+│   └── globals.css
+├── components/
+│   ├── PuzzleBoard.tsx   # Core game UI — statements, selection, feedback, timer
+│   ├── RulesModal.tsx    # How-to-play overlay
+│   └── ShareButton.tsx   # Copy-to-clipboard share result
+├── data/
+│   └── puzzles.ts        # 30 handcrafted puzzles (10 easy / 10 medium / 10 hard)
+├── lib/
+│   ├── puzzleUtils.ts    # Daily puzzle selection, random puzzle, puzzle number
+│   └── storage.ts        # localStorage helpers — stats, streaks, results
+└── types/
+    └── index.ts          # Shared TypeScript types
+```
 
-## Learn More
+## Game mechanics
 
-To learn more about Next.js, take a look at the following resources:
+- Show 3–5 statements and ask: "Can all of these be true at the same time?"
+- User either taps **Consistent** or selects the one statement to remove
+- One submission per puzzle — instant feedback with explanation
+- Daily mode: deterministic puzzle from date, locked after completion, shareable result
+- Practice mode: random puzzles, running score, unlimited
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stats tracked (localStorage)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Current streak · Best streak · Total solved · Daily solved · Practice solved · Accuracy %
 
-## Deploy on Vercel
+## Puzzle format
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+{
+  id: string
+  difficulty: 'easy' | 'medium' | 'hard'
+  category: 'everyday' | 'science' | 'business' | 'social' | 'abstract'
+  statements: string[]
+  isConsistent: boolean
+  answerIndex: number | null   // null if consistent
+  explanation: string
+}
+```

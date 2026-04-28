@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fafaf9;
+  --foreground: #111827;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ── Flash animations for puzzle feedback ── */
+@keyframes flash-correct {
+  0%   { background-color: #d1fae5; }
+  60%  { background-color: #d1fae5; }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-incorrect {
+  0%   { background-color: #fee2e2; }
+  60%  { background-color: #fee2e2; }
+  100% { background-color: transparent; }
+}
+
+.animate-flash-correct {
+  animation: flash-correct 0.7s ease-out forwards;
+}
+
+.animate-flash-incorrect {
+  animation: flash-incorrect 0.7s ease-out forwards;
+}
+
+/* ── Countdown progress bar ── */
+@keyframes countdown-shrink {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
+.animate-countdown {
+  animation: countdown-shrink 2.5s linear forwards;
+}
+
+/* ── Smooth modal entrance ── */
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.96) translateY(4px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-modal-in {
+  animation: modal-in 0.18s ease-out forwards;
 }
