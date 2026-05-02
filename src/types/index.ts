@@ -9,6 +9,7 @@ export interface Puzzle {
   answerIndex: number | null; // null if consistent
   explanation: string;
   category: Category;
+  practiceOnly?: boolean;
 }
 
 export interface DailySetResult {

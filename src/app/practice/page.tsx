@@ -2,13 +2,13 @@
 
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { getRandomPuzzle, getTodayString } from '@/lib/puzzleUtils';
+import { getRandomPuzzle, getPracticePuzzles, getTodayString } from '@/lib/puzzleUtils';
 import { recordPracticeResult } from '@/lib/storage';
 import { Puzzle } from '@/types';
 import PuzzleBoard from '@/components/PuzzleBoard';
 
 export default function PracticePage() {
-  const [puzzle, setPuzzle] = useState<Puzzle>(() => getRandomPuzzle());
+  const [puzzle, setPuzzle] = useState<Puzzle>(() => getRandomPuzzle([], getPracticePuzzles()));
   const [playedIds, setPlayedIds] = useState<string[]>([]);
   const [key, setKey] = useState(0);
 
@@ -28,7 +28,7 @@ export default function PracticePage() {
   const handleNext = useCallback(() => {
     const newPlayed = [...playedIds, puzzle.id];
     setPlayedIds(newPlayed);
-    setPuzzle(getRandomPuzzle(newPlayed));
+    setPuzzle(getRandomPuzzle(newPlayed, getPracticePuzzles()));
     setKey((k) => k + 1);
   }, [playedIds, puzzle.id]);
 

@@ -7,6 +7,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-1",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "All members of the finance team attended the budget meeting.",
@@ -20,6 +21,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-2",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "All professional athletes train daily.",
@@ -33,6 +35,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-3",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "If an artwork is a sculpture, it must be displayed outdoors.",
@@ -46,6 +49,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-4",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "No students who missed more than three classes passed the exam.",
@@ -59,6 +63,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-5",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "Every successful business invests in employee training.",
@@ -72,6 +77,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-6",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "All cats are carnivores.",
@@ -85,6 +91,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-7",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "All books by this author are historical novels.",
@@ -98,6 +105,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-8",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "If a bird is a canary, it sings beautifully.",
@@ -111,6 +119,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-9",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "All successful puzzle creators are highly creative.",
@@ -124,6 +133,7 @@ const generatedPuzzles: Puzzle[] = [
   {
     "id": "gen-1-10",
     "difficulty": "easy",
+    "practiceOnly": true,
     "category": "syllogism",
     "statements": [
       "If a bird is a hummingbird, it can hover.",

@@ -5,8 +5,17 @@ import { Puzzle } from '@/types';
 // Combined pool: handcrafted + AI-generated
 const allPuzzles: Puzzle[] = [...handcraftedPuzzles, ...generatedPuzzles];
 
-// Medium/hard only — for daily puzzles
-const dailyPuzzles: Puzzle[] = allPuzzles.filter((p) => p.difficulty !== 'easy');
+// Daily pool: medium/hard only, never practiceOnly puzzles
+const dailyPuzzles: Puzzle[] = allPuzzles.filter(
+  (p) => p.difficulty !== 'easy' && !p.practiceOnly
+);
+
+// Fixed seed so the master ordering never changes day-to-day
+const DAILY_MASTER_SEED = 8675309;
+
+// Shuffle the daily pool once. Day N takes positions [N*5, N*5+5), wrapping as needed.
+// This guarantees no puzzle repeats until the entire pool has been used.
+const dailySequence: Puzzle[] = seededShuffle(dailyPuzzles, DAILY_MASTER_SEED);
 
 /**
  * Seeded Fisher-Yates shuffle — deterministic for a given seed.
@@ -43,14 +52,31 @@ function dateToIndex(dateStr: string): number {
 }
 
 /**
- * Returns 5 deterministic daily puzzles for today (medium/hard only).
- * Different set each day, consistent for all users on the same day.
+ * Returns up to 5 puzzles from the static daily pool for today.
+ * Returns an empty array when the static pool is exhausted — callers
+ * should fall back to Gemini generation in that case.
+ * No wrap-around: each puzzle is used at most once.
  */
 export function getDailyPuzzles(): Puzzle[] {
   const today = getTodayString();
-  const seed = dateToIndex(today);
-  const shuffled = seededShuffle(dailyPuzzles, seed);
-  return shuffled.slice(0, 5);
+  const dayIndex = dateToIndex(today);
+  const start = dayIndex * 5;
+  if (start + 5 > dailySequence.length) return [];
+  return dailySequence.slice(start, start + 5);
+}
+
+/**
+ * Returns the practice-eligible puzzle pool:
+ * - puzzles marked practiceOnly, and
+ * - daily puzzles whose day has already passed (retired from daily rotation).
+ * Future daily puzzles are excluded so they stay fresh for daily mode.
+ */
+export function getPracticePuzzles(): Puzzle[] {
+  const today = getTodayString();
+  const dayIndex = dateToIndex(today);
+  const retiredCount = Math.min(dayIndex * 5, dailySequence.length);
+  const retiredIds = new Set(dailySequence.slice(0, retiredCount).map((p) => p.id));
+  return allPuzzles.filter((p) => p.practiceOnly || retiredIds.has(p.id));
 }
 
 /**
@@ -62,12 +88,14 @@ export function getDailyPuzzleNumber(): number {
 }
 
 /**
- * Returns a random puzzle from the full pool, optionally excluding certain IDs.
+ * Returns a random puzzle from the given pool (defaults to all puzzles),
+ * optionally excluding certain IDs.
  */
-export function getRandomPuzzle(excludeIds: string[] = []): Puzzle {
-  const available = allPuzzles.filter((p) => !excludeIds.includes(p.id));
-  const pool = available.length > 0 ? available : allPuzzles;
-  return pool[Math.floor(Math.random() * pool.length)];
+export function getRandomPuzzle(excludeIds: string[] = [], pool?: Puzzle[]): Puzzle {
+  const source = pool ?? allPuzzles;
+  const available = source.filter((p) => !excludeIds.includes(p.id));
+  const draw = available.length > 0 ? available : source;
+  return draw[Math.floor(Math.random() * draw.length)];
 }
 
 /**

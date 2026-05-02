@@ -6,6 +6,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-001',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'everyday',
     statements: [
       'All birds can fly.',
@@ -20,6 +21,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-002',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'everyday',
     statements: [
       'The store is open every day.',
@@ -34,6 +36,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-003',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'abstract',
     statements: [
       'All squares are rectangles.',
@@ -48,6 +51,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-004',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'everyday',
     statements: [
       'Sam is taller than Alex.',
@@ -62,6 +66,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-005',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'everyday',
     statements: [
       'The meeting starts at 3 PM.',
@@ -76,6 +81,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-006',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'abstract',
     statements: [
       'No cats are dogs.',
@@ -90,6 +96,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-007',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'everyday',
     statements: [
       'Every team member attended the meeting.',
@@ -104,6 +111,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-008',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'abstract',
     statements: [
       'All even numbers are divisible by 2.',
@@ -118,6 +126,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-009',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'everyday',
     statements: [
       'The red team scored more than the blue team.',
@@ -132,6 +141,7 @@ const puzzles: Puzzle[] = [
   {
     id: 'easy-010',
     difficulty: 'easy',
+    practiceOnly: true,
     category: 'everyday',
     statements: [
       'Jake only eats vegetarian food.',
