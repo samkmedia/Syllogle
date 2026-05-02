@@ -66,29 +66,35 @@ export default function DailyGame({ puzzles, puzzleNumber }: Props) {
   }, [todayStr]);
 
   const handleAnswer = useCallback((correct: boolean, timeSeconds: number) => {
-    answersRef.current = [...answersRef.current, correct];
-    timesRef.current = [...timesRef.current, timeSeconds];
-    setAnswers([...answersRef.current]);
-  }, []);
+    const newAnswers = [...answersRef.current, correct];
+    const newTimes = [...timesRef.current, timeSeconds];
+    answersRef.current = newAnswers;
+    timesRef.current = newTimes;
+    setAnswers(newAnswers);
 
-  const handleNext = useCallback(() => {
-    const nextIndex = currentIndex + 1;
-
-    if (nextIndex >= TOTAL) {
-      const totalTime = timesRef.current.reduce((a, b) => a + b, 0);
+    // Save as soon as the last answer is recorded — don't wait for "See results" click
+    if (newAnswers.length === TOTAL) {
+      const totalTime = newTimes.reduce((a, b) => a + b, 0);
       const result: DailySetResult = {
-        scores: answersRef.current,
+        scores: newAnswers,
         totalTimeSeconds: totalTime,
         date: todayStr,
       };
       const updated = recordDailyResult(result);
       setStats(updated);
+    }
+  }, [todayStr]);
+
+  const handleNext = useCallback(() => {
+    const nextIndex = currentIndex + 1;
+
+    if (nextIndex >= TOTAL) {
       setPhase('results');
     } else {
       setCurrentIndex(nextIndex);
       setBoardKey((k) => k + 1);
     }
-  }, [currentIndex, todayStr]);
+  }, [currentIndex]);
 
   const handleCopy = async () => {
     const resultScores = alreadyDone ? (savedResult?.scores ?? []) : answersRef.current;
