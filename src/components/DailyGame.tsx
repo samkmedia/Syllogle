@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { getTodayString } from '@/lib/puzzleUtils';
 import { hasDailyBeenCompleted, recordDailyResult, getStats } from '@/lib/storage';
@@ -46,18 +46,24 @@ export default function DailyGame({ puzzles, puzzleNumber }: Props) {
   const timesRef = useRef<number[]>([]);
   const [answers, setAnswers] = useState<boolean[]>([]);
 
-  const [alreadyDone] = useState(() => hasDailyBeenCompleted(todayStr));
-  const [savedResult] = useState<DailySetResult | null>(() => {
-    if (!hasDailyBeenCompleted(todayStr)) return null;
-    return getStats().dailyResults[todayStr] ?? null;
-  });
-  const [stats, setStats] = useState<UserStats | null>(() =>
-    hasDailyBeenCompleted(todayStr) ? getStats() : null
-  );
-  const [phase, setPhase] = useState<'playing' | 'results'>(
-    alreadyDone ? 'results' : 'playing'
-  );
+  // null = still reading localStorage (server can't access it)
+  const [alreadyDone, setAlreadyDone] = useState<boolean | null>(null);
+  const [savedResult, setSavedResult] = useState<DailySetResult | null>(null);
+  const [stats, setStats] = useState<UserStats | null>(null);
+  const [phase, setPhase] = useState<'playing' | 'results'>('playing');
   const [copied, setCopied] = useState(false);
+
+  // Read localStorage only after the component mounts in the browser
+  useEffect(() => {
+    const done = hasDailyBeenCompleted(todayStr);
+    setAlreadyDone(done);
+    if (done) {
+      const savedStats = getStats();
+      setSavedResult(savedStats.dailyResults[todayStr] ?? null);
+      setStats(savedStats);
+      setPhase('results');
+    }
+  }, [todayStr]);
 
   const handleAnswer = useCallback((correct: boolean, timeSeconds: number) => {
     answersRef.current = [...answersRef.current, correct];
@@ -104,6 +110,9 @@ export default function DailyGame({ puzzles, puzzleNumber }: Props) {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  // Wait for localStorage check before rendering anything
+  if (alreadyDone === null) return null;
 
   // Results screen
   if (phase === 'results') {
