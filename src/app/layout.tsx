@@ -5,7 +5,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Syllogle – Daily Logic Puzzle',
   description:
-    'A daily logic puzzle game. Five LSAT-style syllogism puzzles every day — can all the statements be true at once? Free to play, new puzzles every day.',
+    'A daily logic puzzle game. Can all the statements be true at once? Free to play, new puzzles every day.',
   keywords: [
     'logic puzzle',
     'daily puzzle game',
