@@ -46,21 +46,6 @@ export default function OGImage() {
           Daily Logic Puzzle
         </div>
 
-        {/* Puzzle preview line */}
-        <div
-          style={{
-            marginTop: '48px',
-            padding: '20px 40px',
-            background: '#1f1f1f',
-            borderRadius: '16px',
-            fontSize: '22px',
-            color: '#cccccc',
-            maxWidth: '800px',
-            textAlign: 'center',
-          }}
-        >
-          Can all of these statements be true at once?
-        </div>
       </div>
     ),
     { ...size }
