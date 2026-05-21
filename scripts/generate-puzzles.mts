@@ -20,10 +20,10 @@ if (!API_KEY) {
 
 const MODEL = 'gemini-2.5-flash';
 const PUZZLES_PER_BATCH = 10;
-const BATCHES = 5; // 50 puzzles total per run — increase as needed
+const BATCHES = 15; // 150 puzzles total — medium/hard only for daily rotation
 const OUT_FILE = path.join(process.cwd(), 'src/data/generated-puzzles.ts');
 
-const DIFFICULTIES = ['easy', 'medium', 'medium', 'hard', 'hard'] as const;
+const DIFFICULTIES = ['medium', 'hard', 'medium', 'hard', 'hard'] as const;
 const CATEGORIES = ['syllogism', 'conditional', 'quantifier', 'syllogism', 'conditional'] as const;
 
 // ── Types ──────────────────────────────────────────────────────────────────
