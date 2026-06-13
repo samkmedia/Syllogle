@@ -18,9 +18,9 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const MODEL = 'gemini-2.5-flash';
+const MODELS = ['gemini-2.5-flash', 'gemini-2.5-pro'];
 const PUZZLES_PER_BATCH = 10;
-const BATCHES = 15; // 150 puzzles total — medium/hard only for daily rotation
+const BATCHES = 50; // 500 puzzles total — medium/hard only for daily rotation
 const OUT_FILE = path.join(process.cwd(), 'src/data/generated-puzzles.ts');
 
 const DIFFICULTIES = ['medium', 'hard', 'medium', 'hard', 'hard'] as const;
@@ -150,40 +150,46 @@ async function generateBatch(
   category: string,
   batchIndex: number
 ): Promise<RawPuzzle[]> {
-  const model = genAI.getGenerativeModel({ model: MODEL });
   const prompt = buildPrompt(difficulty, category, batchIndex);
-
   console.log(`  Generating batch ${batchIndex} (${difficulty} / ${category})…`);
 
-  const result = await model.generateContent(prompt);
-  const text = result.response.text().trim();
+  for (const modelName of MODELS) {
+    try {
+      const model = genAI.getGenerativeModel({ model: modelName });
+      const result = await model.generateContent(prompt);
+      const text = result.response.text().trim();
+      const cleaned = text.replace(/^```json\s*/i, '').replace(/```\s*$/, '').trim();
 
-  // Strip markdown code fences if present
-  const cleaned = text.replace(/^```json\s*/i, '').replace(/```\s*$/, '').trim();
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(cleaned);
+      } catch {
+        console.error(`  ✗ Batch ${batchIndex} (${modelName}) returned invalid JSON. Trying next model.`);
+        continue;
+      }
 
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(cleaned);
-  } catch {
-    console.error(`  ✗ Batch ${batchIndex} returned invalid JSON. Skipping.`);
-    return [];
-  }
+      if (!Array.isArray(parsed)) {
+        console.error(`  ✗ Batch ${batchIndex} (${modelName}) response is not an array. Trying next model.`);
+        continue;
+      }
 
-  if (!Array.isArray(parsed)) {
-    console.error(`  ✗ Batch ${batchIndex} response is not an array. Skipping.`);
-    return [];
-  }
+      const valid = parsed.filter((p) => {
+        if (!isValidPuzzle(p)) {
+          console.warn(`  ⚠ Skipping malformed puzzle: ${JSON.stringify(p).slice(0, 80)}`);
+          return false;
+        }
+        return true;
+      }) as RawPuzzle[];
 
-  const valid = parsed.filter((p) => {
-    if (!isValidPuzzle(p)) {
-      console.warn(`  ⚠ Skipping malformed puzzle: ${JSON.stringify(p).slice(0, 80)}`);
-      return false;
+      console.log(`  ✓ Batch ${batchIndex}: ${valid.length}/${parsed.length} puzzles valid`);
+      return valid;
+    } catch (err) {
+      console.error(`  ✗ Batch ${batchIndex} (${modelName}) failed:`, err);
     }
-    return true;
-  }) as RawPuzzle[];
+  }
 
-  console.log(`  ✓ Batch ${batchIndex}: ${valid.length}/${parsed.length} puzzles valid`);
-  return valid;
+  console.error(`  ✗ Batch ${batchIndex}: all models failed. Skipping.`);
+  return [];
 }
 
 async function main() {

@@ -7,18 +7,26 @@ import { getDailyPuzzles, getDailyPuzzleNumber, getTodayString } from '@/lib/puz
 const memCache = new Map<string, Puzzle[]>();
 
 async function kvGet(key: string): Promise<Puzzle[] | null> {
-  if (process.env.KV_REST_API_URL) {
-    const { kv } = await import('@vercel/kv');
-    return kv.get<Puzzle[]>(key);
+  try {
+    if (process.env.KV_REST_API_URL) {
+      const { kv } = await import('@vercel/kv');
+      return await kv.get<Puzzle[]>(key);
+    }
+  } catch (err) {
+    console.error('[daily-set] KV get failed, falling back:', err);
   }
   return memCache.get(key) ?? null;
 }
 
 async function kvSet(key: string, value: Puzzle[], exSeconds: number): Promise<void> {
-  if (process.env.KV_REST_API_URL) {
-    const { kv } = await import('@vercel/kv');
-    await kv.set(key, value, { ex: exSeconds });
-    return;
+  try {
+    if (process.env.KV_REST_API_URL) {
+      const { kv } = await import('@vercel/kv');
+      await kv.set(key, value, { ex: Math.max(exSeconds, 1) });
+      return;
+    }
+  } catch (err) {
+    console.error('[daily-set] KV set failed, using in-memory:', err);
   }
   memCache.set(key, value);
 }
@@ -42,7 +50,7 @@ function isValidPuzzle(p: unknown): p is Puzzle {
 
 // ── Gemini generation ─────────────────────────────────────────────────────────
 
-const MODEL = 'gemini-2.5-pro';
+const MODELS = ['gemini-2.5-pro', 'gemini-2.5-flash'];
 
 function buildPrompt(dateStr: string): string {
   return `Generate exactly 5 LSAT-style logic puzzles for a daily puzzle game called "Syllogle."
@@ -91,30 +99,36 @@ Respond with ONLY a valid JSON array, no markdown:
 ]`;
 }
 
+async function tryGenerate(apiKey: string, modelName: string, dateStr: string): Promise<Puzzle[] | null> {
+  const genAI = new GoogleGenerativeAI(apiKey);
+  const model = genAI.getGenerativeModel({ model: modelName });
+  const result = await model.generateContent(buildPrompt(dateStr));
+  const text = result.response.text().trim();
+  const cleaned = text.replace(/^```json\s*/i, '').replace(/```\s*$/, '').trim();
+  const parsed = JSON.parse(cleaned);
+  if (!Array.isArray(parsed)) return null;
+  const valid = parsed.filter(isValidPuzzle);
+  return valid.length >= 5 ? valid.slice(0, 5) : null;
+}
+
 async function generateDailySet(dateStr: string): Promise<Puzzle[] | null> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return null;
 
-  try {
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: MODEL });
-    const result = await model.generateContent(buildPrompt(dateStr));
-    const text = result.response.text().trim();
-    const cleaned = text.replace(/^```json\s*/i, '').replace(/```\s*$/, '').trim();
-    const parsed = JSON.parse(cleaned);
-
-    if (!Array.isArray(parsed)) return null;
-
-    const valid = parsed.filter(isValidPuzzle);
-    if (valid.length < 5) {
-      console.error(`[daily-set] Only ${valid.length}/5 puzzles passed validation`);
-      return valid.length > 0 ? valid : null;
+  for (const modelName of MODELS) {
+    try {
+      const result = await tryGenerate(apiKey, modelName, dateStr);
+      if (result) {
+        console.log(`[daily-set] Generated via ${modelName}`);
+        return result;
+      }
+    } catch (err) {
+      console.error(`[daily-set] ${modelName} failed, trying next:`, err);
     }
-    return valid.slice(0, 5);
-  } catch (err) {
-    console.error('[daily-set] Gemini generation failed:', err);
-    return null;
   }
+
+  console.error('[daily-set] All models failed');
+  return null;
 }
 
 // ── Main export ───────────────────────────────────────────────────────────────
