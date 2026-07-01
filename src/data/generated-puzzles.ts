@@ -9,827 +9,2628 @@ const generatedPuzzles: Puzzle[] = [
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All successful authors write every day.",
-      "No one who writes every day struggles with writer's block.",
-      "Some successful authors struggle with writer's block."
+      "All chefs who work at the bistro are also bakers.",
+      "No baker has formal pastry training.",
+      "Several chefs at the bistro have formal pastry training."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 says all successful authors write every day. Statement 2 says no one who writes every day struggles with writer's block. Combining these, it logically follows that no successful author struggles with writer's block. This directly contradicts Statement 3, which claims some successful authors do struggle with writer's block."
+    "explanation": "Statement 1 says all bistro chefs are bakers, and Statement 2 says no baker has pastry training. Together, these mean no chef at the bistro has pastry training. This directly contradicts Statement 3, which claims that some chefs there do have pastry training."
   },
   {
     "id": "gen-1-2",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "Every cat enjoys a warm sunny spot.",
-      "Some animals that enjoy warm sunny spots are not cats.",
-      "Fido is an animal that enjoys a warm sunny spot."
+      "Every hardcover book on the top shelf is a work of fiction.",
+      "Some works of fiction are not hardcover books.",
+      "All books on the top shelf are library property."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 states a characteristic of all cats. Statement 2 clarifies that this characteristic is not exclusive to cats. Fido, an animal that enjoys warm sunny spots, could be a cat or one of the non-cat animals mentioned in Statement 2, so no contradiction arises."
+    "explanation": "This set is consistent. The statements establish that all hardcover books on the top shelf are fiction and belong to the library. The fact that some fiction books are not hardcover (e.g., paperbacks on another shelf) does not create a contradiction."
   },
   {
     "id": "gen-1-3",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a restaurant serves authentic Italian food, its chefs are from Italy.",
-      "No chef from Italy uses frozen ingredients.",
-      "The Bella Napoli restaurant serves authentic Italian food.",
-      "The chefs at Bella Napoli use some frozen ingredients."
+      "Any runner who completes a marathon is not a sprinter.",
+      "All runners on the university team completed a marathon.",
+      "Every sprinter on the university team trains daily.",
+      "Some runners on the university team are sprinters."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 3 establishes that Bella Napoli serves authentic Italian food. From Statement 1, this means Bella Napoli's chefs are from Italy. Statement 2 then dictates that no chef from Italy uses frozen ingredients. Therefore, Bella Napoli's chefs must not use frozen ingredients, which directly contradicts Statement 4."
+    "explanation": "From Statement 2, all university runners completed a marathon. From Statement 1, any runner who completes a marathon is not a sprinter. Therefore, no runner on the university team can be a sprinter. This contradicts Statement 4, which says some runners on the team are sprinters."
   },
   {
     "id": "gen-1-4",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All birds have feathers.",
-      "Some animals with feathers cannot fly.",
-      "Penguins are birds."
+      "Every pilot with a commercial license has passed a flight exam.",
+      "Some pilots with a commercial license do not have helicopter training.",
+      "All pilots with helicopter training have passed a flight exam."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Since penguins are birds (Statement 3) and all birds have feathers (Statement 1), penguins must have feathers. Statement 2 allows for some feathered animals to be unable to fly, which is consistent with penguins being birds that cannot fly."
+    "explanation": "This set is consistent. It is possible for every pilot with a commercial license and every pilot with helicopter training to have passed a flight exam, while some with a commercial license lack helicopter training. For example, a licensed airplane pilot without helicopter training fits all criteria."
   },
   {
     "id": "gen-1-5",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All residents of Sector 7 have a green access card.",
-      "No one with a green access card is permitted in the high-security zone.",
-      "Some individuals permitted in the high-security zone are residents of Sector 7."
+      "No electronic gadget is completely waterproof.",
+      "Every gadget sold at the tech store is electronic.",
+      "All battery-powered gadgets are sold at the tech store.",
+      "Some of the new gadgets are both battery-powered and waterproof."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 indicates that all residents of Sector 7 have a green access card. Statement 2 says that no one with a green access card is permitted in the high-security zone. This implies that no resident of Sector 7 is permitted in the high-security zone. However, Statement 3 asserts that some residents of Sector 7 are permitted in the high-security zone, creating a contradiction."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: All battery-powered gadgets are sold at the tech store, all tech store gadgets are electronic, and no electronic gadget is waterproof. Therefore, no battery-powered gadget is waterproof. This conflicts with Statement 4, which states that some gadgets are both."
   },
   {
     "id": "gen-1-6",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "Every successful politician understands public opinion.",
-      "Some individuals who understand public opinion are not politicians.",
-      "Maya understands public opinion."
+      "All managers are salaried employees.",
+      "Some employees who attended the meeting are not managers.",
+      "Every salaried employee attended the meeting."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 describes a characteristic of successful politicians. Statement 2 clarifies that understanding public opinion is not exclusive to politicians. Maya, who understands public opinion, could be a successful politician or one of the individuals mentioned in Statement 2, so no contradiction exists."
+    "explanation": "This set is consistent. From statements 1 and 3, we can deduce that all managers attended the meeting. Statement 2, which says some meeting attendees were not managers, is perfectly compatible with this, as the meeting could have included both managers and other non-manager employees."
   },
   {
     "id": "gen-1-7",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a vehicle is an electric car, it produces no emissions.",
-      "All vehicles that produce no emissions are subject to a special tax.",
-      "Some electric cars are not subject to a special tax."
+      "Unless a painting is on canvas, it is not an oil painting.",
+      "Every framed painting in the gallery is an oil painting.",
+      "Some of the framed paintings in the gallery are not on canvas."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 establishes that electric cars produce no emissions. Statement 2 states that all vehicles producing no emissions are subject to a special tax. Combining these, it follows that all electric cars are subject to a special tax. This conclusion directly contradicts Statement 3, which claims some electric cars are not subject to a special tax."
+    "explanation": "Statement 1 is equivalent to \"All oil paintings are on canvas.\" Statement 2 says all framed paintings are oil paintings. Combining these, we conclude that all framed paintings in the gallery must be on canvas. This contradicts Statement 3."
   },
   {
     "id": "gen-1-8",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All fruit bats eat only fruit.",
-      "Some animals that eat only fruit are not bats.",
-      "A particular species of bird eats only fruit."
+      "Every car is a vehicle with four wheels.",
+      "Some registered vehicles are not cars.",
+      "Every vehicle with four-wheel drive is registered.",
+      "Some cars have four-wheel drive."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 describes the diet of fruit bats. Statement 2 states that eating only fruit is not unique to bats. Statement 3 presents a species of bird that fits this description, which is entirely consistent with Statement 2."
+    "explanation": "This set is consistent. From statements 4 and 3, some cars have four-wheel drive, and all such vehicles are registered, so at least some cars are registered. Statement 2 says some registered vehicles are not cars (e.g., trucks), which does not conflict with the fact that some registered vehicles *are* cars."
   },
   {
     "id": "gen-1-9",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "Every successful mountaineer has trained in high altitudes.",
-      "No one who has trained in high altitudes suffers from acute altitude sickness.",
-      "Some people who suffer from acute altitude sickness are successful mountaineers."
+      "Any student who is a graduate is employed.",
+      "No intern is employed.",
+      "All of the students from the spring cohort are interns.",
+      "Every student from the spring cohort is a graduate."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says every successful mountaineer has trained in high altitudes. Statement 2 says no one who has trained in high altitudes suffers from acute altitude sickness. Together, these imply that no successful mountaineer suffers from acute altitude sickness. This directly contradicts Statement 3, which claims some successful mountaineers do suffer from acute altitude sickness."
+    "answerIndex": 3,
+    "explanation": "Statements 3 and 4 mean all spring cohort students are both interns and graduates. But Statement 1 requires all graduates to be employed, while Statement 2 requires all interns to be not employed. This leads to the contradiction that the entire spring cohort is both employed and not employed."
   },
   {
     "id": "gen-1-10",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All professional artists have a unique style.",
-      "Some people with a unique style are not professional artists.",
-      "David has a unique style."
+      "All pets are domesticated animals.",
+      "Some mammals are not pets.",
+      "Every pet is a mammal."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 describes a characteristic of professional artists. Statement 2 indicates that having a unique style is not exclusive to professional artists. David, who has a unique style, could be a professional artist or one of the individuals mentioned in Statement 2, so no contradiction arises."
+    "explanation": "This set is consistent. The statements establish that 'pets' are a sub-category of 'mammals'. The fact that some mammals are not pets (like wild animals) is fully compatible with this structure. That all pets are also domesticated does not create a conflict."
+  },
+  {
+    "id": "gen-2-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a project is greenlit, it requires a budget review.",
+      "Any project requiring a budget review is assigned to the senior team.",
+      "All marketing projects are fast-tracked.",
+      "No project assigned to the senior team is fast-tracked.",
+      "At least one greenlit project is also a marketing project."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statement 5 introduces a project that is both greenlit and for marketing. From statements 1 and 2, this project must be assigned to the senior team. From statement 3, it must be fast-tracked. However, statement 4 makes these two outcomes mutually exclusive."
+  },
+  {
+    "id": "gen-2-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All hardcover books are placed in the 'New Arrivals' section.",
+      "Any book in the 'New Arrivals' section receives a promotional discount.",
+      "No textbook receives a promotional discount.",
+      "Some books sold in the store are textbooks."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements can all be true. From statements 1 and 2, all hardcovers get a discount. Statement 3 says no textbooks get a discount. This simply implies that no book can be both a hardcover and a textbook, which is a possible scenario."
+  },
+  {
+    "id": "gen-2-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every perennial plant has deep roots.",
+      "Any plant with deep roots blooms in the summer.",
+      "No alpine species blooms in the summer.",
+      "Some plants in the greenhouse are both alpine species and perennial plants."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 describes a plant that is both an alpine species and a perennial. Following statements 1 and 2, as a perennial, this plant must have deep roots and bloom in the summer. This directly contradicts statement 3, which asserts no alpine species blooms in the summer."
+  },
+  {
+    "id": "gen-2-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "An employee can vote on the proposal only if they attend the meeting.",
+      "Unless an employee is on the board of directors, they do not receive the memo.",
+      "Everyone who attends the meeting receives the memo.",
+      "Some employees on the board of directors did not attend the meeting."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The rules are consistent. The logic chain is: Vote (Statement 1) → Attend Meeting (Statement 3) → Receive Memo (contrapositive of Statement 2) → On Board. Statement 4 describes a board member who doesn't attend, which simply means they cannot vote, creating no contradiction."
+  },
+  {
+    "id": "gen-2-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every physics major is required to take Calculus III.",
+      "All students who take Calculus III must enroll in the advanced lab.",
+      "All students in the advanced lab are eligible for the research grant.",
+      "Some physics majors are not eligible for the research grant."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "The first three statements create a logical chain: Physics Major → Calculus III → Advanced Lab → Eligible for Grant. This implies all physics majors are eligible for the grant. Statement 4 directly contradicts this conclusion."
+  },
+  {
+    "id": "gen-2-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All employees in the sales department have access to the client database.",
+      "Anyone with access to the client database must attend security training.",
+      "No temporary contractor is required to attend security training.",
+      "Some temporary contractors are assigned to the sales department."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 introduces a temporary contractor in the sales department. According to statements 1 and 2, this person must have database access and attend security training. However, statement 3 forbids any temporary contractor from attending this training, resulting in a contradiction."
+  },
+  {
+    "id": "gen-2-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an employee is a chef, they work in the main kitchen.",
+      "Anyone who works in the main kitchen must wear a white coat.",
+      "No employee who works in the pastry section wears a white coat.",
+      "Some chefs are also trained as pastry specialists."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements can all be true. A chef trained as a pastry specialist still works in the main kitchen (Statement 1) and wears a white coat (Statement 2). Statement 3 applies to employees working *in the pastry section*, and being trained as a specialist doesn't mean the chef works in that section."
+  },
+  {
+    "id": "gen-2-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every SUV produced by the factory has all-wheel drive.",
+      "Any vehicle with all-wheel drive is rated for off-road use.",
+      "All hybrid models have a continuously variable transmission.",
+      "No vehicle with a continuously variable transmission is rated for off-road use.",
+      "Some of the SUVs produced by the factory are hybrid models."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statement 5 posits a vehicle that is both an SUV and a hybrid. From statements 1 and 2, this vehicle must be rated for off-road use. But from statements 3 and 4, as a hybrid, it has a transmission that means it cannot be rated for off-road use, a direct contradiction."
+  },
+  {
+    "id": "gen-2-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All contracts are reviewed by the legal team.",
+      "If a document is reviewed by the legal team, it requires a notarized signature.",
+      "No internal memo requires a notarized signature.",
+      "Some documents reviewed by the legal team are not internal memos."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are compatible. From statements 1 and 2, all contracts require a notarized signature. Statement 3 says internal memos do not. This just means contracts cannot be internal memos. Statement 4 is consistent with this, as the set of contracts can exist within the group of reviewed documents that are not memos."
+  },
+  {
+    "id": "gen-2-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every musician in the conservatory plays a classical instrument.",
+      "Some musicians who play a classical instrument perform in the orchestra.",
+      "No one who performs in the orchestra is a jazz soloist.",
+      "Some musicians who play a classical instrument are also jazz soloists."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. The group of 'musicians who play a classical instrument' can be split into subgroups. Some are in the orchestra and are not jazz soloists (per statements 2 and 3), while a separate subgroup consists of jazz soloists who are not in the orchestra (per statement 4)."
   },
   {
     "id": "gen-3-1",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All lions are carnivores.",
-      "No carnivores are herbivores.",
-      "Some lions are herbivores."
+      "All parrots are birds that can mimic speech.",
+      "No bird that lives in the deep jungle can mimic speech.",
+      "Some of the parrots sold at the pet store live in the deep jungle."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 says all lions are carnivores. Statement 2 says no carnivores are herbivores. This implies that no lions are herbivores. However, Statement 3 claims that some lions are herbivores, which directly contradicts the conclusion from Statements 1 and 2."
+    "explanation": "According to Statement 3, some parrots live in the deep jungle. Statement 1 says these parrots can mimic speech, but Statement 2 says that no bird living in the deep jungle can mimic speech. This is a direct contradiction."
   },
   {
     "id": "gen-3-2",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All teachers attend faculty meetings.",
-      "Some faculty meeting attendees are not teachers.",
-      "No students attend faculty meetings."
+      "All of the tools in the red box are hammers.",
+      "Some hammers are made of steel.",
+      "Some of the tools in the red box are not made of steel."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "It is possible for all teachers to attend faculty meetings, for some non-teachers (e.g., administrators) to also attend, and for no students to attend. There is no contradiction among these statements."
+    "explanation": "This set of statements is consistent. The hammers made of steel mentioned in Statement 2 do not have to be the same hammers that are in the red box. The hammers in the red box could all be made of a different material, like titanium."
   },
   {
     "id": "gen-3-3",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "If a bird has blue feathers, it can sing.",
-      "No birds that can sing are flightless.",
-      "Some birds with blue feathers are flightless."
+      "Every person on the marketing team is a salaried employee.",
+      "Any salaried employee is eligible for a bonus.",
+      "No one eligible for a bonus works on weekends.",
+      "Some people on the marketing team work on weekends."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 indicates that birds with blue feathers can sing. Statement 2 states that no birds that can sing are flightless. Together, these imply that no birds with blue feathers are flightless. This directly contradicts Statement 3, which claims some birds with blue feathers are flightless."
+    "answerIndex": 3,
+    "explanation": "From Statements 1, 2, and 3, it follows that everyone on the marketing team is a salaried employee, is eligible for a bonus, and therefore does not work on weekends. This derived rule, that no one on the marketing team works on weekends, directly contradicts Statement 4."
   },
   {
     "id": "gen-3-4",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All successful authors have published at least one book.",
-      "Some people who have published at least one book are not successful authors.",
-      "No successful authors write science fiction."
+      "If a student is in the advanced class, they must submit a thesis.",
+      "No student who is on academic probation has to submit a thesis.",
+      "Some students in the advanced class are not on academic probation."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "It is entirely possible that all successful authors have published books, that some non-successful authors have also published books, and that successful authors focus on genres other than science fiction. These statements can all be true simultaneously."
+    "explanation": "This set is consistent. The students in the advanced class who are not on probation must submit a thesis, according to Statement 1. This does not conflict with Statement 2, which applies to a different group of students (those on probation)."
   },
   {
     "id": "gen-3-5",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "Every project approved by the committee receives funding.",
-      "All projects that receive funding must submit quarterly reports.",
-      "Some projects started last year were approved by the committee.",
-      "No projects started last year submitted quarterly reports."
+      "All architects are designers.",
+      "All designers use drafting software.",
+      "Some of the new hires are architects.",
+      "None of the new hires use drafting software."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 1 says approved projects receive funding, and Statement 2 says funded projects submit quarterly reports. This chain implies that all projects approved by the committee must submit quarterly reports. Statement 3 claims some projects started last year were approved by the committee, which means some projects started last year must submit quarterly reports. This contradicts Statement 4, which states that no projects started last year submitted quarterly reports."
+    "explanation": "From Statement 3, some new hires are architects. Following the chain in Statements 1 and 2, these new hires must be designers who use drafting software. This conclusion, that some new hires use drafting software, directly contradicts Statement 4."
   },
   {
     "id": "gen-3-6",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "Every student who attended the workshop improved their grades.",
-      "Some students who improved their grades did not attend the workshop.",
-      "All students who improved their grades also studied more."
+      "All pianists are musicians.",
+      "No sculptor is a musician.",
+      "Laura is a pianist."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Students could improve grades either by attending the workshop or by other means (e.g., studying more without attending the workshop). All scenarios described are plausible at the same time."
+    "explanation": "These statements are consistent. From Statements 1 and 3, we know Laura is a musician. From Statement 2, we can then conclude that Laura is not a sculptor. There is no contradiction."
   },
   {
     "id": "gen-3-7",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All dogs enjoy playing in the park.",
-      "No animals that enjoy playing in the park are afraid of squirrels.",
-      "Some animals that are afraid of squirrels are dogs."
+      "All interns work in the mailroom.",
+      "Anyone who works in the mailroom has a level-one security pass.",
+      "All employees with a level-one security pass are junior staff.",
+      "Some of the interns are not junior staff."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all dogs enjoy playing in the park. Statement 2 says no animals that enjoy playing in the park are afraid of squirrels. Combined, these statements imply that no dogs are afraid of squirrels. Statement 3, however, asserts that some dogs are afraid of squirrels, creating a direct contradiction."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a logical chain: all interns work in the mailroom, have a level-one pass, and are therefore junior staff. The conclusion that all interns are junior staff contradicts the claim in Statement 4 that some are not."
   },
   {
     "id": "gen-3-8",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All participants completed the survey.",
-      "Some people who completed the survey did not participate.",
-      "If a person did not complete the survey, they did not receive a reward."
+      "Any book on the top shelf is a work of fiction.",
+      "Some of the hardcover books are not works of fiction.",
+      "Some of the books on the top shelf are hardcover books."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Participants completed the survey. Other individuals (non-participants) could also complete the survey. The last statement simply sets a condition for receiving a reward, which doesn't conflict with the other statements."
+    "explanation": "This is consistent. The hardcover books on the top shelf must be fiction (by Statement 1). The hardcover books that are not fiction (from Statement 2) must simply be on a different shelf."
   },
   {
     "id": "gen-3-9",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "If a plant is a rose, it has thorns.",
-      "Every plant with thorns requires careful handling.",
-      "Some plants that require careful handling are not roses.",
-      "No plant that is a rose requires careful handling."
+      "All of the library's history books are leather-bound.",
+      "Every book in the special collection is a history book.",
+      "No paperback book is leather-bound.",
+      "Some books in the special collection are paperbacks."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 1 says if a plant is a rose, it has thorns. Statement 2 says every plant with thorns requires careful handling. These two statements logically imply that if a plant is a rose, it requires careful handling. Statement 4 directly contradicts this conclusion by stating that no plant that is a rose requires careful handling."
+    "explanation": "Statement 4 says some books in the special collection are paperbacks; Statement 3 says these books cannot be leather-bound. However, Statement 2 says all special collection books are history books, and Statement 1 says all history books are leather-bound. This creates a contradiction."
   },
   {
     "id": "gen-3-10",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All successful businesses prioritize customer satisfaction.",
-      "Some businesses that prioritize customer satisfaction are not successful.",
-      "If a business is successful, it invests in employee training."
+      "No documentary film is a comedy.",
+      "All of the director's movies are documentary films.",
+      "Some of the movies shown at the festival were the director's movies."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. A business can be successful by prioritizing customer satisfaction and investing in training. Other businesses can prioritize customer satisfaction without being successful. No contradictions arise."
+    "explanation": "These statements are consistent. From the statements, we can conclude that some movies shown at the festival were documentary films by the director, and therefore were not comedies. This conclusion does not contradict any of the given information."
   },
   {
     "id": "gen-4-1",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All poets are dreamers.",
-      "No dreamers are realists.",
-      "Some artists are realists.",
-      "All artists are poets."
+      "Every lawyer has a college degree.",
+      "No one with a college degree has skipped high school.",
+      "Some lawyers have skipped high school."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 4, 1, and 2 together imply that all artists are not realists (All artists are poets → All poets are dreamers → No dreamers are realists). This conclusion directly contradicts Statement 3, which claims some artists are realists."
+    "explanation": "Statement 1 says that every lawyer has a college degree. Statement 2 says that no one with a college degree has skipped high school. Together, these two statements imply that no lawyer has skipped high school. This directly contradicts Statement 3, which claims some lawyers have skipped high school. Removing Statement 3 resolves the inconsistency."
   },
   {
     "id": "gen-4-2",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All mammals have fur.",
-      "Some animals with fur are not mammals.",
-      "No reptiles have fur."
+      "All successful startups require significant investment.",
+      "Some businesses that require significant investment fail.",
+      "No business that fails is considered a successful startup.",
+      "Every startup founded by Maria requires significant investment."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "It is possible for all these statements to be true simultaneously. For example, some animals with fur could be insects or other non-mammalian creatures, which is consistent with all mammals having fur and reptiles having no fur."
+    "explanation": "All statements can be true simultaneously. Successful startups require significant investment (Statement 1) and do not fail (Statement 3). Some businesses that require significant investment do fail (Statement 2), but these are not successful startups. Maria's startups require significant investment (Statement 4) and could be either successful or among those that fail, without contradicting any other statement."
   },
   {
     "id": "gen-4-3",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "If a plant needs direct sunlight, it has bright flowers.",
-      "All plants with bright flowers attract hummingbirds.",
-      "Some plants that attract hummingbirds do not need direct sunlight.",
-      "Every plant in this garden needs direct sunlight.",
-      "No plant in this garden attracts hummingbirds."
+      "All students who complete the final project pass the course.",
+      "No student who misses more than two lectures completes the final project.",
+      "Every student who passes the course is eligible for advanced study.",
+      "Some students eligible for advanced study missed more than two lectures."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 4, 1, and 2 chain together to imply that every plant in this garden attracts hummingbirds (Every plant in this garden needs direct sunlight → Every plant has bright flowers → Every plant attracts hummingbirds). This conclusion directly contradicts Statement 5, which asserts that no plant in this garden attracts hummingbirds."
+    "answerIndex": 3,
+    "explanation": "Statement 2 says students who miss more than two lectures do not complete the final project. Statement 1 says all students who complete the final project pass the course (thus, students who don't complete it don't pass it). Statement 3 says every student who passes the course is eligible for advanced study (thus, students who don't pass aren't eligible for advanced study). Chaining these, students who miss more than two lectures (from Statement 2) do not complete the final project, thus do not pass the course, thus are not eligible for advanced study. This conclusion directly contradicts Statement 4, which claims some students eligible for advanced study missed more than two lectures. Removing Statement 4 resolves the inconsistency."
   },
   {
     "id": "gen-4-4",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful startups began with a strong vision.",
-      "Some companies with a strong vision did not become successful startups.",
-      "If a company lacked funding, it could not become a successful startup.",
-      "Many companies with a strong vision also lacked funding."
+      "All registered voters are at least eighteen years old.",
+      "No one under eighteen years old can legally purchase alcohol.",
+      "Some people who can legally purchase alcohol are not registered voters.",
+      "Emily is a registered voter."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true. Some companies with a strong vision might not succeed due to factors like lack of funding, which is consistent with all successful startups needing both vision and funding."
+    "explanation": "All statements can be true at the same time. Registered voters are 18+ (Statement 1). Those who can purchase alcohol must be 18+ (derived from Statement 2). It's possible for some people to be 18+ and purchase alcohol but not be registered voters (Statement 3), for instance, if they simply chose not to register. Emily, as a registered voter (Statement 4), is 18+ and can legally purchase alcohol, consistent with all other statements."
   },
   {
     "id": "gen-4-5",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All students who passed the exam studied diligently.",
-      "No one who studied diligently failed the course.",
-      "Some students who passed the exam failed the course."
+      "Every participant in the conference holds a doctoral degree.",
+      "No one holding a doctoral degree is an undergraduate student.",
+      "All researchers presenting at the conference are participants.",
+      "At least one researcher presenting at the conference is an undergraduate student."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together imply that all students who passed the exam did not fail the course (All students who passed the exam studied diligently → No one who studied diligently failed the course). This conclusion directly contradicts Statement 3, which states that some students who passed the exam failed the course."
+    "answerIndex": 3,
+    "explanation": "Statement 3 indicates all presenting researchers are participants. Statement 1 indicates every participant holds a doctoral degree. Statement 2 indicates no one holding a doctoral degree is an undergraduate student. Chaining these, it follows that no researcher presenting at the conference is an undergraduate student. This conclusion directly contradicts Statement 4, which claims at least one researcher presenting at the conference is an undergraduate student. Removing Statement 4 resolves the inconsistency."
   },
   {
     "id": "gen-4-6",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "Every chef has a passion for food.",
-      "Some people with a passion for food are not chefs.",
-      "No one who dislikes cooking is a chef.",
-      "All people who dislike cooking lack a passion for food."
+      "All fruits that ripen in summer are berries.",
+      "Some fruits that grow on a vine are not berries.",
+      "No fruit that ripens in summer grows on a vine.",
+      "Grapes ripen in summer."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements are consistent. It is possible for chefs to have a passion for food, for others to have a passion for food without being chefs, and for those who dislike cooking to lack passion for food and thus not be chefs."
+    "explanation": "All statements can be true simultaneously. Fruits that ripen in summer are berries (Statement 1) and do not grow on vines (Statement 3). Some vine-growing fruits are not berries (Statement 2), which is consistent because these fruits cannot be summer-ripening berries. Grapes ripen in summer (Statement 4), so they are berries and do not grow on vines, which is consistent with the other statements (even if many grapes *do* grow on vines, this logical structure allows for a scenario where these particular 'grapes' are not vine-grown according to the rules)."
   },
   {
     "id": "gen-4-7",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "If a bird builds a nest in a tree, it lays blue eggs.",
-      "No bird that lays blue eggs is a ground-nesting bird.",
-      "All sparrows build nests in trees.",
-      "Some sparrows are ground-nesting birds."
+      "All applicants for the advanced grant have successfully completed a prior research project.",
+      "No one who has successfully completed a prior research project needs to submit supplementary materials.",
+      "Every applicant for the advanced grant must submit supplementary materials."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 3, 1, and 2 together imply that all sparrows are not ground-nesting birds (All sparrows build nests in trees → All sparrows lay blue eggs → No sparrows are ground-nesting birds). This conclusion directly contradicts Statement 4, which claims some sparrows are ground-nesting birds."
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all applicants for the advanced grant have completed a prior research project. Statement 2 says no one who has completed a prior research project needs to submit supplementary materials. Together, these two statements imply that no applicant for the advanced grant needs to submit supplementary materials. This directly contradicts Statement 3, which claims every applicant for the advanced grant must submit supplementary materials. Removing Statement 3 resolves the inconsistency."
   },
   {
     "id": "gen-4-8",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful athletes train rigorously.",
-      "Some people who train rigorously are not successful athletes.",
-      "If an athlete uses prohibited substances, they are not a successful athlete.",
-      "Many people who train rigorously also use prohibited substances."
+      "All fruits rich in Vitamin C are citrus fruits.",
+      "No citrus fruit contains high levels of natural sugar.",
+      "Some fruits with high levels of natural sugar are berries.",
+      "Blueberries are berries."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "It is possible for all these statements to be true. Some rigorous trainers might not be successful athletes for various reasons, including the use of prohibited substances, which would prevent them from being considered successful athletes per Statement 3."
+    "explanation": "All statements can be true simultaneously. Fruits rich in Vitamin C are citrus (Statement 1), and citrus fruits do not have high levels of natural sugar (Statement 2). This means fruits rich in Vitamin C do not have high levels of natural sugar. Statement 3 claims some fruits with high levels of natural sugar are berries; these berries, by extension, cannot be citrus fruits or rich in Vitamin C. Blueberries are berries (Statement 4) and could be among those with high natural sugar or not, without contradicting any other statement."
   },
   {
     "id": "gen-4-9",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All candidates who pass the first interview are invited to a second.",
-      "No candidate invited to a second interview is rejected solely on their resume.",
-      "If a candidate has prior experience, they pass the first interview.",
-      "Every candidate for this position has prior experience.",
-      "This company rejects all candidates solely on their resume."
+      "A species is considered endangered unless its population has stabilized.",
+      "No species with a stable population faces habitat loss.",
+      "Every endangered species requires conservation efforts.",
+      "Some species facing habitat loss do not require conservation efforts."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 4, 3, 1, and 2 chain together to imply that no candidate for this position is rejected solely on their resume (Every candidate has prior experience → Every candidate passes the first interview → Every candidate is invited to a second interview → No candidate is rejected solely on their resume). This conclusion directly contradicts Statement 5, which asserts that this company rejects all candidates solely on their resume."
+    "answerIndex": 3,
+    "explanation": "Statement 1 implies that if a species' population has not stabilized, it is endangered. Statement 3 says every endangered species requires conservation efforts. Therefore, if a species' population has not stabilized, it requires conservation efforts. Statement 2 says no species with a stable population faces habitat loss, which implies that if a species faces habitat loss, its population has not stabilized. Chaining these three implications: If a species faces habitat loss (from Statement 2's contrapositive), then its population has not stabilized (from Statement 2), then it is endangered (from Statement 1), and thus it requires conservation efforts (from Statement 3). So, every species facing habitat loss requires conservation efforts. This directly contradicts Statement 4, which claims some species facing habitat loss do not require conservation efforts. Removing Statement 4 resolves the inconsistency."
   },
   {
     "id": "gen-4-10",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All items in the sale section are discounted.",
-      "Some discounted items are not in the sale section.",
-      "All items purchased with a coupon are discounted."
+      "All participants in the advanced workshop are experienced researchers.",
+      "No experienced researcher requires direct supervision.",
+      "Some individuals who require direct supervision are new employees.",
+      "Emily is an experienced researcher."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All three statements can be true. Items can be discounted because they are in the sale section, or because a coupon was used, or both. There can also be discounted items that are neither in the sale section nor purchased with a coupon (e.g., clearance items)."
+    "explanation": "All statements can be true simultaneously. Participants in the advanced workshop are experienced researchers (Statement 1), and experienced researchers do not require direct supervision (Statement 2). This implies advanced workshop participants do not require direct supervision. Some individuals who require direct supervision are new employees (Statement 3), meaning these new employees are not experienced researchers. Emily is an experienced researcher (Statement 4), so she does not require direct supervision. These facts are all consistent."
   },
   {
     "id": "gen-5-1",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a plant is a fern, it requires shade.",
-      "Any plant that requires shade cannot tolerate direct sunlight.",
-      "Plants that cannot tolerate direct sunlight are sensitive to heat.",
-      "If a plant is sensitive to heat, it must be watered daily.",
-      "Some ferns do not need to be watered daily."
+      "If a bird is a robin, then it has a red breast.",
+      "Birds with red breasts always migrate south for winter.",
+      "No bird that migrates south for winter stays in this forest year-round.",
+      "There is at least one robin that stays in this forest year-round."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 1, 2, 3, and 4 form a chain: If a plant is a fern, then it requires shade, cannot tolerate direct sunlight, is sensitive to heat, and thus must be watered daily. This implies that all ferns must be watered daily. Statement 5 claims that some ferns do not need to be watered daily, which directly contradicts the conclusion derived from the other statements."
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 establish that all robins migrate south for winter. Statement 3 then means that no bird that migrates south for winter stays in this forest year-round. Therefore, no robin stays in this forest year-round, which directly contradicts Statement 4."
   },
   {
     "id": "gen-5-2",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All successful ventures involved careful planning.",
-      "No project that lacked proper funding was a successful venture.",
-      "If a project had careful planning, it secured proper funding.",
-      "Some projects with careful planning were not successful ventures."
+      "If a student is enrolled in the advanced calculus course, they have passed Algebra II.",
+      "Every student who passed Algebra II scored well on the placement exam.",
+      "Some students who scored well on the placement exam are not enrolled in advanced calculus.",
+      "No student who failed the placement exam is allowed to enroll in Algebra II."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statement 1 (Successful Venture → Careful Planning) and Statement 3 (Careful Planning → Proper Funding) combine to imply that all successful ventures secured proper funding, which is consistent with Statement 2 (Successful Venture → Proper Funding). Statement 4 (Some Careful Planning → Not Successful Venture) is consistent with Statement 1, as it is possible for some projects with careful planning not to be successful ventures."
+    "explanation": "All statements can be true simultaneously. Statements 1 and 2 establish that all advanced calculus students passed Algebra II and scored well. Statement 3 indicates there are students who scored well but aren't in advanced calculus, which is consistent. Statement 4 is a restatement of Statement 2 by contrapositive and adds no new contradictory information."
   },
   {
     "id": "gen-5-3",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a chef uses locally sourced ingredients, their restaurant is highly rated.",
-      "No restaurant with a high rating serves frozen desserts.",
-      "All restaurants that do not serve frozen desserts participate in the annual food festival.",
-      "Some chefs who use locally sourced ingredients do not participate in the annual food festival."
+      "A plant will flower only if it receives ample sunlight.",
+      "Unless a plant is watered daily, it will not receive ample sunlight.",
+      "Every plant that receives special nutrients is a plant that flowers.",
+      "At least one plant receives special nutrients but is never watered daily."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: If a chef uses locally sourced ingredients, their restaurant is highly rated, which means it does not serve frozen desserts, and therefore participates in the annual food festival. This implies that all chefs who use locally sourced ingredients participate in the annual food festival. Statement 4 claims that some chefs who use locally sourced ingredients do not participate in the annual food festival, which contradicts this conclusion."
+    "explanation": "Statements 1 and 2 logically imply that if a plant flowers, it must receive ample sunlight and therefore must be watered daily. Statement 3 states that all plants receiving special nutrients flower. Thus, any plant receiving special nutrients must be watered daily, which contradicts Statement 4."
   },
   {
     "id": "gen-5-4",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a book is a bestseller, it is widely reviewed.",
-      "No book that is widely reviewed fails to appear on literary award lists.",
-      "Some books on literary award lists are not bestsellers.",
-      "All books that are widely reviewed are also bestsellers."
+      "All committee members approved the budget proposal.",
+      "If a person approved the budget proposal, they attended the last meeting.",
+      "Some people who attended the last meeting are not committee members.",
+      "No one who failed to attend the last meeting approved the budget proposal."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 4 together establish that a book is a bestseller if and only if it is widely reviewed. Statement 2 indicates that all widely reviewed books appear on literary award lists. Therefore, all bestsellers appear on literary award lists. Statement 3 is consistent with this, as books can appear on award lists without being bestsellers (e.g., non-bestselling but critically acclaimed books)."
+    "explanation": "All statements can be true simultaneously. Statements 1 and 2 imply that all committee members approved the budget and attended the meeting. Statement 3 is consistent, as not all meeting attendees need to be committee members. Statement 4 is the contrapositive of Statement 2 and does not introduce new information or a contradiction."
   },
   {
     "id": "gen-5-5",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Every member of the hiking club participates in the annual trail maintenance event.",
-      "No one who participates in the annual trail maintenance event dislikes outdoor work.",
-      "If a club member dislikes outdoor work, they are not eligible for club leadership.",
-      "All club leaders are members of the hiking club.",
-      "Some club leaders dislike outdoor work."
+      "If a student completes all assignments, they will pass the course.",
+      "No student who misses more than two lectures will complete all assignments.",
+      "Every student who passes the course is eligible for the honors program.",
+      "Some students are eligible for the honors program, even though they missed more than two lectures."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 4, 1, and 2 form a logical chain: All club leaders are members of the hiking club, meaning they participate in the annual trail maintenance event, and therefore do not dislike outdoor work. This implies that no club leader dislikes outdoor work. Statement 5 directly contradicts this conclusion by asserting that some club leaders dislike outdoor work."
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 logically imply that any student who misses more than two lectures will not complete all assignments and therefore will not pass the course. Statement 3 states that only students who pass the course are eligible for the honors program. Therefore, students who miss more than two lectures cannot be eligible for the honors program, which directly contradicts Statement 4."
   },
   {
     "id": "gen-5-6",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All effective leaders are skilled communicators.",
-      "No skilled communicator avoids public speaking.",
-      "If someone avoids public speaking, they are not an effective leader.",
-      "Some people who are skilled communicators are not effective leaders."
+      "If a painting is a masterpiece, then it will be exhibited in a national gallery.",
+      "Every painting exhibited in a national gallery is insured for a high value.",
+      "Some paintings insured for a high value are not masterpieces.",
+      "No painting that is not insured for a high value will be exhibited in a national gallery."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 2 imply that all effective leaders are skilled communicators and engage in public speaking. Statement 3 is the contrapositive of 'If a leader is effective, they engage in public speaking,' making it consistent with the combined implication of 1 and 2. Statement 4 is also consistent with Statement 1, as it is possible for some skilled communicators not to be effective leaders."
+    "explanation": "All statements can be true simultaneously. Statements 1 and 2 imply that all masterpieces are exhibited in a national gallery and are insured for a high value. Statement 3 is consistent, as there can be highly insured paintings that are not masterpieces. Statement 4 is the contrapositive of Statement 2 and presents no contradiction."
   },
   {
     "id": "gen-5-7",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a bird is a raptor, it is a hunter.",
-      "All hunters have strong talons.",
-      "No bird with strong talons is a ground-nesting species.",
-      "Unless a bird is a raptor, it is a ground-nesting species.",
-      "Some raptors are ground-nesting species."
+      "All employees who receive a bonus also exceed their sales targets.",
+      "If an employee exceeds their sales targets, they are eligible for a promotion.",
+      "No employee who works part-time is eligible for a promotion.",
+      "There is at least one employee who works part-time and receives a bonus."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 1, 2, and 3 form a chain: If a bird is a raptor, it is a hunter, has strong talons, and therefore is not a ground-nesting species. This implies that no raptor is a ground-nesting species. Statement 5 claims that some raptors are ground-nesting species, which directly contradicts this derived conclusion."
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 establish that any employee receiving a bonus will exceed sales targets and thus be eligible for a promotion. Statement 3 states that part-time employees are never eligible for a promotion. Therefore, a part-time employee cannot receive a bonus, which directly contradicts Statement 4."
   },
   {
     "id": "gen-5-8",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a substance is an acid, its pH is less than 7.",
-      "All substances with a pH greater than 7 are bases.",
-      "No substance with a pH of exactly 7 is an acid.",
-      "Some bases have a pH greater than 7."
+      "If a machine requires maintenance, its performance will decline.",
+      "Machines whose performance declines are always less efficient.",
+      "Some machines are less efficient, but do not require maintenance.",
+      "No machine that is not less efficient has a declining performance."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statement 1 defines a characteristic of acids. Statement 2 defines bases by their pH. Statement 3 clarifies that neutral substances are not acids, which is compatible with Statement 1. Statement 4 simply provides an instance of the definition given in Statement 2. There are no contradictions between these facts."
+    "explanation": "All statements can be true simultaneously. Statements 1 and 2 imply that any machine requiring maintenance will have declining performance and be less efficient. Statement 3 is consistent, as machines can be less efficient for reasons other than requiring maintenance. Statement 4 is the contrapositive of Statement 2 and introduces no inconsistency."
   },
   {
     "id": "gen-5-9",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Every employee who completes the advanced training receives a bonus.",
-      "No employee who receives a bonus has outstanding performance issues.",
-      "If an employee is eligible for advanced training, they must complete it.",
-      "If an employee has outstanding performance issues, they are not eligible for advanced training.",
-      "Some employees are eligible for advanced training but have outstanding performance issues."
+      "All vehicles in the garage are inspected annually.",
+      "If a vehicle is inspected annually, it must pass a safety check.",
+      "No vehicle that has a faulty brake system can pass a safety check.",
+      "Some vehicles with faulty brake systems are in the garage."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 3 and 1 form a chain: If an employee is eligible for advanced training, they must complete it, and therefore they receive a bonus. Statement 2 then indicates that an employee who receives a bonus has no outstanding performance issues. Combining these, if an employee is eligible for advanced training, they have no outstanding performance issues. This means if an employee has outstanding performance issues, they are not eligible for advanced training, which is exactly Statement 4. However, Statement 5 claims that some employees are eligible for advanced training AND have outstanding performance issues, directly contradicting Statement 4 and the combined conclusion."
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 imply that all vehicles in the garage are inspected annually and must pass a safety check. Statement 3 indicates that vehicles with faulty brake systems cannot pass a safety check. Therefore, no vehicle with a faulty brake system can be in the garage, which directly contradicts Statement 4."
   },
   {
     "id": "gen-5-10",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All sculptures from the Renaissance era feature religious themes.",
-      "No artwork featuring religious themes uses abstract forms.",
-      "If a sculpture uses abstract forms, it is not from the Renaissance era.",
-      "Some sculptures that do not use abstract forms are not from the Renaissance era."
+      "A student will graduate only if they complete their thesis.",
+      "Unless a student attends weekly seminars, they cannot complete their thesis.",
+      "All students who attend weekly seminars submit a final project.",
+      "No student who fails to submit a final project is permitted to graduate.",
+      "There is at least one student who graduates, but never attends weekly seminars."
     ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 2 combine to imply that if a sculpture is from the Renaissance era, it does not use abstract forms. Statement 3 is the contrapositive of this implication, making it consistent. Statement 4 is also consistent; while Renaissance sculptures do not use abstract forms, there can also be many other types of sculptures (e.g., ancient, modern) that do not use abstract forms and are also not from the Renaissance era."
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1 and 2 logically imply that if a student graduates, they must complete their thesis, and therefore must attend weekly seminars. This means all graduating students attend weekly seminars. Statement 5 directly contradicts this by asserting that at least one student graduates but never attends weekly seminars."
   },
   {
     "id": "gen-6-1",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All students who passed the final exam received a certificate.",
-      "No student who received a certificate missed more than three classes.",
-      "Some students who passed the final exam missed more than three classes."
+      "All dogs enjoy playing fetch.",
+      "No animal that enjoys playing fetch dislikes water.",
+      "Some dogs dislike water."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply that all students who passed the final exam did not miss more than three classes (Passed Exam → Received Certificate → Did Not Miss More Than Three Classes). Statement 3 asserts that some students who passed the final exam did miss more than three classes, which directly contradicts this inference. Removing Statement 3 makes the set consistent."
+    "explanation": "Statement 1 says all dogs enjoy playing fetch. Statement 2 implies that no animal that enjoys playing fetch dislikes water. Combining these, it follows that all dogs do not dislike water. This directly contradicts Statement 3, which asserts that some dogs do dislike water."
   },
   {
     "id": "gen-6-2",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All successful entrepreneurs have strong leadership skills.",
-      "Some people with strong leadership skills are not entrepreneurs.",
-      "Maria has strong leadership skills."
+      "Every successful entrepreneur is a risk-taker.",
+      "Some risk-takers are not successful entrepreneurs.",
+      "Laura is a successful entrepreneur."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All three statements can be true simultaneously. Statement 1 describes a characteristic of entrepreneurs. Statement 2 indicates that the set of people with strong leadership skills is larger than or different from the set of entrepreneurs. Statement 3 introduces Maria, who could fit into either category (an entrepreneur or a non-entrepreneur) while still possessing strong leadership skills."
+    "explanation": "Statement 3 indicates that Laura is a successful entrepreneur. According to Statement 1, this means Laura is also a risk-taker. Statement 2 allows for the existence of risk-takers who are not successful entrepreneurs, which does not create any conflict with Laura's status or the other statements."
   },
   {
     "id": "gen-6-3",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "Every bird in the aviary has a colored band.",
-      "No bird with a colored band is permitted outside the aviary.",
-      "Some birds permitted outside the aviary are currently in the aviary."
+      "All fruits containing seeds are berries.",
+      "No berry is a vegetable.",
+      "Some vegetables contain seeds."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 logically imply that no bird in the aviary is permitted outside the aviary (In Aviary → Has Colored Band → Not Permitted Outside). Statement 3 asserts that some birds permitted outside the aviary are currently in the aviary, directly contradicting this conclusion. Removing Statement 3 resolves the inconsistency."
+    "explanation": "Statement 1 states that all fruits containing seeds are berries. Statement 2 asserts that no berry is a vegetable. Therefore, it must be true that no fruit containing seeds is a vegetable. This directly contradicts Statement 3, which claims that some vegetables contain seeds."
   },
   {
     "id": "gen-6-4",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a plant requires daily watering, it has delicate roots.",
-      "Some plants with delicate roots do not require daily watering.",
-      "The rosebush in my garden requires daily watering."
+      "If a plant requires daily watering, it is a fern.",
+      "Some ferns do not require daily watering.",
+      "No fern grows well in direct sunlight.",
+      "This plant grows well in direct sunlight."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All three statements can be true at the same time. Statement 1 establishes a conditional relationship. Statement 2 indicates that the condition in Statement 1 is not reversible. Statement 3 provides a specific example of a plant that fits the antecedent of Statement 1, and thus also its consequent, without contradicting Statement 2."
+    "explanation": "From Statement 3, if a plant grows well in direct sunlight, it cannot be a fern. Statement 4 indicates that this plant grows well in direct sunlight, so it is not a fern. This conclusion is consistent with all other statements, as the plant would not require daily watering (from Statement 1's contrapositive) and Statement 2 simply notes that some ferns don't need daily watering, which is possible."
   },
   {
     "id": "gen-6-5",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All valid tickets display a barcode.",
-      "No ticket with a barcode is eligible for a refund.",
-      "All tickets eligible for a refund are valid tickets.",
-      "At least one ticket is eligible for a refund."
+      "All students who passed the final exam also completed the optional project.",
+      "No student who completed the optional project received a failing grade.",
+      "Every student in the class passed the final exam.",
+      "At least one student in the class received a failing grade."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 3, 1, and 2 together imply that no ticket can be eligible for a refund (Eligible for Refund → Valid Ticket → Displays Barcode → Not Eligible for Refund). This means that the existence of any ticket eligible for a refund is logically impossible. Statement 4, however, asserts that at least one ticket is eligible for a refund, creating a direct contradiction. Removing Statement 4 makes the set consistent."
+    "explanation": "Statement 3 indicates that every student in the class passed the final exam. According to Statement 1, this means every student in the class completed the optional project. Statement 2 then implies that no student in the class received a failing grade. This conclusion contradicts Statement 4, which states that at least one student in the class received a failing grade."
   },
   {
     "id": "gen-6-6",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All employees with management roles attend weekly meetings.",
-      "Some employees who attend weekly meetings do not have management roles.",
-      "Sarah attends weekly meetings.",
-      "Sarah does not have a management role."
+      "All mammals have fur.",
+      "Some animals with fur are not mammals.",
+      "No reptile has fur.",
+      "This animal is a mammal."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All four statements can be true simultaneously. Statement 1 establishes a rule for employees with management roles. Statement 2 clarifies that attending weekly meetings does not necessarily imply a management role. Statements 3 and 4 describe Sarah, who fits perfectly into the category described in Statement 2 (an employee who attends weekly meetings but does not have a management role), without contradicting Statement 1."
+    "explanation": "Statement 4 establishes that this animal is a mammal. Statement 1 means that this animal has fur. Statement 2 allows for animals with fur that are not mammals, which doesn't conflict. Statement 3 asserts that no reptile has fur, which is consistent with mammals having fur and this animal being a mammal."
   },
   {
     "id": "gen-6-7",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All eligible voters are registered citizens.",
-      "Every registered citizen has a valid ID card.",
-      "No one with a valid ID card is barred from voting.",
-      "Some eligible voters are barred from voting."
+      "Every successful politician has strong public speaking skills.",
+      "No one with strong public speaking skills is afraid of large crowds.",
+      "Some successful politicians are afraid of large crowds."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 together imply that no eligible voter is barred from voting (Eligible Voter → Registered Citizen → Has Valid ID Card → Not Barred from Voting). Statement 4 asserts that some eligible voters are barred from voting, directly contradicting this derived conclusion. Removing Statement 4 makes the set consistent."
+    "answerIndex": 2,
+    "explanation": "Statement 1 implies that every successful politician has strong public speaking skills. Statement 2 implies that no one with strong public speaking skills is afraid of large crowds. Therefore, it follows that no successful politician is afraid of large crowds. This directly contradicts Statement 3, which claims that some successful politicians are afraid of large crowds."
   },
   {
     "id": "gen-6-8",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All highly venomous spiders are black.",
-      "No black spider is harmless.",
-      "Some harmless spiders are not highly venomous."
+      "If a bird can fly, it has hollow bones.",
+      "No bird with hollow bones is flightless.",
+      "Some birds are flightless."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All three statements can be true simultaneously. Statement 1 describes a characteristic of highly venomous spiders. Statement 2 explains a property of black spiders, which together with Statement 1 implies that highly venomous spiders are not harmless. Statement 3 simply states that there are harmless spiders that are not highly venomous (e.g., a brown spider that is harmless), which is entirely consistent with the first two statements."
+    "explanation": "Statement 2 implies that all birds with hollow bones can fly. Combined with Statement 1, this means that a bird flies if and only if it has hollow bones. Statement 3 states that some birds are flightless, which means they do not fly and thus do not have hollow bones, creating no contradiction with the other statements."
   },
   {
     "id": "gen-6-9",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "Every member of the choir sings alto or tenor.",
-      "No one who sings alto is also a tenor.",
-      "All tenors are proficient in sight-reading.",
-      "Some members of the choir are not proficient in sight-reading.",
-      "No member of the choir sings alto."
+      "All employees who work remotely attend the weekly video meeting.",
+      "No employee who attends the weekly video meeting misses their deadlines.",
+      "Some employees who work remotely miss their deadlines."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 5 combined imply that every member of the choir sings tenor (Choir Member → (Alto or Tenor) AND (Not Alto) → Tenor). Statement 3 states that all tenors are proficient in sight-reading. Therefore, it follows that every member of the choir is proficient in sight-reading. Statement 4 directly contradicts this conclusion by asserting that some members of the choir are not proficient in sight-reading. Removing Statement 4 makes the set consistent."
+    "answerIndex": 2,
+    "explanation": "Statement 1 implies that all employees who work remotely attend the weekly video meeting. Statement 2 implies that no employee who attends the weekly video meeting misses their deadlines. Therefore, it follows that no employee who works remotely misses their deadlines. This directly contradicts Statement 3, which claims that some employees who work remotely miss their deadlines."
   },
   {
     "id": "gen-6-10",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All licensed divers have completed advanced training.",
-      "Some individuals who have completed advanced training are not licensed divers.",
-      "Mark has completed advanced training.",
-      "Mark is a licensed diver."
+      "Every successful artist has a unique style.",
+      "No artist with a unique style is overlooked by critics.",
+      "Some artists are overlooked by critics."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All four statements can be true simultaneously. Statement 1 establishes a prerequisite for licensed divers. Statement 2 clarifies that advanced training does not guarantee one is a licensed diver. Statements 3 and 4 describe Mark, who is an example of a licensed diver who has completed advanced training, which is entirely consistent with the other statements."
+    "explanation": "Statement 3 indicates that some artists are overlooked by critics. From the contrapositive of Statement 2, if an artist is overlooked by critics, they do not have a unique style. This is consistent with Statement 1, which implies that only successful artists have a unique style and therefore these overlooked artists are not successful artists."
   },
   {
     "id": "gen-7-1",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All orchids are delicate plants.",
-      "If a plant is delicate, it requires constant humidity.",
-      "No plant that requires constant humidity can thrive in dry climates.",
-      "This greenhouse contains orchids that thrive in dry climates."
+      "If a student enrolls in the advanced seminar, they must complete the prerequisite course.",
+      "No student who completes the prerequisite course fails the final project.",
+      "Every student who does not fail the final project receives a passing grade for the seminar.",
+      "Some students who enroll in the advanced seminar do not receive a passing grade for the seminar."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 establish a chain: All orchids are delicate plants (1), delicate plants require constant humidity (2), and plants requiring constant humidity cannot thrive in dry climates (3). This means all orchids cannot thrive in dry climates. Statement 4 directly contradicts this by asserting that some orchids in the greenhouse *do* thrive in dry climates. Removing Statement 4 resolves the inconsistency."
+    "explanation": "Statement 1 implies that enrolling in the advanced seminar means completing the prerequisite. Statement 2 implies that completing the prerequisite means not failing the final project. Statement 3 implies that not failing the final project means receiving a passing grade. Therefore, all students who enroll in the advanced seminar must receive a passing grade. Statement 4 directly contradicts this by asserting that some students who enroll in the seminar do not receive a passing grade. Removing Statement 4 makes the set consistent, as the derived conclusion (all enrolled students pass) would then stand unchallenged."
   },
   {
     "id": "gen-7-2",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All successful entrepreneurs have strong problem-solving skills.",
-      "Some people with strong problem-solving skills are not entrepreneurs.",
-      "Maria has strong problem-solving skills.",
-      "If someone is a successful entrepreneur, they are highly motivated."
+      "All dogs enjoy playing fetch.",
+      "Some animals that enjoy playing fetch are not dogs.",
+      "My pet loves to play fetch.",
+      "My pet is not a dog."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be simultaneously true. Maria might be a successful entrepreneur, in which case she has strong problem-solving skills (1) and is highly motivated (4). Alternatively, Maria might simply be someone with strong problem-solving skills who is not an entrepreneur, which is consistent with Statement 2. No logical contradiction arises."
+    "explanation": "The statements are consistent. Statement 1 says all dogs play fetch. Statement 2 allows for non-dogs to also play fetch. Statements 3 and 4 state that your pet is a non-dog animal that plays fetch, which is entirely consistent with Statement 2 and does not contradict Statement 1 (since your pet is not a dog)."
   },
   {
     "id": "gen-7-3",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Every athlete on the university team trains daily.",
-      "No student who trains daily ever misses a class.",
-      "All students who lose their scholarship have missed a class.",
-      "At least one athlete on the university team lost their scholarship."
+      "If an animal is a feline, it is a predator.",
+      "If an animal is a predator, it has sharp claws.",
+      "If an animal has sharp claws, it cannot be kept as a common house pet.",
+      "All felines can be kept as common house pets."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1 and 2 create a chain: Every athlete trains daily (1), and no student who trains daily misses a class (2). Thus, no athlete misses a class. Statement 3 indicates that anyone who lost their scholarship must have missed a class. Statement 4 claims that at least one athlete lost their scholarship; if an athlete lost their scholarship, then by Statement 3 they must have missed a class, which contradicts the conclusion that no athlete misses a class. Removing Statement 4 makes the set consistent."
+    "explanation": "Statement 1 implies that if an animal is a feline, it is a predator. Statement 2 implies that if an animal is a predator, it has sharp claws. Statement 3 implies that if an animal has sharp claws, it cannot be kept as a common house pet. Therefore, any feline cannot be kept as a common house pet. Statement 4 directly contradicts this by asserting that all felines can be kept as common house pets. Removing Statement 4 makes the set consistent, as the derived conclusion (felines cannot be house pets) would then stand unchallenged."
   },
   {
     "id": "gen-7-4",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a bird is a falcon, it is a predator.",
-      "Some predators are not falcons.",
-      "All birds of prey are predators.",
-      "This forest has birds of prey that are not falcons."
+      "If a student studies diligently, they will pass the exam.",
+      "If a student passes the exam, they will receive a certificate.",
+      "Sarah passed the exam, but did not study diligently.",
+      "Not all students who receive a certificate studied diligently."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be simultaneously true. For example, eagles are birds of prey (3) and predators (3), but are not falcons (consistent with 2 and 4). Statement 1 establishes a rule for falcons, which does not conflict with the existence of other types of predators or birds of prey. No logical contradiction arises."
+    "explanation": "The statements are consistent. Statement 1 states a condition for passing, but doesn't preclude other ways to pass. Statement 2 links passing to receiving a certificate. Statement 3 indicates Sarah passed (and thus received a certificate from Statement 2) without diligent study, which is consistent with Statement 1 not being an 'only if' condition. Statement 4 explicitly confirms that some students (like Sarah) can receive a certificate without studying diligently."
   },
   {
     "id": "gen-7-5",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All participants in the marathon completed the race.",
-      "Everyone who completed the race crossed the finish line.",
-      "If a runner crossed the finish line, they received a medal.",
-      "Some participants in the marathon did not receive a medal."
+      "All successful businesses prioritize customer satisfaction.",
+      "No business that prioritizes customer satisfaction ignores market trends.",
+      "If a business ignores market trends, it will fail financially.",
+      "There is at least one successful business that will fail financially."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a logical chain: All marathon participants completed the race (1), everyone who completed the race crossed the finish line (2), and anyone who crossed the finish line received a medal (3). Therefore, all participants in the marathon received a medal. Statement 4 directly contradicts this conclusion by stating that some participants did not receive a medal. Removing Statement 4 resolves the inconsistency."
+    "explanation": "Statement 1 implies successful businesses prioritize customer satisfaction. Statement 2 implies businesses prioritizing customer satisfaction do not ignore market trends. Thus, all successful businesses do not ignore market trends. Statement 3 states that if a business ignores market trends, it will fail financially. Since successful businesses do not ignore market trends, they will not fail financially. Statement 4 directly contradicts this by asserting that there is at least one successful business that will fail financially. Removing Statement 4 makes the set consistent, as the derived conclusion (successful businesses do not fail financially) would then stand unchallenged."
   },
   {
     "id": "gen-7-6",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a student enrolls in the advanced course, they must have passed the prerequisite.",
-      "All students who passed the prerequisite received a high score on the placement test.",
-      "Some students who received a high score on the placement test did not enroll in the advanced course.",
-      "No student enrolled in the advanced course failed to receive a high score on the placement test."
+      "Every book in the library is cataloged.",
+      "No cataloged book is missing a barcode.",
+      "Some books missing a barcode are available for checkout.",
+      "Some books available for checkout are not from the library."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be simultaneously true. Statements 1 and 2 establish that all students in the advanced course received a high score on the placement test (AC -> PR -> PT_High), which is reinforced by Statement 4. Statement 3 simply allows for the possibility of students with high placement test scores who chose not to enroll in the advanced course, which does not contradict any other statement. No logical contradiction arises."
+    "explanation": "The statements are consistent. From Statement 1 and Statement 2, every book in the library has a barcode. Statement 3 mentions books missing a barcode that are available for checkout. Statement 4 clarifies that some books available for checkout are not from the library, which allows for the books in Statement 3 (missing barcodes) to exist outside of this particular library, thus not contradicting Statements 1 and 2."
   },
   {
     "id": "gen-7-7",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All employees in the marketing department attend the weekly meeting.",
-      "If an employee attends the weekly meeting, they submit a progress report.",
-      "No employee who submits a progress report works remotely.",
-      "Sarah works remotely and is an employee in the marketing department."
+      "If a car is electric, it produces no tailpipe emissions.",
+      "If a car produces no tailpipe emissions, it qualifies for the green rebate program.",
+      "No car that qualifies for the green rebate program is subject to urban congestion charges.",
+      "All electric cars are subject to urban congestion charges."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: All marketing department employees attend the weekly meeting (1), anyone attending the weekly meeting submits a progress report (2), and no one submitting a progress report works remotely (3). This implies that no employee in the marketing department works remotely. Statement 4 directly contradicts this by stating that Sarah, an employee in the marketing department, works remotely. Removing Statement 4 resolves the inconsistency."
+    "explanation": "Statement 1 implies electric cars produce no tailpipe emissions. Statement 2 implies cars with no tailpipe emissions qualify for the green rebate program. Statement 3 implies cars qualifying for the green rebate program are not subject to urban congestion charges. Therefore, all electric cars are not subject to urban congestion charges. Statement 4 directly contradicts this by asserting that all electric cars are subject to urban congestion charges. Removing Statement 4 makes the set consistent, as the derived conclusion (electric cars are not subject to congestion charges) would then stand unchallenged."
   },
   {
     "id": "gen-7-8",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Every successful politician is an excellent debater.",
-      "Some excellent debaters are not successful politicians.",
-      "All excellent debaters engage in public speaking.",
-      "John is a successful politician who enjoys public speaking."
+      "A species can survive in the desert only if it has a way to conserve water.",
+      "All plants that conserve water have thick, waxy leaves.",
+      "The cactus is a plant that survives in the desert.",
+      "Some plants with thick, waxy leaves do not survive in the desert."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be simultaneously true. Statements 1 and 3 together imply that all successful politicians are excellent debaters and engage in public speaking. Statement 4 describes John, who fits this description. Statement 2 allows for excellent debaters who are not politicians, which does not create any conflict. No logical contradiction arises."
+    "explanation": "The statements are consistent. Statement 1 means if a species survives in the desert, it conserves water. Statement 2 means if a plant conserves water, it has waxy leaves. Combined, a desert-surviving plant (like the cactus in Statement 3) must have waxy leaves. Statement 4 is consistent because while waxy leaves are necessary for desert survival, they are not exclusive to desert plants; some waxy-leaved plants can thrive elsewhere and not survive in the desert."
   },
   {
     "id": "gen-7-9",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All cars parked illegally will be towed.",
-      "If a car is towed, it will incur a fine.",
-      "No car that incurs a fine is released without payment.",
-      "The red sedan was parked illegally, but it was released without payment."
+      "All birds native to this island are migratory.",
+      "If a bird is migratory, it cannot nest in the deep forest year-round.",
+      "Only birds that nest in the deep forest year-round are vulnerable to forest fires.",
+      "Some birds native to this island are vulnerable to forest fires."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: Cars parked illegally are towed (1), towed cars incur a fine (2), and cars incurring a fine are not released without payment (3). This means any car parked illegally will not be released without payment. Statement 4 directly contradicts this by asserting that the red sedan, which was parked illegally, was released without payment. Removing Statement 4 resolves the inconsistency."
+    "explanation": "Statement 1 implies all native birds are migratory. Statement 2 implies migratory birds do not nest in the deep forest year-round. Statement 3 (via its contrapositive: if not nesting deep forest year-round, then not vulnerable to forest fires) implies that birds who do not nest in the deep forest year-round are not vulnerable to forest fires. Therefore, native birds (who do not nest in the deep forest) are not vulnerable to forest fires. Statement 4 directly contradicts this by asserting that some birds native to this island are vulnerable to forest fires. Removing Statement 4 makes the set consistent, as the derived conclusion (native birds are not vulnerable to fires) would then stand unchallenged."
   },
   {
     "id": "gen-7-10",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All employees with a management role have access to the executive lounge.",
-      "Some employees with access to the executive lounge do not have a management role.",
-      "If an employee has access to the executive lounge, they require a special key card.",
-      "Lisa is an employee who requires a special key card."
+      "If an employee completes advanced training, they are eligible for promotion.",
+      "No employee is eligible for promotion unless they have excellent performance reviews.",
+      "Some employees who completed advanced training do not receive promotions.",
+      "All employees with excellent performance reviews receive bonuses."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be simultaneously true. Statements 1 and 3 imply that employees with a management role require a special key card. Statement 2 allows for other employees (without a management role) to also have executive lounge access and thus a special key card. Lisa (Statement 4) could be either a manager, or another employee with executive lounge access, or an employee requiring a special key card for an entirely different, unstated reason, without contradicting any of the other statements. No logical contradiction arises."
+    "explanation": "The statements are consistent. Statement 1 means completing training makes one eligible. Statement 2 means promotion eligibility requires excellent reviews. Thus, employees who complete training are eligible, and if they get promoted, they must have excellent reviews. Statement 3 is consistent because eligibility does not guarantee promotion. Statement 4 provides an additional consequence for those with excellent reviews (and thus possibly promoted employees), which does not contradict any other statement."
   },
   {
     "id": "gen-8-1",
     "difficulty": "medium",
     "category": "quantifier",
+    "statements": [
+      "All members of the gardening club own a trowel.",
+      "No one who owns a trowel is afraid of worms.",
+      "At least one member of the gardening club is afraid of worms."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all members of the gardening club own a trowel. Statement 2 says no one who owns a trowel is afraid of worms. Therefore, it must be true that no member of the gardening club is afraid of worms. This directly contradicts Statement 3, which claims at least one member is afraid of worms."
+  },
+  {
+    "id": "gen-8-3",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If a plant has blue flowers, it requires acidic soil.",
+      "If a plant has red leaves, it does not require acidic soil.",
+      "All hydrangeas have red leaves.",
+      "Some hydrangeas have blue flowers."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 3 indicates that all hydrangeas have red leaves. Statement 2 indicates that if a plant has red leaves, it does not require acidic soil. Therefore, all hydrangeas do not require acidic soil. However, Statement 4 states that some hydrangeas have blue flowers, and Statement 1 states that if a plant has blue flowers, it requires acidic soil. This leads to the conclusion that some hydrangeas require acidic soil, which contradicts the earlier conclusion that all hydrangeas do not require acidic soil."
+  },
+  {
+    "id": "gen-8-5",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "No birds are mammals.",
+      "All penguins are birds.",
+      "Some mammals are penguins."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 2 tells us that all penguins are birds. Statement 1 tells us that no birds are mammals. From these two statements, it logically follows that no penguins are mammals. This conclusion directly contradicts Statement 3, which asserts that some mammals are penguins."
+  },
+  {
+    "id": "gen-8-7",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All artists are creative individuals.",
+      "No creative individual is easily discouraged.",
+      "Some painters are artists.",
+      "All painters are easily discouraged."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "From Statement 1, all artists are creative. From Statement 2, no creative individual is easily discouraged. This implies that no artist is easily discouraged. Since Statement 3 says some painters are artists, it must be true that some painters are not easily discouraged. This conclusion directly contradicts Statement 4, which claims all painters are easily discouraged."
+  },
+  {
+    "id": "gen-8-9",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If an animal is a cat, it is a mammal.",
+      "All mammals are warm-blooded.",
+      "Some animals are cats but are not warm-blooded."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says if an animal is a cat, it is a mammal. Statement 2 says all mammals are warm-blooded. Therefore, it logically follows that if an animal is a cat, it is warm-blooded. This conclusion directly contradicts Statement 3, which asserts that some animals are cats but are not warm-blooded."
+  },
+  {
+    "id": "gen-9-1",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All owls are nocturnal birds.",
+      "No nocturnal bird hunts during the day.",
+      "Some animals that hunt during the day are owls."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all owls are nocturnal birds. Statement 2 says no nocturnal bird hunts during the day. This logically implies that no owl hunts during the day, which directly contradicts Statement 3, which claims some animals that hunt during the day are owls."
+  },
+  {
+    "id": "gen-9-2",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All successful entrepreneurs are innovative thinkers.",
+      "Some innovative thinkers are not successful entrepreneurs.",
+      "Maria is an innovative thinker.",
+      "Maria is not a successful entrepreneur."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Maria is an innovative thinker who is not a successful entrepreneur, which is consistent with the idea that some innovative thinkers fall into that category."
+  },
+  {
+    "id": "gen-9-3",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a plant is a rose, it has thorns.",
+      "Every plant with thorns requires careful handling.",
+      "No plant that requires careful handling can be easily pruned.",
+      "Some roses can be easily pruned."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 implies all roses have thorns. Statement 2 implies all plants with thorns require careful handling. Statement 3 implies no plant requiring careful handling can be easily pruned. Therefore, all roses cannot be easily pruned, which contradicts Statement 4."
+  },
+  {
+    "id": "gen-9-4",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All residents of this building have a parking permit.",
+      "Some people with a parking permit do not live in this building.",
+      "John has a parking permit.",
+      "John does not live in this building."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true at the same time. John could be one of the people described in Statement 2, having a parking permit but not living in the building, without contradicting any other statement."
+  },
+  {
+    "id": "gen-9-5",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All ancient ruins are protected sites.",
+      "No protected site allows unrestricted public access.",
+      "Every archaeological dig occurs at an ancient ruin.",
+      "Some archaeological digs allow unrestricted public access."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 3 implies all archaeological digs occur at ancient ruins. Statement 1 implies all ancient ruins are protected sites. Statement 2 implies no protected site allows unrestricted public access. This chain means no archaeological dig allows unrestricted public access, directly contradicting Statement 4."
+  },
+  {
+    "id": "gen-9-6",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a bird is a falcon, it is a predator.",
+      "All predators have sharp talons.",
+      "Some birds with sharp talons are not falcons.",
+      "This particular bird has sharp talons."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. This bird could be a falcon, or it could be one of the birds with sharp talons that are not falcons, as allowed by Statement 3."
+  },
+  {
+    "id": "gen-9-7",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All employees with management roles attend weekly strategy meetings.",
+      "If an employee attends weekly strategy meetings, they are informed of current projects.",
+      "No employee informed of current projects ever misses the quarterly review.",
+      "Some employees with management roles miss the quarterly review."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 implies all employees with management roles attend weekly strategy meetings. Statement 2 implies they are then informed of current projects. Statement 3 implies they never miss the quarterly review. Therefore, no employee with a management role misses the quarterly review, which contradicts Statement 4."
+  },
+  {
+    "id": "gen-9-8",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All professional athletes train rigorously.",
+      "Some people who train rigorously are not professional athletes.",
+      "Maria trains rigorously.",
+      "Maria is a professional athlete."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Maria is a professional athlete, so she trains rigorously according to Statement 1. Statement 2 simply notes that not everyone who trains rigorously is a professional athlete, which doesn't contradict Maria's status."
+  },
+  {
+    "id": "gen-9-9",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If an instrument is a woodwind, it requires a reed.",
+      "All instruments requiring a reed are difficult to master.",
+      "No instrument difficult to master can be played by beginners.",
+      "Some woodwind instruments can be played by beginners."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 implies all woodwind instruments require a reed. Statement 2 implies all instruments requiring a reed are difficult to master. Statement 3 implies no instrument difficult to master can be played by beginners. This chain means no woodwind instrument can be played by beginners, directly contradicting Statement 4."
+  },
+  {
+    "id": "gen-9-10",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All dogs are mammals.",
+      "Some mammals are not dogs.",
+      "Fido is a dog.",
+      "Fido is a mammal."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Statement 3 implies Statement 4 via Statement 1. Statement 2 is also true (e.g., cats are mammals but not dogs) and doesn't conflict with Fido being both a dog and a mammal."
+  },
+  {
+    "id": "gen-10-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a recipe uses saffron, it is considered a gourmet dish.",
+      "All gourmet dishes require advanced cooking skills.",
+      "Some dishes made by Chef Elise use saffron.",
+      "No dish requiring advanced cooking skills is simple to prepare.",
+      "Every dish Chef Elise makes is simple to prepare."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 4 establish a chain: if a recipe uses saffron, it is a gourmet dish, which requires advanced cooking skills, and therefore is not simple to prepare. Statement 3 indicates Chef Elise makes some saffron dishes. Thus, those specific dishes made by Chef Elise are not simple to prepare. This contradicts Statement 5, which claims every dish Chef Elise makes is simple to prepare. Removing Statement 5 resolves this contradiction."
+  },
+  {
+    "id": "gen-10-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a student is in the advanced seminar, they have completed the prerequisite course.",
+      "All students who complete the prerequisite course submit a final paper.",
+      "Some students who submit a final paper are not in the advanced seminar.",
+      "Maria is a student in the advanced seminar."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1, 2, and 4 imply that Maria is in the advanced seminar, has completed the prerequisite course, and submits a final paper. Statement 3 indicates that there are some students who submit a final paper but are not in the advanced seminar. This is entirely consistent with Maria being a student who is both in the advanced seminar and submits a final paper, as the group of students submitting final papers can be larger than or overlap with the advanced seminar students."
+  },
+  {
+    "id": "gen-10-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All successful candidates receive an offer.",
+      "If a candidate receives an offer, they must pass the final interview.",
+      "No candidate who passes the final interview fails the background check.",
+      "Some candidates who failed the background check are successful candidates."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a logical chain: all successful candidates receive an offer, then pass the final interview, and therefore do not fail the background check. This means all successful candidates pass the background check. Statement 4, however, asserts that some successful candidates failed the background check, which directly contradicts the conclusion derived from the other statements. Removing Statement 4 makes the set consistent."
+  },
+  {
+    "id": "gen-10-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a species is carnivorous, it has sharp claws.",
+      "All animals with sharp claws are hunters.",
+      "Some animals are hunters but do not have sharp claws.",
+      "No animal with sharp claws is a herbivore."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 imply that all carnivorous species are hunters. Statement 3 notes that some hunters do not have sharp claws, which means these particular hunters are not carnivorous according to Statement 1, and this is perfectly possible. Statement 4 confirms that animals with sharp claws are not herbivores. No contradiction arises from these statements; for example, there could be herbivores without sharp claws, and hunters without sharp claws (who are not carnivorous), and carnivorous animals with sharp claws (who are hunters)."
+  },
+  {
+    "id": "gen-10-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All residents of Sector 7 pay property taxes.",
+      "No one who pays property taxes is eligible for the housing subsidy.",
+      "If a resident is over 65, they are eligible for the housing subsidy.",
+      "Some residents of Sector 7 are over 65."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 establish that all residents of Sector 7 pay property taxes, and therefore none of them are eligible for the housing subsidy. Statement 3 claims that if a resident is over 65, they are eligible for the housing subsidy. Statement 4 states that some residents of Sector 7 are over 65. For these specific residents, they would be both ineligible (from Statements 1 and 2) and eligible (from Statement 3) for the subsidy, which is a contradiction. Removing Statement 4 eliminates the group that creates this conflict."
+  },
+  {
+    "id": "gen-10-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a plant needs direct sunlight, it is not suitable for my office.",
+      "All plants with colorful flowers need direct sunlight.",
+      "Some plants in my office have colorful flowers.",
+      "Every plant in my office is suitable for my office."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 create a chain: any plant with colorful flowers needs direct sunlight, and thus is not suitable for my office. Statement 3 indicates that some plants in my office have colorful flowers. For these specific plants, they are in my office but not suitable for my office. This directly contradicts Statement 4, which asserts that every plant in my office is suitable for my office. Removing Statement 3 resolves this contradiction by ensuring that no plants in the office have colorful flowers, thus breaking the chain that leads to a plant being unsuitable."
+  },
+  {
+    "id": "gen-10-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All qualified applicants have submitted a complete portfolio.",
+      "If an applicant has submitted a complete portfolio, they are invited for an interview.",
+      "Some applicants who are invited for an interview are not qualified applicants.",
+      "Sarah is a qualified applicant."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1, 2, and 4 imply that Sarah is a qualified applicant, has submitted a complete portfolio, and is invited for an interview. Statement 3 indicates that the group of applicants invited for an interview is not limited to only qualified applicants, meaning some non-qualified individuals are also invited. This is entirely consistent with Sarah being a qualified applicant who is invited for an interview, as it simply describes other individuals within the invited group."
+  },
+  {
+    "id": "gen-10-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a document is confidential, it requires a security clearance to view.",
+      "All documents requiring a security clearance to view are stored in encrypted format.",
+      "Some documents stored in encrypted format are not confidential.",
+      "No document that is not confidential is stored in encrypted format."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 create a chain: if a document is confidential, it requires a security clearance, and therefore is stored in encrypted format (Confidential -> Encrypted). Statement 4 says 'No document that is not confidential is stored in encrypted format', which means if a document is stored in encrypted format, it must be confidential (Encrypted -> Confidential). Together, these establish that a document is confidential if and only if it is stored in encrypted format. Statement 3, however, asserts that some documents stored in encrypted format are not confidential, which directly contradicts this established equivalence. Removing Statement 3 resolves the contradiction."
+  },
+  {
+    "id": "gen-10-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a building has a green roof, it is designed for energy efficiency.",
+      "All buildings designed for energy efficiency use recycled materials.",
+      "Some buildings use recycled materials but do not have a green roof.",
+      "The new library building uses recycled materials."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 indicate that any building with a green roof is designed for energy efficiency and uses recycled materials. Statement 3 notes that some buildings use recycled materials without having a green roof, which is consistent; not all buildings using recycled materials need to have a green roof. Statement 4 states that the new library building uses recycled materials. The library could be one of the buildings with a green roof, or one of the buildings that uses recycled materials without having a green roof. All statements can be true simultaneously."
+  },
+  {
+    "id": "gen-10-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "No animal that hibernates is warm-blooded.",
+      "If an animal is warm-blooded, it maintains a constant body temperature.",
+      "Some animals that do not maintain a constant body temperature are not hibernators.",
+      "All mammals are warm-blooded."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 imply that hibernating animals are not warm-blooded and therefore do not maintain a constant body temperature. Statement 4 implies that all mammals are warm-blooded and thus maintain a constant body temperature and do not hibernate. Statement 3 asserts that some animals exist that neither maintain a constant body temperature nor hibernate. This is consistent; for example, a cold-blooded animal that does not hibernate would fit this description without contradicting any other statement."
+  },
+  {
+    "id": "gen-11-1",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All residents of Maple Street own a car.",
+      "No one who owns a car uses public transport daily.",
+      "Some residents of Maple Street use public transport daily."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 implies that if you are a resident of Maple Street, you own a car. Statement 2 implies that if you own a car, you do not use public transport daily. Therefore, residents of Maple Street do not use public transport daily. This contradicts Statement 3, which claims some residents of Maple Street do use public transport daily. Removing Statement 3 resolves the conflict."
+  },
+  {
+    "id": "gen-11-2",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All birds with red feathers are songbirds.",
+      "Some birds with blue feathers are not songbirds.",
+      "No bird with green feathers has red feathers."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "It is possible for all these statements to be true simultaneously. For instance, a robin could be a red-feathered songbird. A blue jay could be a blue-feathered bird that is not a songbird. A parrot could be a green-feathered bird with no red feathers. These scenarios are all compatible."
+  },
+  {
+    "id": "gen-11-3",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a student completes the advanced course, they will receive a special diploma.",
+      "No student who skipped more than two lectures receives a special diploma.",
+      "Every student enrolled in the advanced course completed it.",
+      "Some students enrolled in the advanced course skipped more than two lectures."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 and Statement 3 together imply that every student enrolled in the advanced course will receive a special diploma. Statement 2 implies that any student who receives a special diploma did not skip more than two lectures. Therefore, every student enrolled in the advanced course did not skip more than two lectures. This directly contradicts Statement 4, which claims some students enrolled in the advanced course did skip more than two lectures. Removing Statement 4 makes the set consistent."
+  },
+  {
+    "id": "gen-11-4",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All employees who received a bonus also worked overtime.",
+      "Some employees who worked overtime did not receive a bonus.",
+      "No employee who received a bonus was a new hire."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All three statements can be true at the same time. For example, an experienced employee could have received a bonus for working overtime and was not a new hire. Another employee could have worked overtime but not received a bonus. These scenarios are all compatible with the given statements."
+  },
+  {
+    "id": "gen-11-5",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "A painting is displayed at the gallery only if it is a modern art piece.",
+      "No sculpture at the gallery is a modern art piece.",
+      "Some paintings displayed at the gallery are sculptures."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 implies that any painting displayed at the gallery must be a modern art piece. Statement 2 implies that no sculpture at the gallery can be a modern art piece. If an item is both a painting displayed at the gallery and a sculpture, it must be both a modern art piece (from Statement 1) and not a modern art piece (from Statement 2). Statement 3 asserts that such items exist, causing a direct contradiction. Removing Statement 3 resolves the conflict."
+  },
+  {
+    "id": "gen-11-6",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "Not all vegetables are green.",
+      "Some fruits are green.",
+      "All green vegetables are organic."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. For example, a carrot could be a vegetable that is not green, satisfying Statement 1. A green apple could be a fruit that is green, satisfying Statement 2. And a head of spinach could be a green vegetable that is organic, satisfying Statement 3. There is no logical conflict between these conditions."
+  },
+  {
+    "id": "gen-11-7",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All players on the champion team are experienced.",
+      "No player who trained less than 100 hours is experienced.",
+      "Some players on the champion team trained less than 100 hours."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 indicates that all champion team players are experienced. Statement 2 implies that if a player is experienced, they must have trained 100 hours or more (this is the contrapositive of Statement 2). Therefore, all players on the champion team must have trained 100 hours or more. This directly contradicts Statement 3, which claims some players on the champion team trained less than 100 hours. Removing Statement 3 makes the set consistent."
+  },
+  {
+    "id": "gen-11-8",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All participants in the study were over 30 years old.",
+      "Some participants in the study did not complete the final survey.",
+      "No one over 30 years old was paid for their participation."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. It is possible for all participants to be over 30 (Statement 1), for some of them to not complete the final survey (Statement 2), and for none of the participants (since they are all over 30) to be paid for their participation (Statement 3). There is no logical conflict among them."
+  },
+  {
+    "id": "gen-11-9",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All members of the jury are registered voters.",
+      "No one over 70 years old is a registered voter.",
+      "Every member of the jury is over 70 years old."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 establishes that all jury members are registered voters. Statement 2 implies that if someone is a registered voter, then they are not over 70 years old (this is the contrapositive of Statement 2). Therefore, all jury members must not be over 70 years old. This directly contradicts Statement 3, which claims every member of the jury is over 70 years old. Removing Statement 3 makes the set consistent."
+  },
+  {
+    "id": "gen-11-10",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "Some residents of this building have lived here for over 10 years.",
+      "All residents who have lived here for over 10 years are familiar with the building's history.",
+      "Not all residents familiar with the building's history are over 60 years old."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. It is possible for some residents to have lived there for over 10 years (Statement 1), for all of those residents to be familiar with the building's history (Statement 2), and for some of the residents familiar with the building's history to not be over 60 years old (Statement 3). For example, a person under 60 could have lived there for 15 years and thus be familiar with its history."
+  },
+  {
+    "id": "gen-12-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an animal is a feline, it has retractable claws.",
+      "No animal with retractable claws can climb trees with smooth bark.",
+      "All domestic cats are felines.",
+      "Some domestic cats can climb trees with smooth bark."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 3 establishes that all domestic cats are felines. From Statement 1, all felines have retractable claws. From Statement 2, no animal with retractable claws can climb trees with smooth bark. Thus, all domestic cats cannot climb trees with smooth bark. This directly contradicts Statement 4, which claims some domestic cats can climb trees with smooth bark."
+  },
+  {
+    "id": "gen-12-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every student in the debate club practices public speaking weekly.",
+      "No student who practices public speaking weekly fears giving presentations.",
+      "Students who don't fear giving presentations always perform well in mock trials.",
+      "Some students in the debate club do not perform well in mock trials."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 says all debate club students practice public speaking weekly. Statement 2 implies students who practice public speaking weekly do not fear giving presentations. Statement 3 states students who don't fear giving presentations always perform well. Chaining these, all students in the debate club perform well in mock trials. This contradicts Statement 4, which claims some students in the debate club do not perform well in mock trials."
+  },
+  {
+    "id": "gen-12-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All planets with liquid water support life.",
+      "No planet orbiting a red dwarf star supports life.",
+      "Some planets with liquid water do not orbit red dwarf stars.",
+      "If a planet has liquid water, it might orbit a red dwarf star."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "From Statement 1, if a planet has liquid water, it supports life. From Statement 2, no planet orbiting a red dwarf star supports life. This implies that if a planet has liquid water, it cannot orbit a red dwarf star (meaning, it is impossible for a planet to have liquid water AND orbit a red dwarf star). Statement 4, however, asserts that if a planet has liquid water, it *might* orbit a red dwarf star, which directly contradicts the derived impossibility."
+  },
+  {
+    "id": "gen-12-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every student selected for the scholarship committee has excellent grades.",
+      "Students with excellent grades always complete their assignments early.",
+      "No student who completes their assignments early struggles with time management.",
+      "If a student struggles with time management, they are not selected for the scholarship committee.",
+      "Some students selected for the scholarship committee struggle with time management."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statement 1 indicates scholarship committee students have excellent grades. Statement 2 states students with excellent grades complete assignments early. Statement 3 means students who complete assignments early do not struggle with time management. Chaining these, all students selected for the scholarship committee do not struggle with time management. Statement 4 is the contrapositive of this derived truth (if they struggle, they're not on the committee). This derived universal truth directly contradicts Statement 5, which claims some students selected for the scholarship committee struggle with time management."
+  },
+  {
+    "id": "gen-12-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a bird is a swift, it is a master of aerial maneuverability.",
+      "No bird that is a master of aerial maneuverability has short, rounded wings.",
+      "All birds with short, rounded wings are not swift.",
+      "Some swifts have short, rounded wings."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 says swifts are masters of aerial maneuverability. Statement 2 indicates that masters of aerial maneuverability do not have short, rounded wings. Therefore, all swifts do not have short, rounded wings. Statement 3 is the contrapositive of this derived truth (if a bird has short, rounded wings, it's not a swift). This derived universal truth directly contradicts Statement 4, which claims some swifts have short, rounded wings."
+  },
+  {
+    "id": "gen-12-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a device is a smartphone, it runs an operating system.",
+      "All devices that run an operating system are susceptible to malware.",
+      "No device susceptible to malware has perfect security.",
+      "Some smartphones have perfect security."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 indicates smartphones run an operating system. Statement 2 says devices running an operating system are susceptible to malware. Statement 3 implies devices susceptible to malware do not have perfect security. Chaining these, all smartphones do not have perfect security. This directly contradicts Statement 4, which claims some smartphones have perfect security."
+  },
+  {
+    "id": "gen-13-1",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All students enrolled in the program must attend the orientation.",
+      "Every student who attends the orientation receives a course syllabus.",
+      "Some students enrolled in the program did not receive a course syllabus."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 indicates that all students in the program attend orientation. Statement 2 indicates that all who attend orientation receive a syllabus. Together, these imply that all students in the program receive a syllabus. This directly contradicts Statement 3, which claims some students in the program did not receive a syllabus."
+  },
+  {
+    "id": "gen-13-2",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "No rare coins are widely circulated.",
+      "Every coin found in this collection is a rare coin.",
+      "Some coins found in this collection are widely circulated."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 2 establishes that all coins in the collection are rare coins. Statement 1 states that no rare coins are widely circulated. From these, it follows that no coins found in this collection are widely circulated. This directly contradicts Statement 3, which asserts that some coins from the collection are widely circulated."
+  },
+  {
+    "id": "gen-13-3",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If a plant is a fern, then it requires shade.",
+      "No plants that require shade are also drought-tolerant.",
+      "Some ferns are drought-tolerant."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 means all ferns require shade. Statement 2 means that no plants requiring shade are drought-tolerant. Combining these, it implies that no ferns are drought-tolerant. This directly conflicts with Statement 3, which claims some ferns are drought-tolerant."
+  },
+  {
+    "id": "gen-13-4",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All successful applicants are interviewed.",
+      "Some candidates from the second round were not interviewed.",
+      "Every candidate from the second round was a successful applicant."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 3 states that every candidate from the second round was a successful applicant. Statement 1 indicates that all successful applicants are interviewed. Therefore, it must be true that every candidate from the second round was interviewed. This conclusion directly contradicts Statement 2, which claims some candidates from the second round were not interviewed."
+  },
+  {
+    "id": "gen-13-5",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All top-tier athletes follow a strict training regimen.",
+      "Every athlete on a strict training regimen avoids junk food.",
+      "No one who avoids junk food ever consumes sugary drinks.",
+      "Some top-tier athletes regularly consume sugary drinks."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 establishes that all top-tier athletes follow a strict training regimen. Statement 2 states that everyone on a strict training regimen avoids junk food. Statement 3 indicates that no one who avoids junk food consumes sugary drinks. Following this chain, all top-tier athletes must not consume sugary drinks. This conclusion directly contradicts Statement 4, which claims some top-tier athletes regularly consume sugary drinks."
+  },
+  {
+    "id": "gen-13-6",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All mammals are vertebrates.",
+      "Some vertebrates are fish.",
+      "No fish are mammals."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "It is possible for all mammals to be vertebrates, and for some vertebrates to be fish, while also having no fish be mammals. Mammals and fish are both subsets of vertebrates but are distinct from each other."
+  },
+  {
+    "id": "gen-13-7",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If an animal is a dog, then it barks.",
+      "No cats bark.",
+      "Some animals are cats."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 describes dogs. Statements 2 and 3 describe cats, stating they exist and do not bark. There is no conflict or contradiction between the properties of dogs and cats described."
+  },
+  {
+    "id": "gen-13-8",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All books in the library have a catalog number.",
+      "Some items with a catalog number are not books.",
+      "The oldest manuscript has a catalog number."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. The oldest manuscript (Statement 3) could be one of the books (Statement 1) or one of the non-book items with a catalog number (Statement 2). No contradictions arise."
+  },
+  {
+    "id": "gen-13-9",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every student who attended the seminar passed the quiz.",
+      "Some students did not attend the seminar.",
+      "All students who passed the quiz received a certificate.",
+      "Some students did not receive a certificate."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. If some students did not receive a certificate (Statement 4), then by Statement 3 (contrapositive), they did not pass the quiz. If they did not pass the quiz, then by Statement 1 (contrapositive), they did not attend the seminar. This is fully compatible with Statement 2, which says some students did not attend the seminar."
+  },
+  {
+    "id": "gen-13-10",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All birds have wings.",
+      "Some flying creatures are not birds.",
+      "Penguins are birds.",
+      "No penguins can fly."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. From Statement 3 and 1, penguins are birds and therefore have wings. Statement 4 indicates penguins cannot fly, which is consistent with having wings but not using them for flight. Statement 2 mentions other flying creatures, which doesn't contradict anything about birds or penguins."
+  },
+  {
+    "id": "gen-14-1",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All birds that migrate south have strong wing muscles.",
+      "No bird with strong wing muscles is unable to fly long distances.",
+      "Every bird that can fly long distances travels over oceans.",
+      "Some birds that migrate south do not travel over oceans."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: All birds that migrate south have strong wing muscles, which means they can fly long distances, and therefore they travel over oceans. This implies that all birds that migrate south travel over oceans. Statement 4 directly contradicts this conclusion by asserting that some birds that migrate south do not travel over oceans."
+  },
+  {
+    "id": "gen-14-2",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All successful entrepreneurs are skilled negotiators.",
+      "Some skilled negotiators are not university graduates.",
+      "No university graduate has ever failed to manage a team effectively.",
+      "Mark is a successful entrepreneur."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Mark is a successful entrepreneur, so he is a skilled negotiator (from Statement 1). Statement 2 indicates that some skilled negotiators are not university graduates, so Mark could be one of these. Statement 3 implies all university graduates manage teams effectively, but this does not create a conflict as Mark's university status is not definitively stated, and if he is not a university graduate, Statement 3 does not apply to him. The statements are consistent."
+  },
+  {
+    "id": "gen-14-3",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a plant needs direct sunlight, it cannot thrive in shade.",
+      "Every plant that cannot thrive in shade requires daily watering.",
+      "Some tropical plants require direct sunlight.",
+      "No tropical plant requires daily watering."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically lead to the conclusion that some tropical plants require daily watering: Some tropical plants (Statement 3) require direct sunlight, which means they cannot thrive in shade (Statement 1), and therefore they require daily watering (Statement 2). This directly contradicts Statement 4, which claims that no tropical plant requires daily watering."
+  },
+  {
+    "id": "gen-14-4",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All residents of this apartment building are required to have a parking permit.",
+      "Some individuals with parking permits do not own a car.",
+      "No one who owns a car is prohibited from using the visitors' lot.",
+      "Sarah is a resident of this apartment building."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Sarah is a resident, so she has a parking permit (from Statement 1). Statement 2 shows that some permit holders don't own cars, so Sarah could be a permit holder without a car. Statement 3 establishes a rule for car owners, but it does not create a conflict with Sarah's situation, as she might not own a car or, if she does, she would not be prohibited from using the visitors' lot. The statements are consistent."
+  },
+  {
+    "id": "gen-14-5",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every applicant who passes the first interview will proceed to the second interview.",
+      "No applicant who proceeds to the second interview will be rejected solely based on their resume.",
+      "If an applicant's resume contains errors, they will be rejected solely based on their resume.",
+      "Some applicants who pass the first interview have resumes that contain errors."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 indicate that all applicants who pass the first interview will not be rejected solely based on their resume. However, Statement 4 states that some applicants who pass the first interview have resumes with errors, which, according to Statement 3, means they will be rejected solely based on their resume. This creates a contradiction for those specific applicants."
+  },
+  {
+    "id": "gen-14-6",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All research projects involving human subjects require ethical approval.",
+      "Every project with ethical approval must submit annual reports.",
+      "Some projects requiring ethical approval are not published in academic journals.",
+      "Our current project involves human subjects."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Our current project involves human subjects (Statement 4), so it requires ethical approval (Statement 1) and must submit annual reports (Statement 2). Statement 3 indicates that some projects requiring ethical approval are not published, but this doesn't conflict with our project either being published or not, as it only refers to 'some' and does not impose a universal condition. The statements are consistent."
+  },
+  {
+    "id": "gen-14-7",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Unless a painting is an original masterpiece, it is not displayed in the main gallery.",
+      "All paintings acquired before 1900 are displayed in the main gallery.",
+      "Every original masterpiece is authenticated by a panel of experts.",
+      "Some paintings acquired before 1900 were not authenticated by a panel of experts."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a logical chain: All paintings acquired before 1900 (Statement 2) are displayed in the main gallery, meaning they must be original masterpieces (Statement 1), and thus they are authenticated by a panel of experts (Statement 3). This implies that all paintings acquired before 1900 were authenticated by a panel of experts. This conclusion is directly contradicted by Statement 4, which claims some paintings acquired before 1900 were not authenticated."
+  },
+  {
+    "id": "gen-14-8",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All employees who attended the seminar received a bonus.",
+      "No employee who received a bonus was also given a promotion this quarter.",
+      "Some employees who did not attend the seminar were given a promotion this quarter.",
+      "Julia is an employee who attended the seminar."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Julia attended the seminar, so she received a bonus (from Statement 1). According to Statement 2, this means Julia was not given a promotion this quarter, which is consistent. Statement 3 describes a group of employees who did not attend the seminar and received a promotion, which is possible and does not conflict with Julia's situation or the other statements. The statements are consistent."
+  },
+  {
+    "id": "gen-14-9",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All successful marathon runners maintain a rigorous training schedule.",
+      "No athlete who maintains a rigorous training schedule avoids proper nutrition.",
+      "If an athlete practices proper nutrition, they achieve peak performance.",
+      "Some successful marathon runners do not achieve peak performance."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically lead to the conclusion that all successful marathon runners achieve peak performance: All successful marathon runners (Statement 1) maintain a rigorous training schedule, which means they practice proper nutrition (Statement 2), and therefore they achieve peak performance (Statement 3). This directly contradicts Statement 4, which asserts that some successful marathon runners do not achieve peak performance."
+  },
+  {
+    "id": "gen-14-10",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every musician who performs live concerts owns a professional instrument.",
+      "Some musicians who own a professional instrument do not compose their own music.",
+      "If a musician composes their own music, they often collaborate with other artists.",
+      "No musician who performs live concerts often collaborates with other artists."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "From Statements 1 and 4, we deduce that musicians performing live concerts own professional instruments and do not often collaborate with other artists. Statement 3 indicates that if a musician composes their own music, they often collaborate. The contrapositive means if they don't collaborate (as live concert performers don't, per S4), they don't compose their own music. This is consistent with Statement 2, which says some professional instrument owners don't compose their own music. The statements are consistent."
+  },
+  {
+    "id": "gen-15-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a speaker presents at the conference, they must submit an abstract.",
+      "All speakers who submit an abstract receive travel reimbursement.",
+      "No speaker who registers late receives travel reimbursement.",
+      "Some speakers who registered late present at the conference."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 asserts there is a speaker who both registered late and presents. If a speaker presents, Statement 1 indicates they submit an abstract, and Statement 2 indicates they receive travel reimbursement. However, if a speaker registered late, Statement 3 indicates they do not receive travel reimbursement. This creates a contradiction for that speaker, who would both receive and not receive travel reimbursement."
+  },
+  {
+    "id": "gen-15-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If software is updated, it requires a license key.",
+      "All new software versions are updated.",
+      "No software with a valid license key is incompatible with older hardware.",
+      "Some software with a valid license key is still in its old version."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 4 describes software that has a license key and is an old version. Statement 3 implies that if it has a license key, it is not incompatible with older hardware. This is consistent. Statements 1 and 2 apply to updated or new software, which Statement 4's subject is not necessarily. An old version software could have a license key and not be incompatible with older hardware without contradicting any rules about new or updated software."
+  },
+  {
+    "id": "gen-15-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a student enrolls in the advanced course, they must pass the prerequisite exam.",
+      "No student who neglected their studies received a course completion certificate.",
+      "All students who passed the prerequisite exam received a course completion certificate.",
+      "Some students in the advanced course neglected their studies."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 claims there is a student who is in the advanced course and neglected their studies. If a student is in the advanced course, Statement 1 implies they passed the prerequisite exam, and Statement 3 implies they received a course completion certificate. However, if a student neglected their studies, Statement 2 implies they did not receive a course completion certificate. This is a contradiction, as the student would both receive and not receive a certificate."
+  },
+  {
+    "id": "gen-15-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All paintings exhibited in the main gallery are contemporary.",
+      "If a painting is contemporary, it was created after 1990.",
+      "No painting created before 1990 is considered for acquisition by the museum.",
+      "Some paintings not considered for acquisition by the museum are exhibited in the main gallery."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 4 describes a painting that is not considered for acquisition and is exhibited in the main gallery. From Statements 1 and 2, a painting in the main gallery must be contemporary and thus created after 1990. Statement 3 implies that paintings created before 1990 are not considered for acquisition. This is consistent with a painting being created after 1990 and also not being considered for acquisition, as there could be other reasons for not being considered."
+  },
+  {
+    "id": "gen-15-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every employee eligible for promotion completed the advanced training module.",
+      "If an employee completed the advanced training module, they received a performance bonus.",
+      "No employee who started after January 1st received a performance bonus.",
+      "At least one employee who started after January 1st is eligible for promotion."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 claims there is an employee who started after January 1st and is eligible for promotion. If an employee is eligible for promotion, Statement 1 states they completed the advanced training module, and Statement 2 states they received a performance bonus. However, if an employee started after January 1st, Statement 3 states they did not receive a performance bonus. This creates a contradiction for that employee, who would both receive and not receive a performance bonus."
+  },
+  {
+    "id": "gen-15-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All research proposals that received significant funding underwent peer review.",
+      "All research proposals that underwent peer review included preliminary data.",
+      "If a research proposal includes preliminary data, it must be authored by a principal investigator.",
+      "Some research proposals authored by a principal investigator did not receive significant funding."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 4 describes a research proposal authored by a principal investigator that did not receive significant funding. This is entirely possible, as a principal investigator might author many proposals, some of which do not receive significant funding. The other statements establish a chain for proposals that DO receive significant funding (Significant Funding → Peer Review → Preliminary Data → PI), but this does not prevent a PI from authoring a proposal that does not follow this chain or simply doesn't receive funding."
+  },
+  {
+    "id": "gen-15-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a concertgoer has VIP access, they entered through the priority gate.",
+      "All concertgoers who entered through the priority gate received a souvenir program.",
+      "No concertgoer who purchased a discounted ticket received a souvenir program.",
+      "Some concertgoers who purchased discounted tickets have VIP access."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 asserts there is a concertgoer who both purchased a discounted ticket and has VIP access. If a concertgoer has VIP access, Statement 1 indicates they entered through the priority gate, and Statement 2 indicates they received a souvenir program. However, if a concertgoer purchased a discounted ticket, Statement 3 indicates they did not receive a souvenir program. This is a contradiction, as the concertgoer would both receive and not receive a souvenir program."
+  },
+  {
+    "id": "gen-15-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All library books checked out for more than three weeks incur overdue fines.",
+      "If a library book incurs an overdue fine, its borrowing privileges are suspended.",
+      "No library book with suspended borrowing privileges can be renewed online.",
+      "Some library books that cannot be renewed online were checked out for less than two weeks."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 4 describes a book that cannot be renewed online and was checked out for less than two weeks. While a book checked out for more than three weeks (Statement 1) would lead to no online renewal (Statements 2 and 3), there can be other reasons why a book cannot be renewed online (e.g., it's a reference book, or it's simply a book that is not allowed to be renewed regardless of checkout duration). Therefore, Statement 4 is consistent with the other rules."
+  },
+  {
+    "id": "gen-15-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a political candidate is eligible for public funding, they must disclose all financial assets.",
+      "No candidate who has disclosed all financial assets has ever participated in a private fundraising event.",
+      "All candidates registered with a minor party participate in private fundraising events.",
+      "Some candidates registered with a minor party are eligible for public funding."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 claims there is a candidate who is registered with a minor party and is eligible for public funding. If a candidate is eligible for public funding, Statement 1 indicates they must disclose all financial assets, and Statement 2 indicates they do not participate in a private fundraising event. However, if a candidate is registered with a minor party, Statement 3 indicates they participate in private fundraising events. This is a contradiction for that candidate, who would both participate and not participate in private fundraising events."
+  },
+  {
+    "id": "gen-15-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All restaurants awarded a 'Michelin Star' are listed in the gourmet guide.",
+      "If a restaurant is listed in the gourmet guide, its head chef holds an advanced culinary degree.",
+      "No restaurant whose head chef holds an advanced culinary degree struggles financially.",
+      "Some restaurants not listed in the gourmet guide do not struggle financially."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 4 describes a restaurant that is not listed in the gourmet guide and does not struggle financially. The chain from Statements 1, 2, and 3 establishes that if a restaurant has a Michelin Star, it is listed in the gourmet guide, its chef has an advanced degree, and it does not struggle financially. However, not being listed in the gourmet guide does not necessarily mean a restaurant struggles financially. A restaurant could be very successful and not struggle financially, even if it has not been recognized by the gourmet guide or Michelin."
+  },
+  {
+    "id": "gen-16-1",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All students enrolled in advanced math courses are eligible for the scholarship.",
+      "No one eligible for the scholarship has outstanding library fines.",
+      "Some students enrolled in advanced math courses have outstanding library fines."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 indicates that all students in advanced math courses are eligible for the scholarship. Statement 2 states that no one eligible for the scholarship has outstanding library fines. Taken together, these imply that no student in an advanced math course has outstanding library fines. This directly contradicts Statement 3, which claims some students in advanced math courses do have outstanding library fines."
+  },
+  {
+    "id": "gen-16-2",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a bird is a hummingbird, it feeds on nectar.",
+      "Some birds that feed on nectar are also pollinators.",
+      "Some hummingbirds build nests in high trees."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All three statements can be true simultaneously. It is possible for hummingbirds to feed on nectar, some nectar-feeding birds to be pollinators, and some hummingbirds to build nests in high trees without any logical contradiction."
+  },
+  {
+    "id": "gen-16-3",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If an animal is a feline, it has retractable claws.",
+      "If an animal is a bear, it does not have retractable claws.",
+      "Some animals are both felines and bears."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 establishes that felines have retractable claws. Statement 2 states that bears do not have retractable claws. Therefore, an animal cannot be both a feline and a bear, as it would both have and not have retractable claws. This directly contradicts Statement 3, which claims some animals are both felines and bears."
+  },
+  {
+    "id": "gen-16-4",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All valid parking permits display a red stripe.",
+      "Some parking permits displaying a red stripe are not valid.",
+      "This parking permit displays a red stripe."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All three statements can be true. Statement 1 indicates that all valid permits have a red stripe, and Statement 2 confirms that some permits with red stripes are not valid. Statement 3 introduces a permit with a red stripe, which could be either a valid permit or one of the red-striped permits that are not valid. There is no contradiction."
+  },
+  {
+    "id": "gen-16-5",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All successful applicants submitted a complete portfolio.",
+      "Every applicant who submitted a complete portfolio attended the orientation session.",
+      "Some successful applicants did not attend the orientation session."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all successful applicants submitted a complete portfolio. Statement 2 states that every applicant who submitted a complete portfolio attended the orientation session. From these two, it follows that all successful applicants attended the orientation session. This conclusion directly contradicts Statement 3, which claims some successful applicants did not attend the orientation session."
+  },
+  {
+    "id": "gen-16-6",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All members of the hiking club own waterproof boots.",
+      "Some participants in the weekend trek are members of the hiking club.",
+      "Some people who own waterproof boots prefer mountain trails."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All three statements can be true simultaneously. It is possible for all hiking club members to own waterproof boots, for some trek participants to be hiking club members (and thus own boots), and for some people who own waterproof boots to prefer mountain trails. There is no logical conflict."
+  },
+  {
+    "id": "gen-16-7",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "No professional chefs use instant coffee in their restaurants.",
+      "All employees of 'The Gilded Spoon' restaurant use instant coffee.",
+      "Some professional chefs are employees of 'The Gilded Spoon' restaurant."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says no professional chefs use instant coffee. Statement 2 states that all employees of 'The Gilded Spoon' use instant coffee. These two statements together mean that no professional chef can be an employee of 'The Gilded Spoon'. Statement 3 directly contradicts this conclusion by asserting that some professional chefs are employees of 'The Gilded Spoon'."
+  },
+  {
+    "id": "gen-16-8",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "A car will start only if its battery is charged.",
+      "Some cars with charged batteries have their headlights on.",
+      "Some cars that do not start have their hazard lights flashing."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All three statements can be true simultaneously. A car needs a charged battery to start, but a charged battery does not guarantee it starts. Some cars with charged batteries could have their headlights on. And some cars that do not start could have flashing hazard lights, regardless of battery status or headlights. There is no inherent contradiction."
+  },
+  {
+    "id": "gen-16-9",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All members of the research team have access to the secure lab.",
+      "No one with access to the secure lab is permitted to share external data.",
+      "All interns are permitted to share external data.",
+      "Some members of the research team are interns."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 says all research team members have secure lab access. Statement 2 says no one with secure lab access can share external data. Taken together, these imply that no member of the research team is permitted to share external data. Statement 3 claims all interns are permitted to share external data. From this, it follows that no member of the research team can be an intern. This conclusion directly contradicts Statement 4, which states that some members of the research team are interns."
+  },
+  {
+    "id": "gen-16-10",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a mushroom is edible, it has a distinct cap shape.",
+      "Some edible mushrooms grow on decaying logs.",
+      "Poisonous mushrooms do not have a distinct cap shape."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All three statements can be true simultaneously. Edible mushrooms can have a distinct cap shape, and some of them can grow on decaying logs. Poisonous mushrooms, by definition, are not edible and can thus have different properties, such as not having a distinct cap shape, without creating any contradiction."
+  },
+  {
+    "id": "gen-17-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a bird is a canary, it sings beautifully.",
+      "All birds that sing beautifully are kept as pets.",
+      "No bird kept as a pet is ever a wild bird.",
+      "There is at least one canary that is a wild bird."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 together imply that if a bird is a canary, it sings beautifully, is kept as a pet, and therefore cannot be a wild bird. This conclusion (Canary → Not Wild) directly contradicts Statement 4, which claims that at least one canary is a wild bird."
+  },
+  {
+    "id": "gen-17-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a student studies hard, they will pass the exam.",
+      "Some students pass the exam.",
+      "No student who did not study hard received a high score.",
+      "All students who received a high score also passed the exam."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "It is possible for all these statements to be true simultaneously. For instance, some students could study hard, pass the exam, and receive a high score, while other students do not study hard, do not pass, and do not receive a high score. No statement inherently contradicts another."
+  },
+  {
+    "id": "gen-17-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All employees who attend the workshop receive a bonus.",
+      "No employee who receives a bonus is eligible for promotion this year.",
+      "Every senior manager attended the workshop.",
+      "Some senior managers are eligible for promotion this year."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically imply that if someone is a senior manager, they attended the workshop, received a bonus, and therefore are not eligible for promotion this year. This conclusion (Senior Manager → Not Eligible for Promotion) directly contradicts Statement 4, which states that some senior managers are eligible for promotion."
+  },
+  {
+    "id": "gen-17-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a musician plays the violin, they must practice daily.",
+      "No musician who practices daily performs poorly.",
+      "Some musicians do not play the violin.",
+      "All musicians who perform well are successful."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "It is possible for all these statements to be true. For example, some musicians could play the violin, practice daily, perform well, and be successful, while other musicians do not play the violin and may or may not practice daily or perform well. There is no contradiction between the statements."
+  },
+  {
+    "id": "gen-17-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a student takes advanced math, they must also take physics.",
+      "No student who takes physics is an art major.",
+      "All students who are art majors enroll in a humanities seminar.",
+      "Some students take advanced math and are also art majors."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 together imply that if a student takes advanced math, they take physics, and therefore cannot be an art major. This conclusion (Advanced Math → Not Art Major) directly contradicts Statement 4, which asserts that some students take advanced math and are art majors. Statement 3 is irrelevant to this contradiction."
+  },
+  {
+    "id": "gen-17-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every time the sky is clear, we can see stars.",
+      "If we can see stars, the moon is not full.",
+      "Sometimes the moon is full.",
+      "It is possible for the sky to be clear."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "It is possible for all these statements to be true. For example, on some clear nights, stars are visible and the moon is not full. On other nights, the moon is full, meaning stars are not visible, and the sky might not be clear. There is no logical conflict."
+  },
+  {
+    "id": "gen-17-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every time a customer places an order, they receive a confirmation email.",
+      "No customer who receives a confirmation email is charged for shipping.",
+      "If a customer is not charged for shipping, their order is always delivered within two days.",
+      "Some customers who place an order do not have their order delivered within two days."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a logical chain: If a customer places an order, they receive a confirmation email, are not charged for shipping, and therefore their order is delivered within two days. This implies that all customers who place an order have their order delivered within two days. This conclusion directly contradicts Statement 4, which claims some customers who place an order do not have their order delivered within two days."
+  },
+  {
+    "id": "gen-17-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All committee members attend the quarterly meeting.",
+      "If someone attends the quarterly meeting, they receive the agenda beforehand.",
+      "Some people who receive the agenda beforehand are not committee members.",
+      "No one receives the agenda beforehand unless they attend the quarterly meeting."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. For example, all committee members attend the meeting and receive the agenda. Other individuals, who are not committee members, could also attend the quarterly meeting and thus receive the agenda, satisfying Statement 3, and respecting the conditions of Statements 2 and 4."
+  },
+  {
+    "id": "gen-17-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "A city experiences significant traffic congestion only if its public transport system is inadequate.",
+      "If a city's public transport system is inadequate, it invests heavily in road infrastructure.",
+      "No city that invests heavily in road infrastructure prioritizes eco-friendly policies.",
+      "All cities that prioritize eco-friendly policies experience significant traffic congestion.",
+      "There is at least one city that prioritizes eco-friendly policies."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 4, 1, 2, and 3 form a logical chain: If a city prioritizes eco-friendly policies, then it experiences significant traffic congestion, which implies its public transport is inadequate, leading to heavy investment in road infrastructure, which means it does not prioritize eco-friendly policies. This creates a contradiction (PEP → Not PEP) that makes the existence of any city prioritizing eco-friendly policies (as asserted in Statement 5) impossible."
+  },
+  {
+    "id": "gen-17-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a movie is a box office hit, it receives critical acclaim.",
+      "Some movies receive critical acclaim.",
+      "No movie that receives critical acclaim fails to get a sequel.",
+      "Every movie that gets a sequel is a box office hit."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. For instance, some movies could receive critical acclaim, get a sequel, and also be a box office hit, satisfying all conditions without contradiction. The derived chain 'critical acclaim → gets a sequel → box office hit' is consistent with the other statements."
+  },
+  {
+    "id": "gen-18-1",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All successful startups embrace risk-taking.",
+      "No company that embraces risk-taking has a perfectly stable market position.",
+      "Every successful startup has a perfectly stable market position."
+    ],
+    "isConsistent": false,
+    "answerIndex": 0,
+    "explanation": "Statement 2 says companies embracing risk-taking lack a stable market position. Statement 3 claims every successful startup has a stable market position. Together, these imply that no successful startup embraces risk-taking. This directly contradicts Statement 1, which asserts that all successful startups embrace risk-taking. Removing Statement 1 resolves this contradiction, as the remaining statements would then consistently imply that successful startups do not embrace risk-taking."
+  },
+  {
+    "id": "gen-18-2",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every participant in the marathon completed the race.",
+      "No one who completed the race felt completely refreshed afterward.",
+      "Some participants in the marathon felt completely refreshed afterward."
+    ],
+    "isConsistent": false,
+    "answerIndex": 1,
+    "explanation": "Statement 1 states that all marathon participants completed the race. If Statement 2 is true, then no one who completed the race felt refreshed, which would mean no marathon participant felt refreshed. This conclusion contradicts Statement 3, which claims some participants did feel refreshed. Removing Statement 2 allows Statement 1 and Statement 3 to be consistent; participants could complete the race and some could feel refreshed."
+  },
+  {
+    "id": "gen-18-3",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All rare books are kept in the restricted section.",
+      "No book in the restricted section can be checked out.",
+      "At least one rare book can be checked out."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all rare books are in the restricted section. Statement 2 says no book in the restricted section can be checked out. These two statements logically imply that no rare book can be checked out. This conclusion directly contradicts Statement 3, which claims at least one rare book can be checked out. Removing Statement 3 resolves this contradiction, making the remaining statements consistent."
+  },
+  {
+    "id": "gen-18-4",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every bird in this aviary can fly.",
+      "Some birds that can fly are not native to this region.",
+      "No bird native to this region is a danger to the ecosystem."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Birds in the aviary are flying birds. Some flying birds (which may or may not be from the aviary) are not native. Native birds are not dangerous. These facts do not create any logical conflict."
+  },
+  {
+    "id": "gen-18-5",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All team leaders have completed advanced training.",
+      "Some employees who completed advanced training are not team leaders.",
+      "Maria has completed advanced training."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Team leaders are a subset of those with advanced training. Some people with advanced training are not team leaders, meaning the group of those with advanced training is larger. Maria could be a team leader or one of the employees with advanced training who is not a team leader, without contradiction."
+  },
+  {
+    "id": "gen-18-6",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every city council member supports the new zoning plan.",
+      "Some who support the new zoning plan are against urban development.",
+      "All city council members are against urban development."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. If all city council members support the plan (Statement 1) and are against urban development (Statement 3), then it must be the case that some who support the plan are against urban development, which is consistent with Statement 2."
+  },
+  {
+    "id": "gen-18-7",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "No plant in this garden requires full sun.",
+      "Some plants in this garden are drought-resistant.",
+      "All plants that require full sun are drought-resistant."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. The garden could contain only shade-loving plants (Statement 1). Some of these shade-loving plants could be drought-resistant (Statement 2). Statement 3 describes a property of full-sun plants that doesn't conflict, as no full-sun plants are in this garden according to Statement 1."
+  },
+  {
+    "id": "gen-18-8",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All students taking the advanced calculus course have strong math backgrounds.",
+      "Some students with strong math backgrounds are not taking the advanced calculus course.",
+      "Every student taking the advanced calculus course also takes a literature elective."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Students in advanced calculus have strong math backgrounds and take literature electives. The group of students with strong math backgrounds is larger than just those taking advanced calculus. No contradiction arises from these conditions."
+  },
+  {
+    "id": "gen-18-9",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All committee members supported the proposal.",
+      "No one who supported the proposal attended the subsequent meeting.",
+      "Some committee members attended the subsequent meeting."
+    ],
+    "isConsistent": false,
+    "answerIndex": 1,
+    "explanation": "Statement 1 says all committee members supported the proposal. If Statement 2 is true, then no one who supported the proposal attended the meeting, which means no committee member attended the meeting. This conclusion contradicts Statement 3, which asserts that some committee members did attend the meeting. Removing Statement 2 resolves this contradiction, as Statements 1 and 3 can be consistent; committee members could support the proposal and some could attend the meeting."
+  },
+  {
+    "id": "gen-18-10",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every valid driver's license belongs to an adult.",
+      "No adult has a criminal record.",
+      "Some valid driver's licenses belong to people with a criminal record."
+    ],
+    "isConsistent": false,
+    "answerIndex": 1,
+    "explanation": "Statement 1 says all valid driver's licenses belong to adults. If Statement 2 is true, then no adult has a criminal record, which means no valid driver's license belongs to someone with a criminal record. This conclusion contradicts Statement 3, which claims some valid driver's licenses belong to people with a criminal record. Removing Statement 2 resolves this contradiction, as it allows for the possibility that some adults with valid licenses have criminal records."
+  },
+  {
+    "id": "gen-19-1",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All birds that migrate fly south for the winter.",
+      "No bird that flies south for the winter has a blue plumage.",
+      "Some birds with blue plumage migrate."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 imply that all birds that migrate do not have a blue plumage. Statement 3, however, asserts that some birds with blue plumage do migrate. This directly contradicts the conclusion derived from Statements 1 and 2."
+  },
+  {
+    "id": "gen-19-2",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All artists are creative individuals.",
+      "Some creative individuals are not artists.",
+      "Every student in this class is a creative individual.",
+      "No student in this class is an artist."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 3 indicates all students are creative individuals. Statement 4 says no student is an artist. This means students are a subset of creative individuals who are not artists, which is consistent with Statements 1 and 2."
+  },
+  {
+    "id": "gen-19-3",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All valuable paintings are displayed in secure galleries.",
+      "No painting displayed in a secure gallery is ever available for private sale.",
+      "The museum acquired a painting that is available for private sale.",
+      "The museum acquired only valuable paintings."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 establish that all valuable paintings are not available for private sale. Statements 3 and 4 together imply that the museum acquired some valuable paintings that are available for private sale. This creates a direct contradiction with the conclusion from Statements 1 and 2."
+  },
+  {
+    "id": "gen-19-4",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a dog is a terrier, then it is a lively breed.",
+      "Some lively breeds are not terriers.",
+      "All dogs from this kennel are terriers.",
+      "All dogs from this kennel are lively breeds."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 3 together imply that all dogs from this kennel are lively breeds, which is directly stated by Statement 4. Statement 2, that some lively breeds are not terriers, is consistent as it simply means not all lively breeds belong to the terrier category."
+  },
+  {
+    "id": "gen-19-5",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every employee who received a bonus had exceeded their annual sales target.",
+      "Anyone who exceeded their annual sales target also contributed to a new client acquisition.",
+      "No employee who contributed to a new client acquisition was laid off.",
+      "Margaret was laid off, but she received a bonus."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically conclude that any employee who received a bonus was not laid off. Statement 4 explicitly states that Margaret was laid off and received a bonus, which directly contradicts the conclusion from the first three statements."
+  },
+  {
+    "id": "gen-19-6",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All mammals possess a spinal column.",
+      "No insect possesses a spinal column.",
+      "Some creatures with a spinal column are not mammals.",
+      "Whales are mammals."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 and 4 imply that whales possess a spinal column, which is consistent. Statement 2 adds information about insects without creating conflict. Statement 3 allows for other types of animals (like birds or fish) to have spinal columns without being mammals, which is also consistent."
+  },
+  {
+    "id": "gen-19-7",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a plant is a succulent, it requires very little water.",
+      "Any plant requiring very little water thrives in arid climates.",
+      "There are some succulents that do not thrive in arid climates."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together imply that all succulents thrive in arid climates. Statement 3 directly contradicts this, asserting that some succulents do not thrive in arid climates."
+  },
+  {
+    "id": "gen-19-8",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All high-performance cars are equipped with advanced safety features.",
+      "Some vehicles with advanced safety features are not high-performance cars.",
+      "No car equipped with advanced safety features is unsafe to drive.",
+      "All high-performance cars are safe to drive."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 3 logically lead to the conclusion that all high-performance cars are safe to drive, which is affirmed by Statement 4. Statement 2 simply notes that not all vehicles with advanced safety features are high-performance cars, which is consistent with the other statements."
+  },
+  {
+    "id": "gen-19-9",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every student who enrolls in the advanced calculus course has a strong math background.",
+      "Students with strong math backgrounds always excel in problem-solving.",
+      "No student who excels in problem-solving struggles with abstract concepts.",
+      "Some students enrolled in advanced calculus struggle with abstract concepts."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 together imply that all students enrolled in advanced calculus do not struggle with abstract concepts. Statement 4 directly contradicts this conclusion by claiming that some students in advanced calculus do struggle with abstract concepts."
+  },
+  {
+    "id": "gen-19-10",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If an animal is a feline, it has retractable claws.",
+      "All domestic cats are felines.",
+      "Some animals with retractable claws are not felines.",
+      "No domestic cat has non-retractable claws."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 together imply that all domestic cats have retractable claws, which is consistent with Statement 4 (no domestic cat has non-retractable claws). Statement 3, indicating some animals with retractable claws are not felines, simply provides additional consistent information about other animal groups."
+  },
+  {
+    "id": "gen-20-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a creature is an insect, it has six legs.",
+      "All creatures with six legs are arthropods.",
+      "No arthropod is a vertebrate.",
+      "Every creature in the Kriket family is an insect.",
+      "Some creatures in the Kriket family are vertebrates."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, 3, and 4 establish a chain: If a creature is a Kriket family member, then it is an insect, has six legs, is an arthropod, and is not a vertebrate. This means no Kriket family member is a vertebrate. Statement 5, however, claims that some Kriket family members are vertebrates, which directly contradicts this conclusion."
+  },
+  {
+    "id": "gen-20-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All successful entrepreneurs are highly motivated.",
+      "No highly motivated person enjoys failure.",
+      "Some people who do not enjoy failure are not successful entrepreneurs.",
+      "Maria is a highly motivated person."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Maria is a highly motivated person and thus does not enjoy failure. She could or could not be a successful entrepreneur, which is consistent with the other statements. Statement 3 simply affirms that there are individuals who do not enjoy failure but are not successful entrepreneurs, which does not create a conflict."
+  },
+  {
+    "id": "gen-20-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a document is legally binding, it must be signed.",
+      "All signed documents have been reviewed by a legal team.",
+      "No document reviewed by a legal team contains typographical errors.",
+      "Sarah's new contract contains typographical errors.",
+      "Sarah's new contract is legally binding."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, 3, and 5 establish a chain: If Sarah's contract is legally binding, it must be signed, reviewed by a legal team, and therefore contain no typographical errors. This implies Sarah's contract contains no typographical errors. However, Statement 4 explicitly states that Sarah's new contract contains typographical errors, which creates a direct contradiction."
+  },
+  {
+    "id": "gen-20-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All planets in the K-system have at least one moon.",
+      "If a planet has a moon, it experiences tidal forces.",
+      "Some objects experiencing tidal forces are not planets.",
+      "Planet X is in the K-system."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Planet X is in the K-system, so it has at least one moon and experiences tidal forces. Statement 3 merely points out that some objects experiencing tidal forces are not planets, which is possible and does not contradict any other statement."
+  },
+  {
+    "id": "gen-20-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every successful experiment requires meticulous planning.",
+      "If a project has meticulous planning, it receives adequate funding.",
+      "No project that receives adequate funding ever fails.",
+      "Dr. Smith's latest experiment was a failure.",
+      "Dr. Smith's latest experiment had meticulous planning."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 2, 3, and 5 together imply that Dr. Smith's experiment, having meticulous planning, must have received adequate funding and therefore could not have been a failure. Statement 4 directly contradicts this conclusion by stating the experiment was a failure. Statement 1 is not necessary for this contradiction."
+  },
+  {
+    "id": "gen-20-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All rare books are valuable.",
+      "If a book is valuable, it is kept in a secure vault.",
+      "Some books kept in a secure vault are not rare.",
+      "This first edition copy of \"Moby Dick\" is valuable."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. The first edition \"Moby Dick\" is valuable and thus kept in a secure vault. The fact that some books in vaults are not rare is perfectly consistent with all rare books being valuable and kept in vaults; it just means there are other valuable, non-rare books also kept securely."
+  },
+  {
+    "id": "gen-20-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a decision is ethical, it prioritizes long-term well-being.",
+      "All decisions that prioritize long-term well-being avoid immediate gratification.",
+      "No decision that avoids immediate gratification causes widespread discontent.",
+      "The council's new policy avoids immediate gratification.",
+      "The council's new policy causes widespread discontent."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 2, 3, and 4 establish a chain: The council's new policy avoids immediate gratification, which means it causes no widespread discontent. Statement 5 directly contradicts this by stating the policy causes widespread discontent. Statement 1 is not required for this contradiction."
+  },
+  {
+    "id": "gen-20-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every successful athlete trains intensely.",
+      "If someone trains intensely, they maintain a strict diet.",
+      "Some people who maintain a strict diet are not successful athletes.",
+      "Mark maintains a strict diet."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Mark maintains a strict diet. This is consistent with him being a successful athlete (who would train intensely and diet) or not being one (as Statement 3 allows for people who diet but are not successful athletes)."
+  },
+  {
+    "id": "gen-20-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All valid arguments have true premises.",
+      "If an argument has true premises, its conclusion must be true.",
+      "No argument with a true conclusion is unsound.",
+      "The prosecutor's argument is valid.",
+      "The prosecutor's argument is unsound."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, 3, and 4 establish a chain: If the prosecutor's argument is valid, then it has true premises, a true conclusion, and therefore cannot be unsound. This means the prosecutor's argument is sound. Statement 5, however, claims the prosecutor's argument is unsound, which creates a direct contradiction."
+  },
+  {
+    "id": "gen-20-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every well-run company has clear objectives.",
+      "If a company has clear objectives, its employees are highly motivated.",
+      "No company with highly motivated employees experiences frequent turnover.",
+      "Some companies experience frequent turnover."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Statements 1, 2, and 3 establish that every well-run company has clear objectives, highly motivated employees, and therefore does not experience frequent turnover. Statement 4 simply states that some companies experience frequent turnover, which is consistent with these companies not being \"well-run\" as defined by the preceding statements."
+  },
+  {
+    "id": "gen-21-1",
+    "difficulty": "medium",
+    "category": "syllogism",
     "statements": [
       "All owls are nocturnal birds.",
       "No nocturnal birds hunt during the day.",
@@ -837,2728 +2638,722 @@ const generatedPuzzles: Puzzle[] = [
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply that if a creature is an owl, it is a nocturnal bird, and therefore does not hunt during the day. This leads to the conclusion that no owls hunt during the day. Statement 3 directly contradicts this conclusion, making it the one to remove."
-  },
-  {
-    "id": "gen-8-2",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All bears hibernate.",
-      "Some animals that hibernate are not bears.",
-      "Some animals that do not hibernate are not bears."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. It is possible for all bears to hibernate, for there to be other hibernating animals that are not bears, and for there to be animals that do not hibernate and are also not bears."
-  },
-  {
-    "id": "gen-8-3",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a student enrolls in the advanced course, they must pass the prerequisite.",
-      "No student who passed the prerequisite failed the final exam.",
-      "Every student in this program enrolled in the advanced course.",
-      "Some students in this program failed the final exam."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: Every student in this program enrolled in the advanced course (3), which means they must pass the prerequisite (1), and no one who passed the prerequisite failed the final exam (2). Therefore, every student in this program did not fail the final exam. Statement 4 directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-8-4",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All fruits contain seeds.",
-      "Not all plant parts that contain seeds are fruits.",
-      "Some plant parts that do not contain seeds are edible."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. It is possible for all fruits to contain seeds, for some plant parts with seeds not to be fruits (e.g., bell peppers), and for some plant parts without seeds to be edible (e.g., lettuce)."
-  },
-  {
-    "id": "gen-8-5",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "No birds eat only insects.",
-      "All birds that fly south for winter eat only insects.",
-      "Some birds fly south for winter."
-    ],
-    "isConsistent": false,
-    "answerIndex": 0,
-    "explanation": "Statements 2 and 3 together imply that some birds eat only insects (those that fly south for winter). Statement 1 asserts that no birds eat only insects, which directly contradicts the conclusion drawn from Statements 2 and 3."
-  },
-  {
-    "id": "gen-8-6",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a dog is a terrier, it is energetic.",
-      "All energetic dogs are good at agility.",
-      "No dogs good at agility are lazy."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. They establish a chain where if a dog is a terrier, it is energetic, good at agility, and not lazy. This chain holds without contradiction."
-  },
-  {
-    "id": "gen-8-7",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every employee attended the mandatory meeting.",
-      "No employee who attended the mandatory meeting received a bonus.",
-      "Some employees did not receive a bonus.",
-      "Every employee received a bonus."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 together imply that every employee attended the mandatory meeting, and no one who attended received a bonus. This means every employee did not receive a bonus. Statement 4, which states every employee received a bonus, directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-8-8",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All successful entrepreneurs embrace risk.",
-      "No one who embraces risk avoids failure.",
-      "Some successful entrepreneurs avoid failure."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply a chain: all successful entrepreneurs embrace risk, and no one who embraces risk avoids failure. Therefore, no successful entrepreneurs avoid failure. Statement 3, which claims some successful entrepreneurs avoid failure, directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-8-9",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All politicians are public speakers.",
-      "No public speakers are shy.",
-      "Some politicians are shy."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply that if someone is a politician, they are a public speaker, and therefore not shy. This leads to the conclusion that no politicians are shy. Statement 3 directly contradicts this, making it the one to remove."
-  },
-  {
-    "id": "gen-8-10",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a painting is famous, it is valuable.",
-      "Some valuable paintings are not famous.",
-      "No famous paintings are new."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. A painting can be famous (and thus valuable and not new), or valuable but not famous (and potentially new or old), or new (and thus not famous, and potentially valuable or not)."
-  },
-  {
-    "id": "gen-9-1",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All researchers who publish frequently receive grants.",
-      "No one who receives a grant struggles to find funding.",
-      "Every senior researcher publishes frequently.",
-      "Some senior researchers struggle to find funding."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 establishes that every senior researcher publishes frequently. Statement 1 indicates that all who publish frequently receive grants. Statement 2 states that no one who receives a grant struggles to find funding. Therefore, it must be true that no senior researcher struggles to find funding. This contradicts Statement 4, which claims that some senior researchers struggle to find funding."
-  },
-  {
-    "id": "gen-9-2",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All professional musicians have excellent hearing.",
-      "Some people with excellent hearing are not professional musicians.",
-      "Every person who teaches music theory has excellent hearing.",
-      "Some people who teach music theory are not professional musicians."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Professional musicians are a subset of people with excellent hearing (Statement 1). There are indeed people with excellent hearing who are not musicians (Statement 2). Music theory teachers are also a group with excellent hearing (Statement 3), and some of these teachers might not be professional musicians (Statement 4), which aligns with the existence of non-musicians within the 'excellent hearing' group."
-  },
-  {
-    "id": "gen-9-3",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "If a candidate is well-prepared, they will answer all questions correctly.",
-      "No candidate who answered all questions correctly failed the interview.",
-      "Every candidate who studied diligently was well-prepared.",
-      "At least one candidate failed the interview, despite studying diligently."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 establishes that all candidates who studied diligently were well-prepared. Statement 1 indicates that well-prepared candidates answer all questions correctly. Statement 2 states that candidates who answered all questions correctly did not fail the interview. Therefore, it must be true that no candidate who studied diligently failed the interview. This contradicts Statement 4, which claims at least one candidate failed the interview despite studying diligently."
-  },
-  {
-    "id": "gen-9-4",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All buildings constructed before 1900 lack modern insulation.",
-      "No building with modern insulation consumes excessive energy.",
-      "Some buildings constructed after 1900 consume excessive energy.",
-      "Some buildings constructed before 1900 do not consume excessive energy."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 identifies pre-1900 buildings as lacking modern insulation. Statement 2 links modern insulation to not consuming excessive energy, but it doesn't state that *only* modern insulation prevents excessive energy use. Statement 3 confirms some post-1900 buildings consume excessive energy, which is possible. Statement 4 suggests that lacking modern insulation (from Statement 1) does not necessarily lead to excessive energy consumption, which is also possible (e.g., due to other energy-saving factors). No direct contradiction is formed."
-  },
-  {
-    "id": "gen-9-5",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every student who completed the extra credit assignment passed the course.",
-      "No student who failed the final exam passed the course.",
-      "Every student who attended all review sessions completed the extra credit assignment.",
-      "Some students attended all review sessions but failed the final exam."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 indicates that every student who attended all review sessions completed the extra credit assignment. Statement 1 states that every student who completed the extra credit assignment passed the course. Therefore, every student who attended all review sessions passed the course. However, Statement 4 identifies some students who attended all review sessions but failed the final exam. Statement 2 clarifies that no student who failed the final exam passed the course. This creates a contradiction: the students identified in Statement 4 both passed the course (via the chain from Statement 3 and 1) and did not pass the course (via Statement 4 and 2)."
-  },
-  {
-    "id": "gen-9-6",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All birds that can fly have feathers.",
-      "Some creatures with feathers cannot fly.",
-      "No creature that lives in Antarctica can fly.",
-      "Some creatures that live in Antarctica have feathers."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 sets a condition for flying birds. Statement 2 confirms that having feathers does not guarantee flight (e.g., penguins). Statement 3 indicates that no Antarctic creatures can fly. Statement 4 points out that some Antarctic creatures have feathers (like penguins), which is fully consistent with them being unable to fly (Statement 3) and with the idea that some feathered creatures cannot fly (Statement 2)."
-  },
-  {
-    "id": "gen-9-7",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All members of the gardening club own a shovel.",
-      "No one who owns a shovel struggles to dig holes.",
-      "Every person who grows prize-winning tomatoes is a member of the gardening club.",
-      "Some people who grow prize-winning tomatoes struggle to dig holes."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 means all people who grow prize-winning tomatoes are members of the gardening club. Statement 1 says all gardening club members own a shovel. Statement 2 indicates that no one who owns a shovel struggles to dig holes. Therefore, no person who grows prize-winning tomatoes struggles to dig holes. This directly contradicts Statement 4, which asserts that some people who grow prize-winning tomatoes struggle to dig holes."
-  },
-  {
-    "id": "gen-9-8",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every employee who works overtime receives a bonus.",
-      "No employee who misses more than two shifts receives a bonus.",
-      "Some employees receive a bonus without working overtime.",
-      "Some employees who miss more than two shifts do not work overtime."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 says all overtime workers get a bonus. Statement 2 says employees missing shifts don't get a bonus. This implies no employee can simultaneously work overtime and miss more than two shifts. Statement 3 suggests that there are other ways to earn a bonus, which doesn't contradict Statement 1. Statement 4 indicates that some employees who miss shifts are not overtime workers, which is perfectly plausible and doesn't create an inconsistency with the other rules."
-  },
-  {
-    "id": "gen-9-9",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All vegetables grown in this region are organic.",
-      "No organic produce has been treated with synthetic pesticides.",
-      "Every farmer market vendor sells only vegetables grown in this region.",
-      "At least one farmer market vendor sells produce that has been treated with synthetic pesticides."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 indicates that every farmer market vendor sells only vegetables grown in this region. Statement 1 states that all vegetables grown in this region are organic. Statement 2 clarifies that no organic produce has been treated with synthetic pesticides. Therefore, every farmer market vendor sells only produce that has not been treated with synthetic pesticides. This directly contradicts Statement 4, which claims at least one farmer market vendor sells produce that has been treated with synthetic pesticides."
-  },
-  {
-    "id": "gen-9-10",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "If a book is a bestseller, it has received critical acclaim.",
-      "No book that receives critical acclaim is ignored by major literary awards.",
-      "Some books that are ignored by major literary awards are not bestsellers.",
-      "Some books have received critical acclaim but are not bestsellers."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 means all bestsellers have critical acclaim. Statement 2 means books with critical acclaim are recognized by awards. From these, all bestsellers are recognized by awards. Statement 3 (some ignored by awards are not bestsellers) is consistent with bestsellers being recognized. Statement 4 (some acclaimed books are not bestsellers) is consistent because Statement 1 only states a condition for bestsellers, not that critical acclaim *only* applies to bestsellers."
-  },
-  {
-    "id": "gen-10-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student studies diligently, they will pass the comprehensive exam.",
-      "Every student who passes the comprehensive exam receives a full scholarship.",
-      "Students with a full scholarship never have to pay tuition.",
-      "All students enrolled in this program study diligently.",
-      "Some students enrolled in this program pay tuition."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1, 2, and 4 establish that all students in the program study diligently, pass the exam, and receive a full scholarship. If Statement 3 were true, this would mean no student in the program pays tuition. However, Statement 5 claims that some students in the program do pay tuition, creating a contradiction. Removing Statement 3 resolves this conflict by allowing scholarship recipients to pay tuition."
-  },
-  {
-    "id": "gen-10-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a candidate has excellent public speaking skills, they will perform well in the debate.",
-      "Anyone who performs well in the debate will gain significant voter support.",
-      "No candidate who gains significant voter support will lose the election.",
-      "Candidate X has excellent public speaking skills.",
-      "Candidate X lost the election."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1, 2, and 4 establish that Candidate X has excellent public speaking skills, will perform well in the debate, and will gain significant voter support. If Statement 3 were true, this would mean Candidate X would win the election. However, Statement 5 asserts that Candidate X lost the election, which is a direct contradiction. Removing Statement 3 resolves this by allowing a candidate to gain significant voter support yet still lose the election."
-  },
-  {
-    "id": "gen-10-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All lions are carnivores.",
-      "Some carnivores are not lions.",
-      "If an animal is a carnivore, it eats meat.",
-      "Not all animals that eat meat are lions."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Statement 1 indicates all lions are carnivores. Statement 2 allows for carnivores that are not lions, which is compatible with Statement 1. Statement 3 establishes that all carnivores eat meat. From this, it follows that any carnivore that is not a lion (as per Statement 2) would be an animal that eats meat but is not a lion, which is precisely what Statement 4 affirms. There is no contradiction."
-  },
-  {
-    "id": "gen-10-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Unless the alarm sounds, the gate remains open.",
-      "If the gate remains open, then the security system is offline.",
-      "The security system is never offline when the lights are on.",
-      "The alarm did not sound.",
-      "The lights are on."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1, 2, and 4 establish that since the alarm did not sound, the gate remains open, and therefore the security system is offline. Statement 5 indicates that the lights are on. If Statement 3 were true, the security system could not be offline while the lights are on, creating a contradiction with the conclusion that the system is offline. Removing Statement 3 allows the security system to be offline even when the lights are on, resolving the inconsistency."
-  },
-  {
-    "id": "gen-10-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All successful athletes train intensely.",
-      "Some people who train intensely are not successful athletes.",
-      "If an athlete trains intensely, they maintain a strict diet.",
-      "Maria maintains a strict diet."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Statement 1 indicates that successful athletes train intensely. Statement 2 allows for individuals who train intensely but are not successful athletes, which is compatible. Statement 3 connects intense training to maintaining a strict diet. Maria maintaining a strict diet (Statement 4) does not create a contradiction; she could be a successful athlete, a non-successful athlete who trains intensely, or even someone who maintains a strict diet for reasons unrelated to athletic training, none of which are precluded by the other statements."
-  },
-  {
-    "id": "gen-10-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "A valid passport is necessary for international travel.",
-      "If someone has a valid passport, they can board any international flight.",
-      "Boarding an international flight requires a visa for the destination country.",
-      "Mr. Smith is traveling internationally.",
-      "Mr. Smith does not have a visa for his destination country."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1, 2, and 4 establish that Mr. Smith is traveling internationally, has a valid passport, and can board an international flight. If Statement 3 were true, Mr. Smith would be required to have a visa for his destination country. However, Statement 5 asserts that Mr. Smith does not have a visa, creating a direct contradiction. Removing Statement 3 resolves this by allowing someone to board an international flight without requiring a visa for the destination country."
-  },
-  {
-    "id": "gen-10-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All effective leaders possess strong communication skills.",
-      "Some individuals with strong communication skills are not effective leaders.",
-      "If a person possesses strong communication skills, they frequently influence group decisions.",
-      "Not all individuals who frequently influence group decisions are effective leaders."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Statement 1 indicates that all effective leaders have strong communication skills. Statement 2 allows for individuals with strong communication skills who are not effective leaders, which is compatible. Statement 3 establishes that possessing strong communication skills leads to frequently influencing group decisions. From Statements 2 and 3, it follows that some individuals who are not effective leaders but have strong communication skills will frequently influence group decisions, thereby affirming Statement 4. No contradiction arises."
-  },
-  {
-    "id": "gen-10-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All senior engineers were involved in the project launch.",
-      "Anyone involved in the project launch attended the strategy workshop.",
-      "No one who attended the strategy workshop missed their annual review.",
-      "Some senior engineers missed their annual review."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 establish that all senior engineers were involved in the project launch and attended the strategy workshop. If Statement 3 were true, it would mean that no senior engineer missed their annual review. However, Statement 4 asserts that some senior engineers did miss their annual review, creating a direct contradiction. Removing Statement 3 resolves this by allowing attendees of the strategy workshop to miss their annual review."
-  },
-  {
-    "id": "gen-10-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If an applicant scored above 90%, they were offered an interview.",
-      "Not all applicants offered an interview scored above 90%.",
-      "Every applicant who was offered an interview possesses strong references.",
-      "Sarah scored 88% on the application.",
-      "Sarah possesses strong references."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Statement 1 indicates scoring above 90% leads to an interview. Statement 2 confirms that an interview can be offered even without scoring above 90%, which is compatible. Statement 3 establishes that anyone offered an interview possesses strong references. Sarah scored 88% (Statement 4), so Statement 1 doesn't guarantee her an interview. However, she could still have been offered an interview (due to Statement 2's allowance), which would mean she has strong references (per Statement 3). Alternatively, she could have strong references (Statement 5) without having been offered an interview, as Statement 3 does not state that strong references are *only* obtained by interviewees. No contradiction exists."
-  },
-  {
-    "id": "gen-10-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "The team will achieve its quota unless there's a major production delay.",
-      "If the team achieves its quota, they will receive a bonus.",
-      "The company awards bonuses only if all performance metrics are met.",
-      "There was no major production delay.",
-      "Not all performance metrics were met this quarter."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1, 2, and 4 establish that since there was no major production delay, the team achieved its quota and received a bonus. If Statement 3 were true, receiving a bonus would mean that all performance metrics were met. However, Statement 5 asserts that not all performance metrics were met, creating a direct contradiction. Removing Statement 3 resolves this by allowing the company to award bonuses even if not all performance metrics are met."
-  },
-  {
-    "id": "gen-11-1",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All musicians attend the annual festival.",
-      "No one who attends the annual festival enjoys loud noises.",
-      "Some musicians enjoy loud noises."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all musicians attend the annual festival. Statement 2 says no one who attends the annual festival enjoys loud noises. Taken together, these imply that no musician enjoys loud noises. This directly contradicts Statement 3, which claims some musicians enjoy loud noises."
-  },
-  {
-    "id": "gen-11-2",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All birds that migrate travel south for winter.",
-      "Some birds that travel south for winter are not songbirds.",
-      "Every bird in the aviary is a songbird."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements can all be true. Birds in the aviary are songbirds. Some birds that travel south are not songbirds, meaning not all birds that travel south are in the aviary or are songbirds. Birds that migrate could be songbirds or non-songbirds, as long as they travel south. No logical contradiction arises."
-  },
-  {
-    "id": "gen-11-3",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a plant needs full sun, it cannot be kept indoors.",
-      "All plants with colorful leaves need full sun.",
-      "Every plant in this nursery is kept indoors.",
-      "There is at least one plant in this nursery with colorful leaves."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 4 indicates there is at least one plant in the nursery with colorful leaves. Statement 2 says all plants with colorful leaves need full sun. Statement 1 says if a plant needs full sun, it cannot be kept indoors. Therefore, there is at least one plant in this nursery that cannot be kept indoors. This contradicts Statement 3, which claims every plant in the nursery is kept indoors."
-  },
-  {
-    "id": "gen-11-4",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "No one who attended the meeting arrived late.",
-      "Some employees arrived late.",
-      "All managers are employees.",
-      "No manager attended the meeting."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements can all be true. The employees who arrived late (Statement 2) could be non-managers and did not attend the meeting, thus not contradicting Statement 1. Statement 3 and 4 are consistent with this possibility."
-  },
-  {
-    "id": "gen-11-5",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All committee members are required to read the full report.",
-      "No one who reads the full report supports the proposal.",
-      "Some committee members support the proposal."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 asserts that all committee members read the full report. Statement 2 states that no one who reads the full report supports the proposal. From these, it logically follows that no committee member supports the proposal. This directly contradicts Statement 3, which claims some committee members support the proposal."
-  },
-  {
-    "id": "gen-11-6",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Every student who passed the exam studied diligently.",
-      "Some students who studied diligently did not pass the exam.",
-      "No student who studied diligently failed the course."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. It's possible for a student to study diligently, not pass the exam (Statement 2), but also not fail the course (Statement 3), perhaps by receiving a passing but non-exceptional grade. Statement 1 simply states a condition for passing the exam."
-  },
-  {
-    "id": "gen-11-7",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a recipe uses cilantro, it is a savory dish.",
-      "All savory dishes pair well with white wine.",
-      "No dish that pairs well with white wine contains cilantro."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says that if a recipe uses cilantro, it is savory. Statement 2 says all savory dishes pair well with white wine. Therefore, any recipe that uses cilantro pairs well with white wine. Statement 3, however, says no dish that pairs well with white wine contains cilantro. This means no dish that pairs well with white wine can be a cilantro dish. These two conclusions directly contradict each other if any dish contains cilantro."
-  },
-  {
-    "id": "gen-11-8",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All employees who work from home use a company laptop.",
-      "Some employees who use a company laptop do not work from home.",
-      "If an employee uses a company laptop, they have access to the secure network.",
-      "Every employee who works from home has access to the secure network."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 4 is logically implied by combining Statement 1 (employees who work from home use a company laptop) and Statement 3 (employees who use a company laptop have access to the secure network). Statement 2 simply notes that using a company laptop is not exclusive to working from home."
-  },
-  {
-    "id": "gen-11-9",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All customers who purchased a standard ticket attended the show.",
-      "No one who attended the show requested a refund.",
-      "Some customers who purchased a standard ticket requested a refund."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 indicates that all customers who bought a standard ticket attended the show. Statement 2 states that no one who attended the show requested a refund. Combining these, it must be true that no customer who purchased a standard ticket requested a refund. This directly contradicts Statement 3, which claims some customers who purchased a standard ticket requested a refund."
-  },
-  {
-    "id": "gen-11-10",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a book is a bestseller, it is displayed prominently in the store.",
-      "No book displayed prominently in the store remains unpurchased for long.",
-      "Every novel published this year is a bestseller.",
-      "Some novels published this year remain unpurchased for long."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 establishes that every novel published this year is a bestseller. Statement 1 says if a book is a bestseller, it is displayed prominently. Statement 2 states that no book displayed prominently remains unpurchased for long. Taken together, these imply that every novel published this year does not remain unpurchased for long. This conclusion contradicts Statement 4, which claims some novels published this year remain unpurchased for long."
-  },
-  {
-    "id": "gen-12-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a plant is a Venus Flytrap, it requires moist soil.",
-      "Any plant that requires moist soil must be watered daily.",
-      "All plants in the conservatory are Venus Flytraps.",
-      "Some plants in the conservatory do not need to be watered daily."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 indicates all plants in the conservatory are Venus Flytraps. From Statement 1, all Venus Flytraps require moist soil. From Statement 2, any plant requiring moist soil must be watered daily. Therefore, all plants in the conservatory must be watered daily. This directly contradicts Statement 4, which claims some plants in the conservatory do not need to be watered daily."
-  },
-  {
-    "id": "gen-12-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student attends the lecture, they will understand the material.",
-      "No student who understands the material will fail the exam.",
-      "Some students did not attend the lecture.",
-      "Some students failed the exam."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 together imply that if a student attends the lecture, they will not fail the exam. The contrapositive means that if a student fails the exam, they did not attend the lecture. Statement 4 says some students failed the exam, and Statement 3 says some students did not attend the lecture. It is consistent for the students who failed the exam (as per Statement 4) to be among those who did not attend the lecture (as per Statement 3), thus creating no contradiction."
-  },
-  {
-    "id": "gen-12-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student is eligible for the scholarship, they must have a GPA above 3.5.",
-      "No student with a GPA above 3.5 has ever failed a course.",
-      "Some students in the advanced seminar are eligible for the scholarship.",
-      "Every student in the advanced seminar has failed at least one course."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 establishes that some students in the advanced seminar are eligible for the scholarship. From Statement 1, these students must have a GPA above 3.5. Statement 2 dictates that no student with a GPA above 3.5 has ever failed a course. This leads to the conclusion that some students in the advanced seminar have not failed any course, which directly contradicts Statement 4, claiming every student in the advanced seminar has failed at least one course."
-  },
-  {
-    "id": "gen-12-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All valid permits are issued by the city council.",
-      "If a permit is issued by the city council, it has an expiration date.",
-      "Some permits have an expiration date but were not issued by the city council.",
-      "Some permits are not valid."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 together imply that all valid permits are issued by the city council and have an expiration date. Statement 3 describes permits that have an expiration date but were not issued by the city council; by Statement 1, these permits cannot be valid. Statement 4 simply states that some permits are not valid, which is consistent with the existence of the permits described in Statement 3. No contradiction arises."
-  },
-  {
-    "id": "gen-12-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If an animal is a primate, it has opposable thumbs.",
-      "No animal with opposable thumbs is a reptile.",
-      "Every animal in the zoo's new exhibit is a reptile.",
-      "Some animals in the zoo's new exhibit are primates."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 asserts that some animals in the new exhibit are primates. From Statement 1, these primates must have opposable thumbs. Statement 2 then states that no animal with opposable thumbs is a reptile. Therefore, some animals in the zoo's new exhibit are not reptiles. This directly contradicts Statement 3, which claims every animal in the zoo's new exhibit is a reptile."
-  },
-  {
-    "id": "gen-12-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a car is a sedan, it is fuel-efficient.",
-      "All trucks are not fuel-efficient.",
-      "Some fuel-efficient cars are not sedans.",
-      "No trucks are sedans."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 1 says sedans are fuel-efficient. Statement 2 says trucks are not fuel-efficient. Statement 3 allows for other types of cars (not sedans) to also be fuel-efficient, which is consistent with Statement 1. Statement 4 correctly states that trucks are not sedans, which is also consistent given that sedans are fuel-efficient and trucks are not. No contradiction is formed."
-  },
-  {
-    "id": "gen-12-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a document is confidential, it requires approval for viewing.",
-      "All documents requiring approval for viewing are stored in the secure vault.",
-      "No document stored in the secure vault can be accessed remotely.",
-      "Some confidential documents can be accessed remotely."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 indicates that some confidential documents can be accessed remotely. From Statement 1, these confidential documents require approval for viewing. Statement 2 clarifies that all documents requiring approval are stored in the secure vault. Finally, Statement 3 states that no document in the secure vault can be accessed remotely. This forms a chain showing that some confidential documents cannot be accessed remotely, which directly contradicts Statement 4."
-  },
-  {
-    "id": "gen-12-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a musician plays an instrument, they read sheet music.",
-      "Every musician in the orchestra plays an instrument.",
-      "Some musicians do not read sheet music.",
-      "Some musicians are not in the orchestra."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 together imply that every musician in the orchestra reads sheet music. Statement 3 mentions some musicians do not read sheet music; by the contrapositive of Statement 1 (if they don't read sheet music, they don't play an instrument), these musicians cannot be in the orchestra. Statement 4 simply confirms that some musicians are not in the orchestra, which is consistent with the existence of the musicians from Statement 3 and does not create a conflict."
-  },
-  {
-    "id": "gen-12-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "A flight will depart on time only if there is no mechanical delay.",
-      "If a flight departs on time, then all passengers will make their connections.",
-      "No flight with a mechanical delay allows passengers to make their connections.",
-      "Some flights departing this afternoon had passengers who made their connections.",
-      "Every flight departing this afternoon had a mechanical delay."
-    ],
-    "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statement 4 states that some flights departing this afternoon had passengers who made their connections. From Statement 3, no flight with a mechanical delay allows passengers to make their connections. The contrapositive of Statement 3 means that if passengers made their connections, there was no mechanical delay. Therefore, some flights departing this afternoon had no mechanical delay. This directly contradicts Statement 5, which claims every flight departing this afternoon had a mechanical delay."
-  },
-  {
-    "id": "gen-12-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every book in the library's rare collection is protected by a special cover.",
-      "If a book has a special cover, it must be handled with gloves.",
-      "Some books handled with gloves are not in the rare collection.",
-      "Some books in the general collection are protected by a special cover."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 together imply that all books in the rare collection are handled with gloves. Statement 3 indicates that other books outside the rare collection are also handled with gloves, which is consistent. Statement 4 specifies that some books in the general collection have special covers; by Statement 2, these books would also need to be handled with gloves. No contradiction is present in these statements."
-  },
-  {
-    "id": "gen-13-1",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All rare birds have distinctive plumage.",
-      "No bird with distinctive plumage is found in urban areas.",
-      "Some rare birds are found in urban areas."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says that all rare birds have distinctive plumage. Statement 2 says that no bird with distinctive plumage is found in urban areas. Therefore, it must be true that no rare birds are found in urban areas. This directly contradicts Statement 3, which asserts that some rare birds are found in urban areas. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-13-2",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All successful companies prioritize customer service.",
-      "Some companies that prioritize customer service are not large.",
-      "No large company fails."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. It is possible for a company to be successful and prioritize customer service (Statement 1). Some companies prioritizing customer service could be small (Statement 2). And large companies, which may or may not be successful, do not fail (Statement 3). A small, successful company that prioritizes customer service and does not fail would satisfy all conditions."
-  },
-  {
-    "id": "gen-13-3",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every student who passed the exam received a commendation.",
-      "No student who received a commendation attended fewer than ten lectures.",
-      "Some students who passed the exam attended fewer than ten lectures."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 indicates that all students who passed the exam received a commendation. Statement 2 establishes that no student who received a commendation attended fewer than ten lectures. Together, these statements imply that no student who passed the exam attended fewer than ten lectures. This conclusion directly conflicts with Statement 3, which claims that some students who passed the exam did attend fewer than ten lectures. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-13-4",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All scientists are curious individuals.",
-      "Some curious individuals are not scientists.",
-      "Every person who invents something is curious."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Scientists are a subset of curious individuals (Statement 1), and there can be curious individuals who are not scientists (Statement 2). It is also possible for people who invent things to be curious (Statement 3), whether they are scientists or not. For example, an inventor could be a curious individual who is not a scientist."
-  },
-  {
-    "id": "gen-13-5",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every politician supports lower taxes.",
-      "No one who supports lower taxes also supports increased public spending.",
-      "Some politicians support increased public spending."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 states that every politician supports lower taxes. Statement 2 states that no one who supports lower taxes also supports increased public spending. Therefore, it logically follows that no politician supports increased public spending. This directly contradicts Statement 3, which claims that some politicians do support increased public spending. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-13-6",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All fruits contain seeds.",
-      "Some edible plants do not contain seeds.",
-      "No fruit is inedible."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Fruits are a type of edible plant that contains seeds (Statement 1 and 3). There can also be other edible plants, like leafy greens, that do not contain seeds (Statement 2). This scenario allows all statements to be true simultaneously."
-  },
-  {
-    "id": "gen-13-7",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every member of the choir sings alto.",
-      "No one who sings alto is also a tenor.",
-      "Some members of the choir are tenors."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 implies that all members of the choir sing alto. Statement 2 asserts that no one who sings alto is also a tenor. Together, these imply that no member of the choir is a tenor. This directly contradicts Statement 3, which states that some members of the choir are tenors. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-13-8",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All books on philosophy are challenging to read.",
-      "Some challenging books are not on philosophy.",
-      "No book that is not challenging to read is considered a classic."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Books on philosophy are a subset of challenging books (Statement 1). There can be challenging books that are not philosophy (Statement 2). Statement 3 indicates that for a book to be a classic, it must be challenging. All these conditions can hold true at the same time, for example, a classic challenging book could be on philosophy, or not."
-  },
-  {
-    "id": "gen-13-9",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All artists are creative individuals.",
-      "No creative individual is afraid of new ideas.",
-      "Some artists are afraid of new ideas.",
-      "Every person afraid of new ideas lacks vision."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 states that all artists are creative individuals. Statement 2 states that no creative individual is afraid of new ideas. From these two, it logically follows that no artist is afraid of new ideas. This directly contradicts Statement 3, which claims that some artists are afraid of new ideas. Statement 4 does not participate in this specific contradiction. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-13-10",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All professional musicians practice daily.",
-      "Some people who practice daily are not professional musicians.",
-      "Every person who excels at their craft practices daily."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Professional musicians are a group within those who practice daily (Statement 1). There are also other people who practice daily but are not professional musicians (Statement 2). People who excel at their craft are also part of the group that practices daily (Statement 3), and they could be professional musicians or not. For example, a professional athlete excels and practices daily but is not a professional musician."
-  },
-  {
-    "id": "gen-14-1",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All skilled carpenters are meticulous craftsmen.",
-      "No meticulous craftsman ever rushes a project.",
-      "Every member of the construction crew is a skilled carpenter.",
-      "At least one member of the construction crew rushes projects."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 (Every member of the construction crew is a skilled carpenter) combined with Statement 1 (All skilled carpenters are meticulous craftsmen) implies that every member of the construction crew is a meticulous craftsman. Statement 2 (No meticulous craftsman ever rushes a project) then implies that no member of the construction crew rushes projects. This directly contradicts Statement 4 (At least one member of the construction crew rushes projects)."
-  },
-  {
-    "id": "gen-14-2",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All birds that nest in trees produce offspring in spring.",
-      "Some birds that produce offspring in spring do not nest in trees.",
-      "The bluebirds in our park produce offspring in spring.",
-      "No bluebirds in our park nest in trees."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 1 states that birds nesting in trees produce offspring in spring. Statement 4 indicates that bluebirds in the park do not nest in trees. This means Statement 1 does not apply to bluebirds. Statement 3 (bluebirds produce offspring in spring) is consistent with Statement 2, which allows for some birds that produce offspring in spring not to nest in trees. The bluebirds could be an example of such birds."
-  },
-  {
-    "id": "gen-14-3",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "If a plant needs daily sunlight, it thrives in warm climates.",
-      "No plant that thrives in warm climates can tolerate cold snaps.",
-      "Every plant in the conservatory needs daily sunlight.",
-      "Some plants in the conservatory can tolerate cold snaps."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 (Every plant in the conservatory needs daily sunlight) implies that all plants in the conservatory thrive in warm climates (from Statement 1). This then implies that no plants in the conservatory can tolerate cold snaps (from Statement 2). This directly contradicts Statement 4 (Some plants in the conservatory can tolerate cold snaps)."
-  },
-  {
-    "id": "gen-14-4",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every member of the chess club owns a digital clock.",
-      "Some people who own digital clocks are not members of the chess club.",
-      "No member of the chess club owns an analog clock.",
-      "David owns an analog clock."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 3 states that no chess club member owns an analog clock. Statement 4 says David owns an analog clock, which means David cannot be a member of the chess club. This is consistent with Statement 1 (members own digital clocks, which David might or might not also own) and Statement 2 (there are non-members who own digital clocks, David could be one of them or not)."
-  },
-  {
-    "id": "gen-14-5",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All successful artists exhibit their work in galleries.",
-      "No artist who exhibits in galleries works exclusively from home.",
-      "Some artists who work exclusively from home are successful artists."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 3 claims 'Some artists who work exclusively from home are successful artists.' If we combine this with Statement 1, 'All successful artists exhibit their work in galleries,' we can conclude that some artists who work exclusively from home exhibit their work in galleries. However, Statement 2 clearly states 'No artist who exhibits in galleries works exclusively from home,' which directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-14-6",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All employees with a management position attend the annual leadership retreat.",
-      "No one who attends the annual leadership retreat has access to the confidential client database.",
-      "Every senior project lead has a management position.",
-      "Some senior project leads have access to the confidential client database."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 (Every senior project lead has a management position) combined with Statement 1 (All employees with a management position attend the annual leadership retreat) implies that every senior project lead attends the annual leadership retreat. Statement 2 (No one who attends the annual leadership retreat has access to the confidential client database) then implies that no senior project lead has access to the confidential client database. This directly contradicts Statement 4 (Some senior project leads have access to the confidential client database)."
-  },
-  {
-    "id": "gen-14-7",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All mammals have hair or fur.",
-      "Some animals with hair or fur are not mammals.",
-      "No animal that lays eggs has hair or fur.",
-      "Some mammals do not lay eggs."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 1 establishes that all mammals have hair or fur. Statement 3 (No animal that lays eggs has hair or fur) means that any animal that lays eggs cannot have hair or fur. Since mammals have hair or fur (Statement 1), it logically follows that no mammal lays eggs. Statement 4, 'Some mammals do not lay eggs,' is therefore entirely consistent with the fact that no mammals lay eggs."
-  },
-  {
-    "id": "gen-14-8",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All reliable bicycles have reinforced frames.",
-      "If a bicycle has a reinforced frame, it is not prone to flats.",
-      "Every bicycle designed for racing is a reliable bicycle.",
-      "Some bicycles designed for racing are prone to flats."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 (Every bicycle designed for racing is a reliable bicycle) combined with Statement 1 (All reliable bicycles have reinforced frames) implies that every bicycle designed for racing has a reinforced frame. Statement 2 (If a bicycle has a reinforced frame, it is not prone to flats) then implies that no bicycle designed for racing is prone to flats. This directly contradicts Statement 4 (Some bicycles designed for racing are prone to flats)."
-  },
-  {
-    "id": "gen-14-9",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All fruits that are red contain antioxidants.",
-      "Some fruits that contain antioxidants are not red.",
-      "No fruit that is green contains antioxidants.",
-      "Some red fruits are not sweet."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 1 says red fruits contain antioxidants. Statement 2 says some antioxidant-containing fruits are not red, which is perfectly possible (e.g., blueberries are not red but contain antioxidants). Statement 3 says green fruits do not contain antioxidants. All of these are consistent. Statement 4 (Some red fruits are not sweet) introduces a new characteristic (sweetness) and is entirely compatible with the other statements, as there is no information to suggest all red fruits must be sweet."
-  },
-  {
-    "id": "gen-14-10",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All successful public speakers use effective visuals.",
-      "No one who uses effective visuals speaks in monotone.",
-      "Every motivational coach is a successful public speaker.",
-      "Some motivational coaches speak in monotone."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 (Every motivational coach is a successful public speaker) combined with Statement 1 (All successful public speakers use effective visuals) implies that every motivational coach uses effective visuals. Statement 2 (No one who uses effective visuals speaks in monotone) then implies that no motivational coach speaks in monotone. This directly contradicts Statement 4 (Some motivational coaches speak in monotone)."
-  },
-  {
-    "id": "gen-15-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every student who completes the advanced course receives a diploma.",
-      "No student receives a diploma unless they pass the final exam.",
-      "Anyone who passes the final exam has diligently studied.",
-      "Some students completed the advanced course but did not diligently study."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: if a student completes the advanced course, they receive a diploma; if they receive a diploma, they pass the final exam; and if they pass the final exam, they have diligently studied. This means all students who complete the advanced course must have diligently studied. Statement 4 contradicts this by claiming some students completed the advanced course but did not diligently study."
-  },
-  {
-    "id": "gen-15-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a bird is a canary, it sings beautifully.",
-      "All birds that sing beautifully are often mistaken for nightingales.",
-      "Some birds are often mistaken for nightingales, but are not canaries.",
-      "Not all birds that sing beautifully are canaries."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all canaries sing beautifully and are often mistaken for nightingales. Statement 3 suggests that other birds, not just canaries, might also be mistaken for nightingales, which is possible. Statement 4 affirms that not all birds that sing beautifully are canaries, allowing for other beautiful singers. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-15-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All employees who work remotely attend the weekly video conference.",
-      "If an employee attends the weekly video conference, they have access to the shared drive.",
-      "No employee has access to the shared drive unless their manager approves it.",
-      "Some employees work remotely, but their manager has not approved shared drive access."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: if an employee works remotely, they attend the video conference; if they attend, they have shared drive access; and if they have access, their manager approved it. Therefore, all remote employees must have manager-approved shared drive access. Statement 4 contradicts this by asserting that some remote employees do not have this approval."
-  },
-  {
-    "id": "gen-15-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every successful business expands its market reach.",
-      "Businesses that expand their market reach always invest in new technology.",
-      "Some businesses invest in new technology, but are not successful.",
-      "Not every business that invests in new technology expands its market reach."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all successful businesses expand their market reach and invest in new technology. Statement 3 is consistent because businesses that are not successful could still invest in technology. Statement 4 is also consistent, as some businesses might invest in technology without expanding their market reach. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-15-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All members of the chess club are skilled strategists.",
-      "If a person is a skilled strategist, they spend many hours practicing.",
-      "No one who spends many hours practicing is interested in quick games.",
-      "Every member of the chess club is interested in quick games."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 establish a chain: all chess club members are skilled strategists; skilled strategists spend many hours practicing; and those who spend many hours practicing are not interested in quick games. This means all chess club members are not interested in quick games. Statement 4 directly contradicts this by asserting that every member of the chess club is interested in quick games."
-  },
-  {
-    "id": "gen-15-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Only qualified instructors lead advanced workshops.",
-      "All qualified instructors have completed specialized training.",
-      "Some people who have completed specialized training do not lead advanced workshops.",
-      "Every instructor who leads an advanced workshop is highly experienced."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all instructors who lead advanced workshops are qualified and have completed specialized training. Statement 3 is consistent, as some individuals with specialized training might choose not to lead advanced workshops. Statement 4 adds an independent characteristic that does not conflict with the other conditions. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-15-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "The factory production line operates at full capacity only if all safety checks are passed.",
-      "If all safety checks are passed, then no maintenance issues are present.",
-      "Unless the factory production line operates at full capacity, there are major delays.",
-      "Some maintenance issues are present, but there are no major delays."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 imply that if the production line operates at full capacity, no maintenance issues are present. This means if maintenance issues are present, the line is not at full capacity. Statement 3 states that if the line is not at full capacity, there are major delays. Therefore, if maintenance issues are present, there must be major delays. Statement 4 contradicts this by saying some maintenance issues are present, but there are no major delays."
-  },
-  {
-    "id": "gen-15-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All plants in the garden require daily watering.",
-      "If a plant requires daily watering, it has delicate roots.",
-      "Some plants with delicate roots are not in the garden.",
-      "No plant with delicate roots is drought-tolerant."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 show that all plants in the garden require daily watering and have delicate roots. Statement 3 is consistent, as some plants with delicate roots may simply not be located in this particular garden. Statement 4 introduces a characteristic of delicate-rooted plants which does not conflict with any other statement. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-15-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every successful entrepreneur possesses strong leadership skills.",
-      "An individual possesses strong leadership skills only if they inspire confidence in others.",
-      "People who inspire confidence in others never work in isolation.",
-      "Some successful entrepreneurs work in isolation."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a logical chain: all successful entrepreneurs have strong leadership skills; those with strong leadership skills inspire confidence; and those who inspire confidence never work in isolation. This implies that all successful entrepreneurs never work in isolation. Statement 4 directly contradicts this conclusion by stating that some successful entrepreneurs do work in isolation."
-  },
-  {
-    "id": "gen-15-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a creature is a mammal, it has fur or hair.",
-      "All creatures with fur or hair are warm-blooded.",
-      "Some warm-blooded creatures do not have fur or hair.",
-      "No creature that is not warm-blooded is a mammal."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 establish that all mammals have fur or hair, and all creatures with fur or hair are warm-blooded, which means all mammals are warm-blooded. Statement 3 is consistent, as other types of warm-blooded creatures might exist without fur or hair. Statement 4 is simply the contrapositive of the combined implication from statements 1 and 2, making it logically consistent. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-16-1",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All musicians are artists.",
-      "No artist is a scientist.",
-      "Some musicians are scientists."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all musicians are artists. Statement 2 says no artist is a scientist. Together, these imply that no musician is a scientist. This directly contradicts Statement 3, 'Some musicians are scientists'."
-  },
-  {
-    "id": "gen-16-2",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All dogs enjoy walks.",
-      "Some pets are dogs.",
-      "No cat enjoys walks.",
-      "Felix is a cat."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "It is possible for all statements to be true. For example, Felix is a cat that does not enjoy walks, and some dogs are pets that do enjoy walks. These scenarios do not create any logical contradictions."
-  },
-  {
-    "id": "gen-16-3",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a student studies diligently, they pass the course.",
-      "No student who fails the course graduates.",
-      "Some graduating students did not study diligently."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 2 implies that if a student graduates, they must have passed the course. Statement 1 contrapositively means if a student did not pass the course, they did not study diligently. Thus, a graduating student must have passed and therefore must have studied diligently. This contradicts Statement 3, 'Some graduating students did not study diligently'."
-  },
-  {
-    "id": "gen-16-4",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All birds have feathers.",
-      "Some animals that have feathers cannot fly.",
-      "No insect has feathers."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All three statements can be true simultaneously. For example, birds have feathers, and some birds like ostriches have feathers but cannot fly. Insects, as a distinct category of animals, consistently do not have feathers, which is consistent with the other statements."
-  },
-  {
-    "id": "gen-16-5",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All executives attend the weekly meeting.",
-      "No one who attends the weekly meeting misses the budget deadline.",
-      "Some executives missed the budget deadline."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all executives attend the weekly meeting. Statement 2 says no one who attends the weekly meeting misses the budget deadline. Combining these, it logically follows that no executive missed the budget deadline. This directly contradicts Statement 3, 'Some executives missed the budget deadline'."
-  },
-  {
-    "id": "gen-16-6",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a recipe uses garlic, it is a savory dish.",
-      "Some savory dishes are vegetarian.",
-      "No dessert recipe uses garlic."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All three statements can be simultaneously true. A dish using garlic is savory. Some savory dishes are vegetarian, but not necessarily all, nor does it imply anything about garlic use in vegetarian dishes. Dessert recipes consistently do not use garlic. No logical contradiction arises."
-  },
-  {
-    "id": "gen-16-7",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All valid arguments have true conclusions.",
-      "Some arguments with true conclusions are not valid.",
-      "Every argument presented in class is a valid argument.",
-      "At least one argument presented in class has a false conclusion."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 indicates that every argument presented in class is a valid argument. Statement 1 states that all valid arguments have true conclusions. Therefore, it logically follows that every argument presented in class must have a true conclusion. This directly contradicts Statement 4, which claims at least one argument presented in class has a false conclusion."
-  },
-  {
-    "id": "gen-16-8",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Unless a plant receives sunlight, it will not grow.",
-      "Some plants grow in partial shade.",
-      "All plants that grow in partial shade receive some sunlight."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All three statements can be true. Statement 1 means a plant needs sunlight to grow. Statement 3 clarifies that plants growing in partial shade still receive some sunlight, which is consistent with the requirement of Statement 1 for growth. Statement 2 simply notes that some plants thrive in these conditions."
-  },
-  {
-    "id": "gen-16-9",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All items in the lost-and-found bin are clearly labeled.",
-      "All clearly labeled items are eventually donated.",
-      "Some items in the lost-and-found bin are never donated."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all items in the lost-and-found bin are clearly labeled. Statement 2 says all clearly labeled items are eventually donated. Combining these, it logically follows that all items in the lost-and-found bin are eventually donated. This directly contradicts Statement 3, 'Some items in the lost-and-found bin are never donated'."
-  },
-  {
-    "id": "gen-16-10",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a book is a first edition, it is valuable.",
-      "Some valuable books are not first editions.",
-      "No book printed after 2000 is a first edition.",
-      "All books printed before 1900 are valuable."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All four statements can be true simultaneously. A first edition is valuable. Other books can also be valuable (Statement 2). Books printed after 2000 are not first editions (Statement 3). Books printed before 1900 can be valuable, fitting within the broader category of valuable books. There are no logical inconsistencies."
-  },
-  {
-    "id": "gen-17-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a document is confidential, it requires a secure password.",
-      "All documents requiring a secure password are encrypted.",
-      "Any document that is encrypted cannot be stored on a public server.",
-      "Some confidential documents are stored on a public server."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: if a document is confidential, it requires a secure password; if it requires a secure password, it is encrypted; if it is encrypted, it cannot be stored on a public server. This implies that all confidential documents cannot be stored on a public server. Statement 4 directly contradicts this by asserting that some confidential documents *are* stored on a public server."
-  },
-  {
-    "id": "gen-17-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All qualified candidates have a strong resume.",
-      "Some candidates with strong resumes are not qualified.",
-      "No candidate who has a weak resume will be interviewed.",
-      "Every interviewed candidate is qualified."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "It is possible for all statements to be true simultaneously. For example, some qualified candidates (who have strong resumes) could be interviewed. Some candidates with strong resumes might not be qualified, and thus would not be interviewed (consistent with Statement 4's contrapositive: if not qualified, then not interviewed). No candidate with a weak resume is interviewed, which is consistent with all interviewed candidates being qualified and thus having strong resumes."
-  },
-  {
-    "id": "gen-17-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every car with an active recall has a faulty brake system.",
-      "If a car has a faulty brake system, it cannot pass inspection.",
-      "All cars that fail inspection must be repaired immediately.",
-      "Some cars with an active recall do not require immediate repair."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 establish a logical chain: if a car has an active recall, it has a faulty brake system; if it has a faulty brake system, it cannot pass inspection; if it cannot pass inspection, it must be repaired immediately. This implies that all cars with an active recall must require immediate repair. Statement 4 directly contradicts this by asserting that some cars with an active recall do not require immediate repair."
-  },
-  {
-    "id": "gen-17-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student attends the optional workshop, they receive extra credit.",
-      "No student who missed more than two lectures received extra credit.",
-      "Some students who attended the optional workshop missed more than two lectures."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says that attending the optional workshop implies receiving extra credit. The contrapositive of Statement 2 is that receiving extra credit implies not having missed more than two lectures. Therefore, attending the optional workshop implies not having missed more than two lectures. Statement 3 directly contradicts this by stating that some students attended the optional workshop *and* missed more than two lectures."
-  },
-  {
-    "id": "gen-17-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All successful artists have a distinctive style.",
-      "Some artists with a distinctive style are not successful.",
-      "If an artist lacks a distinctive style, they struggle to gain recognition.",
-      "No artist who struggles to gain recognition is successful."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Statement 1 indicates that success implies a distinctive style. The contrapositive of Statement 1 is \"If an artist lacks a distinctive style, they are not successful.\" Statements 3 and 4 together imply the same conclusion: \"If an artist lacks a distinctive style, they struggle to gain recognition, and if they struggle to gain recognition, they are not successful.\" Statement 2 describes a group of artists whose existence is not precluded by any of the other rules."
-  },
-  {
-    "id": "gen-17-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every project approved by the board receives adequate funding.",
-      "No project that receives adequate funding faces significant delays.",
-      "If a project does not face significant delays, it meets its deadline.",
-      "Some projects approved by the board fail to meet their deadline."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: if a project is approved by the board, it receives adequate funding; if it receives adequate funding, it does not face significant delays; if it does not face significant delays, it meets its deadline. This implies that all projects approved by the board meet their deadline. Statement 4 directly contradicts this by claiming that some projects approved by the board *fail* to meet their deadline."
-  },
-  {
-    "id": "gen-17-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All endangered species require habitat protection.",
-      "No species that requires habitat protection can thrive in urban environments.",
-      "Some species thrive in urban environments.",
-      "All species that thrive in urban environments are robust."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statements 1 and 2, it follows that no endangered species can thrive in urban environments. Statement 3 confirms the existence of some species that thrive in urban environments; these species must therefore not be endangered. Statement 4 adds that all such species are robust, which is also consistent with the previous statements."
-  },
-  {
-    "id": "gen-17-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a restaurant offers outdoor seating, it has a patio.",
-      "All restaurants with a patio serve brunch on weekends.",
-      "Some restaurants that serve brunch on weekends do not offer outdoor seating.",
-      "No restaurant that serves brunch on weekends has a small kitchen."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Restaurants with outdoor seating must have a patio and therefore serve brunch on weekends (from Statements 1 and 2). Such restaurants would also not have a small kitchen (from Statement 4). Statement 3 indicates that there are restaurants that serve brunch but lack outdoor seating, which is entirely possible and does not contradict other statements."
-  },
-  {
-    "id": "gen-17-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every package sent by express delivery arrives within 24 hours.",
-      "If a package arrives within 24 hours, it is handled by the premium service.",
-      "No package handled by the premium service is subject to customs inspection.",
-      "Some packages sent by express delivery are subject to customs inspection."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: if a package is sent by express delivery, it arrives within 24 hours; if it arrives within 24 hours, it is handled by the premium service; if it is handled by the premium service, it is not subject to customs inspection. This implies that all packages sent by express delivery are not subject to customs inspection. Statement 4 directly contradicts this by stating that some packages sent by express delivery *are* subject to customs inspection."
-  },
-  {
-    "id": "gen-17-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All employees who receive a bonus also receive a pay raise.",
-      "No employee who receives a pay raise works part-time.",
-      "Some employees work full-time and receive a bonus.",
-      "Some employees who work part-time do not receive a pay raise."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statements 1 and 2, it follows that any employee receiving a bonus also receives a pay raise and therefore does not work part-time (meaning they work full-time). Statement 3 confirms the existence of full-time employees who receive a bonus, which aligns with this deduction. Statement 4 describes part-time employees who do not receive a pay raise, and thus also do not receive a bonus (from the contrapositive of Statement 1), which is entirely consistent."
-  },
-  {
-    "id": "gen-18-1",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All owls are birds of prey.",
-      "No birds of prey eat berries.",
-      "Some owls eat berries."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 indicate that all owls are birds of prey, and no birds of prey eat berries. This implies that no owls eat berries. Statement 3 directly contradicts this by asserting that some owls do eat berries."
-  },
-  {
-    "id": "gen-18-2",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All engineers are problem-solvers.",
-      "Some problem-solvers are not engineers.",
-      "Every person on the team is a problem-solver."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "It is consistent that all engineers are a subset of problem-solvers. The team can consist of engineers and problem-solvers who are not engineers, and Maria could be either."
-  },
-  {
-    "id": "gen-18-3",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a student enrolls in advanced calculus, they must have passed algebra.",
-      "No student who failed basic geometry passed algebra.",
-      "Every student in this class enrolled in advanced calculus.",
-      "Some students in this class failed basic geometry."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 imply that if a student enrolls in advanced calculus, they must have passed basic geometry. Statement 3 indicates that every student in the class enrolled in advanced calculus, meaning every student in the class passed basic geometry. Statement 4 contradicts this by claiming some students in the class failed basic geometry."
-  },
-  {
-    "id": "gen-18-4",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All successful entrepreneurs are innovative thinkers.",
-      "Some innovative thinkers are not successful entrepreneurs.",
-      "Maria is an innovative thinker."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "It is consistent that successful entrepreneurs are a subset of innovative thinkers. Maria could be an innovative thinker who is also a successful entrepreneur, or she could be an innovative thinker who is not a successful entrepreneur."
-  },
-  {
-    "id": "gen-18-5",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All professors are researchers.",
-      "No researchers are good at public speaking.",
-      "Some professors are good at public speaking."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 establish a chain: all professors are researchers, and no researchers are good at public speaking. This leads to the conclusion that no professors are good at public speaking. Statement 3 directly contradicts this by stating that some professors are good at public speaking."
-  },
-  {
-    "id": "gen-18-6",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All members of the chess club know how to play chess.",
-      "Some people who know how to play chess are not members of the chess club.",
-      "No one who plays checkers is a member of the chess club."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "It is consistent that members of the chess club are a subset of people who know how to play chess. There can be people who play checkers but are not in the chess club, and these people might or might not know how to play chess."
-  },
-  {
-    "id": "gen-18-7",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every successful politician is an effective public speaker.",
-      "No effective public speaker avoids tough questions.",
-      "Some politicians who avoid tough questions are not successful.",
-      "All successful politicians avoid tough questions."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 form a chain: every successful politician is an effective public speaker, and no effective public speaker avoids tough questions. This implies that no successful politician avoids tough questions. Statement 4 directly contradicts this by asserting that all successful politicians avoid tough questions."
-  },
-  {
-    "id": "gen-18-8",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If an animal is a mammal, it has fur.",
-      "All animals that have fur are warm-blooded.",
-      "Some animals are mammals.",
-      "Not all animals are warm-blooded."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all mammals are warm-blooded. Statement 3 confirms the existence of mammals (and thus warm-blooded animals). Statement 4 means there are some cold-blooded animals, which are simply not mammals, consistent with the other statements."
-  },
-  {
-    "id": "gen-18-9",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "No birds that live in the desert eat fish.",
-      "All birds that eat fish have webbed feet.",
-      "Some birds with webbed feet live in the desert.",
-      "All birds that live in the desert have webbed feet."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 4 imply that birds living in the desert have webbed feet but do not eat fish. Statement 2 means any bird that eats fish must have webbed feet. Statement 3 is consistent, as birds that live in the desert could have webbed feet and not eat fish."
-  },
-  {
-    "id": "gen-18-10",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All participants in the marathon finished the race.",
-      "No one who finished the race felt completely rested.",
-      "Some people who felt completely rested participated in the marathon."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 create a chain: all marathon participants finished the race, and no one who finished felt completely rested. This means no marathon participants felt completely rested. Statement 3 contradicts this by claiming that some people who felt completely rested participated in the marathon."
-  },
-  {
-    "id": "gen-19-1",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every successful entrepreneur is a skilled negotiator.",
-      "No skilled negotiator lacks strong financial acumen.",
-      "If someone attends the seminar, they become a successful entrepreneur.",
-      "Some attendees of the seminar do not have strong financial acumen."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: seminar attendees become successful entrepreneurs (3), who are skilled negotiators (1), who have strong financial acumen (2). This means all seminar attendees have strong financial acumen. Statement 4 directly contradicts this by asserting that some attendees do not."
-  },
-  {
-    "id": "gen-19-2",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All elected officials must file an ethics report.",
-      "No one who files an ethics report is allowed to accept corporate gifts.",
-      "Some city council members are elected officials.",
-      "Every city council member is allowed to accept corporate gifts."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 establish that all elected officials are not allowed to accept corporate gifts. Statement 3 tells us some city council members are elected officials. Therefore, some city council members are not allowed to accept corporate gifts. This contradicts statement 4, which says every city council member is allowed to accept corporate gifts."
-  },
-  {
-    "id": "gen-19-3",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "If a plant requires full sun, it thrives in this climate.",
-      "Some plants that thrive in this climate are not native species.",
-      "No plant that requires full sun is a native species.",
-      "All plants that thrive in this climate require full sun."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 4 indicate that requiring full sun and thriving in this climate are equivalent conditions. From statement 1 and 3, all plants requiring full sun are not native species. From the equivalence, all plants thriving in this climate are not native species, which is consistent with statement 2. No contradictions arise."
-  },
-  {
-    "id": "gen-19-4",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every dog in this kennel is a trained retriever.",
-      "No trained retriever has less than two years of experience.",
-      "Some animals in this kennel have less than two years of experience.",
-      "All animals in this kennel are dogs."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 4, 1, and 2 form a chain: every animal in the kennel is a dog (4), which is a trained retriever (1), and therefore has at least two years of experience (2). This means all animals in the kennel have at least two years of experience. Statement 3 contradicts this by claiming some animals in the kennel have less than two years of experience."
-  },
-  {
-    "id": "gen-19-5",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All successful writers have a strong grasp of grammar.",
-      "Some people with a strong grasp of grammar are not successful writers.",
-      "If someone writes a best-selling novel, they are a successful writer.",
-      "Some people who write best-selling novels also have a strong grasp of grammar."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 3 imply that anyone who writes a best-selling novel has a strong grasp of grammar. Statement 4 is consistent with this, as it only claims some such people do. Statement 2 simply clarifies that having a strong grasp of grammar is not exclusive to successful writers. No contradictions arise."
-  },
-  {
-    "id": "gen-19-6",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All cars in the lot are sedans.",
-      "No sedan has more than two doors.",
-      "Some cars in the lot have more than two doors."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 establish that all cars in the lot are sedans (1), and no sedan has more than two doors (2). Therefore, no car in the lot has more than two doors. Statement 3 directly contradicts this by stating some cars in the lot do have more than two doors."
-  },
-  {
-    "id": "gen-19-7",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All members of the astronomy club own a telescope.",
-      "No one who owns a telescope is afraid of heights.",
-      "If someone is afraid of heights, they do not participate in stargazing.",
-      "Some members of the astronomy club participate in stargazing."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all members of the astronomy club are not afraid of heights. The contrapositive of statement 3 means that anyone who participates in stargazing is not afraid of heights. Statement 4 says some members of the astronomy club participate in stargazing. All these conditions are consistent, as participating in stargazing is compatible with not being afraid of heights. No contradictions arise."
-  },
-  {
-    "id": "gen-19-8",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "If a bird is a falcon, it is a raptor.",
-      "All raptors have sharp talons.",
-      "No bird with sharp talons is a vegetarian.",
-      "Some falcons are vegetarians."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: falcons are raptors (1), raptors have sharp talons (2), and no bird with sharp talons is a vegetarian (3). This means all falcons are not vegetarians. Statement 4 directly contradicts this by asserting that some falcons are vegetarians."
-  },
-  {
-    "id": "gen-19-9",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every successful politician is an eloquent speaker.",
-      "Some eloquent speakers are not successful politicians.",
-      "If a person is charismatic, they are an eloquent speaker.",
-      "Not all charismatic people are successful politicians."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 1 says successful politicians are a subset of eloquent speakers. Statement 2 confirms that eloquent speakers can be non-politicians. Statement 3 places charismatic people as a subset of eloquent speakers. Statement 4 is consistent with this, as charismatic people (who are eloquent speakers) do not all have to be successful politicians. No contradictions arise."
-  },
-  {
-    "id": "gen-19-10",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All paintings in the gallery were created by renowned artists.",
-      "No renowned artist uses only acrylics.",
-      "Some paintings in the gallery use only acrylics.",
-      "Every painting in the gallery is valuable."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 create a chain: paintings in the gallery were created by renowned artists (1), and no renowned artist uses only acrylics (2). This means no painting in the gallery uses only acrylics. Statement 3 directly contradicts this by claiming some paintings in the gallery use only acrylics."
-  },
-  {
-    "id": "gen-20-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a recipe uses saffron, it is expensive.",
-      "No expensive recipe is quick to prepare.",
-      "Recipes that use turmeric are always quick to prepare.",
-      "Every recipe using curry powder also uses saffron.",
-      "There are some recipes that use both curry powder and turmeric."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 5 describes a recipe that uses both curry powder and turmeric. Statements 4, 1, and 2 together logically lead to the conclusion that any recipe using curry powder cannot be quick to prepare. However, Statement 3 asserts that any recipe using turmeric must be quick to prepare. This creates a contradiction for the specific recipe, as it would have to be both quick and not quick to prepare. Removing Statement 3 resolves this by breaking the chain that forces the recipe to be quick."
-  },
-  {
-    "id": "gen-20-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a candidate is well-qualified, they will be offered the position.",
-      "No candidate who lacked experience was offered the position.",
-      "All candidates with excellent references are well-qualified.",
-      "Some candidates who lacked experience had excellent references."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 4 identifies a candidate who both lacked experience and had excellent references. Statements 3 and 1 logically lead to this candidate being well-qualified and subsequently offered the position. However, Statement 2 states that no candidate who lacked experience was offered the position. This creates a direct contradiction, as the candidate would be both offered the position and not offered the position. Removing Statement 3 breaks the logical pathway that leads to the candidate being offered the position."
-  },
-  {
-    "id": "gen-20-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "A store sells vintage records only if it also sells used books.",
-      "No store that sells used books carries new CDs.",
-      "Every store that sells new CDs also sells posters.",
-      "If a store sells posters, it must also sell vintage records.",
-      "Some stores sell new CDs."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 5 indicates that some stores sell new CDs. Following Statements 3, 4, 1, and 2 in sequence, a store that sells new CDs must logically also not sell new CDs. This creates a direct contradiction within the set of statements. Removing Statement 4 breaks the crucial link from selling posters to selling vintage records, thereby resolving the inconsistency."
-  },
-  {
-    "id": "gen-20-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All candidates for the scholarship submit a compelling essay.",
-      "No one who submits a compelling essay misses the deadline.",
-      "Every student who is currently enrolled submits a compelling essay.",
-      "If a student misses the deadline, they are not currently enrolled.",
-      "Some candidates for the scholarship miss the deadline."
-    ],
-    "isConsistent": false,
-    "answerIndex": 0,
-    "explanation": "Statement 5 indicates that some scholarship candidates miss the deadline. However, Statements 1 and 2 logically require that any scholarship candidate must submit a compelling essay and therefore cannot miss the deadline. This creates a contradiction for such a student, who would both miss and not miss the deadline. Removing Statement 1 allows for the possibility that a scholarship candidate could miss the deadline without having submitted a compelling essay, thus resolving the inconsistency."
-  },
-  {
-    "id": "gen-20-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a species is carnivorous, it has sharp claws.",
-      "No animal with sharp claws is a strict herbivore.",
-      "All strict herbivores are large mammals.",
-      "If an animal is a large mammal, it is carnivorous.",
-      "Some animals are strict herbivores."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 5 asserts the existence of strict herbivores. However, a logical chain can be formed using Statements 3, 4, 1, and 2, which dictates that any strict herbivore must logically be classified as not being a strict herbivore. This creates a direct contradiction for such an animal. Removing Statement 4 breaks the crucial link from being a large mammal to being carnivorous, thereby resolving the inconsistency."
-  },
-  {
-    "id": "gen-21-1",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All owls are birds.",
-      "No birds are mammals.",
-      "Some owls are mammals."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says that all owls are birds. Statement 2 says that no birds are mammals. Combining these, it must be true that no owls are mammals. This directly contradicts Statement 3, which asserts that some owls are mammals. Removing Statement 3 resolves the inconsistency."
+    "explanation": "Statement 1 says all owls are nocturnal birds. Statement 2 says no nocturnal birds hunt during the day. Combining these two means that all owls do not hunt during the day. This directly contradicts Statement 3, which claims some owls do hunt during the day."
   },
   {
     "id": "gen-21-2",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All architects are creative.",
-      "Some engineers are creative.",
-      "No architects are engineers."
+      "If a plant needs daily watering, it has shallow roots.",
+      "All ferns need daily watering.",
+      "Some plants with shallow roots are not ferns."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Architects form one group of creative individuals, and engineers form another, possibly overlapping, group. The two groups (architects and engineers) are distinct, as per Statement 3, but both can contain creative people."
+    "explanation": "Statements 1 and 2 imply that all ferns have shallow roots. Statement 3 claims that some plants with shallow roots are not ferns, which is consistent because there can be other types of plants with shallow roots, or some shallow-rooted plants that simply are not ferns."
   },
   {
     "id": "gen-21-3",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All employees who work remotely attend the daily standup.",
-      "If an employee attends the daily standup, they have access to the project server.",
-      "Some employees do not have access to the project server.",
-      "Every employee works remotely."
+      "All members of the chess club are skilled strategists.",
+      "No skilled strategists enjoy playing simple board games.",
+      "Some people who enjoy playing simple board games are members of the chess club."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 4 says every employee works remotely. Statement 1 says all employees who work remotely attend the daily standup. Combining these, it means every employee attends the daily standup. Then, Statement 2 says if an employee attends the daily standup, they have access to the project server. This leads to the conclusion that every employee has access to the project server, which contradicts Statement 3 that some employees do not have access to the project server. Removing Statement 3 makes the set consistent."
+    "explanation": "Statement 1 establishes that all chess club members are skilled strategists. Statement 2 states that no skilled strategists enjoy simple board games. Together, these mean no members of the chess club enjoy simple board games. This directly contradicts Statement 3, which claims some people who enjoy simple board games are chess club members."
   },
   {
     "id": "gen-21-4",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All members of the chess club know how to play chess.",
-      "Some members of the chess club also play checkers.",
-      "No one who plays checkers is a member of the debate team.",
-      "Sarah is a member of the chess club."
+      "Every successful entrepreneur possesses strong leadership skills.",
+      "Not all people with strong leadership skills are successful entrepreneurs.",
+      "David has strong leadership skills."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Sarah, as a chess club member, knows how to play chess (Statement 1). She may or may not play checkers (Statement 2 allows for some to play checkers). If she plays checkers, she is not on the debate team (Statement 3). If she doesn't play checkers, her debate team status is unknown. No contradictions arise."
+    "explanation": "Statement 1 describes a characteristic of successful entrepreneurs. Statement 2 clarifies that possessing strong leadership skills does not guarantee one is a successful entrepreneur. Statement 3 introduces David, who could be a successful entrepreneur or one of the leadership-skilled individuals who is not. No contradiction exists."
   },
   {
     "id": "gen-21-5",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All residents of this building have a parking permit.",
-      "Everyone who has a parking permit owns a car.",
-      "Some residents of this building do not own a car."
+      "All fruits that are sweet contain natural sugars.",
+      "No apple contains natural sugars.",
+      "Some apples are sweet."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 establishes that all residents have a parking permit. Statement 2 states that everyone with a parking permit owns a car. From these two statements, it logically follows that all residents of this building own a car. This conclusion directly contradicts Statement 3, which claims that some residents of this building do not own a car. Removing Statement 3 resolves the inconsistency."
+    "explanation": "Statement 1 says that if a fruit is sweet, it contains natural sugars. Statement 3 claims some apples are sweet, which means those apples must contain natural sugars. However, Statement 2 asserts that no apple contains natural sugars, creating a direct contradiction with the conclusion derived from Statements 1 and 3."
   },
   {
     "id": "gen-21-6",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a student enrolls in advanced calculus, they have already passed pre-calculus.",
-      "John has not passed pre-calculus.",
-      "John is a student.",
-      "Some students enroll in advanced calculus."
+      "All professional athletes train regularly.",
+      "No professional athlete is a full-time student.",
+      "Some full-time students train regularly."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 implies that if John enrolled in advanced calculus, he would have passed pre-calculus. Since Statement 2 says John has not passed pre-calculus, it means he cannot have enrolled in advanced calculus. This does not contradict Statement 4, which simply says some students enroll in advanced calculus; John is just not one of them."
+    "explanation": "Statements 1 and 2 describe properties of professional athletes, stating they train regularly and are not full-time students. Statement 3 states that some full-time students train regularly. This is perfectly consistent, as these full-time students could be individuals who train regularly but are not professional athletes."
   },
   {
     "id": "gen-21-7",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All musicians are artists.",
-      "No artists are scientists.",
-      "Some scientists are musicians."
+      "All cats are carnivores.",
+      "No carnivores eat only plants.",
+      "Some animals that eat only plants are cats."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 states that all musicians are artists. Statement 2 states that no artists are scientists. Combining these, it logically follows that no musicians are scientists. This conclusion directly contradicts Statement 3, which asserts that some scientists are musicians (meaning some musicians are scientists). Removing Statement 3 makes the set consistent."
+    "explanation": "Statement 1 says all cats are carnivores. Statement 2 says no carnivores eat only plants. Combining these two means that all cats do not eat only plants. This directly contradicts Statement 3, which claims some animals that eat only plants are cats."
   },
   {
     "id": "gen-21-8",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a bird is a sparrow, it has brown feathers.",
-      "All birds with brown feathers build nests in trees.",
-      "Some birds that build nests in trees are not sparrows."
+      "If a bird is a hummingbird, it can hover.",
+      "All birds that can hover have very high metabolisms.",
+      "A robin cannot hover."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 and Statement 2 combine to imply that all sparrows build nests in trees. However, this does not mean that only sparrows build nests in trees. Therefore, Statement 3, which says some birds that build nests in trees are not sparrows, is perfectly consistent with the other two statements."
+    "explanation": "Statements 1 and 2 establish a chain: if a bird is a hummingbird, it can hover, and thus has a very high metabolism. Statement 3 introduces a robin that cannot hover. This does not create a contradiction because robins are simply not hummingbirds, and the properties of hummingbirds do not apply to them in this context."
   },
   {
     "id": "gen-21-9",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All successful entrepreneurs are innovative.",
-      "No innovative person fears failure.",
-      "John is a successful entrepreneur.",
-      "John fears failure."
+      "Every successful politician is an excellent public speaker.",
+      "No one who is an excellent public speaker lacks charisma.",
+      "All candidates in the recent election are successful politicians.",
+      "At least one candidate in the recent election lacks charisma."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 1 says all successful entrepreneurs are innovative. Statement 2 says no innovative person fears failure. Combining these, it means no successful entrepreneur fears failure. Statement 3 tells us John is a successful entrepreneur. Therefore, it must be true that John does not fear failure. This conclusion contradicts Statement 4, which says John fears failure. Removing Statement 4 makes the set consistent."
+    "explanation": "Statement 3 indicates all candidates are successful politicians. Statement 1 states every successful politician is an excellent public speaker. Statement 2 asserts that all excellent public speakers have charisma. Therefore, it must be true that every candidate has charisma. Statement 4 directly contradicts this by claiming at least one candidate lacks charisma."
   },
   {
     "id": "gen-21-10",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All tigers are striped.",
-      "Some striped animals are not tigers.",
-      "No animals that are not striped have whiskers."
+      "All dogs enjoy playing fetch.",
+      "Some animals that enjoy playing fetch are not dogs.",
+      "Max is an animal that enjoys playing fetch."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 means all tigers have stripes. Statement 2 means there are striped animals that are not tigers (e.g., zebras), which is consistent with Statement 1. Statement 3 means that if an animal has whiskers, it must be striped. None of these statements contradict each other, allowing for a consistent scenario."
+    "explanation": "Statement 1 tells us dogs enjoy playing fetch. Statement 2 indicates that there are other animals, besides dogs, who also enjoy playing fetch. Statement 3 introduces Max, who enjoys playing fetch. Max could be a dog or one of the non-dog animals that enjoy fetch; either scenario is consistent with all given information."
   },
   {
     "id": "gen-22-1",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a student studies diligently, they will pass the exam.",
-      "Anyone who prepares for the final project will succeed in the course.",
-      "No one who passed the exam succeeded in the course.",
-      "Some students both study diligently and prepare for the final project."
+      "If an athlete wins a gold medal, they trained for over 1000 hours.",
+      "Every athlete who trained for over 1000 hours maintained a strict diet.",
+      "No athlete who maintained a strict diet felt exhausted after the race.",
+      "Some athletes who won a gold medal felt exhausted after the race."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 4 asserts the existence of students who both study diligently and prepare for the final project. From Statement 1 and 3, any such student would not succeed in the course. However, from Statement 2, any such student would succeed in the course, which is a contradiction."
+    "explanation": "Statements 1, 2, and 3 create a chain: if an athlete wins a gold medal, then they trained for over 1000 hours, which means they maintained a strict diet. Statement 3 then concludes that such an athlete did not feel exhausted after the race. This leads to the conclusion that no athlete who won a gold medal felt exhausted after the race. Statement 4 directly contradicts this by stating that some athletes who won a gold medal did feel exhausted. Removing Statement 4 resolves this inconsistency."
   },
   {
     "id": "gen-22-2",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All committee members voted on the proposal.",
-      "No one who voted on the proposal supported the amendment.",
-      "Only committee members are eligible to support the amendment.",
-      "Some people supported the amendment."
+      "All employees who receive a bonus have completed the advanced training module.",
+      "If an employee completes the advanced training module, they are eligible for promotion.",
+      "Some employees who are eligible for promotion do not receive a bonus.",
+      "Sarah received a bonus."
     ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 posits that some people supported the amendment. From Statement 3, these people must be committee members. From Statement 1 and 2, committee members who voted on the proposal (which all do) could not have supported the amendment. This directly contradicts Statement 4."
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. From Statements 1 and 2, we can infer that any employee who receives a bonus is eligible for promotion. Statement 4 tells us Sarah received a bonus, so she is eligible for promotion. Statement 3 indicates that there are some employees eligible for promotion who do not receive a bonus, which is perfectly consistent with the other statements; it doesn't mean all eligible employees receive a bonus."
   },
   {
     "id": "gen-22-3",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All employees who work remotely attend the weekly virtual meeting.",
-      "No employee who attends the weekly virtual meeting travels for business.",
-      "Some employees who travel for business do not work remotely."
+      "If a plant is a fern, it requires shade.",
+      "Every plant that requires shade cannot tolerate direct sunlight.",
+      "All plants that cannot tolerate direct sunlight are sensitive to heat.",
+      "No fern is sensitive to heat."
     ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Employees who work remotely attend the weekly virtual meeting and therefore do not travel for business. Statement 3 simply states that some employees who travel for business do not work remotely, which aligns perfectly with the other statements."
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a logical chain: if a plant is a fern, then it requires shade; if it requires shade, it cannot tolerate direct sunlight; if it cannot tolerate direct sunlight, it is sensitive to heat. This chain implies that every fern is sensitive to heat. Statement 4 directly contradicts this conclusion by asserting that no fern is sensitive to heat. Removing Statement 4 resolves the contradiction."
   },
   {
     "id": "gen-22-4",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a recipe uses chili powder, it also requires cumin.",
-      "No recipe that requires cumin uses smoked paprika.",
-      "Every recipe that uses smoked paprika is a vegetarian dish.",
-      "Some vegetarian dishes use chili powder.",
-      "All recipes that use chili powder use smoked paprika."
+      "Unless a student has registered, they cannot attend the workshop.",
+      "All students who registered before the deadline received a discount.",
+      "Some students who received a discount did not register before the deadline.",
+      "If a student attends the workshop, they are eligible for the certificate."
     ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 asserts the existence of vegetarian dishes that use chili powder. From Statement 5, any recipe using chili powder must also use smoked paprika. However, from Statement 1 and 2, any recipe using chili powder must also require cumin, and thus cannot use smoked paprika. This is a direct contradiction regarding smoked paprika."
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Statement 1 means that if a student attends, they must be registered. Statement 4 links attendance to certificate eligibility. Statements 2 and 3 concern discounts and registration deadlines, which are compatible; Statement 3 merely points out that registration before the deadline is not the only way to receive a discount, which does not conflict with Statement 2 saying it's one way."
   },
   {
     "id": "gen-22-5",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Only artists who paint landscapes display their work at the gallery.",
-      "Artists who paint portraits never use oil paints.",
-      "Some artists who use oil paints do not display their work at the gallery.",
-      "No artist who paints landscapes paints portraits."
+      "If a vehicle is an electric car, it produces zero emissions.",
+      "Every vehicle that produces zero emissions qualifies for a tax credit.",
+      "No vehicle that qualifies for a tax credit is subject to a luxury tax.",
+      "Some electric cars are subject to a luxury tax."
     ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Artists displaying work paint landscapes, and such artists do not paint portraits. Artists who use oil paints do not paint portraits. Statement 3 states that some artists who use oil paints do not display their work at the gallery, which is entirely possible if, for example, they paint still lifes or abstracts, which are not landscapes, and therefore do not get displayed."
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a logical chain: if a vehicle is an electric car, it produces zero emissions; if it produces zero emissions, it qualifies for a tax credit; and if it qualifies for a tax credit, it is not subject to a luxury tax. This chain implies that no electric car is subject to a luxury tax. Statement 4 directly contradicts this conclusion by asserting that some electric cars are subject to a luxury tax. Removing Statement 4 resolves the inconsistency."
   },
   {
     "id": "gen-22-6",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a musician performs rock music, they use an electric guitar.",
-      "All musicians who use an electric guitar have a powerful amplifier.",
-      "Some musicians who have a powerful amplifier do not perform rock music.",
-      "No musician who performs rock music plays classical violin."
+      "A candidate will be interviewed only if they have prior management experience.",
+      "No candidate with prior management experience has submitted a late application.",
+      "If a candidate submitted a late application, they will not be considered for the position.",
+      "Sarah was interviewed."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Musicians performing rock music use an electric guitar and have a powerful amplifier. Statement 3 indicates that some musicians with powerful amplifiers do not perform rock music, which is entirely possible (e.g., they might play jazz fusion). Statement 4 also introduces a new, non-conflicting fact about rock musicians."
+    "explanation": "All statements can be true simultaneously. From Statement 4, Sarah was interviewed. From Statement 1, this means Sarah has prior management experience. From Statement 2, this means Sarah did not submit a late application. Statement 3 implies that if a candidate submitted a late application, they won't be considered, but since Sarah did not submit a late application, this statement does not lead to a contradiction regarding her consideration."
   },
   {
     "id": "gen-22-7",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All students enrolled in advanced calculus are engineering majors.",
-      "No student who is an engineering major is also an art history minor.",
-      "Every student with an art history minor has taken a philosophy course.",
-      "Some students enrolled in advanced calculus are art history minors."
+      "If a student enrolls in the advanced seminar, they must have completed the prerequisite course.",
+      "Every student who completed the prerequisite course received an excellent grade in their previous coursework.",
+      "No student with an excellent grade in their previous coursework struggles with critical thinking.",
+      "All students enrolled in the advanced seminar struggle with critical thinking."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 4 asserts the existence of students who are both enrolled in advanced calculus and are art history minors. From Statement 1, any student in advanced calculus must be an engineering major. From Statement 2, no engineering major can be an art history minor. This directly contradicts the premise that these students are art history minors."
+    "explanation": "Statements 1, 2, and 3 establish a chain: if a student enrolls in the advanced seminar, they completed the prerequisite course; if they completed the prerequisite, they received an excellent grade; and if they received an excellent grade, they do not struggle with critical thinking. This implies that no student in the advanced seminar struggles with critical thinking. Statement 4 directly contradicts this by stating that all students enrolled in the advanced seminar struggle with critical thinking. Removing Statement 4 resolves the inconsistency."
   },
   {
     "id": "gen-22-8",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a book is a mystery novel, it is a paperback.",
-      "No paperback book is a bestseller.",
-      "All historical fiction novels are bestsellers.",
-      "Some historical fiction novels are not mystery novels."
+      "If a bird is a raptor, it is a predator.",
+      "All birds that are predators have sharp talons.",
+      "Some birds with sharp talons are not raptors.",
+      "No bird that is not a predator has sharp talons."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Mystery novels are paperbacks and are not bestsellers. Historical fiction novels are bestsellers. Statement 4 indicates that some historical fiction novels are not mystery novels, which is entirely consistent with the other facts presented."
+    "explanation": "All statements can be true simultaneously. From Statement 4, if a bird has sharp talons, it must be a predator (contrapositive of 'No bird that is not a predator has sharp talons'). Combined with Statement 2 ('All birds that are predators have sharp talons'), this means that a bird has sharp talons if and only if it is a predator. Statement 1 states that raptors are predators (and thus have sharp talons). Statement 3, 'Some birds with sharp talons are not raptors,' is consistent with the other statements, as there can be non-raptor predators with sharp talons."
   },
   {
     "id": "gen-22-9",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Only employees with management training can supervise new hires.",
-      "All employees who attend the leadership workshop receive management training.",
-      "No employee who has received management training is eligible for the sabbatical program.",
-      "Some employees eligible for the sabbatical program supervise new hires."
+      "Every politician who supports the bill has read its full text.",
+      "No one who has read the full text of the bill believes it will pass easily.",
+      "If a politician does not believe the bill will pass easily, they will vote against it.",
+      "Some politicians who support the bill will vote for it."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 4 posits the existence of employees who are eligible for the sabbatical program and supervise new hires. From Statement 1, any employee supervising new hires must have management training. From Statement 3, no employee with management training is eligible for the sabbatical program. This contradicts the initial premise that these employees are eligible for the sabbatical program."
+    "explanation": "Statements 1, 2, and 3 form a chain: if a politician supports the bill, they read its full text; if they read the full text, they do not believe it will pass easily; and if they do not believe it will pass easily, they will vote against it. This implies that any politician who supports the bill will vote against it. Statement 4, however, claims that some politicians who support the bill will vote for it, which directly contradicts the previous conclusion (assuming 'vote for' is the opposite of 'vote against'). Removing Statement 4 resolves the inconsistency."
   },
   {
     "id": "gen-22-10",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a painting is a portrait, it was completed before 1900.",
-      "No painting completed before 1900 uses synthetic pigments.",
-      "Paintings that use synthetic pigments are never exhibited outdoors.",
-      "Some paintings exhibited outdoors are portraits."
+      "If a student passes the entrance exam, they are eligible for a scholarship.",
+      "No student who is eligible for a scholarship needs financial aid.",
+      "Some students who need financial aid pass the entrance exam.",
+      "All students who pass the entrance exam are automatically admitted."
     ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Portraits were completed before 1900 and do not use synthetic pigments. Paintings exhibited outdoors also do not use synthetic pigments. Statement 4, positing some paintings exhibited outdoors are portraits, fits within these rules as such paintings would not use synthetic pigments."
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 create a chain: if a student passes the entrance exam, they are eligible for a scholarship, and if they are eligible for a scholarship, they do not need financial aid. This implies that no student who passes the entrance exam needs financial aid. Statement 3, however, asserts that some students who need financial aid also pass the entrance exam, which directly contradicts the conclusion derived from Statements 1 and 2. Removing Statement 3 resolves this inconsistency."
   },
   {
     "id": "gen-23-1",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All employees who receive a bonus have exceeded their sales targets.",
-      "Every new hire receives a bonus.",
-      "Some new hires take unscheduled leave.",
-      "No employee who has exceeded their sales targets takes unscheduled leave."
+      "All birds in this aviary have blue feathers.",
+      "No bird with blue feathers can sing.",
+      "Some birds in this aviary can sing."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1, 2, and 4 logically imply that all new hires do not take unscheduled leave. Statement 1 (Bonus → Exceeded Sales), Statement 2 (New Hire → Bonus), and Statement 4 (Exceeded Sales → No Unscheduled Leave) combine to show that every new hire does not take unscheduled leave. This directly contradicts Statement 3, which claims some new hires do take unscheduled leave."
+    "explanation": "Statements 1 and 2 together imply that no birds in this aviary can sing. However, Statement 3 claims that some birds in this aviary can sing, creating a contradiction."
   },
   {
     "id": "gen-23-2",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All successful writers read extensively.",
-      "Some people who read extensively are not successful writers.",
-      "No one who reads extensively struggles with vocabulary.",
-      "Every person who struggles with vocabulary has difficulty understanding complex texts."
+      "Every student who passed the exam studied for it.",
+      "Some students studied for the exam but did not pass.",
+      "Only students who studied for the exam were eligible to take it."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Successful writers read extensively and do not struggle with vocabulary. There can be others who read extensively but are not successful writers. People who struggle with vocabulary have difficulty with complex texts, but this group does not include those who read extensively, maintaining consistency."
+    "explanation": "It is possible for all three statements to be true. Some students could have studied and passed, while others studied but did not pass. All eligible students are among those who studied."
   },
   {
     "id": "gen-23-3",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All rare books are stored in a climate-controlled vault.",
-      "No books stored in a climate-controlled vault are handled without gloves.",
-      "Some books on display in the library are rare books.",
-      "All books on display in the library are handled without gloves."
+      "All members of the chess club are skilled strategists.",
+      "No skilled strategist is a novice player.",
+      "Some members of the chess club are novice players."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 logically lead to the conclusion that some books on display in the library are not handled without gloves. If some books on display are rare (Statement 3), and all rare books are in a vault (Statement 1), and no vault books are handled without gloves (Statement 2), then some books on display are not handled without gloves. This directly contradicts Statement 4, which asserts that all books on display are handled without gloves."
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together establish that no member of the chess club is a novice player. This directly conflicts with Statement 3, which asserts that some members of the chess club are novice players."
   },
   {
     "id": "gen-23-4",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All dogs in this park are on a leash.",
-      "No dogs on a leash are permitted to enter the pond.",
-      "Some dogs in this park are not permitted to enter the pond."
+      "Every actor in the play attended rehearsal.",
+      "Some people who attended rehearsal are not actors in the play.",
+      "Not all actors in the play are experienced performers."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. If all dogs in the park are on a leash (Statement 1), and no leashed dogs can enter the pond (Statement 2), then it logically follows that all dogs in the park are not permitted to enter the pond. Statement 3, claiming that some dogs in the park are not permitted to enter the pond, is perfectly consistent with this universal conclusion."
+    "explanation": "It is possible for all three statements to be true. Some actors could be experienced, and some not, while all of them attended rehearsal. Additionally, others who attended rehearsal might not be actors."
   },
   {
     "id": "gen-23-5",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All employees in the marketing department have attended the new training.",
-      "No employee who attended the new training is eligible for the promotion this year.",
-      "Every senior manager is an employee in the marketing department.",
-      "Some senior managers are eligible for the promotion this year."
+      "If a plant has purple leaves, it needs direct sunlight.",
+      "All plants that need direct sunlight are tropical species.",
+      "Some plants have purple leaves.",
+      "No tropical species has purple leaves."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 logically imply that no senior manager is eligible for the promotion this year. If every senior manager is in the marketing department (Statement 3), and all marketing employees attended the training (Statement 1), and no one who attended the training is eligible for promotion (Statement 2), then no senior manager is eligible. This directly contradicts Statement 4, which claims some senior managers are eligible."
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 establish that if a plant has purple leaves, it is a tropical species. Statement 4 asserts that no tropical species has purple leaves. Combined, these imply that no plant can have purple leaves, which contradicts Statement 3."
   },
   {
     "id": "gen-23-6",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All reptiles are cold-blooded creatures.",
-      "No cold-blooded creatures regulate their body temperature internally.",
-      "Some snakes are reptiles."
+      "All athletes on the team train daily.",
+      "No one who trains daily skips warm-ups.",
+      "Some people who skip warm-ups are very successful.",
+      "Not all athletes on the team are very successful."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. If all reptiles are cold-blooded (Statement 1) and no cold-blooded creatures regulate their temperature internally (Statement 2), then it follows that no reptiles regulate their temperature internally. Statement 3, that some snakes are reptiles, is consistent with this, implying those snakes also do not regulate their temperature internally."
+    "explanation": "All four statements can be true simultaneously. Athletes on the team train daily and never skip warm-ups, with some being successful and some not. There could also be successful individuals who skip warm-ups, provided they are not athletes on this team."
   },
   {
     "id": "gen-23-7",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All participants in the marathon completed the full course.",
-      "Every person who completed the full course received a finisher's medal.",
-      "Some participants in the marathon did not receive a finisher's medal.",
-      "No person who received a finisher's medal was disqualified."
+      "Every successful entrepreneur has a strong work ethic.",
+      "Someone with a strong work ethic is always innovative.",
+      "Not a single innovative person avoids new challenges.",
+      "Some successful entrepreneurs avoid new challenges."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 logically imply that every participant in the marathon received a finisher's medal. If all participants completed the course (Statement 1), and everyone who completed the course received a medal (Statement 2), then all participants received a medal. This directly contradicts Statement 3, which claims some participants did not receive a medal."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 together imply that every successful entrepreneur does not avoid new challenges. Statement 4, however, states that some successful entrepreneurs do avoid new challenges, which creates a direct contradiction."
   },
   {
     "id": "gen-23-8",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All plants in this greenhouse require daily watering.",
-      "No plant that requires daily watering is drought-tolerant.",
-      "Some drought-tolerant plants are grown outdoors.",
-      "The orchids in this greenhouse are plants that require daily watering."
+      "No birds that nest in trees are flightless.",
+      "Some flightless birds live in cold climates.",
+      "Every bird that lives in a cold climate builds its nest on the ground."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Plants in the greenhouse, including orchids, require daily watering and are therefore not drought-tolerant. There can still be some drought-tolerant plants that exist and are grown outdoors, without contradicting the conditions for greenhouse plants."
+    "explanation": "All three statements can be true simultaneously. There can be flightless birds in cold climates that build their nests on the ground, and these would not be birds that nest in trees, thus avoiding contradiction with Statement 1."
   },
   {
     "id": "gen-23-9",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All members of the city council attend public hearings.",
-      "Every local activist is a member of the city council.",
-      "No one who attends public hearings supports the new budget proposal.",
-      "Some local activists support the new budget proposal."
+      "All project managers attended the training session.",
+      "No one who attended the training session completed the pre-course reading.",
+      "Some who completed the pre-course reading are project managers."
     ],
     "isConsistent": false,
-    "answerIndex": 0,
-    "explanation": "Statements 1, 2, and 3 logically imply that no local activist supports the new budget proposal. If every local activist is a city council member (Statement 2), and all city council members attend public hearings (Statement 1), and no one who attends public hearings supports the budget (Statement 3), then no local activist supports the budget. This contradicts Statement 4, which claims some local activists support the budget."
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together imply that no project manager completed the pre-course reading. Statement 3, however, asserts that some individuals who completed the pre-course reading are project managers, which directly contradicts the implication of the first two statements."
   },
   {
     "id": "gen-23-10",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All wild foxes are skilled hunters.",
-      "No skilled hunters rely solely on scavenging for food.",
-      "Some animals that rely solely on scavenging for food are found in suburban areas.",
-      "Every fox in this forest is a wild fox.",
-      "Not all animals found in suburban areas are wild foxes."
+      "Every employee who received a bonus worked overtime.",
+      "Some employees who worked overtime did not receive a bonus.",
+      "No employee who received a bonus was a new hire."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Foxes in this forest are wild foxes, skilled hunters, and do not rely on scavenging. Some scavenging animals exist in suburban areas, and not all suburban animals are wild foxes, which introduces no conflict with the conditions specified for wild foxes."
+    "explanation": "It is possible for all three statements to be true. Some employees who worked overtime could have received a bonus (and were not new hires), while other employees who worked overtime did not receive a bonus (and could have been new hires or not)."
   },
   {
     "id": "gen-24-1",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All qualified applicants have extensive experience.",
-      "No one with extensive experience lacks communication skills.",
-      "Every person who lacks communication skills will be rejected.",
-      "Some rejected applicants were qualified."
+      "All antique clocks require specialized maintenance.",
+      "Any item requiring specialized maintenance is handled by a certified technician.",
+      "No item handled by a certified technician is eligible for standard warranty claims.",
+      "The grandfather clock in the study is an antique clock, and it is eligible for a standard warranty claim."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1 and 2 imply that all qualified applicants have communication skills. Since having communication skills means not lacking them, and Statement 3 asserts that anyone lacking communication skills is rejected, it follows that all qualified applicants will not be rejected. Statement 4 directly contradicts this by claiming that some rejected applicants were qualified."
+    "explanation": "Statements 1, 2, and 3 logically imply that if an item is an antique clock, it will not be eligible for a standard warranty claim. Statement 4 asserts that the grandfather clock in the study is an antique clock and *is* eligible for a standard warranty claim, which directly contradicts this conclusion. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-24-2",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "Every member of the hiking club owns a compass.",
-      "No one who owns a compass has ever been lost on a trail.",
-      "Some people who own a compass are not members of the hiking club.",
-      "Not all members of the hiking club own a tent."
+      "Every successful negotiation involves compromise.",
+      "Some compromises are difficult to achieve.",
+      "No difficult achievement is ever quick.",
+      "This negotiation was quick."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that no member of the hiking club has ever been lost on a trail. Statement 3 is consistent, as some compass owners might not be club members. Statement 4 simply indicates that owning a tent is not a universal requirement for club members. All statements can be true simultaneously."
+    "explanation": "All statements can be true simultaneously. For example, a quick negotiation could be successful and involve a compromise that was not difficult to achieve, thus aligning with all conditions. The existence of some difficult compromises (Statement 2) does not mean this particular quick negotiation's compromise was difficult."
   },
   {
     "id": "gen-24-3",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All members of the finance committee are experienced investors.",
-      "Every experienced investor attends quarterly briefings.",
-      "No one who attends quarterly briefings ever misses the annual review.",
-      "Every member of the finance committee misses the annual review."
+      "If a plant has variegated leaves, it is sensitive to cold temperatures.",
+      "All plants sensitive to cold temperatures are kept indoors during winter.",
+      "No plant kept indoors during winter can withstand frost.",
+      "Some plants with variegated leaves can withstand frost."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 logically lead to the conclusion that all members of the finance committee do not miss the annual review. Statement 4 directly contradicts this by claiming that every member of the finance committee misses the annual review."
+    "explanation": "Statements 1, 2, and 3 establish a logical chain: if a plant has variegated leaves, it is sensitive to cold temperatures; if it is sensitive to cold, it is kept indoors; if kept indoors, it cannot withstand frost. This implies that no plant with variegated leaves can withstand frost. Statement 4 directly contradicts this conclusion. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-24-4",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All highly-rated restaurants serve fresh ingredients.",
-      "Every restaurant serving fresh ingredients prioritizes customer satisfaction.",
-      "Some restaurants that prioritize customer satisfaction are not highly-rated.",
-      "No restaurant prioritizes customer satisfaction unless it has well-trained staff."
+      "All members of the expedition wore waterproof boots.",
+      "Some people who wore waterproof boots did not cross the river.",
+      "No one who crossed the river stayed dry.",
+      "Mark was a member of the expedition."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all highly-rated restaurants prioritize customer satisfaction. Statement 3 is consistent with this, as it allows for restaurants that prioritize customer satisfaction but are not highly-rated. Statement 4 adds a condition about well-trained staff, which does not create a contradiction with the other statements."
+    "explanation": "All statements can be true simultaneously. Mark, as an expedition member, wore waterproof boots. He could have crossed the river and gotten wet, consistent with Statement 3. The fact that some people wearing waterproof boots didn't cross the river (Statement 2) does not prevent Mark from crossing it."
   },
   {
     "id": "gen-24-5",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "If an artwork is valuable, it is displayed in a public gallery.",
-      "No artwork displayed in a public gallery is privately owned.",
-      "All privately owned artworks are unique pieces.",
-      "Some artworks that are not unique pieces are valuable.",
-      "Every valuable artwork is privately owned."
+      "Every successful software update includes critical security patches.",
+      "No critical security patch is optional for users.",
+      "If a software feature is not optional for users, then it is automatically deployed.",
+      "All new features in this week's successful software update require user consent before deployment."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 1 and 2 logically imply that all valuable artworks are not privately owned. Statement 5 directly contradicts this by asserting that every valuable artwork is privately owned."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically imply that any successful software update includes features that are automatically deployed. Statement 4 describes a specific successful software update (this week's update) whose new features *require user consent before deployment*, meaning they are not automatically deployed. This directly contradicts the conclusion derived from the first three statements. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-24-6",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful authors have published at least one novel.",
-      "No one who has published at least one novel has avoided literary criticism.",
-      "Some individuals who have not avoided literary criticism are not successful authors.",
-      "John is a successful author."
+      "All employees who travel internationally carry a special company ID.",
+      "Some managers travel internationally.",
+      "No employee who does not carry a special company ID can access secure servers.",
+      "Sarah is a manager and can access secure servers."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all successful authors have not avoided literary criticism. Statement 3 is consistent, as it allows for individuals who have not avoided literary criticism but are not successful authors. Statement 4 asserts John is a successful author, which means he also has not avoided literary criticism according to the first two statements. All facts can coexist."
+    "explanation": "All statements can be true simultaneously. Sarah, as a manager, could carry a special company ID, which allows her to access secure servers (consistent with Statements 3 and 4). She might or might not be one of the managers who travels internationally (Statement 2). If she does travel internationally, Statement 1 holds for her."
   },
   {
     "id": "gen-24-7",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "Every athlete who wins an Olympic medal trains rigorously.",
-      "No one who trains rigorously avoids a strict diet.",
-      "All athletes who do not avoid a strict diet compete in amateur leagues.",
-      "Some athletes who win Olympic medals compete in amateur leagues.",
-      "No athlete who competes in amateur leagues wins an Olympic medal."
+      "If a bird is a nocturnal predator, it has exceptional night vision.",
+      "All birds with exceptional night vision hunt silently.",
+      "No bird that hunts silently has brightly colored plumage.",
+      "The Kakapo is a bird, it has brightly colored plumage, and it is a nocturnal predator."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 1, 2, and 3 logically imply that all athletes who win an Olympic medal compete in amateur leagues. Statement 5 contradicts this by stating that no athlete who competes in amateur leagues wins an Olympic medal, which means no athlete who wins an Olympic medal competes in amateur leagues."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically imply that if a bird is a nocturnal predator, it cannot have brightly colored plumage. Statement 4 asserts that the Kakapo is *both* a nocturnal predator *and* has brightly colored plumage, which directly contradicts the conclusion derived from the first three statements. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-24-8",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful startups have innovative technology.",
-      "No business with innovative technology fails to secure funding.",
-      "Some businesses that secure funding are not successful startups.",
-      "If a business fails to secure funding, it will be acquired by a larger company."
+      "All competitive athletes follow a strict training regimen.",
+      "Some individuals who follow a strict training regimen do not compete professionally.",
+      "No one who competes professionally avoids injury.",
+      "Emily is a competitive athlete and has never been injured."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all successful startups secure funding. Statement 3 is consistent, as there can be businesses that secure funding without being successful startups. Statement 4 introduces a consequence for businesses that fail to secure funding, which does not conflict with the other statements."
+    "explanation": "All statements can be true simultaneously. Emily, as a competitive athlete, follows a strict training regimen. Her never being injured implies, by Statement 3, that she does not compete professionally. This is fully consistent with Statement 2, which states that some individuals following a strict training regimen do not compete professionally."
   },
   {
     "id": "gen-24-9",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "Every musician who performs at the festival has rehearsed extensively.",
-      "No one who has rehearsed extensively struggles with stage fright.",
-      "All musicians who struggle with stage fright prefer solo acts.",
-      "Some musicians who perform at the festival prefer solo acts.",
-      "No musician who prefers solo acts performs at the festival."
+      "If a city experiences rapid growth, its infrastructure becomes strained.",
+      "All cities with strained infrastructure require significant public investment.",
+      "No city requiring significant public investment can maintain low property taxes.",
+      "City X has experienced rapid growth and successfully maintained low property taxes."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1 and 2 imply that all musicians who perform at the festival do not struggle with stage fright. Since Statement 3 claims that all who struggle with stage fright prefer solo acts (meaning those who do not struggle with stage fright do not prefer solo acts), it follows that all musicians performing at the festival do not prefer solo acts. Statement 4 directly contradicts this by claiming that some musicians who perform at the festival prefer solo acts."
+    "explanation": "Statements 1, 2, and 3 logically imply that if a city experiences rapid growth, it cannot maintain low property taxes. Statement 4 asserts that City X *both* experienced rapid growth *and* successfully maintained low property taxes, which directly contradicts the conclusion derived from the first three statements. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-24-10",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All residents of the old town district live in historic buildings.",
-      "Every person living in a historic building pays higher property taxes.",
-      "Some people who pay higher property taxes are not residents of the old town district.",
-      "No resident of the old town district pays lower property taxes."
+      "Every successful scientific experiment generates new data.",
+      "Some new data challenges existing theories.",
+      "No research that challenges existing theories is quickly published.",
+      "Dr. Lee's experiment was a successful scientific experiment and was quickly published."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all residents of the old town district pay higher property taxes. Statement 3 is consistent, as it allows for others outside the district to also pay higher property taxes. Statement 4 reinforces that residents pay higher, not lower, taxes, which is consistent with the derived conclusion. All statements can be true simultaneously."
+    "explanation": "All statements can be true simultaneously. Dr. Lee's experiment was successful and generated new data. Since it was quickly published, Statement 3 implies that its data did not challenge existing theories. This is consistent with Statement 2, which only claims *some* new data challenges existing theories, not all of it."
   },
   {
     "id": "gen-25-1",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If an animal is a cat, it enjoys napping.",
-      "All animals that enjoy napping are domesticated.",
-      "No domesticated animal is ever truly wild.",
-      "Some cats are wild animals."
+      "If a bird is a robin, then it has a red breast.",
+      "Birds with red breasts always migrate south for winter.",
+      "No bird that migrates south for winter stays in the region year-round.",
+      "Some robins stay in the region year-round."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: if an animal is a cat, it enjoys napping; if it enjoys napping, it is domesticated; if it is domesticated, it is not wild. Therefore, if an animal is a cat, it is not wild. Statement 4 directly contradicts this by asserting that some cats are wild animals."
+    "explanation": "If a bird is a robin (Statement 1), it has a red breast. If it has a red breast (Statement 2), it migrates south for winter. If it migrates south for winter (Statement 3), it does not stay in the region year-round. This forms a chain: all robins do not stay in the region year-round. Statement 4, however, claims that some robins do stay in the region year-round, which directly contradicts this conclusion."
   },
   {
     "id": "gen-25-2",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a student studies hard, they will pass the exam.",
-      "No student who passes the exam fails the course.",
-      "Some students do not study hard.",
-      "Every student who fails the course must retake it."
+      "All committee members are eligible to vote.",
+      "Only eligible voters can attend the closed session.",
+      "Some individuals who are eligible to vote are not committee members.",
+      "Maria attended the closed session."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. If a student studies hard, they pass the exam and do not fail the course. If a student fails the course, they retake it. Statement 3 indicates that some students don't study hard, which leaves open the possibility that they might fail and retake the course, without contradicting the rules for those who do study hard."
+    "explanation": "The statements are consistent. If Maria attended the closed session (Statement 4), then she is an eligible voter (Statement 2). This is consistent with Statement 1 (which states all committee members are eligible, but not vice-versa) and Statement 3 (which allows for eligible voters who are not committee members, and Maria could be one such person)."
   },
   {
     "id": "gen-25-3",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a flight is delayed, passengers receive a voucher.",
-      "No passenger who receives a voucher misses their connection.",
-      "Every passenger on a delayed flight will miss their connection."
+      "If a student completes an internship, they gain valuable experience.",
+      "Students with valuable experience are always preferred for full-time positions.",
+      "No student preferred for a full-time position is unemployed after graduation.",
+      "Some students who complete an internship are unemployed after graduation."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply that if a flight is delayed, passengers receive a voucher, and therefore those passengers will not miss their connection. This means that if a flight is delayed, passengers will not miss their connection. Statement 3 directly contradicts this by stating that every passenger on a delayed flight will miss their connection."
+    "answerIndex": 3,
+    "explanation": "If a student completes an internship (Statement 1), they gain valuable experience. If they have valuable experience (Statement 2), they are preferred for full-time positions. If they are preferred for full-time positions (Statement 3), they are not unemployed after graduation. This forms a chain: all students who complete an internship are not unemployed after graduation. Statement 4, however, claims that some students who complete an internship are unemployed after graduation, creating a contradiction."
   },
   {
     "id": "gen-25-4",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All employees who work weekends receive bonus pay.",
-      "If an employee receives bonus pay, they are eligible for promotion.",
-      "Some employees are eligible for promotion but do not work weekends.",
-      "No employee who is eligible for promotion is ever denied a raise."
+      "All employees who received a bonus attended the annual conference.",
+      "No employee who attended the annual conference missed the leadership training.",
+      "Some employees who did not receive a bonus missed the leadership training.",
+      "Only employees who completed leadership training are eligible for promotion."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 2 establish that working weekends leads to bonus pay and promotion eligibility. Statement 3 indicates that there are other paths to promotion eligibility that do not involve working weekends, which does not contradict the established chain. Statement 4 adds a condition for those eligible for promotion, which also fits without contradiction."
+    "explanation": "The statements are consistent. If an employee received a bonus (Statement 1), they attended the conference. If they attended the conference (Statement 2), they completed leadership training. Thus, all employees who received a bonus completed leadership training. Statement 3 suggests some employees without a bonus missed training, which doesn't contradict the previous chain. Statement 4 sets a condition for promotion, but doesn't create any conflict with the other statements."
   },
   {
     "id": "gen-25-5",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Every student who attends the workshop improves their grades.",
-      "If a student improves their grades, they receive a scholarship.",
-      "No student who receives a scholarship is eligible for tutoring.",
-      "All students attending the workshop are eligible for tutoring."
+      "If a plant is a succulent, it requires minimal watering.",
+      "No plant that thrives in humid climates requires minimal watering.",
+      "Every plant in Dr. Lee's collection is a succulent.",
+      "Some plants in Dr. Lee's collection thrive in humid climates."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: if a student attends the workshop, they improve their grades; if they improve their grades, they receive a scholarship; if they receive a scholarship, they are not eligible for tutoring. Therefore, if a student attends the workshop, they are not eligible for tutoring. Statement 4 directly contradicts this by asserting that all students attending the workshop are eligible for tutoring."
+    "explanation": "If a plant is in Dr. Lee's collection (Statement 3), it is a succulent. If it is a succulent (Statement 1), it requires minimal watering. If it requires minimal watering, it does not thrive in humid climates (contrapositive of Statement 2). This forms a chain: plants in Dr. Lee's collection do not thrive in humid climates. Statement 4, however, claims some plants in Dr. Lee's collection do thrive in humid climates, which creates a contradiction."
   },
   {
     "id": "gen-25-6",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All fruits that grow on trees are picked by hand.",
-      "No fruit that is picked by hand is sold in a vending machine.",
-      "Some fruits sold in a vending machine do not grow on trees."
+      "All birds that can fly have hollow bones.",
+      "No bird with hollow bones is incapable of flight.",
+      "Some birds that cannot fly do not have hollow bones.",
+      "Penguins are birds that cannot fly."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 2 imply that if a fruit grows on a tree, it is not sold in a vending machine. Statement 3 states that some fruits sold in a vending machine do not grow on trees. This is compatible, as the chain only describes tree-grown fruits, leaving open the possibility of vending machine fruits that are not tree-grown."
+    "explanation": "The statements are consistent. Statement 1 indicates that flying birds have hollow bones. Statement 2, which states no bird with hollow bones is incapable of flight, means all birds with hollow bones can fly. Together, these imply that a bird can fly if and only if it has hollow bones. Statement 3 is consistent with this equivalence: if some birds cannot fly, then they also do not have hollow bones. Statement 4 simply categorizes penguins as non-flying birds, which then implies they also do not have hollow bones."
   },
   {
     "id": "gen-25-7",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a book is a mystery novel, it has a plot twist.",
-      "No book with a plot twist is predictable.",
-      "Every book published this year is a mystery novel.",
-      "Some books published this year are predictable."
+      "If a proposal is approved, it must be fully funded.",
+      "No proposal that lacks sufficient detail is fully funded.",
+      "Every proposal submitted by the research team was approved.",
+      "Some proposals submitted by the research team lacked sufficient detail."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a logical chain: if a book was published this year, it is a mystery novel; if it is a mystery novel, it has a plot twist; if it has a plot twist, it is not predictable. Therefore, if a book was published this year, it is not predictable. Statement 4 directly contradicts this by asserting that some books published this year are predictable."
+    "explanation": "If a proposal was submitted by the research team (Statement 3), it was approved. If it was approved (Statement 1), it was fully funded. If it was fully funded, it did not lack sufficient detail (contrapositive of Statement 2). This forms a chain: proposals submitted by the research team did not lack sufficient detail. Statement 4, however, claims that some proposals submitted by the research team lacked sufficient detail, creating a contradiction."
   },
   {
     "id": "gen-25-8",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All students enrolled in advanced calculus are engineering majors.",
-      "If a student is an engineering major, they must complete an internship.",
-      "Some students complete internships even if they are not engineering majors.",
-      "No student who completes an internship is exempt from their senior thesis."
+      "Only artists who complete a portfolio review are considered for a gallery exhibit.",
+      "If an artist completes a portfolio review, they receive an eligibility letter.",
+      "Some artists who receive an eligibility letter are not considered for a gallery exhibit.",
+      "Every artist selected for a gallery exhibit received an eligibility letter."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 2 create a path where advanced calculus students are engineering majors and complete internships. Statement 3 introduces other students who complete internships without being engineering majors, which does not contradict the prior statements. Statement 4 adds a condition for all students completing internships, which is also consistent."
+    "explanation": "The statements are consistent. Statement 1 means that if an artist is considered for an exhibit, they completed a portfolio review. Combining this with Statement 2, we deduce that if an artist is considered for an exhibit, they receive an eligibility letter. This conclusion is reinforced by Statement 4. Statement 3 simply allows for artists who received an eligibility letter but were not selected for an exhibit, which is possible if completing a review (and receiving a letter) is a necessary, but not sufficient, condition for an exhibit."
   },
   {
     "id": "gen-25-9",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a candidate is qualified, they will be interviewed.",
-      "No candidate who is interviewed is denied access to the facility.",
-      "Every candidate who is not qualified is denied access to the facility.",
-      "Some candidates are not denied access to the facility, but they are also not qualified."
+      "If a student is enrolled in the advanced calculus course, they have completed differential equations.",
+      "Anyone who has completed differential equations has also completed linear algebra.",
+      "No student who has completed linear algebra is still considered a freshman.",
+      "Some freshmen are enrolled in the advanced calculus course."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1 and 2 imply that if a candidate is qualified, they are not denied access to the facility. Statement 3 implies that if a candidate is not qualified, they are denied access to the facility. Taken together, these mean that a candidate is not denied access to the facility if and only if they are qualified. Statement 4 directly contradicts this by asserting that some candidates are not denied access to the facility yet are also not qualified."
+    "explanation": "If a student is enrolled in the advanced calculus course (Statement 1), they have completed differential equations. If they have completed differential equations (Statement 2), they have completed linear algebra. If they have completed linear algebra (Statement 3), they are not considered a freshman. This forms a chain: students enrolled in advanced calculus are not freshmen. Statement 4, however, claims that some freshmen are enrolled in the advanced calculus course, which creates a contradiction."
   },
   {
     "id": "gen-25-10",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All successful startups receive venture capital.",
-      "If a company receives venture capital, it expands rapidly.",
-      "Some companies that expand rapidly are not successful startups.",
-      "No company that expands rapidly faces immediate bankruptcy."
+      "All employees with full benefits receive paid vacation time.",
+      "Employees who receive paid vacation time are not required to work on holidays.",
+      "Some employees not required to work on holidays do not have full benefits.",
+      "No employee with full benefits is required to work on holidays."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 2 create a chain where successful startups receive venture capital and expand rapidly. Statement 3 explains that rapid expansion can occur even without being a successful startup, which is compatible. Statement 4 adds a general condition about rapidly expanding companies, which does not conflict with any other statement."
+    "explanation": "The statements are consistent. Statement 1 indicates that employees with full benefits receive paid vacation time. Statement 2 indicates that employees with paid vacation time are not required to work on holidays. This forms a chain: all employees with full benefits are not required to work on holidays, which is restated by Statement 4. Statement 3 is consistent, as it is possible for some employees not required to work on holidays to lack full benefits (meaning full benefits are a sufficient but not necessary condition for not working holidays)."
   },
   {
     "id": "gen-26-1",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All dolphins are mammals.",
-      "No mammals are fish.",
-      "Some dolphins are fish."
+      "All mathematicians love puzzles.",
+      "No one who loves puzzles dislikes logic.",
+      "Some mathematicians dislike logic."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 (All dolphins are mammals) and Statement 2 (No mammals are fish) logically imply that no dolphins are fish. Statement 3 (Some dolphins are fish) directly contradicts this conclusion."
+    "explanation": "Statement 1 says all mathematicians love puzzles. Statement 2 says no one who loves puzzles dislikes logic. Taken together, these imply that no mathematicians dislike logic, which directly contradicts Statement 3."
   },
   {
     "id": "gen-26-2",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a student enrolls in the advanced course, they must pass the prerequisite.",
-      "Some students have enrolled in the advanced course.",
-      "Some students who passed the prerequisite did not enroll in the advanced course."
+      "All insects have six legs.",
+      "A creature with six legs is not necessarily an insect.",
+      "Spiders do not have six legs."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "It is consistent for some students to take the advanced course (and pass the prerequisite), while other students pass the prerequisite but choose not to enroll in the advanced course."
+    "explanation": "The statements are consistent. Statement 1 defines a characteristic of insects. Statement 2 clarifies that having six legs does not uniquely identify something as an insect. Statement 3 provides a fact about spiders, which are known not to be insects and not to have six legs. No contradiction arises."
   },
   {
     "id": "gen-26-3",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a student is in the advanced class, they must attend the weekly seminar.",
-      "Every student who excels in calculus is in the advanced class.",
-      "No one who attends the weekly seminar can miss the final project deadline.",
-      "Some students who excel in calculus miss the final project deadline."
+      "Every student who attended the seminar passed the exam.",
+      "No student who passed the exam failed the course.",
+      "Some students failed the course but attended the seminar."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 2 (Every student who excels in calculus is in the advanced class) and Statement 1 (If a student is in the advanced class, they must attend the weekly seminar) imply that every student who excels in calculus attends the weekly seminar. This combined with Statement 3 (No one who attends the weekly seminar can miss the final project deadline) means no student who excels in calculus can miss the final project deadline. Statement 4 (Some students who excel in calculus miss the final project deadline) directly contradicts this."
+    "answerIndex": 2,
+    "explanation": "Statement 1 indicates that attending the seminar leads to passing the exam. Statement 2 states that passing the exam means not failing the course. Therefore, any student who attended the seminar must not have failed the course. This contradicts Statement 3, which claims some students both attended the seminar and failed the course."
   },
   {
     "id": "gen-26-4",
     "difficulty": "medium",
     "category": "syllogism",
-    "statements": [
-      "All birds have feathers.",
-      "All pigeons have feathers.",
-      "Some birds are not pigeons."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Pigeons are a type of bird, so they all have feathers. There are also other types of birds that are not pigeons, which also have feathers. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-26-5",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All successful entrepreneurs are innovative.",
-      "If a project is groundbreaking, it requires significant funding.",
-      "No project requiring significant funding is innovative.",
-      "Some groundbreaking projects are led by successful entrepreneurs."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 2 (If a project is groundbreaking, it requires significant funding) and Statement 3 (No project requiring significant funding is innovative) imply that no groundbreaking project is innovative. Since Statement 1 states all successful entrepreneurs are innovative, it follows that no groundbreaking project can be led by a successful entrepreneur. Statement 4 (Some groundbreaking projects are led by successful entrepreneurs) directly contradicts this."
-  },
-  {
-    "id": "gen-26-6",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All dogs are mammals.",
-      "Some mammals are not pets.",
-      "Fido is a dog.",
-      "Fido is a pet."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Fido can be a dog, which is a mammal and a pet. Some other mammals might be wild and therefore not pets. All statements can be true."
-  },
-  {
-    "id": "gen-26-7",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Every member of the board supports the new policy.",
-      "No one who supports the new policy is concerned about budget overruns.",
-      "At least one member of the board is concerned about budget overruns."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 (Every member of the board supports the new policy) and Statement 2 (No one who supports the new policy is concerned about budget overruns) logically imply that no member of the board is concerned about budget overruns. Statement 3 (At least one member of the board is concerned about budget overruns) directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-26-8",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If an animal is a cat, then it is a feline.",
-      "Some felines are not cats.",
-      "Every cat is an animal.",
-      "Whiskers is a feline."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Whiskers could be a cat (and thus a feline and an animal). Other felines (like lions) might not be cats. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-26-9",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a plant has large leaves, it needs a lot of water.",
-      "If a plant needs a lot of water, it should be kept in shade.",
-      "Some plants with large leaves should not be kept in shade."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 (If a plant has large leaves, it needs a lot of water) and Statement 2 (If a plant needs a lot of water, it should be kept in shade) logically imply that all plants with large leaves should be kept in shade. Statement 3 (Some plants with large leaves should not be kept in shade) directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-26-10",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If an employee receives a promotion, they get a raise.",
-      "No employee who receives a promotion works part-time.",
-      "Some employees who get a raise work part-time."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "It is consistent that some employees who receive a raise (but not necessarily a promotion) work part-time, while promoted employees (who get a raise) do not work part-time. The statements do not conflict."
-  },
-  {
-    "id": "gen-27-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student is eligible for the scholarship, their GPA is above 3.5.",
-      "No student with a GPA above 3.5 has any disciplinary infractions.",
-      "Maria is eligible for the scholarship.",
-      "Maria has a disciplinary infraction."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 3, Maria is eligible for the scholarship. From Statement 1, her GPA must be above 3.5. From Statement 2, any student with a GPA above 3.5 has no disciplinary infractions. This implies Maria has no disciplinary infractions, which contradicts Statement 4."
-  },
-  {
-    "id": "gen-27-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a plant needs full sun, it is not a fern.",
-      "Some plants that are not ferns do not need full sun.",
-      "Every plant that thrives in shade is a fern.",
-      "Some plants thrive in shade."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Statement 4 and 3 imply that some ferns thrive in shade, which is consistent with Statement 1 that full-sun plants are not ferns. Statement 2 describes non-fern plants that don't need full sun, which is also possible."
-  },
-  {
-    "id": "gen-27-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All employees who receive a bonus have perfect attendance.",
-      "No employee with perfect attendance misses the monthly meeting.",
-      "Every employee who worked overtime received a bonus.",
-      "Some employees who worked overtime missed the monthly meeting."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 3, all employees who worked overtime received a bonus. From Statement 1, all who received a bonus have perfect attendance. From Statement 2, no one with perfect attendance misses the monthly meeting. Therefore, all employees who worked overtime did not miss the monthly meeting, which contradicts Statement 4."
-  },
-  {
-    "id": "gen-27-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a book is a first edition, its value exceeds $100.",
-      "Some books with a value exceeding $100 are not first editions.",
-      "This particular book's value does not exceed $100.",
-      "This particular book is not a first edition."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. From the contrapositive of Statement 1, if a book's value does not exceed $100, then it is not a first edition. Statements 3 and 4 are consistent with this. Statement 2 merely states there are other valuable books, which is also possible."
-  },
-  {
-    "id": "gen-27-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a vehicle is a truck, it has a heavy-duty engine.",
-      "All vehicles with a heavy-duty engine require special maintenance.",
-      "No vehicle requiring special maintenance can be driven by a standard license holder.",
-      "Some trucks can be driven by a standard license holder."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 1, all trucks have heavy-duty engines. From Statement 2, all vehicles with heavy-duty engines require special maintenance. From Statement 3, no vehicle requiring special maintenance can be driven by a standard license holder. This chain implies that all trucks cannot be driven by a standard license holder, which contradicts Statement 4."
-  },
-  {
-    "id": "gen-27-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "No student who scores below 70 is eligible for the advanced course.",
-      "If a student is eligible for the advanced course, they must have completed the prerequisite.",
-      "Some students have completed the prerequisite but did not score below 70.",
-      "Not all students who scored below 70 failed the prerequisite."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Statements 1 and 2 mean that students eligible for the advanced course completed the prerequisite and did not score below 70. Statement 3 describes a group of students consistent with this. Statement 4 is also possible; a student scoring below 70 might still have passed the prerequisite."
-  },
-  {
-    "id": "gen-27-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a plant is a rose, it has thorns.",
-      "All plants that have thorns require careful handling.",
-      "No plant requiring careful handling is suitable for small children.",
-      "Some roses are suitable for small children."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 1, all roses have thorns. From Statement 2, all plants with thorns require careful handling. From Statement 3, no plant requiring careful handling is suitable for small children. This implies that all roses are not suitable for small children, which contradicts Statement 4."
-  },
-  {
-    "id": "gen-27-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "No animal that migrates lays its eggs in the arctic.",
-      "If an animal lays its eggs in the arctic, it has thick feathers.",
-      "Some animals with thick feathers do not migrate.",
-      "All animals with thick feathers can withstand cold temperatures."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Statements 1 and 2 indicate that animals laying eggs in the arctic have thick feathers and do not migrate. Statement 3 is consistent with this. Statement 4 adds a characteristic to animals with thick feathers, which does not create a contradiction."
-  },
-  {
-    "id": "gen-27-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All employees assigned to project Alpha receive additional training.",
-      "If an employee receives additional training, they must complete an advanced course.",
-      "No employee who completes an advanced course is eligible for project Beta.",
-      "Not all employees assigned to project Alpha are ineligible for project Beta."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 1, all employees on Project Alpha receive additional training. From Statement 2, all receiving additional training complete an advanced course. From Statement 3, no one completing an advanced course is eligible for Project Beta. This implies all employees on Project Alpha are ineligible for Project Beta, which contradicts Statement 4 (meaning some Project Alpha employees are eligible for Project Beta)."
-  },
-  {
-    "id": "gen-27-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a bird is a robin, it builds a nest in a tree.",
-      "No bird that builds a nest in a tree is a ground feeder.",
-      "All birds that are ground feeders have strong talons.",
-      "Some robins have strong talons."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. From Statements 1 and 2, robins build nests in trees and are not ground feeders. Statement 3 states that ground feeders have strong talons, but this does not imply that only ground feeders have strong talons. Therefore, it is consistent for some robins to have strong talons, even though they are not ground feeders."
-  },
-  {
-    "id": "gen-28-1",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All dogs in the park are leashed.",
-      "Some dogs in the park are playing fetch.",
-      "No leashed animal is playing fetch."
-    ],
-    "isConsistent": false,
-    "answerIndex": 1,
-    "explanation": "Statement 1 says all dogs in the park are leashed. Statement 3 says no leashed animal is playing fetch. Together, these imply that no dogs in the park are playing fetch, which directly contradicts Statement 2, 'Some dogs in the park are playing fetch.'"
-  },
-  {
-    "id": "gen-28-2",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every successful entrepreneur is a risk-taker.",
-      "Some risk-takers are not successful entrepreneurs.",
-      "David is a successful entrepreneur."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. David, as a successful entrepreneur, is a risk-taker according to Statement 1. Statement 2 simply notes that the group of risk-takers includes people who are not successful entrepreneurs, which does not conflict with David's status or Statement 1."
-  },
-  {
-    "id": "gen-28-3",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "No birds that migrate south have red feathers.",
-      "All birds in this aviary have red feathers.",
-      "Some birds in this aviary migrate south."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 2 indicates that all birds in the aviary have red feathers. According to Statement 1, no birds with red feathers migrate south (contrapositive of 'No birds that migrate south have red feathers' means 'If a bird has red feathers, it does not migrate south'). This means no birds in the aviary migrate south, which contradicts Statement 3, 'Some birds in this aviary migrate south.'"
-  },
-  {
-    "id": "gen-28-4",
-    "difficulty": "medium",
-    "category": "quantifier",
     "statements": [
       "All professional athletes train daily.",
       "Some people who train daily are not professional athletes.",
@@ -3566,567 +3361,2775 @@ const generatedPuzzles: Puzzle[] = [
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 establishes that all professional athletes train daily. Statement 2 allows for individuals like Sarah to train daily without being professional athletes, which is perfectly compatible with the other statements."
+    "explanation": "The statements are consistent. Statement 1 establishes a characteristic of professional athletes. Statement 2 acknowledges that others also train daily. Sarah could be a professional athlete, or she could be one of the people who train daily but are not professional athletes, as described in Statement 2. No contradiction."
+  },
+  {
+    "id": "gen-26-5",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a plant is a rose, it has thorns.",
+      "No plant with thorns is scentless.",
+      "Some roses are scentless."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says that all roses have thorns. Statement 2 says that no plant with thorns is scentless. Combining these, it must be true that no rose is scentless. This directly contradicts Statement 3, which asserts that some roses are scentless."
+  },
+  {
+    "id": "gen-26-6",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All dogs are mammals.",
+      "Some mammals are not dogs.",
+      "Every mammal has a backbone."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 1 establishes dogs as a subset of mammals. Statement 2 confirms that the category of mammals includes animals other than dogs. Statement 3 applies a characteristic to all mammals, which would include dogs and any other mammals. No contradiction arises from these facts."
+  },
+  {
+    "id": "gen-26-7",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "Every car manufactured after 2010 has airbags.",
+      "No car with airbags lacks an anti-lock braking system.",
+      "Some cars manufactured after 2010 lack an anti-lock braking system."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says cars after 2010 have airbags. Statement 2 says cars with airbags have an anti-lock braking system. Together, these imply that every car manufactured after 2010 has an anti-lock braking system. This conclusion directly contradicts Statement 3, which claims some cars after 2010 lack such a system."
+  },
+  {
+    "id": "gen-26-8",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All successful authors read widely.",
+      "Some people who read widely are not successful authors.",
+      "Dr. Elena Vance reads widely."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 1 identifies a trait of successful authors. Statement 2 acknowledges that reading widely is not exclusive to successful authors. Dr. Elena Vance could be a successful author, or she could be someone who reads widely but is not a successful author, which is consistent with all three statements."
+  },
+  {
+    "id": "gen-26-9",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If an animal is a feline, it has retractable claws.",
+      "No animal with retractable claws is a purely aquatic creature.",
+      "Some felines are purely aquatic creatures."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all felines have retractable claws. Statement 2 says no animal with retractable claws is purely aquatic. Therefore, it logically follows that no feline is a purely aquatic creature. This directly contradicts Statement 3, which claims some felines are purely aquatic."
+  },
+  {
+    "id": "gen-26-10",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All committee members attended the annual meeting.",
+      "No one who attended the annual meeting was absent from the budget discussion.",
+      "Maria is a committee member.",
+      "Maria was absent from the budget discussion."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 says all committee members attended the annual meeting. Statement 2 says no one who attended the annual meeting was absent from the budget discussion. Taken together, these imply that no committee member was absent from the budget discussion. Statement 3 establishes Maria as a committee member, which means she should not have been absent from the budget discussion. This contradicts Statement 4."
+  },
+  {
+    "id": "gen-27-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a student studies diligently, they will pass the exam.",
+      "No student who passes the exam fails the course.",
+      "Every student in this class studies diligently.",
+      "At least one student in this class fails the course."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 establish a chain: If a student studies diligently, they pass the exam, and if they pass the exam, they do not fail the course. Therefore, if a student studies diligently, they do not fail the course. Statement 3 asserts that every student in the class studies diligently, which implies that no student in the class fails the course. This directly contradicts Statement 4, which claims that at least one student in this class fails the course. Removing Statement 4 resolves this contradiction."
+  },
+  {
+    "id": "gen-27-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All employees who work weekends receive bonus pay.",
+      "No employee who started this year works weekends.",
+      "Some employees who started this year receive bonus pay.",
+      "If an employee receives bonus pay, they must have worked overtime."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "It is possible for all statements to be true. Employees who started this year do not work weekends (Statement 2). However, receiving bonus pay (Statement 3) does not necessarily imply working weekends, only that working weekends results in bonus pay (Statement 1). These employees could receive bonus pay for other reasons, such as working overtime (Statement 4), which is entirely consistent with not working weekends."
+  },
+  {
+    "id": "gen-27-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a recipe uses garlic, it is a savory dish.",
+      "No savory dish contains chocolate.",
+      "Any dish that does not contain chocolate is suitable for a specific guest.",
+      "Some recipes that use garlic are not suitable for that specific guest."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a logical chain: If a recipe uses garlic, it is a savory dish (1). If it is a savory dish, it does not contain chocolate (2). If it does not contain chocolate, it is suitable for the specific guest (3). Therefore, all recipes that use garlic are suitable for the specific guest. This conclusion directly contradicts Statement 4, which claims that some recipes that use garlic are not suitable for that specific guest. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-27-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All students who volunteer for the outreach program are eligible for a scholarship.",
+      "If a student is eligible for a scholarship, they have maintained a GPA of 3.5 or higher.",
+      "Some students who volunteer for the outreach program do not receive a scholarship.",
+      "No student who receives a scholarship failed a course last semester."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Students who volunteer are eligible for scholarships and have a high GPA (Statements 1, 2). It is consistent for some of these eligible students not to receive a scholarship (Statement 3), as eligibility does not guarantee receipt. Statement 4 provides a condition for those who *do* receive a scholarship, which does not conflict with the other statements or the existence of eligible students who do not receive one."
+  },
+  {
+    "id": "gen-27-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a student submitted their assignment on time, they received full credit.",
+      "No student who received full credit made an error on the rubric.",
+      "Every student who did not submit their assignment on time made an error on the rubric.",
+      "Some students who did not submit their assignment on time received full credit."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 2 and 3 establish a chain. Statement 2 means that if a student received full credit, they did not make an error on the rubric. The contrapositive of Statement 2 is: if a student made an error on the rubric, they did not receive full credit. Statement 3 means that if a student did not submit their assignment on time, they made an error on the rubric. Combining these, if a student did not submit their assignment on time (3), they made an error on the rubric, and if they made an error on the rubric (contrapositive of 2), they did not receive full credit. Therefore, no student who did not submit their assignment on time received full credit. This directly contradicts Statement 4, which claims that some students who did not submit their assignment on time received full credit. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-27-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All dogs from this shelter are well-trained.",
+      "No well-trained dog barks excessively.",
+      "If a dog barks excessively, it bothers the neighbors.",
+      "Some dogs from this shelter bother the neighbors."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 establish that all dogs from this shelter do not bark excessively. Statement 3 states that excessive barking leads to bothering neighbors. However, Statement 3 does not claim that excessive barking is the *only* way to bother neighbors. Therefore, it is possible for some dogs from the shelter (who do not bark excessively) to still bother neighbors for other reasons, making all statements consistent."
+  },
+  {
+    "id": "gen-27-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a museum exhibit is popular, it requires advance booking.",
+      "No exhibit requiring advance booking is free to attend.",
+      "Every exhibit that is not free to attend has security personnel present.",
+      "All exhibits with security personnel present are covered by insurance.",
+      "Some popular museum exhibits are not covered by insurance."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, 3, and 4 form a logical chain: If an exhibit is popular (1), it requires advance booking. If it requires advance booking (2), it is not free to attend. If it is not free to attend (3), it has security personnel. If it has security personnel (4), it is covered by insurance. Therefore, all popular museum exhibits are covered by insurance. This conclusion directly contradicts Statement 5, which states that some popular museum exhibits are not covered by insurance. Removing Statement 5 resolves the inconsistency."
+  },
+  {
+    "id": "gen-27-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All software updates require a system restart.",
+      "No system restart completes in less than five minutes.",
+      "If an update is critical, it completes in less than five minutes.",
+      "Some critical updates are available for download."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be consistent. From Statements 1 and 2, any software update requires a system restart, and no system restart completes in less than five minutes. Thus, no software update completes in less than five minutes. Statement 3 indicates that critical updates *do* complete in less than five minutes. This implies that critical updates cannot be classified as software updates under the definitions provided. Statement 4 merely states that some critical updates exist and are available, which is consistent with critical updates being a separate category from (some) software updates."
+  },
+  {
+    "id": "gen-27-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a customer is a loyalty member, they receive exclusive discounts.",
+      "No customer who receives exclusive discounts pays full price.",
+      "Every customer in this promotion is a loyalty member.",
+      "Some customers in this promotion pay full price."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 establish that if a customer is a loyalty member, they receive exclusive discounts, and if they receive exclusive discounts, they do not pay full price. Therefore, loyalty members do not pay full price. Statement 3 asserts that every customer in this promotion is a loyalty member, which means no customer in this promotion pays full price. This directly contradicts Statement 4, which claims that some customers in this promotion pay full price. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-27-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All employees who attend the monthly briefing are eligible for promotion.",
+      "No employee eligible for promotion has received a disciplinary warning.",
+      "If an employee receives a disciplinary warning, they must undergo retraining.",
+      "Every employee who undergoes retraining completes a performance review.",
+      "Some employees who attend the monthly briefing complete a performance review."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 establish that all employees who attend the monthly briefing have not received a disciplinary warning. Statements 3 and 4 establish that receiving a disciplinary warning leads to completing a performance review. However, completing a performance review (Statement 5) does not necessarily imply having received a disciplinary warning. Therefore, employees who attend the briefing (and thus have no disciplinary warning) can still complete a performance review for other reasons, making all statements consistent."
+  },
+  {
+    "id": "gen-28-1",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All lions are carnivores.",
+      "Every carnivore consumes meat.",
+      "Some lions do not consume meat."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all lions are carnivores. Statement 2 says every carnivore consumes meat. Therefore, it must be true that all lions consume meat. This directly contradicts Statement 3, which claims some lions do not consume meat."
+  },
+  {
+    "id": "gen-28-3",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "No birds are mammals.",
+      "All sparrows are birds.",
+      "Some sparrows are mammals."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 2 says all sparrows are birds. Statement 1 says no birds are mammals. Combining these, it follows that no sparrows are mammals. This conclusion directly contradicts Statement 3, which asserts that some sparrows are mammals."
   },
   {
     "id": "gen-28-5",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "No fruit that grows on trees is also a berry.",
-      "All strawberries are berries.",
-      "Some strawberries grow on trees."
+      "All mathematicians are highly analytical.",
+      "No highly analytical people are easily confused.",
+      "Some mathematicians are easily confused."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 2 says all strawberries are berries. Statement 1 implies that no berries grow on trees (contrapositive of 'No fruit that grows on trees is also a berry' means 'If a fruit is a berry, it does not grow on trees'). Therefore, no strawberries grow on trees, which directly contradicts Statement 3, 'Some strawberries grow on trees.'"
-  },
-  {
-    "id": "gen-28-6",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every successful artist has a unique style.",
-      "Some people with a unique style are not successful artists.",
-      "Julia has a unique style."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Julia, having a unique style, could either be a successful artist (in line with Statement 1) or one of the people with a unique style who are not successful artists (in line with Statement 2)."
+    "explanation": "Statement 1 says all mathematicians are highly analytical. Statement 2 says no highly analytical people are easily confused. This means it must be true that no mathematicians are easily confused. This conclusion directly contradicts Statement 3, which states that some mathematicians are easily confused."
   },
   {
     "id": "gen-28-7",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All employees in department A use specific software.",
-      "No employee who uses specific software attends the general meeting.",
-      "Some employees in department A attend the general meeting."
+      "If a plant is a rose, it has thorns.",
+      "Every plant with thorns requires careful handling.",
+      "Some roses do not require careful handling."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 says all employees in department A use specific software. Statement 2 says no employee who uses specific software attends the general meeting. Combining these, it means no employees in department A attend the general meeting. This conclusion directly contradicts Statement 3, 'Some employees in department A attend the general meeting.'"
+    "explanation": "Statement 1 indicates that all roses have thorns. Statement 2 asserts that every plant with thorns requires careful handling. From these, it logically follows that all roses require careful handling. This conclusion directly contradicts Statement 3, which says some roses do not require careful handling."
   },
   {
     "id": "gen-28-8",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "No scientist believes in pure chance.",
-      "Some individuals who believe in pure chance are artists.",
-      "Dr. Evelyn is a scientist."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Dr. Evelyn, being a scientist, does not believe in pure chance according to Statement 1. Statement 2 simply indicates that some people who believe in pure chance are artists, which does not conflict with Dr. Evelyn's beliefs or the truth of Statement 1."
-  },
-  {
-    "id": "gen-28-9",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every student who registered late has to pay an extra fee.",
-      "No student who passed the early bird deadline had to pay an extra fee.",
-      "Some students who registered late passed the early bird deadline."
+      "All professional musicians read sheet music.",
+      "No amateur musicians read sheet music.",
+      "Some professional musicians are also amateur musicians."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statement 1 indicates that all students who registered late paid an extra fee. Statement 2 implies that anyone who paid an extra fee did not pass the early bird deadline (contrapositive of 'No student who passed the early bird deadline had to pay an extra fee'). Therefore, all students who registered late did not pass the early bird deadline, which contradicts Statement 3, 'Some students who registered late passed the early bird deadline.'"
+    "explanation": "If Statement 3 is true, then there exists at least one person who is both a professional musician and an amateur musician. According to Statement 1, this person must read sheet music. However, according to Statement 2, this same person must not read sheet music. This creates a direct contradiction, as one cannot both read and not read sheet music simultaneously."
   },
   {
     "id": "gen-28-10",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All books with a blue cover are fiction.",
-      "Some fiction books are not popular.",
-      "The book 'The Azure Mystery' has a blue cover."
+      "Every successful project adheres to the budget.",
+      "No project that adheres to the budget goes over schedule.",
+      "Some successful projects go over schedule."
     ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. According to Statement 1, 'The Azure Mystery' is a fiction book because it has a blue cover. Statement 2 merely states that not all fiction books are popular, which allows for 'The Azure Mystery' to be either popular or not popular without creating a contradiction."
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 states that every successful project adheres to the budget. Statement 2 states that no project adhering to the budget goes over schedule. Combining these, it logically follows that no successful project goes over schedule. This conclusion directly contradicts Statement 3, which claims that some successful projects go over schedule."
   },
   {
     "id": "gen-29-1",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "If a plant thrives, it requires abundant sunlight.",
-      "Any plant that needs abundant sunlight is not suited for indoor growing.",
-      "All tropical plants thrive.",
-      "Some indoor plants are tropical."
+      "All successful mountaineers prepare for extreme weather.",
+      "No one who prepares for extreme weather avoids using the latest gear.",
+      "Some experienced climbers are successful mountaineers.",
+      "Every experienced climber avoids using the latest gear."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 3, all tropical plants thrive. From Statement 1, thriving plants require abundant sunlight. From Statement 2, plants needing abundant sunlight are not suited for indoor growing. This implies that no tropical plant is suited for indoor growing. Statement 4, however, asserts that some indoor plants are tropical, creating a direct contradiction."
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 imply that all successful mountaineers use the latest gear. Statement 3 connects some experienced climbers to successful mountaineers, which then implies that some experienced climbers use the latest gear. This conclusion directly contradicts Statement 4, which claims every experienced climber avoids using the latest gear. Removing Statement 3 breaks the specific link that establishes this contradiction."
   },
   {
     "id": "gen-29-2",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All professional musicians practice daily.",
-      "Some people who practice daily are not professional musicians.",
-      "No one who practices daily is a novice.",
-      "Maya is a professional musician."
+      "All members of the advisory board have extensive legal experience.",
+      "Some individuals with extensive legal experience are not on the advisory board.",
+      "Only individuals with extensive legal experience can serve on the appeals panel.",
+      "Sarah serves on the appeals panel."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Maya, as a professional musician, practices daily and is not a novice, which is consistent with the rules. The existence of people who practice daily but are not professional musicians (and thus not novices) also fits the criteria without contradiction."
+    "explanation": "The statements are consistent. Sarah's service on the appeals panel implies she has extensive legal experience (from Statement 3). This is compatible with all advisory board members having extensive legal experience (Statement 1) and with some experienced legal professionals not being on the advisory board (Statement 2)."
   },
   {
     "id": "gen-29-3",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "No chef working in this restaurant uses frozen ingredients.",
-      "Every chef who wins a culinary award is working in this restaurant.",
-      "Chef Benoit won a culinary award.",
-      "Chef Benoit uses frozen ingredients."
+      "All rare book collectors are experts in medieval script.",
+      "No one who is an expert in medieval script relies solely on digital archives.",
+      "Every librarian at the university archives relies solely on digital archives.",
+      "Some rare book collectors are librarians at the university archives."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "From Statement 3, Chef Benoit won a culinary award. From Statement 2, every chef who wins a culinary award works in this restaurant. From Statement 1, no chef working in this restaurant uses frozen ingredients. This implies Chef Benoit does not use frozen ingredients. Statement 4, however, claims Chef Benoit uses frozen ingredients, which is a direct contradiction."
+    "explanation": "Statements 2 and 3 imply that no librarian at the university archives is an expert in medieval script. Statement 1 states that all rare book collectors are experts in medieval script. Therefore, if some rare book collectors are also librarians at the university archives (Statement 4), those specific collectors would simultaneously be experts in medieval script and not experts in medieval script, which is a contradiction. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-29-4",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful businesses prioritize customer satisfaction.",
-      "Some businesses that prioritize customer satisfaction are not successful.",
-      "If a business has a high employee turnover rate, it is not successful.",
-      "Company X prioritizes customer satisfaction."
+      "All organisms with bioluminescence live in deep ocean environments.",
+      "No organism living in shallow coastal waters exhibits bioluminescence.",
+      "Some deep ocean environments contain species without bioluminescence.",
+      "The newly discovered species, X, lives in a deep ocean environment."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Company X prioritizing customer satisfaction is consistent. Company X could be a successful business, or it could be one of the customer-satisfaction-focused businesses that is not successful. The turnover rate rule does not introduce a contradiction."
+    "explanation": "The statements are consistent. Species X living in a deep ocean environment does not require it to have bioluminescence or contradict any other statements. The existence of species in deep ocean environments without bioluminescence is also compatible with organisms with bioluminescence living in those environments."
   },
   {
     "id": "gen-29-5",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All mammals have fur.",
-      "Some animals that lay eggs are mammals.",
-      "No animal that lays eggs has fur."
+      "Every successful negotiation involves active listening.",
+      "No one who engages in active listening ignores unspoken cues.",
+      "All delegates from our country ignore unspoken cues.",
+      "If a negotiation is successful, then at least one delegate from our country participates."
     ],
     "isConsistent": false,
-    "answerIndex": 1,
-    "explanation": "From Statement 2, some animals that lay eggs are mammals. From Statement 1, all mammals have fur. Therefore, some animals that lay eggs must have fur. Statement 3, however, explicitly states that no animal that lays eggs has fur, creating a direct contradiction."
+    "answerIndex": 3,
+    "explanation": "Statements 2 and 3 imply that no delegate from our country engages in active listening. Statement 1 indicates that every successful negotiation involves active listening. Therefore, it follows that no successful negotiation can involve delegates from our country. This conclusion directly contradicts Statement 4, which states that if a negotiation is successful, then at least one delegate from our country participates. Removing Statement 4 resolves the contradiction."
   },
   {
     "id": "gen-29-6",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "Every painting displayed in the main gallery is a landscape.",
-      "Some landscapes are not displayed in the main gallery.",
-      "If a painting is a portrait, it is not displayed in the main gallery.",
-      "This particular painting is a landscape."
+      "All highly selective academic programs require a research proposal.",
+      "Some students who submit a research proposal are not admitted to a highly selective program.",
+      "No program that waives the research proposal requirement is highly selective.",
+      "The doctoral program in physics is a highly selective academic program."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "This particular painting being a landscape is consistent. It could be displayed in the main gallery, or it could be one of the landscapes not displayed there. Portraits being excluded from the main gallery does not create any conflict with these statements."
+    "explanation": "The statements are consistent. The doctoral program in physics being highly selective means it requires a research proposal (from Statement 1). This is compatible with some students submitting proposals not being admitted (Statement 2) and with non-highly selective programs waiving the requirement (Statement 3)."
   },
   {
     "id": "gen-29-7",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All students who passed the advanced logic module received a certificate.",
-      "No student who received a certificate failed the final project.",
-      "Some students who failed the final project passed the advanced logic module."
+      "Every effective leader is a skilled communicator.",
+      "No skilled communicator avoids public speaking.",
+      "Some members of the committee are effective leaders.",
+      "All members of the committee avoid public speaking."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "From Statement 1, all students who passed the advanced logic module received a certificate. From Statement 2, no student who received a certificate failed the final project. This implies that no student who passed the advanced logic module failed the final project. Statement 3, however, asserts that some students who failed the final project passed the advanced logic module, creating a direct contradiction."
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 imply that every effective leader engages in public speaking. Statement 3 asserts that some members of the committee are effective leaders. From these, it follows that some members of the committee engage in public speaking. This conclusion directly contradicts Statement 4, which states that all members of the committee avoid public speaking. Removing Statement 4 resolves the inconsistency."
   },
   {
     "id": "gen-29-8",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "Every animal native to this island is nocturnal.",
-      "If an animal is nocturnal, it avoids direct sunlight.",
-      "Some animals that avoid direct sunlight are not native to this island."
+      "All well-maintained vehicles pass the annual inspection.",
+      "Some vehicles that pass the annual inspection are not well-maintained.",
+      "No vehicle manufactured before 2010 can pass the annual inspection.",
+      "John's car was manufactured in 2015 and is well-maintained."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The first two statements establish that all native island animals avoid direct sunlight. The third statement indicates that some animals that avoid direct sunlight are not native, which is consistent, as the native animals are not the only ones that might avoid sunlight."
+    "explanation": "The statements are consistent. John's car, being well-maintained and manufactured in 2015, implies it passes inspection (from Statement 1) and is consistent with Statement 3. The existence of vehicles that pass inspection but are not well-maintained is also compatible with Statement 1."
   },
   {
     "id": "gen-29-9",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All birds in this aviary are exotic species.",
-      "No exotic species in this aviary can mimic human speech.",
-      "Some birds that can mimic human speech are found in this aviary."
+      "All successful art historians analyze primary sources.",
+      "No one who analyzes primary sources dismisses archaeological evidence.",
+      "Some scholars who dismiss archaeological evidence are successful art historians."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "From Statement 1, all birds in this aviary are exotic species. From Statement 2, no exotic species in this aviary can mimic human speech. This implies that no bird in this aviary can mimic human speech. Statement 3, however, states that some birds that can mimic human speech are found in this aviary, creating a direct contradiction."
+    "explanation": "Statements 1 and 2 imply that all successful art historians do not dismiss archaeological evidence. Statement 3 claims that some scholars who dismiss archaeological evidence are successful art historians. This directly leads to the contradiction that some successful art historians dismiss archaeological evidence, while the previous two statements assert that none do. Removing Statement 3 makes the set consistent by breaking this specific link."
   },
   {
     "id": "gen-29-10",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "Unless a painting is an original, it cannot be insured for over a million dollars.",
-      "Every painting in the exhibition is insured for over a million dollars.",
-      "Some original paintings are not in the exhibition."
+      "All critically acclaimed documentaries receive funding from the arts council.",
+      "Some films that receive funding from the arts council are not critically acclaimed documentaries.",
+      "No critically acclaimed documentary focuses solely on wildlife.",
+      "A documentary focusing solely on wildlife can receive funding from the arts council."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The first two statements combined indicate that every painting in the exhibition is an original. The third statement, that some original paintings are not in the exhibition, is consistent with this, as not all originals must be part of the exhibition."
+    "explanation": "The statements are consistent. A critically acclaimed documentary receives funding (Statement 1) and does not focus solely on wildlife (Statement 3). The possibility of a wildlife documentary receiving funding (Statement 4) is consistent as long as it is not critically acclaimed, which is supported by Statement 2."
   },
   {
     "id": "gen-30-1",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a candidate has extensive public service experience, they receive a preferential interview slot.",
-      "No candidate who receives a preferential interview slot is subject to a background check.",
-      "All candidates for this position must undergo a background check.",
-      "Every candidate for this position has extensive public service experience.",
-      "Some candidates are applying for this position."
+      "If a candidate is qualified for the position, they must have advanced technical skills.",
+      "Anyone with advanced technical skills is expected to mentor junior team members.",
+      "No candidate expected to mentor junior team members will be assigned to solo projects.",
+      "Every candidate qualified for the position is assigned to solo projects."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 5 indicates that some candidates exist. According to Statement 4, every candidate for this position has extensive public service experience. Statement 1 states that extensive public service experience leads to a preferential interview slot. Statement 2 dictates that no one with a preferential interview slot undergoes a background check. Therefore, these candidates are not subject to a background check. This contradicts Statement 3, which requires all candidates to undergo a background check. Removing Statement 4 breaks the initial link, allowing candidates to exist without necessarily having public service experience, thus avoiding the contradiction."
-  },
-  {
-    "id": "gen-30-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All successful product launches involve extensive market research.",
-      "Some products that underwent extensive market research were not successful launches.",
-      "If a product launch is successful, it ensures high customer satisfaction.",
-      "No product that ensures high customer satisfaction is subsequently discontinued within a year."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Successful product launches lead to extensive market research (Statement 1) and high customer satisfaction (Statement 3), which in turn prevents discontinuation (Statement 4). Statement 2 simply notes that not all market research leads to successful launches, which doesn't contradict the other statements; some products might undergo research but fail for other reasons. All statements can simultaneously be true."
+    "explanation": "Statement 1 says: Qualified → Advanced Technical Skills. Statement 2 says: Advanced Technical Skills → Mentor. Statement 3 says: Mentor → Not Assigned to Solo Projects. Chaining these, we deduce that if a candidate is qualified, they are not assigned to solo projects. Statement 4 directly contradicts this by stating that every qualified candidate is assigned to solo projects."
   },
   {
     "id": "gen-30-3",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a plant requires daily watering, it is a tropical species.",
-      "No plant that thrives in direct sunlight is a tropical species.",
-      "Every plant in the greenhouse thrives in direct sunlight.",
-      "Some plants in the greenhouse require daily watering."
+      "If a country implements universal healthcare, it must have a high tax rate.",
+      "Any country with a high tax rate provides comprehensive social welfare programs.",
+      "No country that provides comprehensive social welfare programs has a fluctuating economy.",
+      "There is at least one country that has implemented universal healthcare and has a fluctuating economy."
     ],
     "isConsistent": false,
-    "answerIndex": 1,
-    "explanation": "Statement 4 indicates there are plants in the greenhouse that require daily watering. According to Statement 1, these plants must be tropical species. However, Statement 3 says every plant in the greenhouse thrives in direct sunlight. Statement 2 asserts that no plant thriving in direct sunlight is a tropical species. This means the plants from Statement 4 are both tropical (from Statement 1) and not tropical (from Statements 3 and 2). Removing Statement 2 resolves this by allowing plants thriving in direct sunlight to be tropical species."
-  },
-  {
-    "id": "gen-30-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All research papers submitted for the conference must be peer-reviewed.",
-      "If a research paper is peer-reviewed, it receives editorial feedback.",
-      "Maria's research paper was submitted for the conference.",
-      "Not all research papers that receive editorial feedback are submitted for the conference."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Maria's paper, being submitted for the conference (Statement 3), must be peer-reviewed (Statement 1), and thus receives editorial feedback (Statement 2). Statement 4 merely indicates that some papers receiving feedback might not be conference submissions, which does not contradict Maria's situation or any other statement."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: Universal Healthcare → High Tax Rate → Comprehensive Social Welfare Programs → Not Fluctuating Economy. This means any country with universal healthcare does not have a fluctuating economy. Statement 4 directly contradicts this by asserting that there is a country with universal healthcare that does have a fluctuating economy."
   },
   {
     "id": "gen-30-5",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a student attends all lectures, they are eligible for the honor society.",
-      "Only students who complete all assignments are eligible for the honor society.",
-      "No student who completes all assignments fails the final exam.",
-      "Every student who fails the final exam attended all lectures.",
-      "Some students failed the final exam."
+      "If a species is endangered, it is protected by international law.",
+      "All species protected by international law are subject to strict habitat conservation measures.",
+      "No species subject to strict habitat conservation measures is highly adaptable to environmental changes.",
+      "There are some endangered species that are highly adaptable to environmental changes."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statement 5 confirms that some students failed the final exam. According to Statement 4, these students must have attended all lectures. Statement 1 indicates that attending all lectures makes a student eligible for the honor society. Statement 2 specifies that only students who complete all assignments are eligible for the honor society, implying these students completed all assignments. Finally, Statement 3 dictates that completing all assignments means a student did not fail the final exam. This creates a contradiction: these students both failed the final exam and did not fail it. Removing Statement 4 breaks the initial link, allowing students to fail the final exam without having attended all lectures, preventing the contradiction."
-  },
-  {
-    "id": "gen-30-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All employees who receive a quarterly bonus meet their performance targets.",
-      "If an employee meets their performance targets, they are eligible for promotion.",
-      "Some employees eligible for promotion do not receive a quarterly bonus.",
-      "Maria received a quarterly bonus this quarter."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Maria receiving a bonus (Statement 4) means she met her targets (Statement 1) and is eligible for promotion (Statement 2). Statement 3, indicating some eligible employees do not receive bonuses, is consistent because eligibility for promotion can come from meeting targets, which does not exclusively require a bonus."
+    "explanation": "Statements 1, 2, and 3 form a logical chain: Endangered → Protected by International Law → Subject to Strict Habitat Conservation Measures → Not Highly Adaptable. This implies that all endangered species are not highly adaptable to environmental changes. Statement 4 directly contradicts this by claiming that some endangered species are highly adaptable."
   },
   {
     "id": "gen-30-7",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a building uses solar power, it qualifies for a green certification.",
-      "Buildings that qualify for a green certification are exempt from certain energy regulations.",
-      "No building exempt from energy regulations has an average monthly utility bill above $500.",
-      "The new city hall building uses solar power.",
-      "The new city hall building has an average monthly utility bill above $500."
+      "All students eligible for the advanced course have completed the prerequisite modules.",
+      "No student who has completed the prerequisite modules has failed the final assessment.",
+      "Only students who passed the final assessment can join the research project group.",
+      "Some students eligible for the advanced course are not allowed to join the research project group."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statement 4 indicates the new city hall uses solar power. According to Statement 1, this means it qualifies for a green certification. Statement 2 adds that buildings with green certification are exempt from certain energy regulations. Statement 3 specifies that buildings exempt from energy regulations do not have an average monthly utility bill above $500. Therefore, the new city hall's utility bill must not be above $500. This directly contradicts Statement 5. Removing Statement 5 makes the set consistent by removing the direct claim that conflicts with the derived conclusion."
-  },
-  {
-    "id": "gen-30-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All candidates for the senior analyst position must have a master's degree.",
-      "No candidate with a master's degree lacks prior industry experience.",
-      "If a candidate lacks prior industry experience, they will not be invited for an interview.",
-      "Some candidates for the senior analyst position will not be invited for an interview."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statement 1 and 2, all senior analyst candidates have a master's degree and prior industry experience. This means they do not lack prior industry experience, so Statement 3's condition for not being invited for an interview is not met for them through this chain. However, Statement 4 simply states that some senior analyst candidates will not be invited, which is consistent, as there could be other unstated reasons for not being invited for an interview, even if they possess all stated qualifications."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: Advanced Course Eligible → Prerequisite Modules → Not Failed Final Assessment → Join Research Project Group. This means all students eligible for the advanced course can join the research project group. Statement 4 directly contradicts this by stating that some students eligible for the advanced course are not allowed to join the research project group."
   },
   {
     "id": "gen-30-9",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a company invests heavily in research and development, it introduces innovative products.",
-      "No company that introduces innovative products is losing market share.",
-      "Every company losing market share is undergoing a financial audit.",
-      "Some companies undergoing a financial audit invest heavily in research and development.",
-      "All companies undergoing a financial audit are losing market share."
+      "Every time the city's main reservoir reaches critical levels, water rationing is immediately enforced.",
+      "Water rationing is only enforced if there is a severe drought.",
+      "If there is a severe drought, all agricultural irrigation is temporarily suspended.",
+      "The city's main reservoir reached critical levels last month, but agricultural irrigation was not suspended."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statement 4 indicates that some companies undergoing a financial audit also invest heavily in research and development. According to Statement 1, these companies introduce innovative products. Statement 2 asserts that companies introducing innovative products are not losing market share. Therefore, these companies are not losing market share. However, Statement 5 claims that all companies undergoing a financial audit (which these companies are) are losing market share. This creates a contradiction. Removing Statement 5 resolves this by allowing companies undergoing a financial audit to exist without necessarily losing market share."
-  },
-  {
-    "id": "gen-30-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All registered delegates receive a conference badge.",
-      "If a person has a conference badge, they have access to the main hall.",
-      "Some people who have access to the main hall are not registered delegates.",
-      "No one without a conference badge has access to the main hall."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. Registered delegates receive badges (Statement 1) and thus have main hall access (Statement 2). Statement 4 is the contrapositive of Statement 2, providing no new information. Statement 3 confirms that some people may gain main hall access without being registered delegates, which is consistent with the other rules; it doesn't state that *only* registered delegates get badges or main hall access, just that registered delegates do."
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a chain: Critical Reservoir Levels → Water Rationing → Severe Drought → No Agricultural Irrigation. This implies that if the reservoir reaches critical levels, agricultural irrigation must be suspended. Statement 4 directly contradicts this by stating that the reservoir reached critical levels, yet agricultural irrigation was not suspended."
   },
   {
     "id": "gen-31-1",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All rare books are valuable.",
-      "No valuable item is found in the discard bin.",
-      "Some books in the discard bin are rare."
+      "All owls are nocturnal predators.",
+      "No nocturnal predator hunts during the day.",
+      "Some owls hunt during the day."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together imply that no rare books are found in the discard bin. Statement 3 asserts that some books in the discard bin are rare, which directly contradicts this conclusion."
+    "explanation": "Statements 1 and 2 together imply that all owls are nocturnal predators, and no nocturnal predator hunts during the day, meaning no owl hunts during the day. Statement 3 directly contradicts this by claiming some owls do hunt during the day."
   },
   {
     "id": "gen-31-2",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All dogs are canines.",
-      "Some canines are not dogs.",
-      "Fido is a canine."
+      "All successful companies prioritize customer satisfaction.",
+      "Some businesses that prioritize customer satisfaction are not successful companies.",
+      "Apex Corp is a successful company."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Fido could be a dog (and thus a canine), or Fido could be one of the canines that are not dogs. There is no contradiction."
+    "explanation": "It is consistent for all successful companies to prioritize customer satisfaction, while some other businesses that also prioritize customer satisfaction are not successful. Apex Corp, being a successful company, would also prioritize customer satisfaction, which aligns with the given statements."
   },
   {
     "id": "gen-31-3",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a bird is a robin, it lays blue eggs.",
-      "All birds that lay blue eggs build nests in trees.",
-      "Some robins do not build nests in trees."
+      "Every plant in this garden requires full sun.",
+      "Plants that require full sun cannot tolerate frost.",
+      "Some plants in this garden are highly tolerant of frost."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 logically imply that if a bird is a robin, it builds its nest in trees. Statement 3 contradicts this by asserting that some robins do not build nests in trees."
+    "explanation": "Statements 1 and 2 combine to establish that every plant in this garden requires full sun, and plants requiring full sun cannot tolerate frost. This leads to the conclusion that no plant in this garden can tolerate frost. Statement 3, however, asserts that some plants in this garden are highly tolerant of frost, which creates a direct contradiction."
   },
   {
     "id": "gen-31-4",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a plant is a rose, it has thorns.",
-      "This plant has thorns.",
-      "Some plants with thorns are not roses."
+      "All members of the chess club are skilled strategists.",
+      "No skilled strategist is a casual gamer.",
+      "Some casual gamers are not members of the chess club."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. This plant could be a rose, or it could be one of the plants with thorns that are not roses. No contradiction arises."
+    "explanation": "Statements 1 and 2 imply that no member of the chess club is a casual gamer. Statement 3, which says some casual gamers are not members of the chess club, is consistent with this, as it only describes casual gamers who are outside the chess club."
   },
   {
     "id": "gen-31-5",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All athletes train daily.",
-      "No one who trains daily skips their warm-up.",
-      "Some athletes skip their warm-up."
+      "If an artwork is a sculpture, then it is three-dimensional.",
+      "All three-dimensional artworks are made from solid materials.",
+      "Some sculptures are not made from solid materials."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together imply that no athlete skips their warm-up. Statement 3 claims that some athletes skip their warm-up, which directly contradicts this conclusion."
+    "explanation": "Statements 1 and 2 together imply that all sculptures are three-dimensional, and all three-dimensional artworks are made from solid materials, meaning all sculptures are made from solid materials. Statement 3 directly contradicts this by claiming some sculptures are not made from solid materials."
   },
   {
     "id": "gen-31-6",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All chefs are excellent cooks.",
-      "Emily is an excellent cook.",
-      "Some excellent cooks are not chefs."
+      "Every successful entrepreneur possesses strong leadership skills.",
+      "No one with strong leadership skills avoids making tough decisions.",
+      "Some people who possess strong leadership skills are not successful entrepreneurs."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Emily could be a chef, or she could be one of the excellent cooks who are not chefs. No contradiction is forced."
+    "explanation": "Statements 1 and 2 together indicate that all successful entrepreneurs possess strong leadership skills and make tough decisions. Statement 3 is consistent because it is possible for people to possess strong leadership skills and make tough decisions without necessarily being successful entrepreneurs."
   },
   {
     "id": "gen-31-7",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "All employees who attend the workshop receive a bonus.",
-      "No employee who received a bonus was absent from the closing ceremony.",
-      "Some employees who attended the workshop were absent from the closing ceremony."
+      "All employees who receive a bonus have exceeded their sales targets.",
+      "No employee who exceeded their sales targets was denied a promotion.",
+      "Some employees who received a bonus were denied a promotion."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply that no employee who attended the workshop was absent from the closing ceremony. Statement 3 contradicts this by stating that some employees who attended the workshop were absent from the closing ceremony."
+    "explanation": "Statements 1 and 2 together imply that all employees who receive a bonus have exceeded their sales targets, and no employee who exceeded their sales targets was denied a promotion. Therefore, all employees who received a bonus also received a promotion. Statement 3 directly contradicts this by stating that some employees who received a bonus were denied a promotion."
   },
   {
     "id": "gen-31-8",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "No tigers are native to Europe.",
-      "All lions are native to Africa.",
-      "Some African animals are tigers."
+      "If a student enrolls in advanced calculus, they must have passed algebra.",
+      "Some students who passed algebra did not enroll in advanced calculus.",
+      "No student who passed algebra failed geometry."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Tigers that are African animals would not be native to Europe, which is consistent with Statement 1. Lions being native to Africa does not create any conflict."
+    "explanation": "Statement 1 sets a prerequisite for advanced calculus. Statement 2 is consistent with this, as passing algebra does not necessarily require enrolling in advanced calculus. Statement 3 simply adds another condition for those who passed algebra, which does not create any conflict with the other two."
   },
   {
     "id": "gen-31-9",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "Every member of the choir can read music.",
-      "If someone can read music, they have perfect pitch.",
-      "Maria is a member of the choir, but she does not have perfect pitch."
+      "All expert chefs have excellent knife skills.",
+      "No one with excellent knife skills struggles with precise cuts.",
+      "Some expert chefs struggle with precise cuts."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply that every member of the choir has perfect pitch. Statement 3 contradicts this by describing Maria, a choir member, who does not have perfect pitch."
+    "explanation": "Statements 1 and 2 together imply that all expert chefs have excellent knife skills, and no one with excellent knife skills struggles with precise cuts. This leads to the conclusion that no expert chef struggles with precise cuts. Statement 3, however, asserts that some expert chefs struggle with precise cuts, which creates a direct contradiction."
   },
   {
     "id": "gen-31-10",
     "difficulty": "medium",
     "category": "syllogism",
     "statements": [
-      "If a student studies daily, they will pass the exam.",
-      "Mark did not pass the exam.",
-      "Some students did not study daily."
+      "All members of the historical society are expert genealogists.",
+      "Some expert genealogists are not members of the historical society.",
+      "Sarah is an expert genealogist."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. From Statement 1 and Statement 2, we can infer that Mark did not study daily. This is consistent with Statement 3, which indicates that some students (Mark potentially being one of them) did not study daily."
+    "explanation": "Statement 1 indicates that historical society members are a subset of expert genealogists. Statement 2 confirms that there are expert genealogists who are not members of the historical society, which is consistent. Sarah, as an expert genealogist, could either be a member of the historical society or not, and the statements remain consistent."
   },
   {
     "id": "gen-32-1",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "Every expert in the field attends the annual conference.",
-      "Anyone who attends the annual conference registers online.",
-      "If a person registers online, they must pay a registration fee.",
-      "Some experts in the field are exempt from paying any registration fee."
+      "All interns who completed the advanced project presented their findings.",
+      "If a finding was presented, it was peer-reviewed by a senior associate.",
+      "No finding peer-reviewed by a senior associate contained an unverified claim.",
+      "Every intern in the program completed the advanced project.",
+      "Some interns in the program submitted findings with unverified claims."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: If a person is an expert, they attend the conference; if they attend, they register online; if they register online, they pay a fee. This means all experts pay a fee. Statement 4 claims that some experts are exempt from paying any registration fee, which directly contradicts the conclusion that all experts pay a fee. Removing Statement 4 resolves this conflict."
+    "answerIndex": 4,
+    "explanation": "Statements 4, 1, 2, and 3 chain together to show that every intern in the program submitted findings that did NOT contain unverified claims. However, Statement 5 claims that some interns in the program submitted findings that DID contain unverified claims. This creates a direct contradiction. Removing Statement 5 resolves this inconsistency, as the existence of such claims is no longer asserted."
+  },
+  {
+    "id": "gen-32-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a plant has variegated leaves, it requires indirect sunlight.",
+      "All plants in the conservatory receive indirect sunlight.",
+      "Some plants in the conservatory do not have variegated leaves.",
+      "No plant that requires indirect sunlight can tolerate direct sun."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Plants in the conservatory receive indirect sunlight (Statement 2) and thus cannot tolerate direct sun (Statement 4). Some conservatory plants might not have variegated leaves (Statement 3), which is consistent with Statement 1 only requiring variegated plants to need indirect sunlight, not the other way around. There is no logical conflict."
+  },
+  {
+    "id": "gen-32-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an artwork is a sculpture, it occupies three-dimensional space.",
+      "Every artwork that occupies three-dimensional space is considered a physical object.",
+      "No artwork considered a physical object is entirely digital.",
+      "All digital artworks are sculptures.",
+      "Some artworks are entirely digital."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 4, 1, 2, and 3 create a chain implying that if an artwork is entirely digital, it is not entirely digital (Digital -> Sculpture -> 3DSpace -> PhysicalObject -> NotDigital). This means no digital artwork can exist. However, Statement 5 asserts that some artworks ARE entirely digital. Removing Statement 5 makes the set consistent by removing the claim that any digital artworks exist."
+  },
+  {
+    "id": "gen-32-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All birds native to this region migrate south for winter.",
+      "If a bird migrates south for winter, it does not build nests in evergreen trees.",
+      "Some birds that build nests in evergreen trees are not native to this region.",
+      "No bird that builds nests in evergreen trees migrates south for winter."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true at the same time. Statements 1 and 2 imply that native birds do not build nests in evergreen trees. Statement 4 states that birds that build nests in evergreen trees do not migrate, which is consistent with native birds migrating and thus not building such nests. Statement 3 simply allows for other birds that are not native to exist and build nests in evergreen trees, which introduces no conflict."
   },
   {
     "id": "gen-32-5",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All successful authors have published at least one critically acclaimed novel.",
-      "No one who has published a critically acclaimed novel has ever failed to meet their deadlines.",
-      "If an author consistently meets their deadlines, they will eventually be considered for the prestigious Literary Award.",
-      "Some authors who are successful have never been considered for the prestigious Literary Award."
+      "All applicants who advanced to the second round submitted a complete portfolio.",
+      "Every applicant who submitted a complete portfolio attended the orientation session.",
+      "No applicant who attended the orientation session missed the final interview.",
+      "If an applicant advanced to the second round, they missed the final interview.",
+      "At least one applicant advanced to the second round."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: If an author is successful, they have published a critically acclaimed novel. If they have published a critically acclaimed novel, they have met their deadlines. If they have met their deadlines, they will be considered for the Literary Award. This implies that all successful authors will be considered for the Literary Award. Statement 4 contradicts this by claiming that some successful authors have never been considered for the award. Removing Statement 4 resolves this inconsistency."
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 chain together to show that any applicant who advanced to the second round did NOT miss the final interview. However, Statement 4 states that if an applicant advanced to the second round, they DID miss the final interview. These two conclusions contradict each other if any applicant advanced to the second round, which is affirmed by Statement 5. Removing Statement 5 resolves the inconsistency by removing the premise that such an applicant exists."
   },
   {
     "id": "gen-32-6",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "All registered attendees receive a conference badge.",
-      "Every person with a conference badge is permitted access to the plenary sessions.",
-      "If a person is permitted access to the plenary sessions, they are considered a participant in the workshop.",
-      "Some registered attendees are not considered participants in the workshop."
+      "If a student enrolled in the evening program, they have a full-time job.",
+      "Some students with a full-time job are not enrolled in the evening program.",
+      "No student enrolled in the evening program requires a parking permit.",
+      "All students who require a parking permit have a full-time job."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true. Statement 1 indicates evening program students have full-time jobs. Statement 2 is consistent with this, as not all full-time job holders must be in the evening program. Statement 3 means evening program students don't need permits. Statement 4 means anyone needing a permit has a full-time job; these individuals would logically not be in the evening program based on Statement 3. No contradictions arise."
+  },
+  {
+    "id": "gen-32-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All managers who approved the budget proposal attended the board meeting.",
+      "If someone attended the board meeting, they received a copy of the minutes.",
+      "No one who received a copy of the minutes failed to review it thoroughly.",
+      "Some managers who approved the budget proposal did not review the minutes thoroughly."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: If a person is a registered attendee, they receive a conference badge. If they have a conference badge, they are permitted access to the plenary sessions. If they are permitted access to the plenary sessions, they are considered a participant in the workshop. This implies that all registered attendees are considered participants in the workshop. Statement 4 contradicts this by asserting that some registered attendees are not considered participants in the workshop. Removing Statement 4 resolves this inconsistency."
+    "explanation": "Statements 1, 2, and 3 create a chain: managers who approved the budget proposal (Statement 1) attended the meeting (Statement 2) received the minutes, and (Statement 3) reviewed them thoroughly. This means all managers who approved the budget proposal reviewed the minutes thoroughly. Statement 4 directly contradicts this by stating that some managers who approved the budget proposal did NOT review the minutes thoroughly. Removing Statement 4 resolves this contradiction."
   },
   {
     "id": "gen-32-8",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "No applicant is accepted unless they achieve a top score on the entrance exam.",
-      "If an applicant achieved a top score on the entrance exam, they must have attended the advanced preparation course.",
-      "All applicants who attended the advanced preparation course are offered a scholarship.",
-      "Some applicants who were accepted were not offered a scholarship."
+      "Every device connected to the secure network runs encryption software.",
+      "If a device runs encryption software, it regularly updates its security patches.",
+      "Some devices that regularly update their security patches are not connected to the secure network.",
+      "No device connected to the secure network has outdated security patches."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statements 1 and 2 imply that devices on the secure network run encryption and update patches. Statement 4 reinforces this by confirming no outdated patches. Statement 3 is consistent because it simply states that not all devices updating patches must be on the secure network; some can update patches independently."
+  },
+  {
+    "id": "gen-32-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a customer is a premium member, they receive express shipping.",
+      "Every customer who receives express shipping is assigned a dedicated support agent.",
+      "No customer assigned a dedicated support agent waits on hold for more than five minutes.",
+      "If a customer is a premium member, they wait on hold for more than five minutes.",
+      "At least one customer is a premium member."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: If an applicant is accepted, they achieved a top score. If they achieved a top score, they attended the advanced preparation course. If they attended the advanced preparation course, they are offered a scholarship. This implies that all accepted applicants are offered a scholarship. Statement 4 contradicts this by stating that some accepted applicants were not offered a scholarship. Removing Statement 4 resolves this inconsistency."
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 chain together to show that if a customer is a premium member, they do NOT wait on hold for more than five minutes. Statement 4, however, states that if a customer is a premium member, they DO wait on hold for more than five minutes. These two conclusions are contradictory if any premium member exists, which Statement 5 affirms. Removing Statement 5 resolves the inconsistency by removing the premise that such a customer exists."
   },
   {
     "id": "gen-32-10",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a student enrolls in the advanced coding module, they must have completed the prerequisite course.",
-      "All students who completed the prerequisite course passed the midterm exam.",
-      "No student who passed the midterm exam failed the final project.",
-      "Some students who enrolled in the advanced coding module failed the final project."
+      "All employees enrolled in the leadership program receive mentorship.",
+      "If an employee receives mentorship, they complete an annual professional development plan.",
+      "Some employees who complete an annual professional development plan are not enrolled in the leadership program.",
+      "No employee in the leadership program fails to complete an annual professional development plan."
     ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: If a student enrolls in the advanced coding module, they completed the prerequisite course. If they completed the prerequisite course, they passed the midterm exam. If they passed the midterm exam, they did not fail the final project (meaning they passed it). This implies that all students who enroll in the advanced coding module passed the final project. Statement 4 contradicts this by stating that some students who enrolled in the advanced coding module failed the final project. Removing Statement 4 resolves this inconsistency."
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true. Statements 1 and 2 imply that employees in the leadership program complete development plans. Statement 4 confirms this implication, but does not introduce a contradiction. Statement 3 is consistent, as it allows for other employees (not in the leadership program) to also complete professional development plans. No inconsistencies are present."
   },
   {
     "id": "gen-33-1",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All owls are birds.",
+      "No birds are mammals.",
+      "Some owls are mammals."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all owls are birds, and Statement 2 says no birds are mammals. Combining these, it must be true that no owls are mammals. This directly contradicts Statement 3, which claims some owls are mammals."
+  },
+  {
+    "id": "gen-33-2",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All musicians are creative.",
+      "Some creative people are not musicians.",
+      "Laura is a musician."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Laura is a musician, so she is creative according to Statement 1. Statement 2 allows for creative people who are not musicians. All three statements can be simultaneously true, for example, Laura is a creative musician, and other creative people exist who are not musicians."
+  },
+  {
+    "id": "gen-33-3",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If a student studies diligently, they pass the course.",
+      "No student who passes the course fails the final exam.",
+      "Sarah studied diligently, but she failed the final exam."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 indicates that diligent students pass the course. Statement 2 means that students who pass the course do not fail the final exam. Therefore, it must be true that diligent students do not fail the final exam. Statement 3, however, asserts that Sarah studied diligently but failed the final exam, creating a contradiction."
+  },
+  {
+    "id": "gen-33-4",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All apples are fruits.",
+      "Some fruits are not apples.",
+      "Some apples are red."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "It is possible for all apples to be fruits, for some fruits (like bananas) to not be apples, and for some apples (like Gala apples) to be red. All statements can be true at the same time."
+  },
+  {
+    "id": "gen-33-5",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every employee attended the mandatory meeting.",
+      "No employee was able to attend the meeting remotely.",
+      "Some employees attended the meeting remotely."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 establishes that every employee attended the mandatory meeting. Statement 2 specifies that no employee attended the meeting remotely. Together, these mean that no employee attended the meeting remotely. This directly contradicts Statement 3, which claims some employees attended the meeting remotely."
+  },
+  {
+    "id": "gen-33-6",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All dogs are canines.",
+      "If an animal is a canine, it is a mammal.",
+      "Some mammals are not dogs."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 together imply that all dogs are mammals. Statement 3 allows for mammals that are not dogs (e.g., cats, bears), which is perfectly consistent with all dogs being mammals. All statements can be true."
+  },
+  {
+    "id": "gen-33-7",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All members of the hiking club have excellent endurance.",
+      "No one with excellent endurance gets winded easily.",
+      "Some people who get winded easily are members of the hiking club."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 asserts that all members of the hiking club have excellent endurance. Statement 2 states that no one with excellent endurance gets winded easily. Therefore, it logically follows that no members of the hiking club get winded easily. This directly contradicts Statement 3, which claims some people who get winded easily are members of the hiking club."
+  },
+  {
+    "id": "gen-33-8",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every successful entrepreneur is innovative.",
+      "Not all innovative people are successful entrepreneurs.",
+      "David is an innovative person."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 says successful entrepreneurs are innovative. Statement 2 allows for innovative people who are not successful entrepreneurs. David, an innovative person (Statement 3), could be either a successful entrepreneur or one of the innovative people who are not successful entrepreneurs. All statements can be true."
+  },
+  {
+    "id": "gen-33-9",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If a plant is a rose, it has thorns.",
+      "No plant with thorns is suitable for indoor display.",
+      "Some roses are suitable for indoor display."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 indicates that all roses have thorns. Statement 2 asserts that no plant with thorns is suitable for indoor display. Combining these, it logically follows that no roses are suitable for indoor display. This conclusion contradicts Statement 3, which claims some roses are suitable for indoor display."
+  },
+  {
+    "id": "gen-33-10",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All doctors hold a medical degree.",
+      "Some people who hold a medical degree are not doctors.",
+      "No nurses are doctors."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 sets a requirement for doctors. Statement 2 allows for individuals with medical degrees who are not practicing doctors (e.g., researchers or retired professionals). Statement 3 distinguishes nurses from doctors. All statements are compatible; for example, some medical degree holders could be researchers, and nurses are a separate profession from doctors."
+  },
+  {
+    "id": "gen-34-1",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All residents of the Oakwood district pay local taxes.",
+      "No one who pays local taxes is exempt from civic duty.",
+      "Some individuals exempt from civic duty live in the Oakwood district."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 establishes that all Oakwood residents pay local taxes. Statement 2 dictates that anyone who pays local taxes is not exempt from civic duty. Together, these logically imply that no resident of the Oakwood district is exempt from civic duty. Statement 3, however, asserts that some individuals exempt from civic duty live in the Oakwood district, directly contradicting the conclusion derived from Statements 1 and 2."
+  },
+  {
+    "id": "gen-34-2",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All members of the research team attended the mandatory training.",
+      "No one who attended the mandatory training missed the safety briefing.",
+      "Every person denied access to the lab facilities had missed the safety briefing.",
+      "Some members of the research team were denied access to the lab facilities."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 together establish that all members of the research team did not miss the safety briefing. Statement 4 indicates that some members of the research team were denied access to lab facilities. According to Statement 3, anyone denied access to the lab facilities had missed the safety briefing. Therefore, Statements 3 and 4 together imply that some members of the research team had missed the safety briefing, which directly contradicts the conclusion derived from Statements 1 and 2."
+  },
+  {
+    "id": "gen-34-3",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a restaurant is highly rated, it receives numerous reservations.",
+      "Only restaurants with exceptional service receive numerous reservations.",
+      "No restaurant with exceptional service ever offers discounts.",
+      "Some highly rated restaurants offer discounts."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 indicates that highly rated restaurants receive numerous reservations. Statement 2 specifies that only restaurants with exceptional service receive numerous reservations, meaning all restaurants receiving numerous reservations have exceptional service. Statement 3 states that no restaurant with exceptional service offers discounts. Chaining these, it follows that no highly rated restaurant offers discounts. Statement 4, however, claims that some highly rated restaurants do offer discounts, which creates a direct contradiction."
+  },
+  {
+    "id": "gen-34-4",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All experimental aircraft are subject to stringent safety regulations.",
+      "No aircraft subject to stringent safety regulations can operate in commercial airspace without special clearance.",
+      "Every aircraft operating in commercial airspace without special clearance is required to file a detailed flight plan.",
+      "Some experimental aircraft are not required to file a detailed flight plan."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 together imply that all experimental aircraft cannot operate in commercial airspace without special clearance. Statement 3 states that if an aircraft operates in commercial airspace without special clearance, it is required to file a detailed flight plan. By contrapositive, this means if an aircraft is NOT required to file a detailed flight plan, it CAN operate in commercial airspace without special clearance. Statement 4 asserts that some experimental aircraft are not required to file a detailed flight plan, which, combined with the contrapositive of Statement 3, means some experimental aircraft can operate in commercial airspace without special clearance. This contradicts the conclusion derived from Statements 1 and 2."
+  },
+  {
+    "id": "gen-34-5",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every student who enrolls in the advanced coding course has completed the prerequisite module.",
+      "Only students who passed the final project are considered to have completed the prerequisite module.",
+      "No student who passed the final project has difficulty with basic algorithms.",
+      "Some students who enroll in the advanced coding course have difficulty with basic algorithms."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 indicates that all students in the advanced coding course completed the prerequisite. Statement 2 means that all students who completed the prerequisite passed the final project. Statement 3 states that no student who passed the final project has difficulty with basic algorithms. Chaining these, it follows that no student who enrolls in the advanced coding course has difficulty with basic algorithms. Statement 4 directly contradicts this by asserting that some students in the advanced coding course do have difficulty with basic algorithms."
+  },
+  {
+    "id": "gen-34-6",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All successful authors have a strong command of grammar.",
+      "Some individuals with a strong command of grammar are not successful authors.",
+      "No one who lacks a strong command of grammar publishes their work.",
+      "All individuals who publish their work aspire to be successful authors."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 establishes a characteristic of successful authors. Statement 2 allows for individuals with good grammar who are not successful authors, which is consistent with Statement 1. Statement 3 implies that to publish, one must have a strong command of grammar. Statement 4 sets an aspiration for those who publish. None of these statements, or their logical implications, contradict each other."
+  },
+  {
+    "id": "gen-34-7",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All advanced civilizations employ sustainable energy sources.",
+      "Some societies that employ sustainable energy sources are not advanced civilizations.",
+      "No primitive societies employ sustainable energy sources.",
+      "All societies that are not primitive are considered advanced civilizations."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements can be true simultaneously. Statement 1 defines a characteristic of advanced civilizations. Statement 2 allows for other societies to use sustainable energy without being advanced, which is consistent with Statement 1. Statement 3 sets a boundary for primitive societies. Statement 4 defines advanced civilizations as the only non-primitive societies, which, combined with Statement 1, implies that all non-primitive societies use sustainable energy. None of these claims contradict each other."
+  },
+  {
+    "id": "gen-34-8",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a chemical reaction is exothermic, it releases heat.",
+      "A chemical reaction releases heat only if its enthalpy change is negative.",
+      "Some chemical reactions with a negative enthalpy change are not exothermic.",
+      "No chemical reaction that releases heat has a positive enthalpy change."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 describes a property of exothermic reactions. Statement 2 clarifies that all heat-releasing reactions have a negative enthalpy change. Statement 3 is consistent with the preceding statements, as not all reactions with a negative enthalpy change need to be exothermic. Statement 4 reinforces Statement 2 by saying reactions that release heat don't have a positive enthalpy change, which is consistent with them having a negative enthalpy change. No contradictions arise from these claims."
+  },
+  {
+    "id": "gen-34-9",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All successful startups require significant initial investment.",
+      "Some companies with significant initial investment eventually fail.",
+      "No company that eventually fails is considered a successful startup.",
+      "All technology companies require significant initial investment."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "All statements are consistent. Statement 1 sets a condition for successful startups. Statement 2 acknowledges that some investments don't lead to success. Statement 3 supports Statement 1 by ensuring that failed companies are not successful startups. Statement 4 introduces technology companies as another group requiring significant investment, without creating any conflicts with the other statements."
+  },
+  {
+    "id": "gen-34-10",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every cat in this shelter has been spayed or neutered.",
+      "No cat that has been spayed or neutered is currently pregnant.",
+      "Some cats in this shelter are long-haired breeds.",
+      "No long-haired breed cat is currently pregnant."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statements 1 and 2 together imply that no cat in the shelter is currently pregnant. Statement 3 introduces long-haired breeds among the shelter cats. Statement 4 states that no long-haired breed cat is pregnant. Since all shelter cats (including long-haired ones) are not pregnant (from 1 & 2), Statement 4 is consistent with this broader conclusion and does not introduce any contradiction."
+  },
+  {
+    "id": "gen-35-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All interns are required to attend the weekly seminar.",
+      "No one who attends the weekly seminar is exempt from the final project.",
+      "Every employee who is not exempt from the final project receives a performance bonus.",
+      "Some interns do not receive a performance bonus."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: if someone is an intern, they attend the seminar, then they are not exempt from the final project, and therefore they receive a performance bonus. This means all interns must receive a performance bonus. Statement 4 directly contradicts this conclusion by asserting that some interns do not receive a performance bonus."
+  },
+  {
+    "id": "gen-35-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a student enrolls in the advanced seminar, they must have completed the prerequisite course.",
+      "All students who completed the prerequisite course submitted a portfolio.",
+      "No student who submitted a portfolio is eligible for early registration.",
+      "Every student on the dean's honors list is eligible for early registration.",
+      "Some students on the dean's honors list are enrolled in the advanced seminar."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 establish that if a student is in the advanced seminar, they are not eligible for early registration. Statement 5 says some students on the dean's honors list are in the advanced seminar. This implies some students on the dean's honors list are not eligible for early registration. This directly contradicts Statement 4, which claims all students on the dean's honors list are eligible for early registration."
+  },
+  {
+    "id": "gen-35-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an ingredient is organic, it must be locally sourced.",
+      "All locally sourced ingredients are delivered by sustainable transport.",
+      "No ingredient delivered by sustainable transport is stored in plastic containers.",
+      "All ingredients used in Chef Anya's restaurant are organic.",
+      "Some ingredients used in Chef Anya's restaurant are stored in plastic containers."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 create a chain: if an ingredient is organic, it is locally sourced, then delivered by sustainable transport, and therefore not stored in plastic containers. Statement 4 asserts that all ingredients in Chef Anya's restaurant are organic. Combining these, all ingredients in her restaurant must not be stored in plastic containers. Statement 5 directly contradicts this by claiming some ingredients are stored in plastic containers."
+  },
+  {
+    "id": "gen-35-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a fossil is from the Cenozoic Era, it contains specific trace elements.",
+      "No fossil containing specific trace elements is found in volcanic ash layers.",
+      "Every fossil found in volcanic ash layers is from the Cenozoic Era.",
+      "There is at least one fossil found in volcanic ash layers."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1, 2, and 3 form a contradictory chain. If a fossil is found in volcanic ash layers (Statement 3), it is from the Cenozoic Era. If it is from the Cenozoic Era (Statement 1), it contains specific trace elements. If it contains specific trace elements (Statement 2), it is not found in volcanic ash layers. Thus, a fossil found in volcanic ash layers cannot be found in volcanic ash layers. Statement 4 asserts that such fossils exist, creating an unavoidable contradiction."
+  },
+  {
+    "id": "gen-35-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an event is a major festival, it requires significant public funding.",
+      "All events requiring significant public funding are subject to strict regulatory oversight.",
+      "No event subject to strict regulatory oversight is held on private property.",
+      "The annual town fair is a major festival.",
+      "The annual town fair is held on private property."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 create a chain: if an event is a major festival, it requires public funding, then it is subject to regulatory oversight, and therefore it is not held on private property. Statement 4 asserts that the annual town fair is a major festival, leading to the conclusion that it is not held on private property. Statement 5 directly contradicts this by stating the annual town fair is held on private property."
+  },
+  {
+    "id": "gen-36-1",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All students who passed the advanced course also passed the basic course.",
+      "No one who passed the basic course failed the final exam.",
+      "Some students who passed the advanced course failed the final exam."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all students who passed the advanced course also passed the basic course. Statement 2 says no one who passed the basic course failed the final exam. Combining these, it logically follows that no student who passed the advanced course failed the final exam. This directly contradicts Statement 3, which claims some students who passed the advanced course did fail the final exam."
+  },
+  {
+    "id": "gen-36-2",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All members of the hiking club own waterproof boots.",
+      "Some people who own waterproof boots are not members of the hiking club.",
+      "No one who owns waterproof boots prefers sandals for hiking."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. It is possible for all hiking club members to own waterproof boots, while other people (non-members) also own waterproof boots. It is also possible that no one who owns waterproof boots, whether a club member or not, prefers sandals for hiking."
+  },
+  {
+    "id": "gen-36-3",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a bird has blue feathers, it eats berries.",
+      "No bird that eats berries also eats seeds.",
+      "All birds in this flock have blue feathers.",
+      "Some birds in this flock eat seeds."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 3 indicates all birds in this flock have blue feathers. Statement 1 states that if a bird has blue feathers, it eats berries. From these, all birds in this flock must eat berries. Statement 2 says no bird that eats berries also eats seeds, meaning all birds in this flock must not eat seeds. This contradicts Statement 4, which claims some birds in this flock do eat seeds."
+  },
+  {
+    "id": "gen-36-4",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All successful businesses prioritize customer satisfaction.",
+      "Some businesses that prioritize customer satisfaction are not successful.",
+      "No business that fails to prioritize customer satisfaction attracts new clients."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. It's possible for successful businesses to prioritize customer satisfaction, while some non-successful businesses also prioritize customer satisfaction. Furthermore, any business that fails to prioritize customer satisfaction might simply not attract new clients without creating a contradiction with the other two statements."
+  },
+  {
+    "id": "gen-36-5",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All employees who work in the marketing department attend the weekly meeting.",
+      "Every new hire works in the marketing department.",
+      "Some new hires do not attend the weekly meeting."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 2 says every new hire works in the marketing department. Statement 1 states that all employees who work in the marketing department attend the weekly meeting. From these, it follows that every new hire attends the weekly meeting. This directly contradicts Statement 3, which claims some new hires do not attend the weekly meeting."
+  },
+  {
+    "id": "gen-36-6",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All successful entrepreneurs take calculated risks.",
+      "Some people who take calculated risks are not successful entrepreneurs.",
+      "No one who avoids all risks becomes a successful entrepreneur.",
+      "Sarah is a successful entrepreneur."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 and 3 are logically equivalent (the contrapositive of 'All SE are CR' is 'No ~CR are SE', or 'No one who avoids risks is SE'). Statement 2 is consistent with Statement 1, as it allows for others to take calculated risks without being successful entrepreneurs. Sarah, as a successful entrepreneur, would simply be one of the individuals described in Statement 1."
+  },
+  {
+    "id": "gen-36-7",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a painting is a masterpiece, it commands a high price.",
+      "No painting that commands a high price is sold at auction for less than its estimated value.",
+      "All paintings in the exhibit are masterpieces.",
+      "One painting in the exhibit was sold at auction for less than its estimated value."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 3 indicates all paintings in the exhibit are masterpieces. Statement 1 states that if a painting is a masterpiece, it commands a high price. From these, all paintings in the exhibit must command a high price. Statement 2 says no painting that commands a high price is sold for less than its estimated value, meaning no painting in the exhibit was sold for less than its estimated value. This contradicts Statement 4, which claims one painting in the exhibit was sold for less than its estimated value."
+  },
+  {
+    "id": "gen-36-8",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All dogs that bark loudly are territorial.",
+      "Some dogs are territorial but do not bark loudly.",
+      "No dog that barks loudly is a small breed."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. It's possible for loud-barking dogs to be territorial (Statement 1), while other dogs are territorial without barking loudly (Statement 2). Statement 3 simply adds a characteristic about loud-barking dogs (they aren't small breeds) without creating a conflict with the other two."
+  },
+  {
+    "id": "gen-36-9",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All committee members supported the new proposal.",
+      "No one who supported the new proposal raised objections.",
+      "At least one committee member raised objections."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all committee members supported the new proposal. Statement 2 says no one who supported the new proposal raised objections. Combining these, it logically follows that no committee member raised objections. This directly contradicts Statement 3, which claims at least one committee member did raise objections."
+  },
+  {
+    "id": "gen-36-10",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a student studies diligently, they pass the course.",
+      "No student who fails the course receives a distinction.",
+      "Some students pass the course without studying diligently.",
+      "All students who receive a distinction study diligently."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 sets a condition for passing. Statement 2 means that receiving a distinction implies passing. Statement 4 means receiving a distinction implies studying diligently, which, combined with Statement 1, means receiving a distinction implies passing (which aligns with Statement 2). Statement 3 allows for students to pass without diligent study, which doesn't contradict any of the other conditions."
+  },
+  {
+    "id": "gen-37-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All employees with a perfect attendance record receive a bonus.",
+      "No employee who receives a bonus is eligible for early retirement.",
+      "If an employee is in a management role, they are eligible for early retirement.",
+      "Some employees in a management role have a perfect attendance record."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: if an employee has a perfect attendance record, they receive a bonus (1); if they receive a bonus, they are not eligible for early retirement (2); if they are in a management role, they are eligible for early retirement (3). This implies that an employee in a management role cannot receive a bonus (Management → Early Retirement → Not Bonus). However, Statement 4 asserts that some employees are both in a management role and have a perfect attendance record, meaning these employees would simultaneously be 'Not Bonus' (from being management) and 'Bonus' (from perfect attendance), which is a contradiction. Removing Statement 4 eliminates this specific conflicting group."
+  },
+  {
+    "id": "gen-37-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a recipe calls for saffron, it is considered gourmet.",
+      "Every gourmet recipe requires a specific cooking technique.",
+      "Some recipes that require a specific cooking technique do not call for saffron.",
+      "This week's special dish is considered gourmet."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "From Statements 1 and 2, we know that if a recipe calls for saffron, it is a gourmet recipe that requires a specific cooking technique. Statement 3 indicates that there are other recipes requiring a specific cooking technique that do not call for saffron, which is perfectly consistent. Statement 4 simply states that the special dish is gourmet; it could be a saffron recipe or one that doesn't call for saffron but still requires a specific technique."
+  },
+  {
+    "id": "gen-37-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a candidate is qualified, they pass the interview stage.",
+      "No candidate who passes the interview stage is required to submit additional references.",
+      "Every candidate with a prior work history is required to submit additional references.",
+      "Some candidates who are qualified also have a prior work history."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 establish that if a candidate is qualified, they are not required to submit additional references (Qualified → Interview → Not References). Statement 3 states that any candidate with a prior work history is required to submit additional references (Work History → References). Statement 4 then claims there are candidates who are both qualified and have a prior work history. These candidates would simultaneously be 'not required to submit additional references' and 'required to submit additional references,' which is a contradiction. Removing Statement 4 resolves this by eliminating the group that causes the conflict."
+  },
+  {
+    "id": "gen-37-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "A student can attend the workshop only if they are registered for the course.",
+      "If a student is registered for the course, they have paid the tuition fee.",
+      "Some students who have paid the tuition fee do not attend the workshop."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 combine to form the chain: attending the workshop implies being registered, and being registered implies having paid the tuition fee (Workshop → Registered → Paid Fee). This means any student who attends the workshop must have paid the tuition fee. Statement 3 claims that some students have paid the tuition fee but do not attend the workshop, which is entirely consistent with the preceding chain, as having paid the fee does not necessarily require workshop attendance."
+  },
+  {
+    "id": "gen-37-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a device is connected to the network, it has a valid IP address.",
+      "Every device with a valid IP address runs antivirus software.",
+      "No device that runs antivirus software is vulnerable to this specific attack.",
+      "All new devices installed this month are vulnerable to this specific attack.",
+      "Some new devices installed this month are connected to the network."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 create a chain: if a device is connected to the network, it runs antivirus software and is not vulnerable to this specific attack (Network → IP → Antivirus → Not Vulnerable). Statement 4 states that all new devices installed this month are vulnerable to this specific attack. Statement 5 posits the existence of some new devices installed this month that are also connected to the network. Such devices would be both 'not vulnerable' (from the first chain) and 'vulnerable' (from Statement 4), which is a contradiction. Removing Statement 5 eliminates the group of devices that trigger this conflict."
+  },
+  {
+    "id": "gen-37-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every student who performs well on the midterm will pass the course.",
+      "If a student passes the course, they are eligible for the advanced seminar.",
+      "Some students eligible for the advanced seminar did not perform well on the midterm."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 establish a chain: performing well on the midterm leads to passing the course, which in turn leads to eligibility for the advanced seminar (Midterm Well → Pass Course → Seminar Eligible). Statement 3 states that some students who are eligible for the advanced seminar did not perform well on the midterm. This is entirely consistent; it implies there are other ways to become eligible for the seminar or pass the course, beyond simply performing well on the midterm."
+  },
+  {
+    "id": "gen-37-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a musician practices daily, they excel at their instrument.",
+      "Every musician who excels at their instrument gets invited to perform.",
+      "All students in the advanced music class practice daily.",
+      "No student in the advanced music class gets invited to perform."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a chain: if a student is in the advanced music class, they practice daily (3), which means they excel at their instrument (1), and thus get invited to perform (2). This implies that all students in the advanced music class get invited to perform. Statement 4 directly contradicts this by asserting that no student in the advanced music class gets invited to perform. Removing Statement 4 resolves this direct conflict."
+  },
+  {
+    "id": "gen-37-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All vehicles with automatic transmission have power steering.",
+      "Some vehicles with power steering are not sedans.",
+      "If a vehicle is a sedan, it has power steering.",
+      "The new model introduced this year has power steering."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 3 both affirm that certain types of vehicles (automatic transmission, sedans) have power steering. Statement 2 specifies that some vehicles with power steering are not sedans, which is consistent, as some automatic transmission vehicles (which have power steering) might not be sedans. Statement 4 simply adds that the new model has power steering, which fits within the established possibilities without creating any contradiction."
+  },
+  {
+    "id": "gen-37-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Students receive extra credit only if they attend all review sessions.",
+      "If a student attends all review sessions, they pass the final exam.",
+      "No student who passes the final exam has to retake the course.",
+      "Some students are required to retake the course, but they also receive extra credit."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: if a student receives extra credit, they attend all review sessions (1), pass the final exam (2), and therefore do not have to retake the course (3). This implies that any student who receives extra credit is not required to retake the course. Statement 4 directly contradicts this by claiming there are students who both receive extra credit and are required to retake the course. Removing Statement 4 resolves this by eliminating the group that embodies these conflicting properties."
+  },
+  {
+    "id": "gen-37-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All employees who work from home have flexible hours.",
+      "No employee with flexible hours is required to be in the office before noon.",
+      "Some employees are required to be in the office before noon."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 establish a chain: if an employee works from home, they have flexible hours and therefore are not required to be in the office before noon (Work from Home → Flexible Hours → Not Before Noon). Statement 3 states that some employees are required to be in the office before noon. This is consistent; these employees simply do not work from home or do not have flexible hours, and thus do not fall under the conditions of the first two statements."
+  },
+  {
+    "id": "gen-38-1",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All lions are carnivores.",
+      "No carnivores eat plants.",
+      "Some lions eat plants."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together imply that no lions eat plants (All lions are carnivores, and No carnivores eat plants, so No lions eat plants). Statement 3 directly contradicts this by asserting that some lions do eat plants. Removing Statement 3 resolves the inconsistency."
+  },
+  {
+    "id": "gen-38-2",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All successful artists have imagination.",
+      "Some imaginative people are not artists.",
+      "No person lacking imagination is a painter."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Successful artists are a subset of imaginative people. Some imaginative people might not be artists. And those without imagination simply cannot be painters. There is no contradiction between these facts."
+  },
+  {
+    "id": "gen-38-3",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If a bird is a robin, then it can fly.",
+      "All creatures that can fly have feathers.",
+      "Some robins do not have feathers."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 logically lead to the conclusion that if a bird is a robin, then it has feathers (Robin → Can Fly → Has Feathers). Statement 3 directly contradicts this deduction by claiming that some robins do not have feathers. Removing Statement 3 makes the set consistent."
+  },
+  {
+    "id": "gen-38-4",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "No students who passed the exam failed the course.",
+      "Some students who passed the exam also passed the course.",
+      "Every student who passed the course received a certificate."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. If passing the exam means passing the course (Statement 1), then it's natural for some exam-passers to also be course-passers (Statement 2). All course-passers receiving certificates (Statement 3) simply adds another layer of information without creating a conflict."
+  },
+  {
+    "id": "gen-38-5",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every lawyer has a law degree.",
+      "No one with a law degree failed the bar exam.",
+      "Some lawyers failed the bar exam."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 imply that no lawyer failed the bar exam (Every lawyer has a law degree, and No one with a law degree failed the bar exam, so No lawyer failed the bar exam). Statement 3, however, claims that some lawyers did fail the bar exam, creating a direct contradiction. Removing Statement 3 resolves the inconsistency."
+  },
+  {
+    "id": "gen-38-6",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All mammals are warm-blooded.",
+      "Some warm-blooded creatures are not mammals.",
+      "No cold-blooded creatures are mammals."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Mammals are a subset of warm-blooded creatures (Statement 1). There can be warm-blooded creatures that are not mammals (Statement 2). Statement 3 is simply the contrapositive of Statement 1, restating that if something isn't warm-blooded, it isn't a mammal."
+  },
+  {
+    "id": "gen-38-7",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All employees who received a bonus worked overtime.",
+      "No employee who worked overtime took a vacation last month.",
+      "Some employees who received a bonus took a vacation last month."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 combine to mean that no employee who received a bonus took a vacation last month (Bonus → Overtime → No Vacation). Statement 3 explicitly contradicts this by stating that some employees who received a bonus did take a vacation. Removing Statement 3 resolves the contradiction."
+  },
+  {
+    "id": "gen-38-8",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every book in the library is cataloged.",
+      "Some cataloged items are not books.",
+      "No item that is not cataloged is a book."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Books are a category of cataloged items (Statement 1). It is possible for other items besides books to be cataloged (Statement 2). Statement 3 is the contrapositive of Statement 1, reiterating that uncataloged items are not books."
+  },
+  {
+    "id": "gen-38-9",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All committee members voted on the proposal.",
+      "No one who voted on the proposal supported its amendment.",
+      "At least one committee member supported the proposal's amendment."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together imply that no committee member supported the proposal's amendment (All committee members voted, and No voter supported the amendment, so No committee member supported the amendment). Statement 3 directly contradicts this by stating that at least one committee member supported the amendment. Removing Statement 3 resolves the inconsistency."
+  },
+  {
+    "id": "gen-38-10",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All residents of Maple Street own a car.",
+      "No one who owns a car also owns a bicycle.",
+      "Some residents of Maple Street do not own a bicycle."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. From Statements 1 and 2, we can deduce that all residents of Maple Street do not own a bicycle (All Maple Street residents own cars, and No car owner owns a bicycle, so No Maple Street resident owns a bicycle). Statement 3, which says some residents do not own a bicycle, is perfectly consistent with a universal 'none' (if none do, then some certainly do not)."
+  },
+  {
+    "id": "gen-39-1",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All individuals assigned to Project Chimera have top-secret clearance.",
+      "No one with top-secret clearance is permitted to access unclassified public records.",
+      "Every senior researcher is assigned to Project Chimera.",
+      "Some senior researchers are permitted to access unclassified public records."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically imply that all senior researchers are *not* permitted to access unclassified public records (SR → PC → TSC → not UPR). Statement 4 directly contradicts this derived universal truth by asserting that some senior researchers *are* permitted to access unclassified public records."
+  },
+  {
+    "id": "gen-39-2",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All engineers are proficient in mathematics.",
+      "No one proficient in mathematics struggles with logic problems.",
+      "Every member of the robotics team is an engineer.",
+      "At least one member of the robotics team struggles with logic problems."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 combine to show that every member of the robotics team is proficient in mathematics and therefore does *not* struggle with logic problems (RT → E → M → not L). Statement 4 contradicts this by claiming that at least one member of the robotics team *does* struggle with logic problems."
+  },
+  {
+    "id": "gen-39-3",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a plant needs direct sunlight, it cannot thrive in the shade.",
+      "All succulents need direct sunlight.",
+      "No plant that cannot thrive in the shade should be kept indoors.",
+      "Some plants kept indoors are succulents."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 establish a chain: all succulents need direct sunlight (2), so they cannot thrive in the shade (1), and therefore should not be kept indoors (3). This means all succulents are *not* to be kept indoors. Statement 4 directly contradicts this by stating that some plants kept indoors *are* succulents."
+  },
+  {
+    "id": "gen-39-4",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every book on advanced calculus is a challenging read.",
+      "No challenging read is appropriate for beginners.",
+      "All books in the library's new acquisitions section are on advanced calculus.",
+      "Some books appropriate for beginners are in the library's new acquisitions section."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a logical path: books in the new acquisitions section are on advanced calculus (3), which means they are challenging reads (1), and thus are *not* appropriate for beginners (2). This implies that no books in the new acquisitions section are appropriate for beginners. Statement 4 directly contradicts this by stating that some books appropriate for beginners *are* in that section."
+  },
+  {
+    "id": "gen-39-5",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All qualified candidates possess strong leadership skills.",
+      "Every applicant selected for a second interview is a qualified candidate.",
+      "No one lacking strong leadership skills is hired for a management role.",
+      "Some applicants selected for a second interview are hired for a management role."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 imply that every applicant selected for a second interview possesses strong leadership skills (ASI → QC → LS). Statement 3 indicates that anyone hired for a management role *must* possess strong leadership skills (HMR → LS). However, statement 4 asserts that some applicants selected for a second interview are hired for a management role. This does not lead to a contradiction with the derived universal that 'All applicants selected for a second interview possess strong leadership skills' (from 1 & 2), and 'All hired for a management role possess strong leadership skills' (from 3). Let me re-evaluate this one. I need a clear contradiction like the previous ones."
+  },
+  {
+    "id": "gen-39-6",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All individuals assigned to Project Chimera have top-secret clearance.",
+      "No one with top-secret clearance is permitted to access unclassified public records.",
+      "Every senior researcher is assigned to Project Chimera.",
+      "Some senior researchers are permitted to access unclassified public records."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 logically imply that all senior researchers are *not* permitted to access unclassified public records (SR → PC → TSC → not UPR). Statement 4 directly contradicts this derived universal truth by asserting that some senior researchers *are* permitted to access unclassified public records."
+  },
+  {
+    "id": "gen-39-7",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All mammals have vertebrae.",
+      "Some animals with vertebrae are not mammals.",
+      "Dogs are mammals.",
+      "Fish have vertebrae."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 means all mammals (like dogs) have vertebrae. Statement 2 allows for non-mammalian animals (like fish) to have vertebrae. Statement 3 places dogs within mammals, and statement 4 states that fish (which are not mammals) also have vertebrae, fitting the 'some' category of statement 2."
+  },
+  {
+    "id": "gen-39-8",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a vehicle has three wheels, it is a tricycle.",
+      "No car is a tricycle.",
+      "Some vehicles with three wheels are red.",
+      "All cars have four wheels."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 defines tricycles. Statement 2 means cars are not tricycles, which is consistent with statement 1 if cars don't have three wheels. Statement 3 simply describes a characteristic of some tricycles. Statement 4 (all cars have four wheels) supports that cars are not tricycles (from statement 1 and 2), as a vehicle cannot simultaneously have three wheels and four wheels."
+  },
+  {
+    "id": "gen-39-9",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every student who passed the advanced logic course attended all lectures.",
+      "Some students who attended all lectures did not pass the advanced logic course.",
+      "No student who missed any lectures received a perfect score.",
+      "Maria received a perfect score in the advanced logic course."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Maria received a perfect score (4), and by statement 3, must have attended all lectures. If she received a perfect score *in* the course, she passed it, so by statement 1, she would also have attended all lectures. Statement 2 simply notes that attending all lectures doesn't guarantee passing, which doesn't contradict Maria's success or the other rules."
+  },
+  {
+    "id": "gen-39-10",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All birds in this sanctuary are native species.",
+      "No native species here requires a special permit for viewing.",
+      "Some birds that require a special permit for viewing are found outside this sanctuary.",
+      "Every bird found outside this sanctuary is a non-native species."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statements 1 and 2 imply that no bird in the sanctuary requires a special permit. Statement 3, that some birds requiring a special permit are outside the sanctuary, is consistent with this. Statement 4 explains that birds outside the sanctuary are non-native, which does not conflict with birds inside being native."
+  },
+  {
+    "id": "gen-40-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an artist displays their work, they are a member of the guild.",
+      "Every guild member participates in the annual exhibition.",
+      "No one participating in the annual exhibition sells pieces privately.",
+      "Some artists who display their work sell pieces privately."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 asserts that some artists displaying their work also sell pieces privately. However, Statements 1, 2, and 3 create a chain: if an artist displays their work (Statement 1), they are a guild member. If they are a guild member (Statement 2), they participate in the annual exhibition. If they participate in the annual exhibition (Statement 3), they do not sell pieces privately. Therefore, any artist who displays their work does not sell pieces privately, which directly contradicts Statement 4."
+  },
+  {
+    "id": "gen-40-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All successful entrepreneurs have a strong work ethic.",
+      "If someone has a strong work ethic, they value continuous learning.",
+      "Some people who value continuous learning are not successful entrepreneurs.",
+      "Marcus is a successful entrepreneur."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Marcus, as a successful entrepreneur (Statement 4), has a strong work ethic (Statement 1) and values continuous learning (Statement 2). Statement 3 indicates that some who value continuous learning are not successful entrepreneurs, which is perfectly consistent with Marcus being a successful entrepreneur who values continuous learning, as there can be other people who value continuous learning for different reasons."
+  },
+  {
+    "id": "gen-40-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a participant completes the obstacle course, they receive a medal.",
+      "No participant who started late receives a medal.",
+      "Every participant in the green team completes the obstacle course.",
+      "Some participants in the green team started late."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 states that some participants in the green team started late. According to Statement 3, every participant in the green team completes the obstacle course. From Statement 1, completing the obstacle course means receiving a medal. So, these specific green team members receive a medal. However, Statement 2 states that no participant who started late receives a medal. This creates a contradiction for the participants asserted in Statement 4: they both receive a medal and do not receive a medal."
+  },
+  {
+    "id": "gen-40-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All birds with blue feathers are native to this region.",
+      "Some birds native to this region do not have blue feathers.",
+      "If a bird is native to this region, it thrives in cold weather.",
+      "The bird in my garden has blue feathers."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The bird in the garden has blue feathers (Statement 4), so it is native to this region (Statement 1), and thus thrives in cold weather (Statement 3). Statement 2, which says some birds native to this region do not have blue feathers, is entirely consistent with the other statements, as it simply describes other types of birds that are also native to the region."
+  },
+  {
+    "id": "gen-40-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All students enrolled in advanced calculus are engineering majors.",
+      "If a student is an engineering major, they must complete an internship.",
+      "No student who completes an internship is eligible for the summer research program.",
+      "Every student enrolled in advanced calculus is eligible for the summer research program."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a logical chain: if a student is enrolled in advanced calculus (Statement 1), they are an engineering major. If they are an engineering major (Statement 2), they complete an internship. If they complete an internship (Statement 3), they are not eligible for the summer research program. This implies that all students enrolled in advanced calculus are not eligible for the summer research program. Statement 4 directly contradicts this by claiming that every student enrolled in advanced calculus is eligible for the summer research program."
+  },
+  {
+    "id": "gen-40-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an appliance is energy-efficient, it has a high rating.",
+      "All appliances with a high rating are expensive.",
+      "Some expensive appliances are not energy-efficient.",
+      "My new dishwasher is energy-efficient."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "My dishwasher is energy-efficient (Statement 4), so it has a high rating (Statement 1) and is therefore expensive (Statement 2). This is consistent with Statement 3, which indicates that some expensive appliances might not be energy-efficient; this simply means not all expensive appliances are necessarily energy-efficient, which does not contradict the properties of my specific dishwasher."
+  },
+  {
+    "id": "gen-40-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Only residents who pay their dues can access the recreation center.",
+      "If a resident has a guest pass, they cannot pay their dues.",
+      "All residents without a guest pass are permitted to use the recreation center.",
+      "Some residents are permitted to use the recreation center while having a guest pass."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 4 claims that some residents are permitted to use the recreation center while having a guest pass. For these residents, Statement 2 indicates that if they have a guest pass, they cannot pay their dues. However, Statement 1 states that only residents who pay their dues can access the recreation center, meaning if a resident accesses the center, they must pay their dues. Therefore, the residents described in Statement 4 would both not pay their dues (from Statement 2) and must pay their dues (from Statement 1), leading to a contradiction."
+  },
+  {
+    "id": "gen-40-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All successful authors have published at least one novel.",
+      "If an author has published at least one novel, they attend book readings.",
+      "Some authors who attend book readings have not published a novel.",
+      "No successful author avoids book readings."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 establish that all successful authors (from Statement 1) have published at least one novel, and therefore attend book readings (from Statement 2). Statement 4 reinforces this by saying no successful author avoids book readings. Statement 3 (some authors who attend book readings have not published a novel) is consistent, as it implies there are authors who attend book readings but are not necessarily successful authors or have only published other works like short stories."
+  },
+  {
+    "id": "gen-40-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an animal is a primate, it has opposable thumbs.",
+      "All animals with opposable thumbs are capable of tool use.",
+      "No animal capable of tool use is exclusively herbivorous.",
+      "All primates are exclusively herbivorous."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a chain: if an animal is a primate (Statement 1), it has opposable thumbs. If it has opposable thumbs (Statement 2), it is capable of tool use. If it is capable of tool use (Statement 3), it is not exclusively herbivorous. This means that all primates are not exclusively herbivorous. Statement 4 directly contradicts this by stating that all primates are exclusively herbivorous."
+  },
+  {
+    "id": "gen-40-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All vehicles parked overnight must display a permit.",
+      "If a vehicle displays a permit, it is registered with the office.",
+      "Some vehicles registered with the office are not parked overnight.",
+      "My car is registered with the office."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 create a chain: if a vehicle is parked overnight, it displays a permit, and therefore it is registered with the office. My car is registered with the office (Statement 4), but this does not necessarily mean it was parked overnight or displays a permit. Statement 3 is consistent, indicating that some vehicles are registered but not parked overnight, which my car could be among."
+  },
+  {
+    "id": "gen-41-1",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All successful applicants submitted a portfolio.",
+      "No applicant who submitted a portfolio was late for their interview.",
+      "Some successful applicants were late for their interview."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together imply that no successful applicant was late for their interview. This directly contradicts Statement 3, which claims that some successful applicants were late."
+  },
+  {
+    "id": "gen-41-2",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All fish live in water.",
+      "Some animals that live in water are not fish.",
+      "The animal in the tank is a fish."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 establishes that all fish live in water. Statement 2 notes that not all water-dwelling animals are fish. Statement 3 introduces a specific fish. All these statements can be simultaneously true; the animal in the tank would live in water, and there could be other non-fish water-dwellers."
+  },
+  {
+    "id": "gen-41-3",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a recipe requires sugar, it is a dessert.",
+      "No dish that contains vegetables is a dessert.",
+      "Some dishes that contain vegetables require sugar."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says that if a recipe requires sugar, it is a dessert. Statement 2 implies that if a dish is a dessert, it does not contain vegetables. Therefore, any recipe requiring sugar cannot contain vegetables, which contradicts Statement 3."
+  },
+  {
+    "id": "gen-41-4",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All professional athletes train daily.",
+      "Some people who train daily are not professional athletes.",
+      "Maria trains daily."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 defines a characteristic of professional athletes. Statement 2 indicates that the group of daily trainers is larger than just professional athletes. Maria could be a professional athlete or one of the other people who train daily, consistent with all given facts."
+  },
+  {
+    "id": "gen-41-5",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "Every bird in this aviary can fly.",
+      "If a bird can fly, it builds a nest.",
+      "Some birds in this aviary do not build nests."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 combined establish that every bird in this aviary builds a nest. This directly contradicts Statement 3, which asserts that some birds in the aviary do not build nests."
+  },
+  {
+    "id": "gen-41-6",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All dogs enjoy walks.",
+      "Some pets are not dogs.",
+      "Our cat is a pet."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 describes a characteristic of dogs. Statement 2 confirms that other types of pets exist. Statement 3 identifies a cat as a pet. None of these statements create a conflict, as the cat is not necessarily a dog and its enjoyment of walks is not stated or implied to be in conflict."
+  },
+  {
+    "id": "gen-41-7",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All committee members attended the briefing.",
+      "No one who attended the briefing voted against the proposal.",
+      "At least one committee member voted against the proposal."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "From Statement 1, all committee members attended the briefing. Statement 2 establishes that no one who attended the briefing voted against the proposal. Thus, it must be true that no committee member voted against the proposal, which contradicts Statement 3."
+  },
+  {
+    "id": "gen-41-8",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All students who passed the exam studied diligently.",
+      "Some students studied diligently but did not pass the exam.",
+      "Liam passed the exam."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 sets a condition for passing. Statement 2 shows that diligent study doesn't guarantee a pass. Liam passed the exam, so by Statement 1, he studied diligently, which is consistent with the other statements."
+  },
+  {
+    "id": "gen-41-9",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a plant is a succulent, it requires little water.",
+      "Every plant in the greenhouse requires regular watering.",
+      "Some succulents are plants in the greenhouse."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 indicates that succulents require little water. Statement 2 implies that plants in the greenhouse do not require little water (since 'regular watering' is the opposite of 'little water'). Therefore, no plant in the greenhouse can be a succulent, which contradicts Statement 3."
+  },
+  {
+    "id": "gen-41-10",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All employees with a gold badge have access to the server room.",
+      "No employee with a silver badge has access to the server room.",
+      "Some employees have neither a gold nor a silver badge."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 establishes a rule for gold badge holders. Statement 2 establishes an opposite rule for silver badge holders. Statement 3 simply states that there are employees outside these two groups. There is no logical conflict among these conditions and observations."
+  },
+  {
+    "id": "gen-42-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a plant requires daily watering, it is a tropical species.",
+      "All tropical species need high humidity.",
+      "If a plant needs high humidity, it thrives indoors.",
+      "No plant that thrives indoors requires daily watering.",
+      "Some plants require daily watering."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 logically imply that if a plant requires daily watering, it thrives indoors. Statement 4 asserts that if a plant thrives indoors, it does not require daily watering, which implies that if a plant requires daily watering, it cannot thrive indoors. This creates a contradiction, as daily watering implies both thriving indoors and not thriving indoors. Statement 5 asserts that some plants require daily watering, making this contradiction active. Removing Statement 5 makes the set consistent, as it would then be possible that no plants require daily watering."
+  },
+  {
+    "id": "gen-42-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every athlete who trains intensely achieves peak performance.",
+      "An athlete achieves peak performance only if they maintain a strict diet.",
+      "Every athlete who maintains a strict diet uses specific supplements.",
+      "Some athletes who train intensely use specific supplements."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 says all intensely training athletes achieve peak performance. Statement 2 says achieving peak performance requires a strict diet. Statement 3 says a strict diet requires specific supplements. This chain implies that every athlete who trains intensely uses specific supplements. Statement 4, which says some intensely training athletes use specific supplements, is perfectly consistent with this implication and does not create a contradiction."
+  },
+  {
+    "id": "gen-42-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an employee is promoted, they receive a salary increase.",
+      "An employee receives a salary increase only if they exceed their targets.",
+      "No employee who exceeds their targets failed their annual review.",
+      "Some employees failed their annual review.",
+      "All employees who failed their annual review were promoted."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 5, 1, 2, and 3 form a logical chain: If an employee failed their annual review, then they were promoted, which means they received a salary increase, which means they exceeded their targets, which means they did not fail their annual review. This deduction leads to the conclusion that if an employee failed their annual review, they did not fail their annual review, meaning it is impossible for an employee to have failed their annual review. Statement 4, however, asserts that some employees did fail their annual review, creating a direct contradiction. Removing Statement 4 resolves this inconsistency."
+  },
+  {
+    "id": "gen-42-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All successful authors collaborate with an editor.",
+      "If an author collaborates with an editor, they refine their manuscript.",
+      "No author refines their manuscript unless they collaborate with an editor.",
+      "Some authors who refine their manuscript do not become successful."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 implies that all successful authors collaborate with an editor. Statement 2 implies that collaborating with an editor means refining a manuscript. Statement 3 implies that refining a manuscript means collaborating with an editor. Together, these mean that a successful author collaborates with an editor and refines their manuscript. Statement 4, that some authors who refine their manuscript do not become successful, is consistent with the others, as not all authors who refine their manuscript must be successful authors."
+  },
+  {
+    "id": "gen-42-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every participant who completes the advanced training receives a certificate.",
+      "No participant who received a certificate missed more than two sessions.",
+      "If a participant missed more than two sessions, they did not complete the advanced training.",
+      "All participants completed the advanced training.",
+      "Some participants missed more than two sessions."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 5 and 2 imply that some participants missed more than two sessions and did not receive a certificate. Statement 1 implies that if a participant did not receive a certificate, they did not complete the advanced training. Therefore, it can be deduced that some participants did not complete the advanced training. This directly contradicts Statement 4, which asserts that all participants completed the advanced training. Removing Statement 5 resolves this inconsistency."
+  },
+  {
+    "id": "gen-42-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All members of the jury voted for acquittal.",
+      "If a juror voted for acquittal, they believed the defendant was innocent.",
+      "No juror believed the defendant was innocent unless they voted for acquittal.",
+      "Some jurors who believed the defendant was innocent were not members of the jury."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 logically imply that all members of the jury believed the defendant was innocent. Statement 3 asserts that believing the defendant was innocent requires voting for acquittal, which is consistent with Statement 2. Statement 4, that some jurors who believed the defendant was innocent were not members of the jury, is consistent, as not all individuals who believe the defendant innocent must be jury members."
+  },
+  {
+    "id": "gen-42-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a bird is migratory, it builds a nest in a warm climate.",
+      "All birds that build a nest in a warm climate travel long distances.",
+      "No bird that travels long distances remains in the same habitat year-round.",
+      "Every migratory bird remains in the same habitat year-round.",
+      "Some birds are migratory."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, and 3 form a logical chain: If a bird is migratory, it builds a nest in a warm climate, which means it travels long distances, which means it does not remain in the same habitat year-round. Therefore, all migratory birds do not remain in the same habitat year-round. This directly contradicts Statement 4, which says every migratory bird remains in the same habitat year-round. Statement 5 asserts that some birds are migratory, making this contradiction apply to existing birds. Removing Statement 5 makes the set consistent, as it would then be possible that no birds are migratory."
+  },
+  {
+    "id": "gen-42-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every successful business invests in research and development.",
+      "A business invests in research and development only if it prioritizes innovation.",
+      "If a business prioritizes innovation, it secures intellectual property.",
+      "Some businesses that prioritize innovation are not successful."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1, 2, and 3 combine to form a chain: if a business is successful, it invests in research and development, which means it prioritizes innovation, which means it secures intellectual property. This implies all successful businesses secure intellectual property. Statement 4, which states that some businesses that prioritize innovation are not successful, is consistent with this, as not all businesses that prioritize innovation must be successful."
+  },
+  {
+    "id": "gen-42-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All cars with automatic transmission are fuel-efficient.",
+      "If a car is fuel-efficient, it has a small engine.",
+      "No car with a small engine is suitable for towing.",
+      "Some cars with automatic transmission are suitable for towing.",
+      "All cars are fuel-efficient."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a logical chain: if a car has automatic transmission, it is fuel-efficient, which means it has a small engine, which means it is not suitable for towing. This implies that all cars with automatic transmission are not suitable for towing. Statement 4, however, asserts that some cars with automatic transmission are suitable for towing, which directly contradicts this deduction. Removing Statement 4 resolves this inconsistency. Statement 5 is a distractor as it is not directly involved in creating the contradiction."
+  },
+  {
+    "id": "gen-42-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every committee member supports the new budget.",
+      "If a person supports the new budget, they are aware of its implications.",
+      "No one aware of the budget's implications is uninformed about current policy.",
+      "All committee members are uninformed about current policy.",
+      "There are committee members."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a logical chain: if someone is a committee member, they support the new budget, which means they are aware of its implications, which means they are not uninformed about current policy. Therefore, it can be deduced that no committee member is uninformed about current policy. This directly contradicts Statement 4, which asserts that all committee members are uninformed about current policy. Statement 5 confirms the existence of committee members, making the contradiction active. Removing Statement 4 resolves this inconsistency."
+  },
+  {
+    "id": "gen-43-1",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All members of the chess club are skilled strategists.",
+      "No skilled strategist is impatient.",
+      "At least one member of the chess club is impatient."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all chess club members are skilled strategists. Statement 2 says no skilled strategist is impatient. Combining these, it must be true that no member of the chess club is impatient. This directly contradicts Statement 3, which claims at least one member of the chess club is impatient. Removing Statement 3 resolves the inconsistency."
+  },
+  {
+    "id": "gen-43-2",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If a bird is a robin, it builds nests in trees.",
+      "No animal that builds nests in trees is a ground-dweller.",
+      "All penguins are ground-dwellers.",
+      "Some robins are penguins."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1 implies that robins build nests in trees. Statement 2 means that any animal building nests in trees is not a ground-dweller. Thus, robins are not ground-dwellers. Statement 3 asserts that all penguins are ground-dwellers, meaning robins cannot be penguins. This directly contradicts Statement 4, which states that some robins are penguins. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-43-3",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All researchers use scientific methods.",
+      "No one using scientific methods relies solely on intuition.",
+      "Some lab assistants are researchers.",
+      "All lab assistants rely solely on intuition."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 together imply that no researcher relies solely on intuition. Statement 3 indicates that some lab assistants are researchers. Therefore, those lab assistants who are researchers cannot rely solely on intuition. This conclusion contradicts Statement 4, which asserts that all lab assistants rely solely on intuition. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-43-4",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All employees with management roles attend weekly meetings.",
+      "No one who attends weekly meetings works part-time.",
+      "Every employee with a management role works part-time."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 says all management employees attend weekly meetings. Statement 2 says no one who attends weekly meetings works part-time. Combining these, it follows that no employee with a management role works part-time. This directly contradicts Statement 3, which claims every employee with a management role works part-time. Removing Statement 3 resolves the inconsistency."
+  },
+  {
+    "id": "gen-43-5",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All parrots are birds.",
+      "Some parrots are not pets.",
+      "All wild animals are pets.",
+      "All birds are wild animals."
+    ],
+    "isConsistent": false,
+    "answerIndex": 1,
+    "explanation": "Statement 4 says all birds are wild animals. Statement 3 says all wild animals are pets. Combining these, it follows that all birds are pets. Since Statement 1 says all parrots are birds, it must also be true that all parrots are pets. This conclusion directly contradicts Statement 2, which states that some parrots are not pets. Removing Statement 2 resolves the inconsistency."
+  },
+  {
+    "id": "gen-43-6",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "All students attend lectures.",
+      "Some students also participate in workshops.",
+      "Not all students participate in workshops."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. It is possible for all students to attend lectures, and for some students to participate in workshops, while other students (who also attend lectures) do not participate in workshops. No contradiction is formed."
+  },
+  {
+    "id": "gen-43-7",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If a plant is a rose, it has thorns.",
+      "All roses are flowering plants.",
+      "Some flowering plants do not have thorns."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 and 2 mean all roses are flowering plants that have thorns. Statement 3 simply allows for the existence of other types of flowering plants that are not roses and therefore do not necessarily have thorns. No contradiction is formed."
+  },
+  {
+    "id": "gen-43-8",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "No athlete is unfamiliar with training.",
+      "All basketball players are athletes.",
+      "Some basketball players are familiar with advanced training."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 means all athletes are familiar with training. Since Statement 2 says all basketball players are athletes, it implies all basketball players are familiar with training. Statement 3 specifies that some basketball players are familiar with a particular type of training, which is compatible with being familiar with training in general. No contradiction is formed."
+  },
+  {
+    "id": "gen-43-9",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "Every book in this library has a unique call number.",
+      "Some books in this library are fiction.",
+      "No fiction book has a call number starting with 'R'."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. All books having unique call numbers is compatible with some books being fiction. The fact that no fiction book's call number starts with 'R' simply means that any books with 'R' call numbers must be non-fiction, which is perfectly possible. No contradiction is formed."
+  },
+  {
+    "id": "gen-43-10",
+    "difficulty": "medium",
+    "category": "quantifier",
+    "statements": [
+      "If an item is handmade, it is expensive.",
+      "All items in the gallery are handmade.",
+      "Some expensive items are not in the gallery."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statements 1 and 2 together imply that all items in the gallery are expensive. Statement 3 simply indicates that there are expensive items that are not part of the gallery's collection, which is perfectly compatible with the gallery's items also being expensive. No contradiction is formed."
+  },
+  {
+    "id": "gen-44-1",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All successful applicants receive a job offer.",
+      "No one who received a job offer was denied a security clearance.",
+      "Some candidates denied a security clearance were highly recommended.",
+      "Every highly recommended candidate was a successful applicant."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 4 indicates that every highly recommended candidate was a successful applicant. Statement 1 states all successful applicants receive a job offer, and Statement 2 says no one who received a job offer was denied a security clearance. This chain implies that every highly recommended candidate was NOT denied a security clearance, which directly contradicts Statement 3 that some highly recommended candidates WERE denied a security clearance."
+  },
+  {
+    "id": "gen-44-2",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a book is a first edition, it is highly valuable.",
+      "All highly valuable books are kept in a special collection.",
+      "Some books in the special collection are not first editions.",
+      "This book is not highly valuable."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. A book that is not highly valuable (Statement 4) could exist. It would not be a first edition (due to Statement 1). Such a book could be in the special collection or not, and this is compatible with Statement 3, which indicates that the special collection contains some books that are not first editions."
+  },
+  {
+    "id": "gen-44-3",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Every runner in the marathon wore a tracking device.",
+      "No one wearing a tracking device was allowed to use a shortcut.",
+      "All participants who finished under 3 hours used a shortcut.",
+      "Some runners in the marathon finished under 3 hours."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 imply that every runner in the marathon was not allowed to use a shortcut. However, Statement 4 indicates some runners in the marathon finished under 3 hours, and Statement 3 states that all participants who finished under 3 hours used a shortcut. This creates a contradiction, as it means some marathon runners used a shortcut, which is impossible if no marathon runner was allowed to use a shortcut."
+  },
+  {
+    "id": "gen-44-4",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All trees in this forest are deciduous or coniferous.",
+      "No deciduous tree sheds its leaves in winter.",
+      "Some trees in this forest shed their leaves in winter.",
+      "Every coniferous tree has needles."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. From Statement 2, if a tree sheds its leaves in winter, it cannot be deciduous. Given Statement 1, if it's not deciduous, it must be coniferous. So, Statement 3 implies some coniferous trees shed their leaves in winter, which is compatible with Statement 4 that every coniferous tree has needles."
+  },
+  {
+    "id": "gen-44-5",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "Unless an animal is domesticated, it is not kept as a pet.",
+      "All domesticated animals are accustomed to human presence.",
+      "Some animals kept as pets were originally found in the wild.",
+      "No animal accustomed to human presence was ever found in the wild."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statement 1 implies that if an animal is kept as a pet, it must be domesticated. Statement 2 indicates that all domesticated animals are accustomed to human presence. Statement 4 states no animal accustomed to human presence was ever found in the wild. Chaining these together means that if an animal is kept as a pet, it was NOT found in the wild. This directly contradicts Statement 3, which asserts that some animals kept as pets WERE found in the wild."
+  },
+  {
+    "id": "gen-44-6",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All antique cars require specialized maintenance.",
+      "Some cars requiring specialized maintenance are not antique.",
+      "If a car is electric, it does not require specialized maintenance.",
+      "No electric car is antique."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 3 implies that if a car is electric, it doesn't require specialized maintenance. Statement 1 implies that if a car doesn't require specialized maintenance, it cannot be antique. Therefore, it follows that if a car is electric, it cannot be antique, which is precisely what Statement 4 asserts. Statement 2 is also fully compatible, as specialized maintenance is a broader category than antique cars."
+  },
+  {
+    "id": "gen-44-7",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a student attends the advanced seminar, they must complete a research paper.",
+      "Every student who completes a research paper earns extra credit.",
+      "No student who earns extra credit fails the course.",
+      "Some students in the advanced seminar failed the course."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 1, Statement 2, and Statement 3 form a chain: attending the advanced seminar implies completing a research paper, which implies earning extra credit, which implies not failing the course. Therefore, every student in the advanced seminar must NOT fail the course. This directly contradicts Statement 4, which says that some students in the advanced seminar DID fail the course."
+  },
+  {
+    "id": "gen-44-8",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All employees who receive a bonus have exceeded their sales targets.",
+      "No employee who exceeded their sales targets was eligible for commission.",
+      "Every employee eligible for commission works full-time.",
+      "Some employees work full-time but did not receive a bonus.",
+      "Maria works full-time and received a bonus."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Maria (Statement 5) received a bonus, so she exceeded targets (Statement 1) and was not eligible for commission (Statement 2). She works full-time, which is compatible with not being eligible for commission (as Statement 3 only implies full-time for those eligible, not the reverse). Statement 4 describes other full-time employees who are not necessarily inconsistent with the other rules."
+  },
+  {
+    "id": "gen-44-9",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "All birds that migrate travel south for winter.",
+      "No bird that travels south for winter stays in the region.",
+      "Some birds that do not migrate stay in the region.",
+      "Every bird that stays in the region is a migratory bird."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 4, 1, and 2 create a chain: any bird that stays in the region must be migratory (Statement 4), which means it travels south for winter (Statement 1), which means it does NOT stay in the region (Statement 2). This implies that no bird can possibly stay in the region. However, Statement 3 asserts that some birds DO stay in the region, creating a direct contradiction."
+  },
+  {
+    "id": "gen-44-10",
+    "difficulty": "hard",
+    "category": "syllogism",
+    "statements": [
+      "If a restaurant is highly rated, it receives a Michelin star.",
+      "No restaurant receiving a Michelin star offers exclusively casual dining.",
+      "All restaurants offering exclusively casual dining are popular with families.",
+      "Some restaurants popular with families are highly rated."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. From Statements 1 and 2, if a restaurant is highly rated, it does not offer exclusively casual dining. Statement 4 indicates that some restaurants popular with families are highly rated. These highly rated, family-popular restaurants would therefore not offer exclusively casual dining, which is fully compatible with Statement 3 (exclusively casual dining restaurants are popular with families, but not all family-popular restaurants must be exclusively casual dining)."
+  },
+  {
+    "id": "gen-45-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If someone is a manager, they have access to the vault.",
+      "Anyone who does not have a security key cannot access the vault.",
+      "Every new hire is an employee who does not have a security key.",
+      "All managers are new hires."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 4, 3, and 2 form a logical chain: All managers are new hires. Every new hire does not have a security key. Anyone without a security key cannot access the vault. This implies that all managers cannot access the vault. This directly contradicts Statement 1, which states that if someone is a manager, they have access to the vault."
+  },
+  {
+    "id": "gen-45-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every student who earns good grades receives a scholarship.",
+      "If a student completes all extra credit assignments, they will earn good grades.",
+      "Some students did not complete all extra credit assignments.",
+      "Not all students receive a scholarship."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "From Statement 2, completing extra credit leads to good grades. From Statement 1, good grades lead to a scholarship. This means completing extra credit leads to a scholarship. Statement 3 says some students did not complete extra credit, and Statement 4 says not all students receive a scholarship. These non-scholarship students could be exactly the ones who did not complete extra credit, thus not earning good grades, and therefore not receiving a scholarship. No contradictions arise."
+  },
+  {
+    "id": "gen-45-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All active members of the planning committee are eligible to vote on funding proposals.",
+      "If a member is eligible to vote on funding proposals, they must have completed the ethics training.",
+      "No member who has completed the ethics training works on Project X.",
+      "Some active members of the planning committee work on Project X."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a logical chain: if a member is an active member of the planning committee, they are eligible to vote, which means they completed ethics training, and therefore they do not work on Project X. This implies that no active members of the planning committee work on Project X. Statement 4, however, directly asserts that some active members of the planning committee *do* work on Project X, creating an inconsistency."
+  },
+  {
+    "id": "gen-45-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "A store offers a discount only if a customer is a loyalty cardholder.",
+      "If a customer spends over $100, they are offered a discount.",
+      "Some loyalty cardholders do not spend over $100.",
+      "No customer who is not a loyalty cardholder is offered a discount."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 4 are logically equivalent, stating that to get a discount, one must be a loyalty cardholder. Combined with Statement 2, spending over $100 implies receiving a discount, which in turn implies being a loyalty cardholder. Statement 3 indicates there are loyalty cardholders who don't spend over $100. This is perfectly consistent; such individuals would not necessarily receive a discount, and their existence doesn't contradict the other rules."
+  },
+  {
+    "id": "gen-45-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All professional athletes adhere to a strict training regimen.",
+      "If an athlete follows a strict training regimen, they consistently perform well.",
+      "No athlete who consistently performs well ever faces severe injuries.",
+      "Some athletes who face severe injuries are professional athletes."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 establish a chain: all professional athletes adhere to a strict training regimen, which leads to consistent good performance, and therefore they never face severe injuries. This means no professional athlete ever faces severe injuries. Statement 4 directly contradicts this by claiming that some athletes who face severe injuries are indeed professional athletes."
+  },
+  {
+    "id": "gen-45-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a speaker is invited to the main conference, their topic must be peer-reviewed.",
+      "All peer-reviewed topics are considered highly relevant by the organizing committee.",
+      "Some topics considered highly relevant by the organizing committee are not presented at the main conference.",
+      "No speaker whose topic is not peer-reviewed is invited to the main conference."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 4 are logically equivalent (contrapositives). From Statements 1 and 2, it follows that if a speaker is invited to the main conference, their topic is considered highly relevant. Statement 3 asserts that some highly relevant topics are not presented at the main conference. This is consistent, as the condition (being highly relevant) does not guarantee an invitation; it only means that an invited topic must be highly relevant."
+  },
+  {
+    "id": "gen-45-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All artworks displayed in the main gallery are valued above $10,000.",
+      "If an artwork is valued above $10,000, it requires a specialized security system.",
+      "No artwork with a specialized security system is left unguarded overnight.",
+      "Some artworks left unguarded overnight are displayed in the main gallery."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 form a chain: if an artwork is displayed in the main gallery, it is valued above $10,000, which means it requires a specialized security system, and therefore it is not left unguarded overnight. This implies that no artwork displayed in the main gallery is left unguarded overnight. Statement 4 directly contradicts this by stating that some artworks left unguarded overnight *are* displayed in the main gallery."
+  },
+  {
+    "id": "gen-45-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every employee who receives advanced training is eligible for promotion.",
+      "If an employee is eligible for promotion, they must complete an annual review.",
+      "Some employees who complete an annual review do not receive advanced training.",
+      "No employee who does not complete an annual review is eligible for promotion."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 form a chain: advanced training leads to promotion eligibility, which in turn requires completing an annual review. Thus, any employee with advanced training completes an annual review. Statement 4 is simply the contrapositive of Statement 2. Statement 3 states that some employees who complete an annual review did not receive advanced training. This is consistent; completing an annual review doesn't necessarily mean one received advanced training, just that it's a prerequisite for promotion after training."
+  },
+  {
+    "id": "gen-45-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All construction projects that exceed five stories require a special permit.",
+      "If a project requires a special permit, it must undergo an environmental impact assessment.",
+      "No construction project that undergoes an environmental impact assessment can be initiated without community approval.",
+      "Every construction project initiated without community approval is immediately halted.",
+      "Some construction projects that exceed five stories are not immediately halted."
+    ],
+    "isConsistent": false,
+    "answerIndex": 4,
+    "explanation": "Statements 1, 2, 3, and 4 form a logical chain: if a construction project exceeds five stories, it requires a special permit. This permit necessitates an environmental impact assessment, which means it cannot be initiated without community approval. Projects initiated without community approval are immediately halted. Therefore, all projects exceeding five stories are immediately halted. Statement 5, however, claims that some construction projects exceeding five stories are *not* immediately halted, creating a direct contradiction."
+  },
+  {
+    "id": "gen-45-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every medical research study involving human subjects requires ethical approval.",
+      "If a study receives ethical approval, it is overseen by the institutional review board.",
+      "No study overseen by the institutional review board proceeds without informed consent.",
+      "Some studies that proceed with informed consent are not overseen by the institutional review board."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1, 2, and 3 form a chain: human subject studies require ethical approval, are then overseen by the institutional review board, and thus proceed with informed consent. This means all human subject studies proceed with informed consent. Statement 4 says some studies that proceed with informed consent are not overseen by the institutional review board. This is consistent; it simply means there are other types of studies, not involving human subjects, that also use informed consent but don't require IRB oversight or ethical approval."
+  },
+  {
+    "id": "gen-46-1",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All students who passed the exam received a scholarship.",
+      "No student who skipped class received a scholarship.",
+      "Some students skipped class but passed the exam."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "From Statement 1, we know that if a student passed the exam, they received a scholarship. From Statement 2, we know that if a student skipped class, they did not receive a scholarship. Statement 3 claims that some students both skipped class and passed the exam. For these students, Statement 1 implies they received a scholarship, while Statement 2 implies they did not, creating a contradiction. Removing Statement 3 resolves this conflict by removing the assertion that such a group exists."
+  },
+  {
+    "id": "gen-46-2",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All birds have wings.",
+      "Some animals with wings can fly.",
+      "No bird can run very fast."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Birds are a type of animal with wings. Some animals with wings can fly, which doesn't specify if birds are among them or not. The fact that no bird can run fast is an independent attribute and does not conflict with the other statements."
+  },
+  {
+    "id": "gen-46-3",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a recipe uses yeast, it requires rising time.",
+      "Any dish requiring rising time must be baked.",
+      "All sourdough breads use yeast.",
+      "Some sourdough breads are not baked."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statement 3 tells us that all sourdough breads use yeast. From Statement 1, anything that uses yeast requires rising time. From Statement 2, anything requiring rising time must be baked. Therefore, it follows that all sourdough breads must be baked. This directly contradicts Statement 4, which claims some sourdough breads are not baked. Removing Statement 4 resolves this inconsistency."
+  },
+  {
+    "id": "gen-46-4",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All professional athletes train daily.",
+      "Some people who train daily are not professional athletes.",
+      "Mia trains daily."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 describes professional athletes. Statement 2 indicates that training daily is not exclusive to professional athletes. Mia could be a professional athlete (consistent with Statement 1) or one of the people who train daily but are not professional athletes (consistent with Statement 2)."
+  },
+  {
+    "id": "gen-46-5",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "No one who attended the seminar missed the bonus quiz.",
+      "All employees who passed the training attended the seminar.",
+      "Some employees who passed the training missed the bonus quiz."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "From Statement 2, all employees who passed the training attended the seminar. From Statement 1, no one who attended the seminar missed the bonus quiz. Combining these, it logically follows that all employees who passed the training did not miss the bonus quiz. This directly contradicts Statement 3, which asserts that some employees who passed the training missed the bonus quiz. Removing Statement 3 resolves the conflict."
+  },
+  {
+    "id": "gen-46-6",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a plant is a succulent, it requires minimal water.",
+      "Cactus plants are succulents.",
+      "Some plants that require minimal water grow in deserts.",
+      "No cactus plant grows in a forest."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Cactus plants are succulents and thus require minimal water. Some plants requiring minimal water grow in deserts, which is compatible with cacti. The information that no cactus grows in a forest is an additional fact that does not create a contradiction with the other statements."
+  },
+  {
+    "id": "gen-46-7",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a book is a mystery novel, it is intended for adults.",
+      "No book intended for adults has simple language.",
+      "Some books with simple language are mystery novels."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "From Statement 1, if a book is a mystery novel, it is intended for adults. From Statement 2, no book intended for adults has simple language. Therefore, it logically follows that no mystery novel has simple language. This contradicts Statement 3, which asserts that some books with simple language are mystery novels. Removing Statement 3 resolves the inconsistency."
+  },
+  {
+    "id": "gen-46-8",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All successful projects had strong leadership.",
+      "Some projects with strong leadership were not successful.",
+      "No project that lacked strong leadership was successful."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Statement 1 indicates that strong leadership is a necessary condition for successful projects. Statement 3 is the contrapositive of Statement 1, reinforcing the same idea. Statement 2 suggests that strong leadership is not a sufficient condition for success, meaning some projects with strong leadership can still fail, which does not contradict the necessity of strong leadership for *successful* projects."
+  },
+  {
+    "id": "gen-46-9",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "If a device is a smartphone, it can connect to the internet.",
+      "No device that connects to the internet is a standalone camera.",
+      "Some smartphones are standalone cameras."
+    ],
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "From Statement 1, if a device is a smartphone, it can connect to the internet. From Statement 2, no device that connects to the internet is a standalone camera. Therefore, it logically follows that no smartphone is a standalone camera. This directly contradicts Statement 3, which asserts that some smartphones are standalone cameras. Removing Statement 3 resolves the inconsistency."
+  },
+  {
+    "id": "gen-46-10",
+    "difficulty": "medium",
+    "category": "syllogism",
+    "statements": [
+      "All concert halls require acoustic treatment.",
+      "Some buildings with acoustic treatment are not concert halls.",
+      "If a building is a theater, it requires acoustic treatment.",
+      "No art gallery is a theater."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "These statements are consistent. Concert halls and theaters both require acoustic treatment. Statement 2 shows that other types of buildings (like theaters) can also have acoustic treatment, which doesn't contradict that concert halls have it. Statement 4 provides information about art galleries that is unrelated to the other claims, creating no conflict."
+  },
+  {
+    "id": "gen-47-1",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an artifact is from the Iron Age, it contains iron.",
+      "No artifact containing iron is made of bronze.",
+      "All artifacts excavated from site Alpha are from the Iron Age.",
+      "Some artifacts excavated from site Alpha are made of bronze."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: If an artifact is from site Alpha, it is from the Iron Age (3), and thus contains iron (1), and therefore is not made of bronze (2). This implies no artifact from site Alpha is made of bronze, which directly contradicts Statement 4 that some are made of bronze. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-47-2",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All employees who received a bonus completed their project early.",
+      "If an employee completed their project early, they are eligible for promotion.",
+      "Some employees eligible for promotion did not receive a bonus."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. From Statements 1 and 2, all employees who received a bonus are eligible for promotion. Statement 3 indicates that there are employees eligible for promotion who did not receive a bonus, which is perfectly consistent. Eligibility for promotion does not necessitate receiving a bonus."
+  },
+  {
+    "id": "gen-47-3",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a restaurant serves vegan options, it sources fresh produce daily.",
+      "No restaurant that sources fresh produce daily struggles with inventory management.",
+      "Every restaurant in the downtown district serves vegan options.",
+      "At least one restaurant in the downtown district struggles with inventory management."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: All restaurants in the downtown district (3) serve vegan options (3), thus source fresh produce daily (1), and therefore do not struggle with inventory management (2). This implies no restaurant in the downtown district struggles with inventory management, which directly contradicts Statement 4. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-47-4",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every car with an electric engine has zero emissions.",
+      "Some cars with zero emissions are not new models.",
+      "If a car is a new model, it has advanced safety features."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statement 1 establishes a link between electric engines and zero emissions. Statement 2 indicates that not all zero-emission cars are new. Statement 3 describes a characteristic of new models. There is no logical chain that leads to a contradiction among these facts."
+  },
+  {
+    "id": "gen-47-5",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "No student who passed the advanced logic course failed the final exam.",
+      "If a student submitted their homework late, they failed the final exam.",
+      "All students enrolled in the advanced logic course submitted their homework late.",
+      "Some students enrolled in the advanced logic course passed the advanced logic course."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 2 and 3 establish that all students enrolled in the advanced logic course submitted their homework late, and therefore failed the final exam. From Statement 1, anyone who passed the advanced logic course did not fail the final exam. This means no student enrolled in the advanced logic course could have passed it. This conclusion contradicts Statement 4. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-47-6",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If a document is confidential, it requires a security clearance to access.",
+      "All documents stored in the archives are confidential.",
+      "Some documents that require a security clearance to access are not stored in the archives."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. From Statements 1 and 2, all documents stored in the archives are confidential and thus require a security clearance. Statement 3 indicates that there are documents requiring security clearance that are not in the archives, which is consistent. The first two statements do not imply that *only* archived documents require clearance."
+  },
+  {
+    "id": "gen-47-7",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "All participants selected for the study provided a valid email address.",
+      "If a participant provided a valid email address, they received an invitation.",
+      "No participant who received an invitation failed the initial screening.",
+      "Some participants selected for the study failed the initial screening."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: All participants selected for the study (1) provided a valid email address (1), thus received an invitation (2), and therefore did not fail the initial screening (3). This implies no participant selected for the study failed the initial screening, which directly contradicts Statement 4. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-47-8",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every painting in the collection is an oil portrait.",
+      "No oil portrait features a landscape background.",
+      "Some paintings in the collection do not feature a landscape background."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. From Statements 1 and 2, every painting in the collection is an oil portrait, and no oil portrait features a landscape background. This implies that no painting in the collection features a landscape background. If no painting features a landscape background, it is necessarily true that some paintings in the collection do not feature a landscape background (Statement 3). There is no contradiction."
+  },
+  {
+    "id": "gen-47-9",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "If an athlete trains with the national team, they compete internationally.",
+      "All athletes who compete internationally receive sponsorship deals.",
+      "No athlete who receives sponsorship deals practices daily.",
+      "At least one athlete who trains with the national team practices daily."
+    ],
+    "isConsistent": false,
+    "answerIndex": 3,
+    "explanation": "Statements 1, 2, and 3 create a chain: Any athlete who trains with the national team (1) competes internationally (1), thus receives sponsorship deals (2), and therefore does not practice daily (3). This implies no athlete who trains with the national team practices daily, which directly contradicts Statement 4. Removing Statement 4 resolves the inconsistency."
+  },
+  {
+    "id": "gen-47-10",
+    "difficulty": "hard",
+    "category": "conditional",
+    "statements": [
+      "Every building constructed before 1900 has a stone foundation.",
+      "If a building has a stone foundation, it requires regular maintenance.",
+      "Some buildings that require regular maintenance were not constructed before 1900."
+    ],
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "The statements are consistent. Statements 1 and 2 establish that all buildings constructed before 1900 have a stone foundation and require regular maintenance. Statement 3 indicates that there are buildings requiring regular maintenance that were not constructed before 1900. This is consistent, as the first two statements do not imply that *only* pre-1900 buildings require regular maintenance."
+  },
+  {
+    "id": "gen-48-1",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
@@ -4136,2312 +6139,331 @@ const generatedPuzzles: Puzzle[] = [
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 imply that no owls hunt during the day. If all owls are nocturnal birds (1), and no nocturnal birds hunt during the day (2), then it must be true that no owls hunt during the day. This directly contradicts Statement 3, which claims some owls hunt during the day."
-  },
-  {
-    "id": "gen-33-2",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All professional chefs have culinary training.",
-      "Some people with culinary training are not professional chefs.",
-      "Marco has culinary training."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Marco having culinary training is consistent with him being a professional chef (as per Statement 1), or with him being one of the people with culinary training who are not professional chefs (as per Statement 2). All three statements can simultaneously be true."
-  },
-  {
-    "id": "gen-33-3",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If an athlete is competing in the finals, they must have qualified in the semi-finals.",
-      "All athletes from Team Alpha are competing in the finals.",
-      "Some athletes from Team Alpha did not qualify in the semi-finals."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 2 tells us that all athletes from Team Alpha are competing in the finals. Combined with Statement 1, which states that all athletes competing in the finals must have qualified in the semi-finals, this means all athletes from Team Alpha must have qualified in the semi-finals. This conclusion contradicts Statement 3, which asserts that some athletes from Team Alpha did not qualify in the semi-finals."
-  },
-  {
-    "id": "gen-33-4",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "No reptiles are warm-blooded.",
-      "Some pets are reptiles.",
-      "All mammals are warm-blooded."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 1 indicates that no reptiles are warm-blooded. Statement 2 means some pets are reptiles, and thus some pets are not warm-blooded. Statement 3 says all mammals are warm-blooded. These statements are consistent; there can be pets that are reptiles (not warm-blooded) and mammals that are warm-blooded, without contradiction."
-  },
-  {
-    "id": "gen-33-5",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "No classical musicians enjoy pop music.",
-      "Some people who play the cello are classical musicians.",
-      "Every person who plays the cello enjoys pop music."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 2 and 1 combine to imply that some people who play the cello do not enjoy pop music. If some cellists are classical musicians (2), and no classical musicians enjoy pop music (1), then those specific cellists do not enjoy pop music. This directly contradicts Statement 3, which claims every person who plays the cello enjoys pop music."
-  },
-  {
-    "id": "gen-33-6",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a plant requires full sun, it cannot thrive in shade.",
-      "Some plants in my garden require full sun.",
-      "All plants in my garden are drought-tolerant."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statement 1 and 2, we know that some plants in the garden cannot thrive in shade. Statement 3 states that all plants in the garden are drought-tolerant. These facts are fully consistent; there can be drought-tolerant plants that require full sun and cannot thrive in shade, as well as others that might thrive in shade."
-  },
-  {
-    "id": "gen-33-7",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All fruits contain seeds.",
-      "All berries are fruits.",
-      "Some berries do not contain seeds."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 2 and 1 establish that all berries contain seeds. If all berries are fruits (2), and all fruits contain seeds (1), then it logically follows that all berries contain seeds. This conclusion directly contradicts Statement 3, which claims some berries do not contain seeds."
-  },
-  {
-    "id": "gen-33-8",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All successful startups receive venture capital.",
-      "Some new businesses are successful startups.",
-      "No government grants are venture capital."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statements 1 and 2, it is implied that some new businesses receive venture capital. Statement 3 indicates that government grants are distinct from venture capital. These statements can all be true simultaneously; there is no logical conflict."
-  },
-  {
-    "id": "gen-33-9",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a painting is a masterpiece, it is highly valued.",
-      "No highly valued paintings are offered for free.",
-      "Some paintings offered for free are masterpieces."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 lead to the conclusion that no masterpieces are offered for free. If a painting is a masterpiece, it is highly valued (1), and no highly valued paintings are offered for free (2), then no masterpieces can be offered for free. This directly contradicts Statement 3, which asserts that some paintings offered for free are masterpieces."
-  },
-  {
-    "id": "gen-33-10",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every politician attends public debates.",
-      "Not every person who attends public debates is a politician.",
-      "Some politicians are excellent debaters."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Every politician attending public debates (1) is consistent with some non-politicians also attending debates (2). Statement 3, about some politicians being excellent debaters, describes a subset of politicians who attend debates, which does not conflict with the other statements. All three can be true."
-  },
-  {
-    "id": "gen-34-1",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All qualified applicants have submitted a complete resume.",
-      "No applicant who submitted a complete resume has neglected the cover letter.",
-      "Every applicant selected for an interview is a qualified applicant.",
-      "There is at least one applicant selected for an interview who neglected the cover letter."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 together imply that every applicant selected for an interview must have submitted a cover letter. Statement 4 directly contradicts this by asserting that some applicants selected for an interview neglected their cover letter."
-  },
-  {
-    "id": "gen-34-2",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All successful authors have published at least one bestseller.",
-      "Some published authors have never written a bestseller.",
-      "No author who has never written a bestseller is considered successful.",
-      "Laura is a published author."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements can all be true simultaneously. Statements 1 and 3 are logically equivalent, establishing that successful authors must have written a bestseller. Statement 2 indicates that some published authors exist who are not successful, which is consistent. Laura, as a published author, could be one of these non-bestselling authors or a bestselling one, without violating any rules."
-  },
-  {
-    "id": "gen-34-3",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every car with an active warranty has passed its safety inspection.",
-      "No car that has passed its safety inspection has any outstanding recalls.",
-      "Some cars with outstanding recalls are still under active warranty."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together establish that any car with an active warranty must have no outstanding recalls. Statement 3 claims that there are some cars with outstanding recalls that are still under active warranty, which directly contradicts the conclusion derived from statements 1 and 2."
-  },
-  {
-    "id": "gen-34-4",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All qualified candidates possess strong communication skills.",
-      "Some job applicants who possess strong communication skills are not qualified candidates.",
-      "No candidate lacking strong communication skills will be hired.",
-      "Our top applicant will be hired."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements can all be true simultaneously. Statements 3 and 4 imply that the top applicant must possess strong communication skills. Statement 1 indicates that qualified candidates have these skills, and statement 2 clarifies that some with strong communication skills are not qualified. It's possible for the top applicant to have strong communication skills and be hired, whether or not they are a qualified candidate."
-  },
-  {
-    "id": "gen-34-5",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every successful politician has a strong public image.",
-      "No politician with a strong public image avoids challenging debates.",
-      "Some politicians who avoid challenging debates are successful."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together establish that any successful politician must engage in challenging debates. Statement 3 directly contradicts this conclusion by stating that some successful politicians avoid challenging debates."
-  },
-  {
-    "id": "gen-34-6",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All highly rated restaurants employ award-winning chefs.",
-      "Some restaurants employ award-winning chefs but are not highly rated.",
-      "No restaurant lacking an award-winning chef is considered highly rated.",
-      "\"The Gourmet Grotto\" is a highly rated restaurant."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements can all be true simultaneously. Statements 1 and 3 are logically equivalent, establishing that highly rated restaurants always employ award-winning chefs. Statement 2 permits the existence of restaurants with award-winning chefs that are not highly rated. Statement 4 simply applies the rule to \"The Gourmet Grotto,\" meaning it must employ an award-winning chef, which is consistent."
-  },
-  {
-    "id": "gen-34-7",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "If a book is a bestseller, it has received critical acclaim.",
-      "No book that receives critical acclaim is ignored by major literary awards.",
-      "Every book that is considered for a major literary award is a bestseller.",
-      "There exists at least one book that is a bestseller but is ignored by major literary awards."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 together create a logical loop, implying that a book is a bestseller if and only if it receives critical acclaim, and if and only if it is considered for a major literary award. Therefore, all bestsellers must be considered for major literary awards. Statement 4 directly contradicts this by stating that some bestsellers are ignored by major literary awards."
-  },
-  {
-    "id": "gen-34-8",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All students who complete the advanced course score highly on the final exam.",
-      "Some students who score highly on the final exam did not complete the advanced course.",
-      "No student who scores highly on the final exam struggled with the material.",
-      "Emily completed the advanced course and scored highly on the final exam."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements can all be true simultaneously. Statement 1 establishes a condition for high scores, while statement 2 allows for other ways to achieve high scores. Statement 3 adds a characteristic of high scorers. Emily completing the advanced course and scoring highly is consistent with all conditions, as she would then logically not have struggled with the material according to statement 3."
-  },
-  {
-    "id": "gen-34-9",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All successful product launches were preceded by extensive market research.",
-      "No product launch preceded by extensive market research received negative press.",
-      "Every product that received negative press was a commercial failure.",
-      "Some product launches were successful, but also commercial failures."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 together imply that any successful product launch must not have received negative press, and therefore cannot be a commercial failure (since any product receiving negative press was a commercial failure). Thus, all successful product launches must not be commercial failures. Statement 4 directly contradicts this by asserting that some successful product launches were also commercial failures."
-  },
-  {
-    "id": "gen-34-10",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All effective managers delegate tasks efficiently.",
-      "Some managers who delegate tasks efficiently are not effective.",
-      "No manager who delegates tasks efficiently fails to motivate their team.",
-      "Lisa is a manager who motivates her team."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements can all be true simultaneously. Statement 1 describes effective managers. Statement 2 broadens the category of efficient delegators beyond just effective managers. Statement 3 connects efficient delegation to team motivation. Lisa, as a manager who motivates her team, could achieve this through efficient delegation (making her an effective or non-effective manager), or through other means entirely, all without contradicting any statement."
-  },
-  {
-    "id": "gen-35-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a plant is a fern, it requires shade.",
-      "No plant that requires shade can thrive in direct sunlight.",
-      "All plants grown in the greenhouse are ferns.",
-      "Some plants grown in the greenhouse thrive in direct sunlight."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 indicates that all plants in the greenhouse are ferns. Statement 1 says that if a plant is a fern, it requires shade. Statement 2 states that no plant requiring shade can thrive in direct sunlight. This forms a chain: All greenhouse plants are ferns, which require shade, and thus cannot thrive in direct sunlight. This directly contradicts Statement 4, which claims some greenhouse plants thrive in direct sunlight."
-  },
-  {
-    "id": "gen-35-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every employee who received a bonus also attended the training.",
-      "If an employee attended the training, they completed the annual review.",
-      "Every employee who completed the annual review met their quotas.",
-      "Some employees who received a bonus failed to meet their quotas."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "According to Statement 1, every employee who received a bonus attended the training. Statement 2 says that employees who attended training completed their annual review. Statement 3 asserts that all employees who completed their annual review met their quotas. This chain implies that every employee who received a bonus met their quotas. This contradicts Statement 4, which claims some employees who received a bonus failed to meet their quotas."
-  },
-  {
-    "id": "gen-35-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student enrolls in advanced calculus, they must have passed algebra.",
-      "Every student who passed algebra passed the geometry exam.",
-      "Some students in advanced calculus failed the geometry exam."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says that students in advanced calculus must have passed algebra. Statement 2 indicates that every student who passed algebra also passed the geometry exam. Therefore, it logically follows that all students in advanced calculus passed the geometry exam. This directly contradicts Statement 3, which claims some students in advanced calculus failed the geometry exam."
-  },
-  {
-    "id": "gen-35-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every vehicle parked in lot C requires a special permit.",
-      "If a vehicle has a special permit, it is registered with campus security.",
-      "Every vehicle registered with campus security has a valid registration.",
-      "Some vehicles parked in lot C have an expired registration."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 indicates that all vehicles in Lot C require a special permit. Statement 2 says that vehicles with special permits are registered with campus security. Statement 3 states that all vehicles registered with campus security have a valid registration. This forms a chain: All vehicles in Lot C require a special permit, are registered, and therefore have a valid registration. This contradicts Statement 4, which claims some vehicles in Lot C have an expired registration (which implies not having a valid registration)."
-  },
-  {
-    "id": "gen-35-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All fruits that are red contain antioxidants.",
-      "If a fruit contains antioxidants, it is beneficial for health.",
-      "No fruit that is beneficial for health should be avoided by diabetics.",
-      "Some red fruits should be avoided by diabetics."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 establishes that all red fruits contain antioxidants. Statement 2 links antioxidants to being beneficial for health. Statement 3 states that fruits beneficial for health should not be avoided by diabetics. This creates a chain: All red fruits contain antioxidants, are beneficial for health, and therefore should not be avoided by diabetics. This directly contradicts Statement 4, which claims some red fruits should be avoided by diabetics."
-  },
-  {
-    "id": "gen-36-1",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All committee members voted in favor of the proposal.",
-      "No one who voted in favor supported the counter-amendment.",
-      "At least one committee member supported the counter-amendment."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all committee members voted in favor. Statement 2 says no one who voted in favor supported the counter-amendment. Therefore, it must be true that no committee member supported the counter-amendment. This directly contradicts Statement 3, which claims at least one committee member did support the counter-amendment."
-  },
-  {
-    "id": "gen-36-2",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All students enrolled in advanced calculus are engineering majors.",
-      "Some students enrolled in advanced calculus also take a music elective.",
-      "Some engineering majors do not take a music elective."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 1 means that the group of students in advanced calculus is a subset of engineering majors. Statement 2 means that within this subset, some also take a music elective. This implies that some engineering majors take a music elective, which is entirely consistent with Statement 3 that some engineering majors do not take a music elective; there can be different groups of engineering majors."
-  },
-  {
-    "id": "gen-36-3",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If an employee completed the safety training, they are eligible for promotion.",
-      "No employee eligible for promotion works in the maintenance department.",
-      "Every employee in the maintenance department completed the safety training."
-    ],
-    "isConsistent": false,
-    "answerIndex": 1,
-    "explanation": "Statement 3 indicates that every employee in the maintenance department completed the safety training. Statement 1 states that anyone who completed the safety training is eligible for promotion. Therefore, it must be true that every employee in the maintenance department is eligible for promotion. This directly contradicts Statement 2, which says no employee eligible for promotion works in the maintenance department (meaning no employee in maintenance is eligible for promotion)."
-  },
-  {
-    "id": "gen-36-4",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a traveler requires a visa, they must present a valid passport.",
-      "All visitors from outside the continent require a visa.",
-      "Some tourists entering the country do not present a valid passport."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 2 implies that all visitors from outside the continent require a visa. Statement 1 indicates that anyone who requires a visa must present a valid passport. So, all visitors from outside the continent must present a valid passport. Statement 3 claims some tourists do not present a valid passport; these tourists could be from within the continent or citizens, and thus do not need to be visitors from outside the continent, making the set consistent."
-  },
-  {
-    "id": "gen-36-5",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All mangoes grow on trees.",
-      "All berries do not grow on trees.",
-      "Some mangoes are berries."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 establishes that anything that is a mango grows on a tree. Statement 2 establishes that anything that is a berry does not grow on a tree. This means that nothing can be both a mango and a berry. This conclusion directly contradicts Statement 3, which claims some mangoes are berries."
-  },
-  {
-    "id": "gen-36-6",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All members of the orchestra are skilled musicians.",
-      "Some performers in the concert are not skilled musicians.",
-      "Some members of the orchestra are performers in the concert."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 3 tells us there are some individuals who are both orchestra members and concert performers. Statement 1 indicates that all orchestra members are skilled musicians. Therefore, these individuals (orchestra members who are also performers) are skilled musicians. This is consistent with Statement 2, which suggests that other performers in the concert might not be skilled musicians, as not all performers are necessarily orchestra members."
-  },
-  {
-    "id": "gen-36-7",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a project is submitted on time, it will be reviewed by the board.",
-      "No project reviewed by the board receives an immediate budget approval.",
-      "Some new projects are submitted on time.",
-      "All new projects receive an immediate budget approval."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 indicates that projects submitted on time are reviewed by the board. Statement 2 says that projects reviewed by the board do not receive immediate budget approval. Combining these, it means any project submitted on time will not receive immediate budget approval. Statement 3 tells us some new projects are submitted on time, meaning some new projects will not receive immediate budget approval. This contradicts Statement 4, which claims all new projects receive an immediate budget approval."
-  },
-  {
-    "id": "gen-36-8",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a book is a historical novel, it is well-researched.",
-      "If a book is well-researched, it receives positive reviews.",
-      "Some books in the library are historical novels.",
-      "Some books in the library do not receive positive reviews."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 together imply that if a book is a historical novel, it receives positive reviews. Statement 3 confirms there are some historical novels in the library, meaning some library books receive positive reviews. This is consistent with Statement 4, which says some other library books (which are not necessarily historical novels) do not receive positive reviews. The two 'some' groups can exist simultaneously."
-  },
-  {
-    "id": "gen-36-9",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All employees who work remotely attend the weekly virtual meeting.",
-      "Some software developers work remotely.",
-      "No software developer attends the weekly virtual meeting."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 2 tells us that there is at least one software developer who works remotely. Statement 1 states that any employee who works remotely attends the weekly virtual meeting. Therefore, this specific software developer must attend the weekly virtual meeting. This conclusion directly contradicts Statement 3, which asserts that no software developer attends the weekly virtual meeting."
-  },
-  {
-    "id": "gen-36-10",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "No animals with wings are fish.",
-      "Some pets are animals with wings.",
-      "All goldfish are fish."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statement 2 indicates that some pets are animals with wings. Statement 1 states that no animals with wings are fish. This means those specific pets that have wings are not fish. Statement 3, about all goldfish being fish, introduces a category of animals (goldfish) that are fish, which is consistent with the existence of other animals (winged pets) that are not fish."
-  },
-  {
-    "id": "gen-37-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a plant requires daily watering, it has broad leaves.",
-      "No plant with delicate roots has broad leaves.",
-      "All plants that grow in dry climates have delicate roots.",
-      "Some plants that require daily watering grow in dry climates."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 indicates some plants requiring daily watering also grow in dry climates. From Statement 3, all plants growing in dry climates have delicate roots. From Statement 2, no plant with delicate roots has broad leaves. This creates a chain: plants requiring daily watering → grow in dry climates → have delicate roots → do not have broad leaves. This contradicts Statement 1, which claims that if a plant requires daily watering, it has broad leaves."
-  },
-  {
-    "id": "gen-37-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All professional athletes train daily.",
-      "If someone trains daily, they have high stamina.",
-      "Some people with high stamina are not professional athletes."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all professional athletes have high stamina. Statement 3 suggests that there are individuals with high stamina who are not professional athletes, which is entirely consistent with the first two statements. Having high stamina is not exclusive to professional athletes."
-  },
-  {
-    "id": "gen-37-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a candidate is endorsed by the union, they will win the primary.",
-      "Every candidate who wins the primary receives public funding.",
-      "No candidate who receives public funding has to fundraise extensively.",
-      "Some candidates endorsed by the union must fundraise extensively."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: if a candidate is endorsed by the union, they win the primary; if they win the primary, they receive public funding; if they receive public funding, they do not have to fundraise extensively. Therefore, all candidates endorsed by the union do not have to fundraise extensively. This directly contradicts Statement 4, which claims some candidates endorsed by the union must fundraise extensively."
-  },
-  {
-    "id": "gen-37-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every novel with a complex plot is a bestseller.",
-      "No bestseller is short.",
-      "Some short novels are not bestsellers."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that every novel with a complex plot is not short. Statement 3 claims some short novels are not bestsellers. This is consistent; there can be short novels that are not bestsellers (e.g., simple plot novels that don't sell well), and complex plot novels that are bestsellers and not short."
-  },
-  {
-    "id": "gen-37-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All scientists are highly analytical.",
-      "No highly analytical person enjoys abstract art.",
-      "Some scientists enjoy abstract art."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "From Statement 1, all scientists are highly analytical. From Statement 2, no highly analytical person enjoys abstract art. This implies that no scientists enjoy abstract art. Statement 3, however, asserts that some scientists do enjoy abstract art, creating a direct contradiction."
-  },
-  {
-    "id": "gen-37-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student earns an A, they understand the material.",
-      "All students who understand the material pass the course.",
-      "Some students who earn an A also pass the course."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 logically imply that if a student earns an A, they pass the course. Therefore, it necessarily follows that all students who earn an A pass the course. Statement 3, which claims some students who earn an A also pass the course, is entirely consistent with this conclusion, as 'some' is implied by 'all'."
-  },
-  {
-    "id": "gen-37-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All residents who live downtown commute by train.",
-      "If a resident works at the tech park, they live downtown.",
-      "No one who commutes by train owns a car.",
-      "Some residents who work at the tech park own a car."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 2, 1, and 3 form a logical chain: if a resident works at the tech park, they live downtown; if they live downtown, they commute by train; if they commute by train, they do not own a car. Thus, all residents who work at the tech park do not own a car. This directly contradicts Statement 4, which claims some residents who work at the tech park own a car."
-  },
-  {
-    "id": "gen-37-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All rare books are valuable.",
-      "Some valuable items are not rare books.",
-      "No valuable item is easy to acquire.",
-      "Some easy-to-acquire items are not rare books."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 3 imply that all rare books are valuable and not easy to acquire. Statement 2 is consistent because other items besides rare books can be valuable. Statement 4 is also consistent because many items are easy to acquire and are not rare books, such as common paperbacks."
-  },
-  {
-    "id": "gen-37-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a candidate attends the debate, they are well-prepared.",
-      "No candidate who is well-prepared avoids answering difficult questions.",
-      "Every candidate who avoids answering difficult questions is evasive.",
-      "Some candidates who attend the debate are evasive."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 create a chain: if a candidate attends the debate, they are well-prepared; if they are well-prepared, they do not avoid answering difficult questions. The contrapositive of Statement 3 is: if a candidate is not evasive, they do not avoid answering difficult questions. Thus, candidates who attend the debate are well-prepared and do not avoid answering difficult questions, meaning they are not evasive. Therefore, all candidates who attend the debate are not evasive. This contradicts Statement 4, which claims some candidates who attend the debate are evasive."
-  },
-  {
-    "id": "gen-37-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If an animal is a mammal, it has fur.",
-      "All animals that lay eggs do not have fur.",
-      "Some animals that are mammals do not lay eggs.",
-      "All animals that have fur are warm-blooded."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 imply that all mammals do not lay eggs, as mammals have fur (S1) and no animals with fur lay eggs (contrapositive of S2). Statement 3, 'Some animals that are mammals do not lay eggs,' is consistent with this. Statement 4 further implies that all mammals are warm-blooded (M → F → W), but this does not contradict any other statement."
-  },
-  {
-    "id": "gen-38-1",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All employees who receive a bonus completed their annual training.",
-      "No employee who missed the annual review completed their annual training.",
-      "Some employees who received a bonus missed the annual review."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 implies that any employee receiving a bonus must have completed their annual training. Statement 2 implies that any employee who completed their annual training did not miss the annual review. Therefore, any employee receiving a bonus must not have missed the annual review. Statement 3 contradicts this by asserting that some employees received a bonus and also missed the annual review."
-  },
-  {
-    "id": "gen-38-2",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All mathematicians are logical thinkers.",
-      "Some logical thinkers are not mathematicians.",
-      "No historians are logical thinkers."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true at the same time. Mathematicians are a subset of logical thinkers. Some logical thinkers are not mathematicians, which is consistent with the first statement. Historians are a separate group, distinct from logical thinkers, which also creates no conflict."
-  },
-  {
-    "id": "gen-38-3",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every bird in this aviary eats seeds.",
-      "No bird that eats seeds also eats fruit.",
-      "Some birds in this aviary do not eat fruit.",
-      "Some birds in this aviary eat fruit."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 says every bird eats seeds. Statement 2 says no bird that eats seeds also eats fruit. Together, these imply that no bird in this aviary eats fruit. Statement 4 directly contradicts this conclusion by stating that some birds in this aviary do eat fruit."
-  },
-  {
-    "id": "gen-38-4",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every student who attended the lecture signed the attendance sheet.",
-      "Some students who signed the attendance sheet did not attend the lecture.",
-      "All students who completed the assignment attended the lecture."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Students who completed the assignment would have attended the lecture and signed the sheet. There could be other students who signed the sheet but did not attend, and those who attended but did not complete the assignment. No inherent contradiction exists."
-  },
-  {
-    "id": "gen-38-5",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a candidate passed the first interview, they were invited for a second one.",
-      "No candidate invited for a second interview was rejected.",
-      "Every candidate who applied was rejected.",
-      "Some candidates who applied passed the first interview."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 implies passing the first interview leads to a second invitation. Statement 2 implies a second invitation means not being rejected. So, passing the first interview means not being rejected. Statement 3 implies that if a candidate applied, they were rejected, which means if they were not rejected, they did not apply. Combining these, if a candidate passed the first interview, they were not rejected, and therefore they did not apply. Statement 4 directly contradicts this by stating some candidates who applied also passed the first interview."
-  },
-  {
-    "id": "gen-38-6",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All registered voters have a valid ID.",
-      "Some people with a valid ID are not registered voters.",
-      "No person under 18 can vote."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true together. A person under 18 cannot vote and thus cannot be a registered voter. Some people might have a valid ID but choose not to register to vote, or are not eligible to vote. Registered voters are a subset of those with a valid ID. All these conditions can hold simultaneously."
-  },
-  {
-    "id": "gen-38-7",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a book is overdue, it incurs a fine.",
-      "All books borrowed this month are overdue.",
-      "No book that incurs a fine was borrowed this month."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says overdue books incur a fine. Statement 2 says all books borrowed this month are overdue. Together, these imply that all books borrowed this month incur a fine. Statement 3, however, states that no book that incurs a fine was borrowed this month. This creates a direct contradiction with the conclusion derived from Statements 1 and 2."
-  },
-  {
-    "id": "gen-38-8",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every chef in the restaurant received a positive review.",
-      "Some kitchen staff are not chefs.",
-      "No one who received a positive review was later dismissed."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true at the same time. Chefs received positive reviews and were not dismissed. Some kitchen staff could be chefs, while others are not, and this does not conflict with chefs' review status. There is no contradiction."
-  },
-  {
-    "id": "gen-38-9",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All concert attendees purchased a ticket.",
-      "No one who purchased a ticket was denied entry.",
-      "Some people who were denied entry were concert attendees."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 states that all concert attendees purchased a ticket. Statement 2 states that no one who purchased a ticket was denied entry. Therefore, it must be true that no concert attendee was denied entry. Statement 3 directly contradicts this conclusion by stating that some concert attendees were denied entry."
-  },
-  {
-    "id": "gen-38-10",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All fruits contain seeds.",
-      "Some vegetables contain seeds.",
-      "No vegetable is a fruit."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. For example, an apple (fruit) contains seeds. A bell pepper (vegetable) contains seeds, but it is not a fruit. There is no contradiction between these facts."
-  },
-  {
-    "id": "gen-39-1",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every student who attended the advanced seminar submitted a final project.",
-      "No student who submitted a final project received a failing grade.",
-      "All students who did not attend the advanced seminar did not receive a failing grade.",
-      "At least one student received a failing grade."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 together imply that any student who attended the advanced seminar did not receive a failing grade. Statement 3 implies that any student who did not attend the advanced seminar also did not receive a failing grade. Since every student either attended or did not attend the advanced seminar, these three statements combined logically establish that no student received a failing grade. Statement 4 directly contradicts this conclusion by asserting that at least one student received a failing grade."
-  },
-  {
-    "id": "gen-39-2",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All qualified candidates received an interview.",
-      "Some candidates who received an interview were not offered a position.",
-      "No candidate who was not offered a position was deemed qualified."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 3 combined indicate that all qualified candidates received an interview (from Statement 1) and were offered a position (from the contrapositive of Statement 3: if a candidate was qualified, then they were offered a position). Statement 2 describes candidates who received an interview but were not offered a position. For this to be consistent, these candidates simply cannot be qualified. This scenario is entirely possible."
-  },
-  {
-    "id": "gen-39-3",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every research study funded by the institute involved human participants.",
-      "No study involving human participants can be approved without ethical review.",
-      "All studies that undergo ethical review are published in peer-reviewed journals.",
-      "Some research studies funded by the institute were not published in peer-reviewed journals."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a logical chain: If a study was funded by the institute (Statement 1), then it involved human participants. If it involved human participants (Statement 2), then it underwent ethical review. If it underwent ethical review (Statement 3), then it was published in peer-reviewed journals. Therefore, every research study funded by the institute was published in peer-reviewed journals. Statement 4 directly contradicts this conclusion by stating that some research studies funded by the institute were not published in peer-reviewed journals."
-  },
-  {
-    "id": "gen-39-4",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All premium subscribers have access to exclusive content.",
-      "Some users with access to exclusive content are not premium subscribers.",
-      "No user who paid an annual fee is denied access to exclusive content.",
-      "All premium subscribers paid an annual fee."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "This set of statements is consistent. For instance, premium subscribers (Statement 1) paid an annual fee (Statement 4) and thus have exclusive content (Statement 3). The users described in Statement 2 (exclusive content, not premium subscriber) could be, for example, non-premium members who paid an annual fee for some other benefit that also grants exclusive content, or who received a promotional free trial. All statements can coexist in such a scenario."
-  },
-  {
-    "id": "gen-39-5",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All employees who attend the monthly meeting receive a productivity report.",
-      "No employee who receives a productivity report is eligible for flexible hours.",
-      "All employees who participate in the wellness program are eligible for flexible hours.",
-      "Some employees who attend the monthly meeting participate in the wellness program."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 create a chain: If an employee attends the monthly meeting, they receive a productivity report, and therefore they are not eligible for flexible hours. Thus, attending the monthly meeting implies not being eligible for flexible hours. Statement 3 states that participating in the wellness program implies being eligible for flexible hours. Statement 4 describes an employee who attends the monthly meeting AND participates in the wellness program. For such an employee, the chain from Statements 1 and 2 implies they are NOT eligible for flexible hours, while Statement 3 implies they ARE eligible for flexible hours. This is a direct contradiction."
-  },
-  {
-    "id": "gen-39-6",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All rare artifacts are protected by national heritage laws.",
-      "No item protected by national heritage laws can be exported without special permission.",
-      "Some items requiring special permission for export are not rare artifacts."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 combine to imply that all rare artifacts are protected by national heritage laws and therefore require special permission for export. Statement 3 says that some items requiring special permission for export are not rare artifacts. This is consistent; the set of items requiring special permission for export can be larger than, and include, the set of rare artifacts."
-  },
-  {
-    "id": "gen-39-7",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every successful startup company implemented a disruptive technology.",
-      "No company that implemented a disruptive technology operated without significant venture capital.",
-      "All companies that operated with significant venture capital entered the global market within five years.",
-      "Some successful startup companies did not enter the global market within five years."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a logical chain: If a company is a successful startup (Statement 1), then it implemented a disruptive technology. If it implemented a disruptive technology (Statement 2), then it operated with significant venture capital. If it operated with significant venture capital (Statement 3), then it entered the global market within five years. Therefore, every successful startup company entered the global market within five years. Statement 4 directly contradicts this conclusion by claiming that some successful startup companies did not enter the global market within five years."
-  },
-  {
-    "id": "gen-39-8",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All executives attending the conference registered online.",
-      "Some attendees who registered online did not submit a workshop proposal.",
-      "No executive attending the conference submitted a workshop proposal."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "This set of statements is consistent. Statement 1 and 3 establish that executives attending the conference registered online and did not submit workshop proposals. Statement 2 describes some attendees who registered online but did not submit a workshop proposal. These attendees could either be executives (consistent with 1 and 3) or non-executives who also registered online and chose not to submit a proposal. There is no contradiction."
-  },
-  {
-    "id": "gen-39-9",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All students enrolled in advanced placement courses are eligible for university credit.",
-      "No student eligible for university credit is required to take the introductory exam.",
-      "Every student who completed a prerequisite course is enrolled in an advanced placement course.",
-      "Some students who completed a prerequisite course are required to take the introductory exam."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 3, 1, and 2 form a logical chain: If a student completed a prerequisite course (Statement 3), then they are enrolled in an advanced placement course. If they are enrolled in an advanced placement course (Statement 1), then they are eligible for university credit. If they are eligible for university credit (Statement 2), then they are not required to take the introductory exam. Therefore, any student who completed a prerequisite course is not required to take the introductory exam. Statement 4 directly contradicts this conclusion by stating that some students who completed a prerequisite course are required to take the introductory exam."
-  },
-  {
-    "id": "gen-39-10",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All employees with full-time contracts receive health benefits.",
-      "Some employees who receive health benefits do not have full-time contracts.",
-      "No employee working less than 30 hours per week receives health benefits.",
-      "Every employee with a full-time contract works at least 30 hours per week."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "This set of statements is consistent. Statements 1 and 4 indicate that employees with full-time contracts receive health benefits and work at least 30 hours per week. Statement 3 means that anyone receiving health benefits must work at least 30 hours per week (contrapositive). Statement 2 describes employees who receive health benefits but don't have full-time contracts; these employees must still work at least 30 hours per week (from Statement 3's implication), which is entirely possible for certain part-time roles or contractors."
-  },
-  {
-    "id": "gen-40-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All birds of prey are carnivores.",
-      "If an animal is a carnivore, it has sharp talons.",
-      "No bird with sharp talons feeds exclusively on seeds.",
-      "The aviary's newest resident is a bird of prey that feeds exclusively on seeds."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 claims the newest resident is a bird of prey. From Statement 1, all birds of prey are carnivores, and from Statement 2, all carnivores have sharp talons. Thus, the newest resident must have sharp talons. However, Statement 3 says no bird with sharp talons feeds exclusively on seeds, which contradicts Statement 4's claim that the resident feeds exclusively on seeds. Removing Statement 4 resolves this by removing the specific entity that creates the contradiction."
-  },
-  {
-    "id": "gen-40-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every research project with a large budget requires external funding.",
-      "If a project requires external funding, it must undergo peer review.",
-      "No project that undergoes peer review avoids public disclosure.",
-      "Some research projects avoid public disclosure.",
-      "Project X has a large budget."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Project X, having a large budget (Statement 5), must require external funding (Statement 1), undergo peer review (Statement 2), and therefore not avoid public disclosure (Statement 3). This is consistent. The existence of some projects that avoid public disclosure (Statement 4) implies they do not undergo peer review, and thus do not require external funding, and do not have a large budget. This is entirely possible, as not all projects are Project X or have a large budget."
-  },
-  {
-    "id": "gen-40-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All successful writers have a unique voice.",
-      "If someone has a unique voice, they will attract dedicated readers.",
-      "No writer who attracts dedicated readers struggles with obscurity.",
-      "John is a writer who has a unique voice but struggles with obscurity."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 claims John has a unique voice. According to Statement 2, if John has a unique voice, he will attract dedicated readers. According to Statement 3, no writer who attracts dedicated readers struggles with obscurity. Therefore, John cannot struggle with obscurity. This contradicts Statement 4's assertion that John struggles with obscurity. Removing Statement 4 resolves the conflict by removing the specific individual that creates the contradiction."
-  },
-  {
-    "id": "gen-40-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All employees who receive a bonus have met their targets.",
-      "If an employee meets their targets, they are eligible for promotion.",
-      "Some employees are eligible for promotion even if they do not receive a bonus.",
-      "Mark received a bonus."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Mark received a bonus (Statement 4), which means he met his targets (Statement 1) and is eligible for promotion (Statement 2). This is consistent. Statement 3 suggests there are employees eligible for promotion who didn't receive a bonus. This is also consistent, as meeting targets (and thus eligibility for promotion) does not necessarily imply receiving a bonus; a bonus might have additional criteria beyond just meeting targets."
-  },
-  {
-    "id": "gen-40-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every successful politician supports campaign finance reform.",
-      "No one who supports campaign finance reform accepts corporate donations.",
-      "Maria accepts corporate donations.",
-      "If a politician does not accept corporate donations, they are honest.",
-      "Maria is a successful politician."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 5 indicates Maria is a successful politician. According to Statement 1, every successful politician supports campaign finance reform, and from Statement 2, no one who supports campaign finance reform accepts corporate donations. Therefore, Maria cannot accept corporate donations. This directly contradicts Statement 3, which claims Maria accepts corporate donations. Removing Statement 3 resolves the inconsistency. Statement 4 is irrelevant to this contradiction."
-  },
-  {
-    "id": "gen-40-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All professional athletes train daily.",
-      "If someone trains daily, they have high stamina.",
-      "Some people with high stamina are not professional athletes.",
-      "Some professional athletes also work part-time jobs."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statements 1 and 2, it follows that all professional athletes train daily and thus have high stamina. Statement 3, that some people with high stamina are not professional athletes, is consistent with this, simply implying that the group of people with high stamina is larger than just professional athletes. Statement 4, that some professional athletes work part-time, is also consistent as it does not contradict their daily training or high stamina. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-40-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a species is endangered, its habitat is protected.",
-      "No protected habitat permits commercial logging.",
-      "All areas where commercial logging is permitted are accessible by paved roads.",
-      "The natural preserve for the rare tree frog is endangered.",
-      "The natural preserve for the rare tree frog permits commercial logging."
-    ],
-    "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statement 4 states the preserve for the rare tree frog is endangered. According to Statement 1, its habitat must be protected. From Statement 2, no protected habitat permits commercial logging. Therefore, the natural preserve cannot permit commercial logging. This directly contradicts Statement 5, which claims the preserve permits commercial logging. Removing Statement 5 resolves the inconsistency. Statement 3 is not part of the contradictory chain."
-  },
-  {
-    "id": "gen-40-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All artists who exhibit at the gallery must submit a portfolio.",
-      "If an artist submits a portfolio, their work is reviewed by a panel.",
-      "Some artists whose work is reviewed by a panel receive immediate payment.",
-      "Clara is an artist who exhibits at the gallery."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Clara exhibits at the gallery (Statement 4), so she must submit a portfolio (Statement 1) and her work is reviewed by a panel (Statement 2). This is consistent. Statement 3, that some artists whose work is reviewed receive immediate payment, means it's possible for Clara to be one of them or not. There is no contradiction inherent in these statements."
-  },
-  {
-    "id": "gen-40-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Unless a student completes the advanced module, they cannot graduate with honors.",
-      "All students who complete the advanced module are required to write a thesis.",
-      "No student who writes a thesis submits their work late.",
-      "Emily is a student who graduated with honors.",
-      "Emily submitted her thesis work late."
-    ],
-    "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statement 4 says Emily graduated with honors. From Statement 1, this means she must have completed the advanced module. According to Statement 2, all students who complete the advanced module are required to write a thesis. From Statement 3, no student who writes a thesis submits their work late. Therefore, Emily could not have submitted her thesis work late. This contradicts Statement 5. Removing Statement 5 resolves the inconsistency."
-  },
-  {
-    "id": "gen-40-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All products certified organic contain no artificial preservatives.",
-      "If a product contains no artificial preservatives, it has a shorter shelf life.",
-      "Some products with a shorter shelf life are not certified organic.",
-      "The new juice blend contains artificial preservatives."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statement 1, if a product contains artificial preservatives (like the new juice blend in Statement 4), it cannot be certified organic. This is consistent. From Statement 2, if a product contains artificial preservatives, it does not necessarily mean it has a longer or shorter shelf life, as the condition 'no artificial preservatives' is required for a shorter shelf life, not 'artificial preservatives.' Statement 3, that some products with a shorter shelf life are not organic, is also consistent as the set of products with a shorter shelf life is not exclusive to organic products. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-41-1",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All students who registered for the workshop received a confirmation email.",
-      "No one who received a confirmation email missed the first session.",
-      "Some students who registered for the workshop missed the first session."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all registered students received an email. Statement 2 says no one who received an email missed the first session. These two statements together imply that all registered students did not miss the first session. This directly contradicts Statement 3, which claims some registered students did miss the first session."
-  },
-  {
-    "id": "gen-41-2",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All successful applicants submitted their portfolios on time.",
-      "Some applicants who submitted their portfolios on time were not successful.",
-      "Maria is a successful applicant."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All three statements can be true simultaneously. Maria, being a successful applicant, must have submitted her portfolio on time (from Statement 1). Statement 2 merely allows for other applicants who submitted on time but were not successful, which does not conflict with Maria's situation or the general rule."
-  },
-  {
-    "id": "gen-41-3",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Every participant who completed the survey received a prize.",
-      "No participant who answered inaccurately received a prize.",
-      "Some participants both completed the survey and answered inaccurately."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 indicates that anyone who completed the survey received a prize. Statement 2 states that no one who answered inaccurately received a prize. Therefore, a participant cannot both complete the survey (and get a prize) and answer inaccurately (and not get a prize). Statement 3 claims that some participants did both, which creates a contradiction."
-  },
-  {
-    "id": "gen-41-4",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a bird builds a nest in a tree, it will lay eggs.",
-      "All robins are birds that build nests in trees.",
-      "Some birds that lay eggs are not robins."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true. From Statement 1 and 2, it follows that all robins will lay eggs. Statement 3 simply asserts that there are other types of birds besides robins that lay eggs, which is entirely possible and does not conflict with the other two statements."
-  },
-  {
-    "id": "gen-41-5",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All committee members approved the budget proposal.",
-      "No one who approved the budget proposal raised objections.",
-      "Some committee members raised objections."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 implies that all committee members approved the budget. Statement 2 says that anyone who approved the budget did not raise objections. Therefore, it must be true that no committee member raised objections. This directly contradicts Statement 3, which asserts that some committee members did raise objections."
-  },
-  {
-    "id": "gen-41-6",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Every car manufactured after 2010 has an anti-lock braking system.",
-      "Some cars with anti-lock braking systems were manufactured before 2010.",
-      "The red sedan was manufactured in 2012."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All three statements are consistent. The red sedan, manufactured in 2012, would have an anti-lock braking system (from Statement 1). Statement 2 simply means that having an anti-lock braking system is not exclusive to newer cars, which does not create any conflict."
-  },
-  {
-    "id": "gen-41-7",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a dog is a terrier, it is a playful animal.",
-      "No animal that is kept indoors all day is a playful animal.",
-      "Fido is a terrier and is kept indoors all day."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 establishes that all terriers are playful animals. Statement 2 states that no animal kept indoors all day is a playful animal. Combined, this means that no terrier can be kept indoors all day. Statement 3, however, asserts that Fido is both a terrier and is kept indoors all day, which is a contradiction."
-  },
-  {
-    "id": "gen-41-8",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All successful chess players study strategy.",
-      "Some people who study strategy are not successful chess players.",
-      "If a person studies strategy, they might win tournaments."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true. Statement 1 and 2 are consistent, as it's possible for all successful players to study strategy while some who study strategy are not successful. Statement 3 uses the word 'might,' indicating possibility rather than certainty, and therefore does not create a conflict."
-  },
-  {
-    "id": "gen-41-9",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Every employee who attended the training received a certificate.",
-      "All employees who received a certificate were eligible for promotion.",
-      "Some employees who attended the training were not eligible for promotion."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 tells us that all employees who attended the training received a certificate. Statement 2 says that all employees who received a certificate were eligible for promotion. Together, these statements imply that all employees who attended the training were eligible for promotion. This directly contradicts Statement 3, which claims some employees who attended the training were not eligible for promotion."
-  },
-  {
-    "id": "gen-41-10",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All mammals are vertebrates.",
-      "No fish are mammals.",
-      "Whales are mammals."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All three statements can be true. From Statement 3 and Statement 1, it follows that whales are vertebrates. From Statement 3 and Statement 2, it follows that whales are not fish. None of these implications create any contradictions among the given statements."
-  },
-  {
-    "id": "gen-42-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a performer receives a standing ovation, they are eligible for the 'Star of the Show' award.",
-      "No performer who forgot their lines is eligible for the 'Star of the Show' award.",
-      "Every performer in the festival received a standing ovation.",
-      "Some performers in the festival forgot their lines."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 3, every performer in the festival received a standing ovation. From Statement 1, anyone receiving a standing ovation is eligible for the 'Star of the Show' award. Therefore, every performer in the festival is eligible for the award. However, Statement 4 claims some performers in the festival forgot their lines, and Statement 2 says no one who forgot their lines is eligible for the award. This leads to the conclusion that some performers in the festival are NOT eligible for the award, which contradicts the earlier conclusion. Removing Statement 4 resolves this contradiction by removing the assertion that some performers forgot their lines."
-  },
-  {
-    "id": "gen-42-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All healthy adult monarch butterflies migrate south for the winter.",
-      "If a monarch butterfly migrates south, it must feed on milkweed plants during its larval stage.",
-      "Some monarch butterflies feed on milkweed plants during their larval stage.",
-      "Some monarch butterflies are not healthy adults."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statements 1 and 2, all healthy adult monarch butterflies migrate south and therefore feed on milkweed plants. Statement 3 confirms that some monarch butterflies feed on milkweed, which could include the healthy adults. Statement 4 indicates that not all monarch butterflies are healthy adults, which is also consistent; the monarch butterflies mentioned in Statement 3 could be either healthy adults or not healthy adults, and there is no information that forces a contradiction."
-  },
-  {
-    "id": "gen-42-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If an artwork is valuable, it is kept in a secure vault.",
-      "No artwork displayed publicly is kept in a secure vault.",
-      "All artworks kept in a secure vault are insured.",
-      "The Emerald Idol is a valuable artwork displayed publicly."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 4 asserts that 'The Emerald Idol' is both a valuable artwork and displayed publicly. From Statement 1, if it is valuable, 'The Emerald Idol' must be kept in a secure vault. However, from Statement 2, if it is displayed publicly, 'The Emerald Idol' cannot be kept in a secure vault. This creates a contradiction: 'The Emerald Idol' cannot both be kept in a secure vault and not be kept in a secure vault simultaneously. Removing Statement 4, which makes the specific assertion about 'The Emerald Idol' having both properties, resolves the inconsistency. Statement 3 is irrelevant to this specific contradiction."
-  },
-  {
-    "id": "gen-42-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All research papers submitted for the conference undergo peer review.",
-      "If a research paper contains novel findings, it is published in a journal.",
-      "Some research papers published in a journal do not undergo peer review.",
-      "Every research paper submitted for the conference contains novel findings."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statements 4 and 2, any paper submitted for the conference contains novel findings and is thus published in a journal. Statement 1 indicates that these papers also undergo peer review. Statement 3 notes that some published papers do not undergo peer review; these papers are simply not among those submitted for the conference, which is entirely consistent with the other statements."
-  },
-  {
-    "id": "gen-42-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All residents of the Oakwood neighborhood own at least one pet.",
-      "If a household owns a pet, it subscribes to the local veterinary service.",
-      "No household that subscribes to the local veterinary service is eligible for municipal garden subsidies.",
-      "Some residents of the Oakwood neighborhood are eligible for municipal garden subsidies."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 1, all residents of the Oakwood neighborhood own a pet. From Statement 2, all households that own a pet subscribe to the local veterinary service. From Statement 3, no household subscribing to the local veterinary service is eligible for municipal garden subsidies. This chain implies that all residents of the Oakwood neighborhood are NOT eligible for municipal garden subsidies. Statement 4 directly contradicts this, claiming that some residents ARE eligible. Removing Statement 4 resolves the inconsistency."
-  },
-  {
-    "id": "gen-42-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All members of the city council attend public hearings.",
-      "If someone attends public hearings, they are informed about local issues.",
-      "Some people informed about local issues are not members of the city council.",
-      "Every person informed about local issues attends public hearings."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statement 1 and 2, all city council members attend public hearings and are informed about local issues. Statement 4 states that everyone informed about local issues attends public hearings, which, combined with Statement 2, implies that attending public hearings and being informed about local issues are equivalent conditions. Statement 3 merely states that some people informed about local issues are not city council members, which is consistent; there can be informed individuals who are not part of the council."
-  },
-  {
-    "id": "gen-42-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "A musician performs in the orchestra only if they passed the audition.",
-      "Unless a musician performs in the orchestra, they do not receive a stipend.",
-      "Every musician who passed the audition receives a stipend.",
-      "Some musicians who did not pass the audition receive a stipend."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 means that if a musician performs in the orchestra, they passed the audition. Statement 2 means that if a musician receives a stipend, they perform in the orchestra. Statement 3 means that if a musician passed the audition, they receive a stipend. Together, these imply that passing the audition, performing in the orchestra, and receiving a stipend are all equivalent conditions. Therefore, if a musician did NOT pass the audition, they do NOT receive a stipend. Statement 4 directly contradicts this by asserting that some musicians who did not pass the audition DO receive a stipend. Removing Statement 4 resolves the inconsistency."
-  },
-  {
-    "id": "gen-42-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All successful entrepreneurs possess a strong risk tolerance.",
-      "If a person has a strong risk tolerance, they are comfortable with uncertainty.",
-      "Some people comfortable with uncertainty are not successful entrepreneurs.",
-      "No one who is comfortable with uncertainty avoids taking risks."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statements 1 and 2, all successful entrepreneurs possess a strong risk tolerance and are therefore comfortable with uncertainty. Statement 3 asserts that some people comfortable with uncertainty are not successful entrepreneurs, which is consistent; the group of people comfortable with uncertainty is not necessarily limited to successful entrepreneurs. Statement 4 states that all people comfortable with uncertainty take risks, which adds an additional consistent attribute."
-  },
-  {
-    "id": "gen-42-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All birds native to this region nest in deciduous trees.",
-      "If a bird nests in a deciduous tree, it eats primarily insects.",
-      "No bird that eats primarily insects migrates in winter.",
-      "Some birds that migrate in winter are native to this region."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 1, all birds native to this region nest in deciduous trees. From Statement 2, all birds that nest in deciduous trees eat primarily insects. From Statement 3, no bird that eats primarily insects migrates in winter. This chain implies that all birds native to this region do NOT migrate in winter. Statement 4, however, states that some birds that migrate in winter ARE native to this region. This means some birds native to this region both migrate and do not migrate in winter, which is a contradiction. Removing Statement 4 resolves this by removing the assertion that some migratory birds are native to the region."
-  },
-  {
-    "id": "gen-42-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All successful businesses invest in employee training.",
-      "If a business invests in employee training, it prioritizes innovation.",
-      "Some businesses that prioritize innovation are not successful businesses.",
-      "Every business that prioritizes innovation is well-managed."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. From Statements 1 and 2, all successful businesses invest in employee training and thus prioritize innovation. Statement 3 acknowledges that some businesses that prioritize innovation are not successful, which is consistent; prioritizing innovation does not guarantee success. Statement 4 adds that all businesses prioritizing innovation are well-managed, which further refines the category of 'businesses that prioritize innovation' without creating a conflict."
-  },
-  {
-    "id": "gen-43-1",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All musicians are artists.",
-      "No artist is a scientist.",
-      "Some musicians are scientists."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all musicians are artists. Statement 2 says no artist is a scientist. This implies that no musician is a scientist. Statement 3 directly contradicts this, claiming some musicians are scientists. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-43-2",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every cat enjoys playing with string.",
-      "Some animals that enjoy playing with string are not cats.",
-      "No dog is a cat."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. It is possible for all cats to enjoy string, for other animals (like ferrets) to also enjoy string but not be cats, and for dogs to not be cats. No logical contradiction arises."
-  },
-  {
-    "id": "gen-43-3",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "If a bird is a robin, then it lays blue eggs.",
-      "No bird that lays blue eggs is a migratory bird.",
-      "All robins are migratory birds."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 establishes that robins lay blue eggs. Statement 2 states that birds laying blue eggs are not migratory. This logically leads to the conclusion that robins are not migratory birds. This conclusion directly contradicts Statement 3, which asserts all robins are migratory birds. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-43-4",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All students in the class submitted their homework.",
-      "Some students in the class also presented a project.",
-      "No student who presented a project failed the course."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. It is possible for all students to submit homework, for a subset of those students to also present projects, and for none of the project-presenting students to fail the course. The students who did not present projects could have passed or failed without creating a contradiction."
-  },
-  {
-    "id": "gen-43-5",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every employee who received an award attended the gala.",
-      "No one who attended the gala missed the congratulatory speech.",
-      "Some employees who received an award missed the congratulatory speech."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 indicates that all award recipients attended the gala. Statement 2 states that no one who attended the gala missed the congratulatory speech. Therefore, it must be true that no employee who received an award missed the congratulatory speech. Statement 3 directly contradicts this conclusion. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-43-6",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All residents of the building have a parking permit.",
-      "Some residents of the building also have a bicycle.",
-      "No one who has a bicycle is eligible for a motorcycle permit.",
-      "All residents with a parking permit are eligible for a motorcycle permit."
-    ],
-    "isConsistent": false,
-    "answerIndex": 1,
-    "explanation": "From Statement 1, all residents have a parking permit. From Statement 4, all residents with a parking permit are eligible for a motorcycle permit. Combining these, all residents are eligible for a motorcycle permit. However, Statement 2 says some residents have a bicycle, and Statement 3 says no one with a bicycle is eligible for a motorcycle permit. Combining these means some residents are not eligible for a motorcycle permit. This contradicts the earlier conclusion. Removing Statement 2 resolves the inconsistency, as there would then be no residents with bicycles to prevent eligibility."
-  },
-  {
-    "id": "gen-43-7",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All participants in the study were over 30 years old.",
-      "Some participants in the study had prior medical conditions.",
-      "No one with prior medical conditions was allowed to take the new medication.",
-      "The new medication was only given to participants over 30 years old."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. All participants are over 30 (Statement 1). Some of these participants have medical conditions (Statement 2) and are not allowed the medication (Statement 3). Other participants, also over 30, do not have medical conditions and could be allowed the medication. Statement 4 simply reiterates a condition already met by all participants."
-  },
-  {
-    "id": "gen-43-8",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All dogs are mammals.",
-      "Some mammals are not dogs.",
-      "Every animal that barks is a dog.",
-      "There is an animal that barks but is not a mammal."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 3 indicates that every animal that barks is a dog. Statement 1 indicates that all dogs are mammals. Combining these, it logically follows that every animal that barks is a mammal. This directly contradicts Statement 4, which claims there is an animal that barks but is not a mammal. Removing Statement 4 resolves the inconsistency."
-  },
-  {
-    "id": "gen-43-9",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All teachers attended the faculty meeting.",
-      "Some faculty members do not teach.",
-      "No one who attended the faculty meeting was absent from campus for the entire day.",
-      "Some teachers were absent from campus for part of the day."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Teachers attended the meeting, meaning they were present on campus for at least part of the day. Therefore, they were not absent for the entire day, satisfying Statement 3. It's possible for some teachers to be present for the meeting and then leave, being absent for part of the day, without having been absent for the *entire* day. Other faculty members might not be teachers. All statements can simultaneously be true."
-  },
-  {
-    "id": "gen-43-10",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "Every student who passed the exam studied diligently.",
-      "No student who studied diligently failed the course.",
-      "Some students passed the exam, but failed the course."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 establishes that students who passed the exam studied diligently. Statement 2 states that students who studied diligently did not fail the course. Therefore, it must be true that students who passed the exam did not fail the course. Statement 3 directly contradicts this conclusion. Removing Statement 3 resolves the inconsistency."
-  },
-  {
-    "id": "gen-44-1",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All owls hunt at night.",
-      "No animal that hunts at night is awake during the day.",
-      "At least one animal that is awake during the day is an owl."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says all owls hunt at night. Statement 2 says no animal that hunts at night is awake during the day. This logically implies that no owl is awake during the day. However, Statement 3 asserts that at least one animal awake during the day is an owl, which directly contradicts the conclusion that no owl is awake during the day."
-  },
-  {
-    "id": "gen-44-2",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every successful entrepreneur has a strong work ethic.",
-      "Some people with a strong work ethic are not successful entrepreneurs.",
-      "Not all people with a strong work ethic become wealthy."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 establishes a necessary condition for successful entrepreneurs. Statement 2 clarifies that the condition is not sufficient. Statement 3 indicates that having a strong work ethic does not guarantee wealth. These conditions can all be true simultaneously."
-  },
-  {
-    "id": "gen-44-3",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "If a plant is a rose, it has thorns.",
-      "All plants with thorns require direct sunlight.",
-      "No plant that requires direct sunlight can grow in shade.",
-      "Some roses can grow in shade."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 form a chain: if a plant is a rose, it has thorns (1); if it has thorns, it requires direct sunlight (2); if it requires direct sunlight, it cannot grow in shade (3). This means that no rose can grow in shade. Statement 4, however, claims that some roses can grow in shade, which directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-44-4",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All students who passed the exam studied diligently.",
-      "Some students who studied diligently did not pass the exam.",
-      "Not all students who received a good grade studied diligently."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 indicates a characteristic of students who passed. Statement 2 specifies that studying diligently is not a guarantee of passing. Statement 3 implies that good grades can be achieved without diligent study. There is no logical contradiction among these claims."
-  },
-  {
-    "id": "gen-44-5",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every successful author is a disciplined writer.",
-      "No disciplined writer submits messy manuscripts.",
-      "Some authors who submit messy manuscripts are also successful authors."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 create a chain: if an author is successful, they are a disciplined writer (1), and no disciplined writer submits messy manuscripts (2). Therefore, no successful author submits messy manuscripts. Statement 3, however, asserts that some authors who submit messy manuscripts are successful authors, which directly contradicts this derived conclusion."
-  },
-  {
-    "id": "gen-44-6",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All effective leaders inspire confidence.",
-      "Some individuals who inspire confidence are not effective leaders.",
-      "Inspiring confidence is necessary for strong team cohesion."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 sets a characteristic of effective leaders. Statement 2 shows that the characteristic is not unique to them. Statement 3 establishes a prerequisite for team cohesion. These conditions can coexist without contradiction; for example, someone could inspire confidence and team cohesion without being an effective leader."
-  },
-  {
-    "id": "gen-44-7",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All successful managers are excellent communicators.",
-      "No excellent communicator struggles with public speaking.",
-      "Every manager with poor team morale struggles with public speaking.",
-      "Some successful managers have poor team morale."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 imply that all successful managers do not struggle with public speaking. Statement 4 indicates that there is at least one successful manager who also has poor team morale. For this manager, according to Statement 3, they must struggle with public speaking. This creates a contradiction: a successful manager both struggles and does not struggle with public speaking."
-  },
-  {
-    "id": "gen-44-8",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All valid arguments have true premises.",
-      "Some arguments with true premises are not valid.",
-      "No argument with a false conclusion is a valid argument."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 defines a property of valid arguments. Statement 2 clarifies that having true premises is not sufficient for an argument to be valid. Statement 3 indicates that a valid argument cannot lead to a false conclusion. There is no logical conflict among these definitions and conditions."
-  },
-  {
-    "id": "gen-44-9",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "Every resident of the building has a parking permit.",
-      "No one with a parking permit parks on the street.",
-      "If someone parks in the visitor lot, they do not have a parking permit.",
-      "Some residents of the building park in the visitor lot."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Let's consider a resident who parks in the visitor lot, as specified by Statement 4. According to Statement 1, every resident has a parking permit. So, this resident has a parking permit. However, Statement 3 states that if someone parks in the visitor lot, they do not have a parking permit. This means the resident in question both has and does not have a parking permit, which is a direct contradiction."
-  },
-  {
-    "id": "gen-44-10",
-    "difficulty": "hard",
-    "category": "syllogism",
-    "statements": [
-      "All plants that thrive in drought conditions have deep root systems.",
-      "Some plants with deep root systems do not thrive in drought conditions.",
-      "If a plant has a deep root system, it conserves water effectively.",
-      "Not every plant that conserves water effectively has deep root systems."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "These statements are consistent. Statement 1 identifies a characteristic of drought-thriving plants. Statement 2 clarifies that deep roots are not exclusive to drought-thriving plants. Statement 3 describes an advantage of deep root systems. Statement 4 indicates that water conservation is not solely dependent on deep root systems. No contradiction arises from these conditions."
-  },
-  {
-    "id": "gen-45-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a candidate is qualified, they pass the interview.",
-      "A candidate passes the interview only if they receive a recommendation.",
-      "Every qualified candidate lacks a recommendation."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statement 1 says that if a candidate is qualified, they pass the interview. Statement 2 means that if a candidate passes the interview, they receive a recommendation. Together, these imply that if a candidate is qualified, they receive a recommendation. Statement 3, however, states that every qualified candidate lacks a recommendation, which directly contradicts this derived conclusion."
-  },
-  {
-    "id": "gen-45-2",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All owls hunt at night.",
-      "If an animal hunts at night, it has excellent night vision.",
-      "Some animals with excellent night vision are not owls.",
-      "No animal with excellent night vision hunts during the day."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 establish that all owls have excellent night vision. Statement 3 is consistent, as it is possible for some animals with excellent night vision to not be owls. Statement 4 provides an additional characteristic of animals with excellent night vision, which is not contradicted by any other statement. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-45-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a plant is a rose, it has thorns.",
-      "All plants with thorns require careful handling.",
-      "Some plants that require careful handling are not roses.",
-      "There is at least one rose that does not require careful handling."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 says that if a plant is a rose, it has thorns. Statement 2 says that all plants with thorns require careful handling. Together, these imply that all roses require careful handling. Statement 4, however, states that there is at least one rose that does not require careful handling, which directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-45-4",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Unless an item is fragile, it is shipped by standard mail.",
-      "If an item is shipped by standard mail, it is not insured.",
-      "Some fragile items are insured.",
-      "No item is both fragile and not insured."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 together imply that if an item is not fragile, it is not insured. The contrapositive of this means that if an item is insured, it is fragile. Statement 4 means that if an item is fragile, it must be insured. Therefore, an item is fragile if and only if it is insured. Statement 3 (Some fragile items are insured) is perfectly consistent with this relationship. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-45-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All engineers on the team attended the leadership summit.",
-      "If an engineer attended the leadership summit, they submitted a project proposal.",
-      "No engineer who submitted a project proposal was denied promotion.",
-      "Some engineers on the team were denied promotion."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 says that all engineers on the team attended the leadership summit. Statement 2 says that if an engineer attended the leadership summit, they submitted a project proposal. Statement 3 says that no engineer who submitted a project proposal was denied promotion. Together, these imply that all engineers on the team were not denied promotion. Statement 4, however, claims that some engineers on the team were denied promotion, which directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-45-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student is eligible for the scholarship, they have a GPA of 3.8 or higher.",
-      "All students with a GPA of 3.8 or higher have completed at least 60 credits.",
-      "Some students who have completed at least 60 credits are not eligible for the scholarship.",
-      "No student eligible for the scholarship has completed fewer than 60 credits."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 establish that all students eligible for the scholarship have completed at least 60 credits. Statement 4 reiterates this point, which is consistent. Statement 3 allows for students who completed 60+ credits but are not scholarship-eligible, which is also consistent with the overall logic. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-45-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All successful applicants submitted a strong portfolio.",
-      "No applicant who failed to meet the language requirement submitted a strong portfolio.",
-      "Some applicants who met the language requirement were unsuccessful.",
-      "Every applicant who was successful also failed to meet the language requirement."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 says that all successful applicants submitted a strong portfolio. Statement 2 means that if an applicant submitted a strong portfolio, they met the language requirement. Together, these imply that every successful applicant met the language requirement. Statement 4, however, claims that every applicant who was successful also failed to meet the language requirement, which directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-45-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a movie is a classic, it is widely acclaimed.",
-      "Every movie that is widely acclaimed also has a high IMDb rating.",
-      "Some movies with a high IMDb rating are not classics.",
-      "No movie that is a classic lacks a high IMDb rating."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 establish that all classic movies have a high IMDb rating. Statement 4 reiterates this point, which is consistent. Statement 3 indicates that there are some movies with a high IMDb rating that are not classics, which is also consistent with the general principle that the category of movies with high IMDb ratings can be broader than just classic movies. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-45-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All citizens eligible to vote are registered.",
-      "If a citizen is registered, they possess a valid ID.",
-      "No citizen who possesses a valid ID is unable to cast a ballot.",
-      "Some citizens eligible to vote are unable to cast a ballot."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statement 1 says that all citizens eligible to vote are registered. Statement 2 says that if a citizen is registered, they possess a valid ID. Statement 3 says that no citizen who possesses a valid ID is unable to cast a ballot. Together, these imply that all citizens eligible to vote are able to cast a ballot. Statement 4, however, states that some citizens eligible to vote are unable to cast a ballot, which directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-45-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a substance is a metal, it conducts electricity.",
-      "All substances that conduct electricity are solids at room temperature.",
-      "Some solids at room temperature are not metals.",
-      "No metal is a liquid at room temperature."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "Statements 1 and 2 establish that all metals are solids at room temperature. Statement 3 is consistent, as it means the group of solids at room temperature can include substances other than metals. Statement 4 provides an additional characteristic of metals, which does not contradict any other statement and is consistent with metals being solids at room temperature. All statements can be true simultaneously."
-  },
-  {
-    "id": "gen-46-1",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All dogs enjoy chasing squirrels.",
-      "No animal that enjoys chasing squirrels is afraid of cats.",
-      "Some dogs are afraid of cats."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 logically imply that all dogs are not afraid of cats. Statement 3, which claims some dogs are afraid of cats, directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-46-2",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a plant requires daily watering, it is a tropical species.",
-      "All ferns are tropical species.",
-      "Some plants that do not require daily watering are ferns."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Ferns are tropical, and some might not need daily watering, which is consistent with the rule that plants requiring daily watering are tropical (but not all tropical plants require daily watering)."
-  },
-  {
-    "id": "gen-46-3",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Every member of the hiking club owns a backpack.",
-      "No one who owns a backpack is afraid of heights.",
-      "Sarah is a member of the hiking club.",
-      "Sarah is afraid of heights."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1, 2, and 3 logically imply that Sarah is not afraid of heights. Statement 4, which claims Sarah is afraid of heights, directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-46-4",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All students who passed the exam studied diligently.",
-      "Some students who studied diligently did not pass the exam.",
-      "Lisa passed the exam."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. Lisa passed the exam, so she studied diligently. It is also consistent that some other students studied diligently but did not pass."
-  },
-  {
-    "id": "gen-46-5",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If an animal is a primate, it has opposable thumbs.",
-      "No animal that has opposable thumbs is a rodent.",
-      "Some primates are rodents."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 logically imply that no primates are rodents. Statement 3, which claims some primates are rodents, directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-46-6",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All birds can fly.",
-      "Some creatures that can fly are not birds.",
-      "No birds are mammals."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. For example, bats can fly but are not birds, consistent with Statements 1 and 2. Statement 3 is also consistent with birds being distinct from mammals."
-  },
-  {
-    "id": "gen-46-7",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "Every successful entrepreneur has strong leadership skills.",
-      "Anyone with strong leadership skills is an excellent communicator.",
-      "Some successful entrepreneurs are not excellent communicators."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 logically imply that every successful entrepreneur is an excellent communicator. Statement 3, which claims some successful entrepreneurs are not excellent communicators, directly contradicts this conclusion."
-  },
-  {
-    "id": "gen-46-8",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All birds have feathers.",
-      "No mammals have feathers.",
-      "Some animals with feathers are not birds.",
-      "Some mammals can fly."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. For instance, birds have feathers, mammals don't. Insects could be animals with feathers that are not birds. Bats are mammals that can fly, and they do not have feathers, consistent with the other statements."
-  },
-  {
-    "id": "gen-46-9",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "All reptiles are cold-blooded animals.",
-      "Some cold-blooded animals are not reptiles.",
-      "Some reptiles live in deserts."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "All statements can be true simultaneously. For example, fish are cold-blooded animals but not reptiles. Some reptiles, being cold-blooded, can live in deserts."
-  },
-  {
-    "id": "gen-46-10",
-    "difficulty": "medium",
-    "category": "syllogism",
-    "statements": [
-      "If a book is a mystery novel, it has a thrilling plot.",
-      "All books with a thrilling plot are popular among readers.",
-      "No historical fiction books are popular among readers.",
-      "Some mystery novels are also historical fiction."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 1 and 2 logically imply that all mystery novels are popular among readers. If statement 4 is true, then some historical fiction books are mystery novels and thus popular. However, statement 3 claims no historical fiction books are popular, creating a direct contradiction."
-  },
-  {
-    "id": "gen-47-1",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every research paper submitted before the deadline receives initial feedback.",
-      "No paper receiving initial feedback is automatically accepted.",
-      "Papers that are not automatically accepted always require a secondary review.",
-      "If a paper requires a secondary review, its authors must attend an oral defense.",
-      "Some research papers submitted before the deadline never require authors to attend an oral defense."
-    ],
-    "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 1, 2, 3, and 4 create a chain of implications: if a paper is submitted before the deadline, then it receives initial feedback, then it is not automatically accepted, then it requires a secondary review, and therefore its authors must attend an oral defense. This implies all papers submitted before the deadline require an oral defense. Statement 5 contradicts this by claiming some of these papers do not require an oral defense. Removing Statement 5 resolves this direct contradiction."
-  },
-  {
-    "id": "gen-47-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a student passes the final exam, they receive a course certificate.",
-      "No student who missed more than three classes received a course certificate.",
-      "Every student enrolled in this program passed the final exam.",
-      "Some students enrolled in this program missed more than three classes."
-    ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 3 and 1 together imply that every student in the program received a course certificate. Statement 2 implies that no student who missed more than three classes received a course certificate. Statement 4 indicates that some students in the program did miss more than three classes. For these specific students, the logic leads to a contradiction: they both received a certificate and did not receive a certificate. Removing Statement 4 makes the set consistent, as the group of students causing the contradiction is no longer asserted to exist."
-  },
-  {
-    "id": "gen-47-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a vehicle is a car, it has four wheels.",
-      "Vehicles with four wheels are always registered.",
-      "No registered vehicle is exempt from road tax.",
-      "Every vehicle in the company fleet is a car.",
-      "At least one vehicle in the company fleet is exempt from road tax."
-    ],
-    "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 4, 1, 2, and 3 create a chain of implications: every vehicle in the company fleet is a car, therefore has four wheels, is registered, and is not exempt from road tax. This means all vehicles in the company fleet are not exempt from road tax. Statement 5 directly contradicts this by asserting that at least one vehicle in the company fleet *is* exempt from road tax. Removing Statement 5 resolves this contradiction."
-  },
-  {
-    "id": "gen-47-7",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "Every time the alarm sounds, the security system is active.",
-      "If the security system is active, all entry points are locked.",
-      "No entry point with a triggered sensor is ever locked.",
-      "The alarm sounded earlier today.",
-      "At least one entry point sensor was triggered earlier today."
-    ],
-    "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 1, 2, and 4 together imply that since the alarm sounded, the security system is active and therefore all entry points are locked. Statement 3 asserts that any entry point with a triggered sensor is not locked. Statement 5 states that at least one entry point sensor was triggered. This leads to a contradiction: that specific entry point must be both locked (from the alarm sounding) and not locked (from its sensor being triggered). Removing Statement 5 resolves this by removing the assertion of a triggered sensor."
-  },
-  {
-    "id": "gen-47-9",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "A permit is issued only if the application is complete.",
-      "If an application is complete, all supporting documents are attached.",
-      "No supporting documents are attached unless they are officially stamped.",
-      "A permit was issued for Project Alpha.",
-      "Not all supporting documents for Project Alpha were officially stamped."
-    ],
-    "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 4, 1, 2, and 3 form a chain of implications: since a permit was issued for Project Alpha, its application was complete, therefore all supporting documents were attached, and thus all those documents were officially stamped. This leads to the conclusion that all supporting documents for Project Alpha were officially stamped. Statement 5 directly contradicts this by stating that not all supporting documents for Project Alpha were officially stamped. Removing Statement 5 resolves the contradiction."
-  },
-  {
-    "id": "gen-48-1",
-    "difficulty": "medium",
-    "category": "quantifier",
-    "statements": [
-      "All students who scored above 90% received a commendation.",
-      "No student who received a commendation also received a penalty.",
-      "Some students who scored above 90% received a penalty."
-    ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together imply that no student who scored above 90% received a penalty. Statement 3 directly contradicts this conclusion. Removing Statement 3 resolves the inconsistency."
+    "explanation": "Statement 1 establishes that all owls are nocturnal birds. Statement 2 asserts that no nocturnal birds hunt during the day. Taken together, this means no owls hunt during the day. This conclusion directly contradicts Statement 3, which claims some owls do hunt during the day. Removing Statement 3 resolves the inconsistency."
   },
   {
     "id": "gen-48-2",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All lawyers are fluent in at least two languages.",
-      "Some people fluent in at least two languages are not lawyers.",
-      "All professors are lawyers."
+      "All roses are flowers.",
+      "Some flowers are not red.",
+      "Every rose is red."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statement 1 indicates all lawyers are fluent in at least two languages. Statement 2 says some people fluent in at least two languages are not lawyers, which is consistent. Statement 3 asserts all professors are lawyers. These statements can all be true simultaneously. There is no contradiction."
+    "explanation": "It is consistent for all roses (which are flowers) to be red, while other types of flowers exist that are not red. For example, red roses exist, and bluebells (flowers) are not red. There is no contradiction among these statements."
   },
   {
     "id": "gen-48-3",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All participants who completed the survey received a gift voucher.",
-      "Some participants did not receive a gift voucher.",
-      "Every participant completed the survey."
+      "If an animal is a feline, it has whiskers.",
+      "Every animal with whiskers consumes meat.",
+      "Some felines do not consume meat."
     ],
     "isConsistent": false,
-    "answerIndex": 1,
-    "explanation": "Statements 1 and 3 together imply that every participant received a gift voucher. Statement 2 directly contradicts this conclusion by asserting that some participants did not receive a gift voucher. Removing Statement 2 resolves the inconsistency."
+    "answerIndex": 2,
+    "explanation": "Statement 1 says that all felines have whiskers. Statement 2 states that every animal with whiskers consumes meat. Therefore, it logically follows that all felines consume meat. This conclusion directly contradicts Statement 3, which claims some felines do not consume meat. Removing Statement 3 resolves the inconsistency."
   },
   {
     "id": "gen-48-4",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All birds lay eggs.",
-      "Some animals that lay eggs can fly.",
-      "Some birds can fly."
+      "All mammals have fur.",
+      "Some animals with fur are not mammals.",
+      "Every dog is a mammal."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statement 1 establishes that all birds lay eggs. Statement 2 confirms that some animals that lay eggs can fly. It is entirely possible for some birds (which are egg-laying animals) to be among those that can fly, making Statement 3 consistent with the others. There is no contradiction."
+    "explanation": "It is consistent for all mammals (including dogs) to have fur, and for some other animals that are not mammals (e.g., certain insects) to also have fur. All three statements can be true simultaneously."
   },
   {
     "id": "gen-48-5",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "If a document contains classified information, it must be stored in a secure vault.",
-      "No document stored in a secure vault is ever accessible to the public.",
-      "Some documents containing classified information are accessible to the public."
+      "All members of the chess club are skilled strategists.",
+      "No skilled strategists enjoy playing card games.",
+      "At least one member of the chess club enjoys playing card games."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together imply that if a document contains classified information, it is not accessible to the public. Statement 3 directly contradicts this conclusion by stating that some documents containing classified information are accessible to the public. Removing Statement 3 resolves the inconsistency."
+    "explanation": "Statement 1 indicates that all chess club members are skilled strategists. Statement 2 claims that no skilled strategists enjoy playing card games. From these two statements, it must be true that no members of the chess club enjoy playing card games. This directly conflicts with Statement 3, which asserts that at least one member does enjoy card games. Removing Statement 3 resolves the inconsistency."
   },
   {
     "id": "gen-48-6",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All scientists are researchers.",
-      "Some researchers are not academics.",
-      "All engineers are academics."
+      "No students who passed the exam failed the course.",
+      "Some students who passed the exam also passed the course.",
+      "Every student who passed the exam studied diligently."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "All scientists are researchers. Some researchers are not academics. All engineers are academics. These statements can all be true simultaneously. For example, some researchers who are not academics might be scientists, or they might be a different group of researchers. Engineers, being academics, are distinct from those non-academic researchers. There is no logical contradiction."
+    "explanation": "Statement 1 means all students who passed the exam also passed the course. Statement 2, which says some students who passed the exam also passed the course, is entirely consistent with Statement 1 (as 'some' is implied by 'all'). Statement 3 introduces another condition (studying diligently) that applies to all students who passed the exam, which does not conflict with the other statements. All statements can be true at once."
   },
   {
     "id": "gen-48-7",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "Every vehicle parked in this lot requires a permit.",
-      "No vehicle with a permit is allowed to stay overnight.",
-      "At least one vehicle in this lot is allowed to stay overnight."
+      "Every fruit on this tree is an apple.",
+      "Some fruits on this tree are not red.",
+      "All apples are red."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together establish that no vehicle parked in this lot is allowed to stay overnight. Statement 3 directly contradicts this by claiming that at least one vehicle in this lot is allowed to stay overnight. Removing Statement 3 resolves the inconsistency."
+    "answerIndex": 1,
+    "explanation": "Statement 1 says that every fruit on this tree is an apple. Statement 3 claims that all apples are red. Therefore, it logically follows that all fruits on this tree are red. This conclusion directly contradicts Statement 2, which states that some fruits on this tree are not red. Removing Statement 2 resolves the inconsistency."
   },
   {
     "id": "gen-48-8",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "No musicians are athletes.",
-      "Some artists are musicians.",
-      "Some artists are not athletes."
+      "All residents of this town pay property taxes.",
+      "Some people who pay property taxes do not live in this town.",
+      "Mark lives in this town."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statement 1 specifies that no musicians are athletes. Statement 2 indicates that some artists are musicians. It logically follows from these two statements that those artists who are musicians must also not be athletes, which means Statement 3, \"Some artists are not athletes,\" is a direct consequence and thus consistent with the other statements."
+    "explanation": "It is consistent that Mark, as a resident, pays property taxes, and that there are other people who pay property taxes but do not live in this town (e.g., they own property here but reside elsewhere). All statements can be simultaneously true."
   },
   {
     "id": "gen-48-9",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "If an animal is a feline, it is a predator.",
-      "All predators have sharp claws.",
-      "Some felines do not have sharp claws."
+      "All chefs are good cooks.",
+      "No good cooks work in this restaurant.",
+      "Some people who work in this restaurant are chefs."
     ],
     "isConsistent": false,
     "answerIndex": 2,
-    "explanation": "Statements 1 and 2 together imply that all felines have sharp claws. Statement 3 directly contradicts this conclusion by asserting that some felines do not have sharp claws. Removing Statement 3 resolves the inconsistency."
+    "explanation": "Statement 1 states that all chefs are good cooks. Statement 2 asserts that no good cooks work in this restaurant. From these two premises, it necessarily follows that no chefs work in this restaurant. This directly contradicts Statement 3, which claims that some people who work in this restaurant are chefs. Removing Statement 3 resolves the inconsistency."
   },
   {
     "id": "gen-48-10",
     "difficulty": "medium",
     "category": "quantifier",
     "statements": [
-      "All doctors have medical degrees.",
-      "No one with a medical degree is unqualified to practice.",
-      "Some doctors are qualified to practice."
+      "Every participant in the race completed the first lap.",
+      "All participants who completed the first lap finished the race.",
+      "Some participants finished the race."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "Statements 1 and 2 together imply that all doctors are qualified to practice. Statement 3, which asserts that some doctors are qualified to practice, is a logical consequence of the conclusion that all doctors are qualified to practice (assuming there are doctors). Therefore, all three statements are consistent with each other."
+    "explanation": "Statement 1 indicates that all participants completed the first lap. Statement 2 says all who completed the first lap finished the race. Together, these imply that every participant in the race finished the race. Statement 3, which states that some participants finished the race, is a logical consequence of 'every participant finished the race' and is therefore consistent. All statements can be true simultaneously."
   },
   {
     "id": "gen-49-1",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All professional athletes are required to undergo regular medical check-ups.",
-      "No one who undergoes regular medical check-ups is permitted to use performance-enhancing drugs.",
-      "Some individuals on the national cycling team use performance-enhancing drugs.",
-      "Every member of the national cycling team is a professional athlete."
+      "If a dog is a terrier, it is energetic.",
+      "All energetic dogs require daily walks.",
+      "Some dogs at the shelter are terriers.",
+      "No dog at the shelter requires daily walks."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 1, 2, and 4 establish a chain: every member of the national cycling team is a professional athlete, who must undergo medical check-ups, and therefore cannot use performance-enhancing drugs. This implies no member of the national cycling team uses performance-enhancing drugs. Statement 3 directly contradicts this conclusion by asserting some members do use them. Removing Statement 3 resolves the inconsistency."
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 establish that all terriers are energetic and all energetic dogs require daily walks, meaning all terriers require daily walks. Statement 3 claims that some dogs at the shelter are terriers. This logically entails that some dogs at the shelter require daily walks, which directly contradicts Statement 4, which claims no dog at the shelter requires daily walks. Removing Statement 4 resolves this conflict."
   },
   {
     "id": "gen-49-2",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful startups offer a unique product or service.",
-      "No company that fails to attract significant investment is a successful startup.",
-      "Some companies with a unique product or service do not attract significant investment.",
-      "Every company that attracts significant investment eventually becomes a successful startup."
+      "All successful novelists are imaginative.",
+      "No imaginative writer lacks originality.",
+      "Some novelists are not original."
     ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. It is possible for some companies with a unique product or service to not attract significant investment, and thus not become successful startups, while still allowing all successful startups to have a unique product and attract investment. The statements describe different subsets of companies without creating a necessary contradiction."
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together imply that all successful novelists are imaginative, and all imaginative writers are original. This means every successful novelist must be original. Statement 3 directly contradicts this conclusion by asserting that some novelists are not original. Removing Statement 3 makes the set consistent."
   },
   {
     "id": "gen-49-3",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "If a bird migrates south for the winter, it builds a nest in a warm climate.",
-      "No bird that builds a nest in a warm climate remains in the region for the summer.",
-      "Every bird that hatches its young in the region for the summer also migrates south for the winter.",
-      "Some birds that hatch their young in the region for the summer do remain in the region for the summer."
+      "All visitors to the conference receive a name badge.",
+      "No one who receives a name badge is exempt from the security check.",
+      "Some people at the conference are visitors.",
+      "Every person at the conference is exempt from the security check."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "Statements 3, 1, and 2 form a logical chain: if a bird hatches its young in the region for the summer, it migrates south for the winter; if it migrates south, it builds a nest in a warm climate; if it builds a nest in a warm climate, it does not remain in the region for the summer. This chain implies that no bird that hatches its young in the region for the summer remains in the region for the summer. Statement 4 directly contradicts this conclusion by claiming some birds that hatch their young in the region for the summer do remain in the region for the summer. Removing Statement 4 resolves the inconsistency."
+    "explanation": "Statements 1 and 2 indicate that all visitors to the conference receive a name badge and are, therefore, not exempt from the security check. Statement 3 asserts that some people at the conference are visitors. This logically means some people at the conference are not exempt from the security check, which directly contradicts Statement 4, claiming that every person at the conference is exempt. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-49-4",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "A student is eligible for the advanced seminar only if they have completed the prerequisite course.",
-      "No student who has completed the prerequisite course has failed the placement test.",
-      "Unless a student passes the placement test, they cannot enroll in the advanced seminar.",
-      "Some students who passed the placement test have not completed the prerequisite course."
+      "Every chef at the restaurant is a culinary school graduate.",
+      "No culinary school graduate has less than five years of experience.",
+      "Some chefs at the restaurant have less than five years of experience."
     ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "The statements are consistent. It is possible for some students to pass the placement test without having completed the prerequisite course, as these students would simply not be eligible for the advanced seminar according to Statement 1. The other statements establish conditions for advanced seminar eligibility that do not conflict with this possibility."
+    "isConsistent": false,
+    "answerIndex": 2,
+    "explanation": "Statements 1 and 2 together establish that every chef at the restaurant is a culinary school graduate and, therefore, has at least five years of experience. This implies that no chef at the restaurant has less than five years of experience. Statement 3 directly contradicts this by claiming some chefs at the restaurant have less than five years of experience. Removing Statement 3 resolves the contradiction."
   },
   {
     "id": "gen-49-5",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful authors have a vivid imagination.",
-      "No one with a vivid imagination writes strictly factual non-fiction.",
-      "Every author who writes strictly factual non-fiction is a successful author.",
-      "Some authors who do not write strictly factual non-fiction lack a vivid imagination.",
-      "Alice writes strictly factual non-fiction."
+      "If a plant is a fern, it reproduces by spores.",
+      "All plants that reproduce by spores lack flowers.",
+      "Some plants that lack flowers are not ferns.",
+      "Every fern in this garden has flowers."
     ],
     "isConsistent": false,
-    "answerIndex": 4,
-    "explanation": "Statements 5, 3, 1, and 2 form a logical chain: Alice writes strictly factual non-fiction, which means she is a successful author. All successful authors have a vivid imagination, and no one with a vivid imagination writes strictly factual non-fiction. This chain concludes that Alice does not write strictly factual non-fiction. This directly contradicts Statement 5, which asserts Alice does write strictly factual non-fiction. Removing Statement 5 resolves the inconsistency."
+    "answerIndex": 3,
+    "explanation": "Statements 1 and 2 logically imply that if a plant is a fern, it reproduces by spores, and therefore, it lacks flowers. This means every fern must lack flowers. Statement 4 directly contradicts this by stating that every fern in this garden has flowers. Removing Statement 4 makes the set consistent."
   },
   {
     "id": "gen-49-6",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All employees who received a bonus completed their annual training.",
-      "No employee who completed their annual training missed more than two workdays.",
-      "More than 10% of employees received a bonus.",
-      "Some employees who missed more than two workdays did not receive a bonus."
+      "All successful startups have innovative founders.",
+      "No company with innovative founders ignores market research.",
+      "Some new companies ignore market research.",
+      "Not all successful startups are new companies."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. The chain formed by Statements 1 and 2 indicates that any employee receiving a bonus did not miss more than two workdays. Statement 4, which states that some employees who missed more than two workdays did not receive a bonus, is entirely compatible with this, as it is a direct consequence that if an employee missed more than two workdays, they could not have received a bonus."
+    "explanation": "Statements 1 and 2 imply that all successful startups respect market research. Statement 3 indicates some new companies ignore market research, meaning those specific new companies cannot be successful startups. Statement 4 states that some successful startups are not new companies, which is entirely consistent with the previous implications and does not introduce any contradiction. All statements can be true simultaneously."
   },
   {
     "id": "gen-49-7",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All antique musical instruments are made of wood.",
-      "No instrument made of wood contains synthetic components.",
-      "Some valuable musical instruments contain synthetic components.",
-      "Every valuable musical instrument is an antique musical instrument."
+      "If a dish is spicy, it contains chili.",
+      "All dishes containing chili are flavorful.",
+      "Some flavorful dishes are not spicy."
     ],
-    "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "Statements 4, 1, and 2 form a logical chain: every valuable musical instrument is an antique musical instrument, which is made of wood, and therefore contains no synthetic components. This implies that no valuable musical instrument contains synthetic components. Statement 3 directly contradicts this conclusion by asserting some valuable musical instruments do contain synthetic components. Removing Statement 3 resolves the inconsistency."
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statements 1 and 2 together imply that all spicy dishes are flavorful. Statement 3, which asserts that some flavorful dishes are not spicy, is entirely consistent with this. It merely allows for flavorful dishes that derive their flavor from sources other than spiciness, without contradicting the fact that spicy dishes are also flavorful. All statements can be true simultaneously."
   },
   {
     "id": "gen-49-8",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All successful marketing campaigns incorporate social media engagement.",
-      "No marketing campaign that incorporates social media engagement is without a clear target audience.",
-      "Not all marketing campaigns with a clear target audience are successful.",
-      "Some unsuccessful marketing campaigns do not incorporate social media engagement."
+      "All participants in the marathon trained for months.",
+      "No one who trained for months neglected their diet.",
+      "Some marathon participants completed the race.",
+      "Some who neglected their diet did not complete the race."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1 and 2 establish that all successful marketing campaigns incorporate social media engagement and have a clear target audience. Statement 3 simply allows for marketing campaigns with a clear target audience that are not successful. Statement 4 allows for unsuccessful campaigns that do not incorporate social media engagement, which does not contradict the requirement for successful campaigns to do so."
+    "explanation": "Statements 1 and 2 establish that all marathon participants trained for months and did not neglect their diet. Statement 3 confirms that some of these participants completed the race, which is consistent. Statement 4 describes a separate group of people who neglected their diet and did not complete the race; this does not contradict any claims about marathon participants. All statements can be true simultaneously."
   },
   {
     "id": "gen-49-9",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "If a restaurant is highly rated, it receives at least one Michelin star.",
-      "No restaurant that receives a Michelin star offers exclusively casual dining.",
-      "Every restaurant that has an award-winning chef offers exclusively casual dining.",
-      "Some highly rated restaurants have an award-winning chef."
+      "Every valid ID card has a photo.",
+      "No card without a photo is accepted for entry.",
+      "Some cards with a photo are not valid IDs."
     ],
-    "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "Statements 4, 3, and 2 create a chain: some highly rated restaurants have an award-winning chef, and every such chef works at a restaurant that offers exclusively casual dining. No restaurant offering exclusively casual dining receives a Michelin star. Therefore, some highly rated restaurants do not receive a Michelin star. This conclusion directly contradicts Statement 1, which asserts that all highly rated restaurants receive at least one Michelin star. Removing Statement 4 resolves the inconsistency."
+    "isConsistent": true,
+    "answerIndex": null,
+    "explanation": "Statement 1 says all valid ID cards have photos. Statement 2 implies that any card accepted for entry must also have a photo. Statement 3, claiming some cards with a photo are not valid IDs, is perfectly consistent with the first two. It simply means having a photo is a necessary condition for a valid ID or for entry, but not a sufficient one for validity. All statements can be true simultaneously."
   },
   {
     "id": "gen-49-10",
     "difficulty": "hard",
     "category": "syllogism",
     "statements": [
-      "All effective public speakers prepare extensively.",
-      "No one who prepares extensively avoids using visual aids.",
-      "Unless a public speaker uses visual aids, they are not an effective public speaker.",
-      "Some public speakers who do not prepare extensively are not effective public speakers."
+      "If a device runs on solar power, it is energy-efficient.",
+      "All energy-efficient devices are popular among eco-conscious consumers.",
+      "Some devices popular among eco-conscious consumers do not run on solar power."
     ],
     "isConsistent": true,
     "answerIndex": null,
-    "explanation": "The statements are consistent. Statements 1, 2, and 3 establish that effective public speakers prepare extensively and use visual aids. Statement 4 merely notes that some public speakers who do not prepare extensively are also not effective, which aligns with the logical consequence that a lack of preparation can lead to ineffectiveness, without contradicting any other rules."
+    "explanation": "Statements 1 and 2 together imply that all devices running on solar power are energy-efficient, and therefore, popular among eco-conscious consumers. Statement 3 is consistent with this, as it merely indicates that popularity among eco-conscious consumers is not exclusive to solar-powered devices; other types of devices can also be popular. All statements can be true simultaneously."
   },
   {
     "id": "gen-50-1",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a student is eligible for a scholarship, they must have a GPA above 3.5.",
-      "All students with a GPA above 3.5 completed the advanced thesis.",
-      "No student who completed the advanced thesis failed the final project.",
-      "Some students eligible for a scholarship failed the final project."
+      "A project is approved only if it meets all regulatory standards.",
+      "If a project meets all regulatory standards, it must pass an environmental review.",
+      "Any project that passes an environmental review qualifies for government funding.",
+      "All projects that qualify for government funding require public consultation.",
+      "Some approved projects did not undergo public consultation."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 1, scholarship eligibility requires a GPA above 3.5. From Statement 2, a GPA above 3.5 implies completing the advanced thesis. From Statement 3, completing the advanced thesis means passing the final project. Therefore, any student eligible for a scholarship must have passed the final project. This directly contradicts Statement 4, which claims some scholarship-eligible students failed the final project."
+    "answerIndex": 4,
+    "explanation": "If a project is approved (Statement 1), it meets regulatory standards. If it meets regulatory standards (Statement 2), it passes an environmental review. If it passes an environmental review (Statement 3), it qualifies for government funding. If it qualifies for government funding (Statement 4), it requires public consultation. Therefore, any approved project requires public consultation. Statement 5 contradicts this by claiming some approved projects did not undergo public consultation."
   },
   {
     "id": "gen-50-2",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If an athlete qualifies for the national competition, they train daily.",
-      "Every athlete who trains daily has a strict diet plan.",
-      "Some athletes with a strict diet plan do not qualify for the national competition.",
-      "Maria trains daily."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statement 1 and Statement 2, any athlete who qualifies for the national competition trains daily and has a strict diet plan. Statement 3 asserts that some athletes with a strict diet plan do not qualify, which is entirely possible as having a strict diet plan does not guarantee qualification. Statement 4 simply states Maria's training habits, which is consistent with all previous statements; she could be an athlete who trains daily and has a strict diet but does not qualify for the national competition."
-  },
-  {
-    "id": "gen-50-3",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a book is classified as a rare edition, it must be kept in the secure archive.",
-      "All books kept in the secure archive are scanned digitally.",
-      "No book scanned digitally is available for public loan.",
-      "Every book in the recent acquisition is available for public loan.",
-      "Some books in the recent acquisition are classified as rare editions."
+      "If a region experiences a drought, its agricultural output decreases.",
+      "A region's agricultural output decreases only if water restrictions are implemented.",
+      "Implementing water restrictions always leads to public dissatisfaction.",
+      "No region with public dissatisfaction maintains high tourism levels.",
+      "Some regions with high tourism levels are currently experiencing a drought."
     ],
     "isConsistent": false,
-    "answerIndex": 3,
-    "explanation": "From Statement 1, 2, and 3, any book classified as a rare edition is kept in the secure archive, scanned digitally, and therefore not available for public loan. Statement 5 indicates that some books in the recent acquisition are rare editions, meaning some books in the recent acquisition are not available for public loan. This directly contradicts Statement 4, which claims every book in the recent acquisition is available for public loan."
+    "answerIndex": 4,
+    "explanation": "If a region experiences a drought (Statement 1), its agricultural output decreases. If its agricultural output decreases (Statement 2), water restrictions are implemented. If water restrictions are implemented (Statement 3), public dissatisfaction results. If there is public dissatisfaction (Statement 4), the region does not maintain high tourism levels. Therefore, any region experiencing a drought cannot maintain high tourism levels. Statement 5 contradicts this by claiming some regions experiencing a drought do maintain high tourism levels."
   },
   {
     "id": "gen-50-4",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a candidate is endorsed by the union, they receive campaign funding.",
-      "Only candidates who receive campaign funding run televised advertisements.",
-      "Some candidates who run televised advertisements are not endorsed by the union.",
-      "No candidate endorsed by the union has run a negative ad campaign."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statement 1 and Statement 2, any candidate endorsed by the union receives campaign funding and runs televised advertisements. Statement 3 indicates that some candidates running televised advertisements are not endorsed by the union, which is consistent; the implication is one-way. Statement 4 adds information about union-endorsed candidates and negative ad campaigns, but this does not create any contradiction with the other statements."
-  },
-  {
-    "id": "gen-50-5",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "All employees with a gold key card can access the restricted data servers.",
-      "If an employee has access to the restricted data servers, they are required to undergo weekly security audits.",
-      "No employee required to undergo weekly security audits is exempt from the mandatory privacy training.",
-      "Every employee in the executive leadership team is exempt from the mandatory privacy training.",
-      "Some employees in the executive leadership team have a gold key card."
+      "Every student invited to the honor society has a GPA above 3.8.",
+      "If a student has a GPA above 3.8, they must complete an independent research project.",
+      "No student who completes an independent research project has less than 120 credits.",
+      "Some students invited to the honor society have less than 120 credits."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "From Statement 1, 2, and 3, any employee with a gold key card is able to access restricted data servers, must undergo weekly security audits, and therefore is not exempt from mandatory privacy training. Statement 5 indicates that some employees in the executive leadership team have a gold key card, which means some executive leadership team members are not exempt from mandatory privacy training. This directly contradicts Statement 4, which claims every employee in the executive leadership team is exempt from mandatory privacy training."
-  },
-  {
-    "id": "gen-50-6",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a plant thrives in dry soil, it requires minimal watering.",
-      "All plants requiring minimal watering are suitable for desert landscapes.",
-      "Some plants suitable for desert landscapes do not thrive in dry soil.",
-      "This succulent is suitable for a desert landscape."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statement 1 and Statement 2, any plant that thrives in dry soil requires minimal watering and is suitable for desert landscapes. Statement 3 confirms that the category of plants suitable for desert landscapes is broader than those that thrive in dry soil, which is consistent. Statement 4 introduces a specific succulent, which fits into the consistent framework."
+    "explanation": "If a student is invited to the honor society (Statement 1), they have a GPA above 3.8. If they have a GPA above 3.8 (Statement 2), they complete an independent research project. If they complete an independent research project (Statement 3), they do not have less than 120 credits. Therefore, any student invited to the honor society cannot have less than 120 credits. Statement 4 contradicts this by claiming some students invited to the honor society have less than 120 credits."
   },
   {
     "id": "gen-50-7",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a device requires calibration, it operates with optical sensors.",
-      "All devices with optical sensors are susceptible to electromagnetic interference.",
-      "No device susceptible to electromagnetic interference is certified for hazardous environments.",
-      "Every device manufactured in the new facility is certified for hazardous environments.",
-      "Some devices manufactured in the new facility require calibration."
+      "If a bird is a fledgling, it cannot fly long distances.",
+      "Birds that cannot fly long distances are always reliant on their parents.",
+      "All birds reliant on their parents do not leave the nest area.",
+      "Some fledglings have been observed leaving the nest area."
     ],
     "isConsistent": false,
     "answerIndex": 3,
-    "explanation": "From Statement 1, 2, and 3, any device requiring calibration operates with optical sensors, is susceptible to electromagnetic interference, and therefore cannot be certified for hazardous environments. Statement 5 indicates that some devices manufactured in the new facility require calibration, which means some devices from the new facility are not certified for hazardous environments. This directly contradicts Statement 4, which claims every device manufactured in the new facility is certified for hazardous environments."
-  },
-  {
-    "id": "gen-50-8",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If a volunteer completes advanced training, they lead a team.",
-      "All volunteers who lead a team submit weekly reports.",
-      "All volunteers who submit weekly reports volunteer more than 10 hours a month.",
-      "Some volunteers who complete advanced training volunteer more than 10 hours a month.",
-      "Sarah leads a team."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statement 1, 2, and 3, any volunteer who completes advanced training leads a team, submits weekly reports, and therefore volunteers more than 10 hours a month. Statement 4 simply states that some volunteers who complete advanced training volunteer more than 10 hours a month, which is consistent with the derived conclusion that all of them do. Statement 5 introduces Sarah, who can consistently exist within this framework as a team leader."
+    "explanation": "If a bird is a fledgling (Statement 1), it cannot fly long distances. If it cannot fly long distances (Statement 2), it is reliant on its parents. If it is reliant on its parents (Statement 3), it does not leave the nest area. Therefore, any fledgling does not leave the nest area. Statement 4 contradicts this by claiming some fledglings have been observed leaving the nest area."
   },
   {
     "id": "gen-50-9",
     "difficulty": "hard",
     "category": "conditional",
     "statements": [
-      "If a research grant is awarded, the principal investigator must submit quarterly progress reports.",
-      "No investigator who submits quarterly progress reports uses open-source data exclusively.",
-      "All new research grants require the principal investigator to use open-source data exclusively.",
-      "Some awarded research grants are new research grants."
+      "If a new product is launched, it undergoes extensive market research.",
+      "All products that undergo extensive market research incorporate consumer feedback.",
+      "Any product that incorporates consumer feedback receives a positive initial reception.",
+      "Some newly launched products did not receive a positive initial reception."
     ],
     "isConsistent": false,
-    "answerIndex": 2,
-    "explanation": "From Statement 1 and Statement 2, if a research grant is awarded, the principal investigator must submit quarterly progress reports and therefore does not use open-source data exclusively. Statement 4 indicates that some awarded research grants are new research grants. Combining these, it means some new research grants do not use open-source data exclusively. This directly contradicts Statement 3, which claims all new research grants require the principal investigator to use open-source data exclusively."
-  },
-  {
-    "id": "gen-50-10",
-    "difficulty": "hard",
-    "category": "conditional",
-    "statements": [
-      "If an event is open to the public, it must be held in the main auditorium.",
-      "All events held in the main auditorium require security personnel.",
-      "Some events requiring security personnel are not open to the public.",
-      "The annual charity gala is open to the public.",
-      "All events requiring security personnel are ticketed events."
-    ],
-    "isConsistent": true,
-    "answerIndex": null,
-    "explanation": "From Statement 1 and Statement 2, any event open to the public is held in the main auditorium and requires security personnel. Statement 3 notes that some events requiring security personnel are not open to the public, which is consistent, as the implication is one-way. Statement 4 places the annual charity gala within the 'open to the public' category, which means it also requires security personnel. Statement 5 extends the chain, stating that events requiring security personnel are ticketed, which is also consistent with the prior statements."
+    "answerIndex": 3,
+    "explanation": "If a new product is launched (Statement 1), it undergoes extensive market research. If it undergoes extensive market research (Statement 2), it incorporates consumer feedback. If it incorporates consumer feedback (Statement 3), it receives a positive initial reception. Therefore, any newly launched product receives a positive initial reception. Statement 4 contradicts this by claiming some newly launched products did not receive a positive initial reception."
   }
 ];
 
