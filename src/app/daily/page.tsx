@@ -4,6 +4,10 @@ import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
+// Worst case: two Gemini model attempts at 12s each + overhead. Capped
+// explicitly so the platform never leaves a request hanging indefinitely.
+export const maxDuration = 30;
+
 export default async function DailyPage() {
   const { puzzles, puzzleNumber } = await getDailyPuzzleSet();
 

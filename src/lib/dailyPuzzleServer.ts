@@ -5,6 +5,7 @@ import { getDailyPuzzles, getDailyPuzzleNumber, getTodayString } from '@/lib/puz
 // ── KV helpers (Vercel KV in prod, in-memory fallback for local dev) ──────────
 
 const memCache = new Map<string, Puzzle[]>();
+const memLocks = new Set<string>();
 
 async function kvGet(key: string): Promise<Puzzle[] | null> {
   try {
@@ -31,6 +32,28 @@ async function kvSet(key: string, value: Puzzle[], exSeconds: number): Promise<v
   memCache.set(key, value);
 }
 
+/**
+ * Best-effort lock so concurrent requests don't all hit Gemini at once when
+ * the static pool is exhausted. Fails open (returns true) on KV errors —
+ * a missed lock just means an extra Gemini call, not a broken response.
+ */
+async function acquireGenerationLock(key: string, exSeconds: number): Promise<boolean> {
+  try {
+    if (process.env.KV_REST_API_URL) {
+      const { kv } = await import('@vercel/kv');
+      const result = await kv.set(key, '1', { nx: true, ex: exSeconds });
+      return result !== null;
+    }
+  } catch (err) {
+    console.error('[daily-set] Lock acquire failed, proceeding without it:', err);
+    return true;
+  }
+  if (memLocks.has(key)) return false;
+  memLocks.add(key);
+  setTimeout(() => memLocks.delete(key), exSeconds * 1000);
+  return true;
+}
+
 // ── Validation ────────────────────────────────────────────────────────────────
 
 function isValidPuzzle(p: unknown): p is Puzzle {
@@ -51,6 +74,10 @@ function isValidPuzzle(p: unknown): p is Puzzle {
 // ── Gemini generation ─────────────────────────────────────────────────────────
 
 const MODELS = ['gemini-2.5-pro', 'gemini-2.5-flash'];
+
+// Each model gets a hard cutoff so a slow/stuck call can't hang the whole
+// request — it fails fast and moves to the next model (or the fallback).
+const MODEL_TIMEOUT_MS = 12_000;
 
 function buildPrompt(dateStr: string): string {
   return `Generate exactly 5 LSAT-style logic puzzles for a daily puzzle game called "Syllogle."
@@ -102,7 +129,7 @@ Respond with ONLY a valid JSON array, no markdown:
 async function tryGenerate(apiKey: string, modelName: string, dateStr: string): Promise<Puzzle[] | null> {
   const genAI = new GoogleGenerativeAI(apiKey);
   const model = genAI.getGenerativeModel({ model: modelName });
-  const result = await model.generateContent(buildPrompt(dateStr));
+  const result = await model.generateContent(buildPrompt(dateStr), { timeout: MODEL_TIMEOUT_MS });
   const text = result.response.text().trim();
   const cleaned = text.replace(/^```json\s*/i, '').replace(/```\s*$/, '').trim();
   const parsed = JSON.parse(cleaned);
@@ -150,7 +177,16 @@ export async function getDailyPuzzleSet(): Promise<{ puzzles: Puzzle[]; puzzleNu
     return { puzzles: staticPuzzles, puzzleNumber };
   }
 
-  // 3. Static pool exhausted — generate via Gemini and cache until tomorrow
+  // 3. Static pool exhausted — generate via Gemini and cache until tomorrow.
+  // Only one request does this at a time; concurrent requests skip straight
+  // to the fallback below instead of each making their own slow Gemini call.
+  const lockKey = `daily-lock:${today}`;
+  const gotLock = await acquireGenerationLock(lockKey, MODEL_TIMEOUT_MS * MODELS.length + 5);
+  if (!gotLock) {
+    console.log(`[daily-set] Another request is already generating day ${puzzleNumber}, skipping`);
+    return { puzzles: staticPuzzles, puzzleNumber };
+  }
+
   console.log(`[daily-set] Static pool exhausted for day ${puzzleNumber}, generating via Gemini…`);
   const generated = await generateDailySet(today);
 
