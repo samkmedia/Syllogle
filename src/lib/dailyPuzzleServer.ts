@@ -178,13 +178,26 @@ export async function getDailyPuzzleSet(): Promise<{ puzzles: Puzzle[]; puzzleNu
   }
 
   // 3. Static pool exhausted — generate via Gemini and cache until tomorrow.
-  // Only one request does this at a time; concurrent requests skip straight
-  // to the fallback below instead of each making their own slow Gemini call.
+  // Only one request does this at a time when possible; a request that loses
+  // the lock race waits briefly for the winner's result instead of just
+  // generating redundantly — but if nothing shows up in time, it generates
+  // independently rather than ever falling back to an empty puzzle set
+  // (staticPuzzles is guaranteed empty here, since step 2 already returned
+  // early if it had 5).
   const lockKey = `daily-lock:${today}`;
-  const gotLock = await acquireGenerationLock(lockKey, MODEL_TIMEOUT_MS * MODELS.length + 5);
+  const lockTtlSeconds = Math.ceil((MODEL_TIMEOUT_MS * MODELS.length) / 1000) + 5; // ~29s
+  const gotLock = await acquireGenerationLock(lockKey, lockTtlSeconds);
+
   if (!gotLock) {
-    console.log(`[daily-set] Another request is already generating day ${puzzleNumber}, skipping`);
-    return { puzzles: staticPuzzles, puzzleNumber };
+    console.log(`[daily-set] Another request is already generating day ${puzzleNumber}, waiting…`);
+    for (let i = 0; i < 5; i++) {
+      await new Promise((r) => setTimeout(r, 2000));
+      const waited = await kvGet(cacheKey);
+      if (waited && waited.length >= 5) {
+        return { puzzles: waited.slice(0, 5), puzzleNumber };
+      }
+    }
+    console.log(`[daily-set] Gave up waiting for day ${puzzleNumber}, generating independently`);
   }
 
   console.log(`[daily-set] Static pool exhausted for day ${puzzleNumber}, generating via Gemini…`);
