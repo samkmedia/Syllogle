@@ -1,14 +1,20 @@
 /**
  * Batch puzzle generation script.
  * Run with: npx tsx scripts/generate-puzzles.mts
+ * Override batch count for a one-off catch-up run: BATCH_COUNT=250 npx tsx scripts/generate-puzzles.mts
  *
- * Calls Gemini 2.5 Flash to generate puzzles and appends them to
- * src/data/generated-puzzles.ts. Existing handcrafted puzzles are untouched.
+ * Calls Gemini to generate puzzles and APPENDS them to the existing pool in
+ * src/data/generated-puzzles.ts — existing puzzles (handcrafted or
+ * previously generated) are read first and kept untouched, new puzzles are
+ * added on top with run-unique ids so they never collide with past runs.
+ * Progress is saved after every batch so an interrupted run doesn't lose
+ * work already paid for.
  */
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import fs from 'fs';
 import path from 'path';
+import { Puzzle } from '../src/types';
 
 // ── Config ─────────────────────────────────────────────────────────────────
 
@@ -20,8 +26,16 @@ if (!API_KEY) {
 
 const MODELS = ['gemini-2.5-flash', 'gemini-2.5-pro'];
 const PUZZLES_PER_BATCH = 10;
-const BATCHES = 50; // 500 puzzles total — medium/hard only for daily rotation
+// 50 batches/run = +500 puzzles/month by default — far more than the ~150/month
+// (5/day) consumed, so the pool grows a comfortable surplus every run. Override
+// with BATCH_COUNT for a larger one-off catch-up run.
+const BATCHES = Number(process.env.BATCH_COUNT) || 50;
 const OUT_FILE = path.join(process.cwd(), 'src/data/generated-puzzles.ts');
+// Unique per run so ids never collide with a previous run's puzzles — the old
+// script reused "gen-1-1".."gen-50-10" every run, which combined with
+// overwriting the file instead of appending, silently discarded all
+// previously generated puzzles each month.
+const RUN_ID = Date.now();
 
 const DIFFICULTIES = ['medium', 'hard', 'medium', 'hard', 'hard'] as const;
 const CATEGORIES = ['syllogism', 'conditional', 'quantifier', 'syllogism', 'conditional'] as const;
@@ -181,6 +195,13 @@ async function generateBatch(
         return true;
       }) as RawPuzzle[];
 
+      // Reassign ids ourselves — don't trust the model to follow the
+      // requested format or to stay unique across batches/runs. RUN_ID makes
+      // every id from this run distinct from every past and future run.
+      valid.forEach((p, i) => {
+        p.id = `gen-${RUN_ID}-${batchIndex}-${i + 1}`;
+      });
+
       console.log(`  ✓ Batch ${batchIndex}: ${valid.length}/${parsed.length} puzzles valid`);
       return valid;
     } catch (err) {
@@ -192,32 +213,54 @@ async function generateBatch(
   return [];
 }
 
-async function main() {
-  const genAI = new GoogleGenerativeAI(API_KEY!);
-  const allPuzzles: RawPuzzle[] = [];
+/** Reads the existing pool straight out of the generated file's source text,
+ * avoiding module-import interop (double-wrapped default exports under tsx
+ * in this Next.js version) entirely. Returns [] if the file doesn't exist
+ * yet or has no array to parse. */
+function readExistingPuzzles(): Puzzle[] {
+  if (!fs.existsSync(OUT_FILE)) return [];
+  const source = fs.readFileSync(OUT_FILE, 'utf-8');
+  const match = source.match(/const generatedPuzzles: Puzzle\[\] = (\[[\s\S]*\]);/);
+  if (!match) return [];
+  return JSON.parse(match[1]);
+}
 
-  for (let i = 0; i < BATCHES; i++) {
-    const difficulty = DIFFICULTIES[i % DIFFICULTIES.length];
-    const category = CATEGORIES[i % CATEGORIES.length];
-    const puzzles = await generateBatch(genAI, difficulty, category, i + 1);
-    allPuzzles.push(...puzzles);
-    // Small delay between batches to be kind to rate limits
-    if (i < BATCHES - 1) await new Promise((r) => setTimeout(r, 1000));
-  }
-
-  console.log(`\nTotal valid puzzles generated: ${allPuzzles.length}`);
-
+function writePuzzles(puzzles: Puzzle[]): void {
   const fileContent = `// Auto-generated puzzles — do not edit manually.
 // Run: npx tsx scripts/generate-puzzles.mts
 
 import { Puzzle } from '@/types';
 
-const generatedPuzzles: Puzzle[] = ${JSON.stringify(allPuzzles, null, 2)};
+const generatedPuzzles: Puzzle[] = ${JSON.stringify(puzzles, null, 2)};
 
 export default generatedPuzzles;
 `;
-
   fs.writeFileSync(OUT_FILE, fileContent, 'utf-8');
+}
+
+async function main() {
+  const genAI = new GoogleGenerativeAI(API_KEY!);
+  const existingPuzzles = readExistingPuzzles();
+  console.log(`Existing pool: ${existingPuzzles.length} puzzles. Appending up to ${BATCHES * PUZZLES_PER_BATCH} more…`);
+
+  const newPuzzles: RawPuzzle[] = [];
+
+  for (let i = 0; i < BATCHES; i++) {
+    const difficulty = DIFFICULTIES[i % DIFFICULTIES.length];
+    const category = CATEGORIES[i % CATEGORIES.length];
+    const puzzles = await generateBatch(genAI, difficulty, category, i + 1);
+    newPuzzles.push(...puzzles);
+
+    // Save after every batch — an interrupted run keeps whatever it already
+    // generated instead of losing it (and the quota spent on it).
+    writePuzzles([...existingPuzzles, ...newPuzzles] as Puzzle[]);
+
+    // Small delay between batches to be kind to rate limits
+    if (i < BATCHES - 1) await new Promise((r) => setTimeout(r, 1000));
+  }
+
+  console.log(`\nNew valid puzzles generated: ${newPuzzles.length}`);
+  console.log(`Total pool size: ${existingPuzzles.length + newPuzzles.length}`);
   console.log(`Saved to ${OUT_FILE}`);
 }
 
