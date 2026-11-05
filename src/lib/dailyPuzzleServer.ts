@@ -5,7 +5,6 @@ import { getDailyPuzzles, getDailyPuzzleNumber, getTodayString } from '@/lib/puz
 // ── KV helpers (Vercel KV in prod, in-memory fallback for local dev) ──────────
 
 const memCache = new Map<string, Puzzle[]>();
-const memLocks = new Set<string>();
 
 async function kvGet(key: string): Promise<Puzzle[] | null> {
   try {
@@ -30,28 +29,6 @@ async function kvSet(key: string, value: Puzzle[], exSeconds: number): Promise<v
     console.error('[daily-set] KV set failed, using in-memory:', err);
   }
   memCache.set(key, value);
-}
-
-/**
- * Best-effort lock so concurrent requests don't all hit Gemini at once when
- * the static pool is exhausted. Fails open (returns true) on KV errors —
- * a missed lock just means an extra Gemini call, not a broken response.
- */
-async function acquireGenerationLock(key: string, exSeconds: number): Promise<boolean> {
-  try {
-    if (process.env.KV_REST_API_URL) {
-      const { kv } = await import('@vercel/kv');
-      const result = await kv.set(key, '1', { nx: true, ex: exSeconds });
-      return result !== null;
-    }
-  } catch (err) {
-    console.error('[daily-set] Lock acquire failed, proceeding without it:', err);
-    return true;
-  }
-  if (memLocks.has(key)) return false;
-  memLocks.add(key);
-  setTimeout(() => memLocks.delete(key), exSeconds * 1000);
-  return true;
 }
 
 // ── Validation ────────────────────────────────────────────────────────────────
@@ -178,28 +155,12 @@ export async function getDailyPuzzleSet(): Promise<{ puzzles: Puzzle[]; puzzleNu
   }
 
   // 3. Static pool exhausted — generate via Gemini and cache until tomorrow.
-  // Only one request does this at a time when possible; a request that loses
-  // the lock race waits briefly for the winner's result instead of just
-  // generating redundantly — but if nothing shows up in time, it generates
-  // independently rather than ever falling back to an empty puzzle set
-  // (staticPuzzles is guaranteed empty here, since step 2 already returned
-  // early if it had 5).
-  const lockKey = `daily-lock:${today}`;
-  const lockTtlSeconds = Math.ceil((MODEL_TIMEOUT_MS * MODELS.length) / 1000) + 5; // ~29s
-  const gotLock = await acquireGenerationLock(lockKey, lockTtlSeconds);
-
-  if (!gotLock) {
-    console.log(`[daily-set] Another request is already generating day ${puzzleNumber}, waiting…`);
-    for (let i = 0; i < 5; i++) {
-      await new Promise((r) => setTimeout(r, 2000));
-      const waited = await kvGet(cacheKey);
-      if (waited && waited.length >= 5) {
-        return { puzzles: waited.slice(0, 5), puzzleNumber };
-      }
-    }
-    console.log(`[daily-set] Gave up waiting for day ${puzzleNumber}, generating independently`);
-  }
-
+  // No cross-request locking: an earlier lock/wait version of this made
+  // things dramatically worse in production (requests hung well past their
+  // own timeout with zero response — root cause not fully diagnosed, rolled
+  // back rather than debugged live). Concurrent requests may redundantly
+  // call Gemini independently, which is suboptimal but bounded and reliable
+  // — every request still resolves within the per-model timeouts below.
   console.log(`[daily-set] Static pool exhausted for day ${puzzleNumber}, generating via Gemini…`);
   const generated = await generateDailySet(today);
 
